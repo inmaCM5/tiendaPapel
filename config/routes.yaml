@@ -5,3 +5,10 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+logout:
+    path: logout
+
+index:
+    path: /
+    controller: App\Controller\BaseController::index
