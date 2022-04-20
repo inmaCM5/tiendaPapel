@@ -13,10 +13,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BaseController extends AbstractController
 {
-    #[Route('/index', name:'index')]
+#[Route('/index', name:'index')]
 function index(ManagerRegistry $doctrine): Response
     {
-    $usuarios = $doctrine->getRepository(Usuarios::class)->findAll();
+    //$usuarios = $doctrine->getRepository(Usuarios::class)->findAll();
     $categorias = $doctrine->getRepository(CategoriasPrincipales::class)->findAll();    
 
     //$categoriasSecundarias = [];
@@ -72,6 +72,17 @@ function productosGlobales(ManagerRegistry $doctrine): Response
     
     return $this->render('productos.html.twig',
         array('productos' => array_unique($arrayProductos, SORT_REGULAR), 'categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias));
+}
+
+#[Route('/contacto', name: 'contaco')]
+public function contacto(ManagerRegistry $doctrine): Response
+{
+    $categorias = $doctrine->getRepository(CategoriasPrincipales::class)->findAll();    
+    $categoriasSecundarias = $doctrine->getRepository(CategoriasSecundarias::class)->findAll();
+
+    return $this->render('contacto.html.twig',
+        array('categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias)
+    );
 }
 
 #[Route('/adminProductos', name:'adminProductos')]
