@@ -6,6 +6,7 @@ use App\Entity\CategoriasPrincipales;
 use App\Entity\CategoriasSecundarias;
 use App\Entity\Productos;
 use App\Entity\Usuarios;
+use App\Entity\Categoria;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,16 +18,22 @@ class BaseController extends AbstractController
 function index(ManagerRegistry $doctrine): Response
     {
     //$usuarios = $doctrine->getRepository(Usuarios::class)->findAll();
-    $categorias = $doctrine->getRepository(CategoriasPrincipales::class)->findAll();    
+    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
+    $categorias=[];
 
-    //$categoriasSecundarias = [];
-    foreach ($categorias as $categoria) {
+
+    /*$categoriasSecundarias = [];*/
+    foreach ($categoriaPrincipal as $categoria) {
+        $categorias[$categoria->getId()][0]= $categoria;
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->find($categoria->getId())->getChildrens();
         /* $categoriasSecundarias[$categoria->getCodigoCatPrincipal()]['categoriaP'] = $categoria;
         $categoriasSecundarias[$categoria->getCodigoCatPrincipal()]['categoriaS'] = $categoria->getCategoriasSecundarias(); */
-        $id = $categoria->getId();
-        $categoriasSecundarias = $doctrine->getRepository(CategoriasPrincipales::class)->find($id)->getCategoriasSecundarias();
+        //$id = $categoria->getId();
+        $categoriasSecundarias = $doctrine->getRepository(Categoria::class)->find($categoria->getId());
         /* $categoriasSecundarias = $doctrine->getRepository(CategoriasSecundarias::class)->findBy(['codigoCatPrincipalSeC' => $id]); */
     }
+
+    /* var_dump($categorias[1]); */
 
     return $this->render('index.html.twig',
         array('categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias)
@@ -74,7 +81,7 @@ function productosGlobales(ManagerRegistry $doctrine): Response
         array('productos' => array_unique($arrayProductos, SORT_REGULAR), 'categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias));
 }
 
-#[Route('/contacto', name: 'contaco')]
+#[Route('/contacto', name: 'contacto')]
 public function contacto(ManagerRegistry $doctrine): Response
 {
     $categorias = $doctrine->getRepository(CategoriasPrincipales::class)->findAll();    

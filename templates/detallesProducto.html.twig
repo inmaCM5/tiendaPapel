@@ -30,7 +30,6 @@
 </div>
 <!--====== Preloader Part Ends ======-->
 
-<!--====== Navbar Style 7 Part Start ======-->
 <div class="navigation">
 	<header class="navbar-style-7 position-relative">
 		<div
@@ -52,7 +51,7 @@
 						class="col-6">
 						<!-- desktop logo Start -->
 						<div class="mobile-logo text-center">
-							<a href="{{ path('index') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo"></a>
+							<a href="{{ path('index') }}"><img src="images/logo.svg" alt="Logo"></a>
 						</div>
 						<!-- desktop logo Ends -->
 					</div>
@@ -260,16 +259,6 @@
 				</div>
 				<!-- navbar search start -->
 				<div class="navbar-search mt-15 search-style-5">
-					<div class="search-select">
-						<select>
-							<option value="">All</option>
-							<option value="1">option 01</option>
-							<option value="2">option 02</option>
-							<option value="3">option 03</option>
-							<option value="4">option 04</option>
-							<option value="5">option 05</option>
-						</select>
-					</div>
 					<div class="search-input">
 						<input type="text" placeholder="Search">
 					</div>
@@ -303,10 +292,7 @@
 						<div class="navbar-top-left">
 							<ul class="navbar-top-link">
 								<li>
-									<a href="about-page.html">About</a>
-								</li>
-								<li>
-									<a href="contact-page.html">Contact</a>
+									<a href="{{ path('contacto') }}">Contacto</a>
 								</li>
 								<li>
 									<a href="javascript:void(0)">
@@ -347,7 +333,7 @@
 						class="main-navbar d-lg-flex justify-content-between align-items-center">
 						<!-- desktop logo Start -->
 						<div class="desktop-logo d-none d-lg-block">
-							<a href="{{ path('index') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo"/></a>
+							<a href="{{ path('index') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo"></a>
 						</div>
 						<!-- desktop logo Ends -->
 						<!-- navbar menu Start -->
@@ -400,49 +386,20 @@
 								<li>
 									<a href="#">Accessories</a>
 								</li>
-								<li class="menu-item-has-children">
-									<a href="#">Pages</a>
-									<!-- sub menu Start -->
-									<ul class="sub-menu">
-										<li>
-											<a href="about-page.html">About Page</a>
-										</li>
-										<li>
-											<a href="account-page.html">Account Page</a>
-										</li>
-										<li>
-											<a href="cart-page.html">Cart Page</a>
-										</li>
-										<li>
-											<a href="category.html">Category Page</a>
-										</li>
-										<li>
-											<a href="checkout-page.html">Checkout Page</a>
-										</li>
-										<li>
-											<a href="contact-page.html">Contact Page</a>
-										</li>
-										<li>
-											<a href="login-page.html">Log In Page</a>
-										</li>
-										<li>
-											<a href="product-details-page.html">Product Details Page</a>
-										</li>
-										<li>
-											<a href="signup-page.html">Sign Up Page</a>
-										</li>
-									</ul>
-									<!-- sub menu Ends -->
-								</li>
 								{% if is_granted('ROLE_ADMIN') %}
-									<li>
-										<a href="#">Administrar categorías</a>
-									</li>
-									<li>
-										<a href="{{ path('adminProductos') }}">Administrar productos</a>
-									</li>
-									<li>
-										<a href="#">Administrar apuntes</a>
+									<li class="menu-item-has-children">
+										<a href="#">Administrar...</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="#">Administrar categorías</a>
+											</li>
+											<li>
+												<a href="{{ path('adminProductos') }}">Administrar productos</a>
+											</li>
+											<li>
+												<a href="#">Administrar apuntes</a>
+											</li>
+										</ul>
 									</li>
 								{% endif %}
 							</ul>
@@ -452,16 +409,6 @@
 							class="navbar-search-cart d-none d-lg-flex">
 							<!-- navbar search start -->
 							<div class="navbar-search search-style-5">
-								<div class="search-select">
-									<select>
-										<option value="">All</option>
-										<option value="1">option 01</option>
-										<option value="2">option 02</option>
-										<option value="3">option 03</option>
-										<option value="4">option 04</option>
-										<option value="5">option 05</option>
-									</select>
-								</div>
 								<div class="search-input">
 									<input type="text" placeholder="Search">
 								</div>
@@ -475,7 +422,7 @@
 							<!-- navbar cart start -->
 							<div class="navbar-cart">
 								<a class="icon-btn primary-icon-text icon-text-btn" href="javascript:void(0)">
-									<img src="{{ asset('images/icon-svg/cart-1.svg') }}" alt="Icon">
+									<img src="images/icon-svg/cart-1.svg" alt="Icon">
 									<span class="icon-text text-style-1">88</span>
 								</a>
 
@@ -662,7 +609,8 @@
 												<p class="price">$144</p>
 											</div>
 											<div class="checkout-btn">
-												<a href="cart-page.html" class="main-btn primary-btn-border">View Cart</a>
+												<a href="cart-page.html" class="main-btn primary-btn-border">View
+													                                                        Cart</a>
 												<a href="checkout-page.html" class="main-btn primary-btn">Checkout</a>
 											</div>
 										</div>

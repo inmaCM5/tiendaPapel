@@ -32,6 +32,9 @@ class Productos
     #[ORM\Column(type: 'blob')]
     private $imagen;
     private $rawImagen;
+
+    #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
+    private $pp;
     public function displayImagen()
     {
         if(null === $this->rawImagen) {
@@ -119,6 +122,18 @@ class Productos
     public function setImagen($imagen): self
     {
         $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    public function getPp(): ?string
+    {
+        return $this->pp;
+    }
+
+    public function setPp(string $pp): self
+    {
+        $this->pp = $pp;
 
         return $this;
     }
