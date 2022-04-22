@@ -25,9 +25,6 @@ class Productos
     #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
     private $pvp;
 
-    #[ORM\ManyToOne(targetEntity: CategoriasSecundarias::class, inversedBy: 'productos')]
-    #[ORM\JoinColumn(nullable: false)]
-    private $categoria;
 
     #[ORM\Column(type: 'blob')]
     private $imagen;
@@ -35,6 +32,10 @@ class Productos
 
     #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
     private $pp;
+
+    #[ORM\ManyToOne(targetEntity: categoria::class, inversedBy: 'productos')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $categoria;
     public function displayImagen()
     {
         if(null === $this->rawImagen) {
@@ -96,17 +97,6 @@ class Productos
         return $this;
     }
 
-    public function getCategoria(): ?CategoriasSecundarias
-    {
-        return $this->categoria;
-    }
-
-    public function setCategoria(?CategoriasSecundarias $categoria): self
-    {
-        $this->categoria = $categoria;
-
-        return $this;
-    }
 
     public function getImagenCodificada()
     {
@@ -134,6 +124,18 @@ class Productos
     public function setPp(string $pp): self
     {
         $this->pp = $pp;
+
+        return $this;
+    }
+
+    public function getCategoria(): ?categoria
+    {
+        return $this->categoria;
+    }
+
+    public function setCategoria(?categoria $categoria): self
+    {
+        $this->categoria = $categoria;
 
         return $this;
     }

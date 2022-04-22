@@ -17,26 +17,16 @@ class BaseController extends AbstractController
 #[Route('/index', name:'index')]
 function index(ManagerRegistry $doctrine): Response
     {
-    //$usuarios = $doctrine->getRepository(Usuarios::class)->findAll();
     $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
     $categorias=[];
 
-
-    /*$categoriasSecundarias = [];*/
     foreach ($categoriaPrincipal as $categoria) {
         $categorias[$categoria->getId()][0]= $categoria;
-        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->find($categoria->getId())->getChildrens();
-        /* $categoriasSecundarias[$categoria->getCodigoCatPrincipal()]['categoriaP'] = $categoria;
-        $categoriasSecundarias[$categoria->getCodigoCatPrincipal()]['categoriaS'] = $categoria->getCategoriasSecundarias(); */
-        //$id = $categoria->getId();
-        $categoriasSecundarias = $doctrine->getRepository(Categoria::class)->find($categoria->getId());
-        /* $categoriasSecundarias = $doctrine->getRepository(CategoriasSecundarias::class)->findBy(['codigoCatPrincipalSeC' => $id]); */
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
     }
 
-    /* var_dump($categorias[1]); */
-
     return $this->render('index.html.twig',
-        array('categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias)
+        array('categorias' => $categorias)
     );
 }
 
@@ -101,5 +91,12 @@ function administrarProductos(ManagerRegistry $doctrine): Response
 
     return $this->render('adminProductos.html.twig',
         array('productos' => $productos, 'categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias));
+}
+
+#[Route('/anadir/{idProducto}', name:'anadir')]
+public function anadir(ManagerRegistry $doctrine, $idProducto, CestaCompra $cesta): Response {
+    $producto = $doctrine->getRepository(Productos::class)->find($idProducto);
+    $cesta->carga_articulo($producto, $_REQUEST['unidades']);
+    return $this->redirectToRoute('productos');
 }
 }

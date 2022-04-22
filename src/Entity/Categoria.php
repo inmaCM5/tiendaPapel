@@ -27,9 +27,13 @@ class Categoria
     #[ORM\ManyToOne(targetEntity: self::class, inversedBy: 'childrens')]
     private $parents;
 
+    #[ORM\OneToMany(mappedBy: 'categoria', targetEntity: Productos::class)]
+    private $productos;
+
     public function __construct()
     {
         $this->childrens = new ArrayCollection();
+        $this->productos = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -103,4 +107,33 @@ class Categoria
         return $this;
     }
 
+    /**
+     * @return Collection<int, Productos>
+     */
+    public function getProductos(): Collection
+    {
+        return $this->productos;
+    }
+
+    public function addProducto(Productos $producto): self
+    {
+        if (!$this->productos->contains($producto)) {
+            $this->productos[] = $producto;
+            $producto->setCategoria($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProducto(Productos $producto): self
+    {
+        if ($this->productos->removeElement($producto)) {
+            // set the owning side to null (unless already changed)
+            if ($producto->getCategoria() === $this) {
+                $producto->setCategoria(null);
+            }
+        }
+
+        return $this;
+    }
 }

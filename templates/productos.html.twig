@@ -714,10 +714,13 @@
                                                         <a href="{{ path('detalles', {'producto': producto.getId()}) }}">{{ producto.getNombre() }}</a>
                                                     </h4>
                                                     <span class="price">{{ producto.getPvp() }}€</span>
-                                                    <a href="javascript:void(0)" class="main-btn primary-btn">
-                                                        <img src="images/icon-svg/cart-4.svg" alt="">
-                                                        Add to Cart
-                                                    </a>
+													<form id="form_seleccion" action="{{ path('anadir', {'idProducto': producto.getId()}) }}" method="post">
+														<a href="javascript:void(0)" class="main-btn primary-btn" type="submit" name = 'anadir'>
+															<img src="images/icon-svg/cart-4.svg" alt="">
+															Add to Cart
+														</a>
+														<input type='hidden' name='codProduc' value= "{{ producto.getCodigo() }}" />
+													</form>
                                                 </div>
                                             </div>
                                         </div>                                       
@@ -747,10 +750,13 @@
                                                     <h4 class="title">
                                                         <a href="{{ path('detalles', {'producto': producto.getId()}) }}">{{ producto.getNombre() }}</a>
                                                     </h4>
-                                                    <a href="javascript:void(0)" class="main-btn secondary-1-btn">
-                                                        <img src="images/icon-svg/cart-7.svg" alt="">
-                                                        {{ producto.getPvp() }}€
-                                                    </a>
+													<form id="form_seleccion" action="{{ path('anadir', {'idProducto': producto.getId()}) }}" method="post">
+														<input href="#" class="main-btn secondary-1-btn" type="submit" name = 'anadir'>
+															<img src="images/icon-svg/cart-7.svg" alt="">
+															{{ producto.getPvp() }}€
+														</input>
+														<input type='hidden' name='codProduc' value= "{{ producto.getCodigo() }}" />
+													</form>
                                                 </div>
                                             </div>
                                         </div>                           

@@ -21,9 +21,6 @@ class CategoriasSecundarias
     #[ORM\Column(type: 'string', length: 255)]
     private $nombreCatSecun;
 
-    #[ORM\OneToMany(mappedBy: 'categoria', targetEntity: Productos::class)]
-    private $productos;
-
     #[ORM\ManyToOne(targetEntity: CategoriasPrincipales::class, inversedBy: 'categoriasSecundarias')]
     #[ORM\JoinColumn(nullable: false)]
     private $codigoCatPrincipalSeC;
@@ -65,23 +62,6 @@ class CategoriasSecundarias
     }
 
     
-    /**
-     * @return Collection<int, Productos>
-     */
-    public function getProductos(): Collection
-    {
-        return $this->productos;
-    }
-
-    public function addProducto(Productos $producto): self
-    {
-        if (!$this->productos->contains($producto)) {
-            $this->productos[] = $producto;
-            $producto->setCategoria($this);
-        }
-
-        return $this;
-    }
 
     public function removeProducto(Productos $producto): self
     {
