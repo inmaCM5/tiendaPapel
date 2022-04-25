@@ -23,7 +23,7 @@ class CestaCompra {
     }
 
     public function carga_articulo($producto, $unidades) {
-        $codProd = $producto->getCod();
+        $codProd = $producto->getCodigo();
         if (array_key_exists($codProd, $this->cesta)) {
             $this->cesta[$codProd]['unidades'] += $unidades;
         } else {
@@ -33,10 +33,18 @@ class CestaCompra {
         $this->guarda_cesta();
     }
     
-    public function eliminar_unidades($producto, $unidades) {
-        $codProd = $producto->getCod();
+    public function eliminar_productos($producto, $unidades) {
+        $codProd = $producto->getCodigo();
         if (array_key_exists($codProd, $this->cesta)) {
-            $this->cesta[$codProd]['unidades'] -= $unidades;
+                unset($this->cesta[$codProd]);
+        }
+        $this->guarda_cesta();
+    }
+
+    public function cambiar_unidades($producto, $unidades) {
+        $codProd = $producto->getCodigo();
+        if (array_key_exists($codProd, $this->cesta)) {
+            $this->cesta[$codProd]['unidades'] = $unidades;
             if($this->cesta[$codProd]['unidades'] <= 0){
                 unset($this->cesta[$codProd]);
             }
@@ -66,4 +74,11 @@ class CestaCompra {
         $this->cesta = array();
     }
 
+    public function unidadesCesta(){
+        $unidades = 0;
+        foreach ($this->cesta as $productoCesta) {
+            $unidades += $productoCesta['unidades'];
+        }
+        return $unidades;
+    }
 }

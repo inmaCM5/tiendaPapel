@@ -54,21 +54,23 @@ function detalleProducto(ManagerRegistry $doctrine, $producto): Response
 }
 
 #[Route('/productos', name:'productos')]
-function productosGlobales(ManagerRegistry $doctrine): Response
+function productosGlobales(ManagerRegistry $doctrine, CestaCompra $cesta): Response
     {
     $productos = $doctrine->getRepository(Productos::class)->findAll();
     $categorias = $doctrine->getRepository(CategoriasPrincipales::class)->findAll();
     $categoriasSecundarias = $doctrine->getRepository(CategoriasSecundarias::class)->findAll();
-    
+
     $arrayProductos = array();
 
     for ($i=0; $i < 21; $i++) { 
         $aleatorio = rand(0, count($productos)-1);
         array_push($arrayProductos, $productos[$aleatorio]);
     }
-    
+
     return $this->render('productos.html.twig',
-        array('productos' => array_unique($arrayProductos, SORT_REGULAR), 'categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias));
+        array('productos' => array_unique($arrayProductos, SORT_REGULAR), 'categorias' => $categorias, 
+        'categoriasSecundarias' => $categoriasSecundarias, 'cesta' => $cesta->get_productos(), 
+        'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
 }
 
 #[Route('/contacto', name: 'contacto')]
@@ -96,7 +98,14 @@ function administrarProductos(ManagerRegistry $doctrine): Response
 #[Route('/anadir/{idProducto}', name:'anadir')]
 public function anadir(ManagerRegistry $doctrine, $idProducto, CestaCompra $cesta): Response {
     $producto = $doctrine->getRepository(Productos::class)->find($idProducto);
-    $cesta->carga_articulo($producto, $_REQUEST['unidades']);
+    $cesta->carga_articulo($producto, $_POST['unidades']);
+    return $this->redirectToRoute('productos');
+}
+
+#[Route('/cambiarUnidades/{idProducto}', name:'cambiarUnidades')]
+public function cambiarUnidades(ManagerRegistry $doctrine, $idProducto, CestaCompra $cesta): Response {
+    $producto = $doctrine->getRepository(Productos::class)->find($idProducto);
+    $cesta->cambiar_unidades($producto, $_POST['unidades']);
     return $this->redirectToRoute('productos');
 }
 }

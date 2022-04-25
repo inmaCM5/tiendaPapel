@@ -33,7 +33,7 @@ class Productos
     #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
     private $pp;
 
-    #[ORM\ManyToOne(targetEntity: categoria::class, inversedBy: 'productos')]
+    #[ORM\ManyToOne(targetEntity: Categoria::class, inversedBy: 'productos')]
     #[ORM\JoinColumn(nullable: false)]
     private $categoria;
     public function displayImagen()
