@@ -56,180 +56,62 @@
                             <div class="navbar-cart">
                                 <a class="icon-btn primary-icon-text icon-text-btn" href="javascript:void(0)">
                                     <img src="images/icon-svg/cart-1.svg" alt="Icon">
-                                    <span class="icon-text text-style-1">88</span>
+                                    <span class="icon-text text-style-1">{{ unidades }}</span>
                                 </a>
-    
+
                                 <div class="navbar-cart-dropdown">
                                     <div class="checkout-style-2">
                                         <div class="checkout-header d-flex justify-content-between">
                                             <h6 class="title">Shopping Cart</h6>
                                         </div>
-    
-                                        <div class="checkout-table table-responsive">
+
+                                        <div class="checkout-table">
                                             <table class="table">
                                                 <tbody>
-                                                    <tr>
-                                                        <td class="checkout-product">
-                                                            <div class="product-cart d-flex">
-                                                                <div class="product-thumb">
-                                                                    <img src="images/product-cart/product-1.png"
-                                                                        alt="Product">
+                                                        
+                                                    {% for produCesta in cesta %}
+                                                        <tr>
+                                                            <td class="checkout-product">
+                                                                <div class="product-cart d-flex">
+                                                                    <div class="product-content media-body">
+                                                                        <h5 class="title">
+                                                                            <a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
+                                                                        </h5>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <a class="delete" href="javascript:void(0)">
+                                                                                    <i class="mdi mdi-delete"></i>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="product-content media-body">
-                                                                    <h5 class="title">
-                                                                        <a href="product-details-page.html">Hollow Port</a>
-                                                                    </h5>
-                                                                    <ul>
-                                                                        <li><span>Brown</span></li>
-                                                                        <li><span>XL</span></li>
-                                                                        <li>
-                                                                            <a class="delete" href="javascript:void(0)">
-                                                                                <i class="mdi mdi-delete"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
+                                                            </td>
+                                                            <td class="checkout-quantity">
+                                                                <div class="product-quantity d-inline-flex">
+                                                                    <form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
+                                                                        <input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
+                                                                        <input type='hidden' name='codProduc' value= "{{ produCesta.producto.getCodigo() }}" />
+                                                                    </form>
                                                                 </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="checkout-quantity">
-                                                            <div class="product-quantity d-inline-flex">
-                                                                <button type="button" id="sub" class="sub">
-                                                                    <i class="mdi mdi-minus"></i>
-                                                                </button>
-                                                                <input type="text" value="1">
-                                                                <button type="button" id="add" class="add">
-                                                                    <i class="mdi mdi-plus"></i>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                        <td class="checkout-price">
-                                                            <p class="price">$36.00</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="checkout-product">
-                                                            <div class="product-cart d-flex">
-                                                                <div class="product-thumb">
-                                                                    <img src="images/product-cart/product-2.png"
-                                                                        alt="Product">
-                                                                </div>
-                                                                <div class="product-content media-body">
-                                                                    <h5 class="title">
-                                                                        <a href="product-details-page.html">Mist Black Triblend</a>
-                                                                    </h5>
-                                                                    <ul>
-                                                                        <li><span>Brown</span></li>
-                                                                        <li><span>XL</span></li>
-                                                                        <li>
-                                                                            <a class="delete" href="javascript:void(0)">
-                                                                                <i class="mdi mdi-delete"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="checkout-quantity">
-                                                            <div class="product-quantity d-inline-flex">
-                                                                <button type="button" id="sub" class="sub">
-                                                                    <i class="mdi mdi-minus"></i>
-                                                                </button>
-                                                                <input type="text" value="1">
-                                                                <button type="button" id="add" class="add">
-                                                                    <i class="mdi mdi-plus"></i>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                        <td class="checkout-price">
-                                                            <p class="price">$36.00</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="checkout-product">
-                                                            <div class="product-cart d-flex">
-                                                                <div class="product-thumb">
-                                                                    <img src="images/product-cart/product-3.png"
-                                                                        alt="Product">
-                                                                </div>
-                                                                <div class="product-content media-body">
-                                                                    <h5 class="title">
-                                                                        <a href="product-details-page.html">Realm Bone</a>
-                                                                    </h5>
-                                                                    <ul>
-                                                                        <li><span>Brown</span></li>
-                                                                        <li><span>XL</span></li>
-                                                                        <li>
-                                                                            <a class="delete" href="javascript:void(0)">
-                                                                                <i class="mdi mdi-delete"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="checkout-quantity">
-                                                            <div class="product-quantity d-inline-flex">
-                                                                <button type="button" id="sub" class="sub">
-                                                                    <i class="mdi mdi-minus"></i>
-                                                                </button>
-                                                                <input type="text" value="1">
-                                                                <button type="button" id="add" class="add">
-                                                                    <i class="mdi mdi-plus"></i>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                        <td class="checkout-price">
-                                                            <p class="price">$36.00</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="checkout-product">
-                                                            <div class="product-cart d-flex">
-                                                                <div class="product-thumb">
-                                                                    <img src="images/product-cart/product-4.png"
-                                                                        alt="Product">
-                                                                </div>
-                                                                <div class="product-content media-body">
-                                                                    <h5 class="title">
-                                                                        <a href="product-details-page.html">Circular Sienna</a></h5>
-                                                                    <ul>
-                                                                        <li><span>Brown</span></li>
-                                                                        <li><span>XL</span></li>
-                                                                        <li>
-                                                                            <a class="delete" href="javascript:void(0)">
-                                                                                <i class="mdi mdi-delete"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="checkout-quantity">
-                                                            <div class="product-quantity d-inline-flex">
-                                                                <button type="button" id="sub" class="sub">
-                                                                    <i class="mdi mdi-minus"></i>
-                                                                </button>
-                                                                <input type="text" value="1">
-                                                                <button type="button" id="add" class="add">
-                                                                    <i class="mdi mdi-plus"></i>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                        <td class="checkout-price">
-                                                            <p class="price">$36.00</p>
-                                                        </td>
-                                                    </tr>
+                                                            </td>
+                                                            <td class="checkout-price">
+                                                                <p class="price">{{ produCesta.producto.getPvp() }}€</p>
+                                                            </td>
+                                                        </tr>
+                                                    {% endfor %}
                                                 </tbody>
                                             </table>
                                         </div>
-    
+
                                         <div class="checkout-footer">
                                             <div class="checkout-sub-total d-flex justify-content-between">
                                                 <p class="value">Subtotal Price:</p>
-                                                <p class="price">$144</p>
+                                                <p class="price">{{ precioCesta }}€</p>
                                             </div>
                                             <div class="checkout-btn">
-                                                <a href="cart-page.html" class="main-btn primary-btn-border">View Cart</a>
+                                                <a href="cart-page.html" class="main-btn primary-btn-border">View
+                                                                                                                                                                Cart</a>
                                                 <a href="checkout-page.html" class="main-btn primary-btn">Checkout</a>
                                             </div>
                                         </div>
@@ -317,31 +199,19 @@
                                             <li>
                                                 <div class="mega-dropdown-menu">
                                                     <ul class="container mega-dropdown d-flex flex-wrap">
-                                                    {% for categoria in categorias %}
-                                                        <li class="mega-dropdown-list menu-item-has-children">
-                                                            <h6 class="heading-6 font-weight-500 mega-title">{{ categoria.nombreCatPrincipal }}
+                                                    {% for lista in categorias %}
+                                                        <li class="mega-dropdown-list menu-item-has-children">  
+                                                            <h6 class="heading-6 font-weight-500 mega-title">{{ lista[0].nombre}}
                                                             </h6>
                                                             <ul>
-                                                            {% for categoriasSec in categoriasSecundarias %}
+                                                            {% for categoriaSecu in lista[1] %}
                                                                 <li>
-                                                                    <a href="#">{{ categoriasSec.nombreCatSecun }}</a>
+                                                                    <a href="#">{{ categoriaSecu.nombre }}</a> 
                                                                 </li>
-                                                            {% endfor %}	
+                                                            {% endfor %}
                                                             </ul>
                                                         </li>
-                                                    {% endfor %}                                                        
-                                                        <li class="mega-dropdown-list menu-item-has-children">
-                                                            <h6 class="heading-6 font-weight-500 mega-title">Accessories
-                                                            </h6>
-                                                            <ul>
-                                                                <li><a href="category.html">Hoodies & Sweatshirts</a></li>
-                                                                <li><a href="category.html">Jackets & Coats</a></li>
-                                                                <li><a href="category.html">Pants</a></li>
-                                                                <li><a href="category.html">Jeans</a></li>
-                                                                <li><a href="category.html">Tops & Tees</a></li>
-                                                                <li><a href="category.html">Casual Shorts</a></li>
-                                                            </ul>
-                                                        </li>
+                                                    {% endfor %}
                                                     </ul>
                                                 </div>
                                             </li>
@@ -378,181 +248,63 @@
                                 <div class="navbar-cart">
                                     <a class="icon-btn primary-icon-text icon-text-btn" href="javascript:void(0)">
                                         <img src="images/icon-svg/cart-1.svg" alt="Icon">
-                                        <span class="icon-text text-style-1">88</span>
+                                        <span class="icon-text text-style-1">{{ unidades }}</span>
                                     </a>
-    
+
                                     <div class="navbar-cart-dropdown">
                                         <div class="checkout-style-2">
                                             <div class="checkout-header d-flex justify-content-between">
                                                 <h6 class="title">Shopping Cart</h6>
                                             </div>
-    
+
                                             <div class="checkout-table">
                                                 <table class="table">
                                                     <tbody>
-                                                        <tr>
-                                                            <td class="checkout-product">
-                                                                <div class="product-cart d-flex">
-                                                                    <div class="product-thumb">
-                                                                        <img src="images/product-cart/product-1.png"
-                                                                            alt="Product">
+                                                            
+                                                        {% for produCesta in cesta %}
+                                                            <tr>
+                                                                <td class="checkout-product">
+                                                                    <div class="product-cart d-flex">
+                                                                        <div class="product-content media-body">
+                                                                            <h5 class="title">
+                                                                                <a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
+                                                                            </h5>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <a class="delete" href="javascript:void(0)">
+                                                                                        <i class="mdi mdi-delete"></i>
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="product-content media-body">
-                                                                        <h5 class="title">
-                                                                            <a href="product-details-page.html">Hollow Port</a>
-                                                                        </h5>
-                                                                        <ul>
-                                                                            <li><span>Brown</span></li>
-                                                                            <li><span>XL</span></li>
-                                                                            <li>
-                                                                                <a class="delete" href="javascript:void(0)">
-                                                                                    <i class="mdi mdi-delete"></i>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
+                                                                </td>
+                                                                <td class="checkout-quantity">
+                                                                    <div class="product-quantity d-inline-flex">
+                                                                        <form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
+                                                                            <input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
+                                                                            <input type='hidden' name='codProduc' value= "{{ produCesta.producto.getCodigo() }}" />
+                                                                        </form>
                                                                     </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="checkout-quantity">
-                                                                <div class="product-quantity d-inline-flex">
-                                                                    <button type="button" id="sub" class="sub">
-                                                                        <i class="mdi mdi-minus"></i>
-                                                                    </button>
-                                                                    <input type="text" value="1">
-                                                                    <button type="button" id="add" class="add">
-                                                                        <i class="mdi mdi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </td>
-                                                            <td class="checkout-price">
-                                                                <p class="price">$36.00</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="checkout-product">
-                                                                <div class="product-cart d-flex">
-                                                                    <div class="product-thumb">
-                                                                        <img src="images/product-cart/product-2.png"
-                                                                            alt="Product">
-                                                                    </div>
-                                                                    <div class="product-content media-body">
-                                                                        <h5 class="title">
-                                                                            <a href="product-details-page.html">Mist Black Triblend</a>
-                                                                        </h5>
-                                                                        <ul>
-                                                                            <li><span>Brown</span></li>
-                                                                            <li><span>XL</span></li>
-                                                                            <li>
-                                                                                <a class="delete" href="javascript:void(0)">
-                                                                                    <i class="mdi mdi-delete"></i>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="checkout-quantity">
-                                                                <div class="product-quantity d-inline-flex">
-                                                                    <button type="button" id="sub" class="sub">
-                                                                        <i class="mdi mdi-minus"></i>
-                                                                    </button>
-                                                                    <input type="text" value="1">
-                                                                    <button type="button" id="add" class="add">
-                                                                        <i class="mdi mdi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </td>
-                                                            <td class="checkout-price">
-                                                                <p class="price">$36.00</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="checkout-product">
-                                                                <div class="product-cart d-flex">
-                                                                    <div class="product-thumb">
-                                                                        <img src="images/product-cart/product-3.png"
-                                                                            alt="Product">
-                                                                    </div>
-                                                                    <div class="product-content media-body">
-                                                                        <h5 class="title">
-                                                                            <a href="product-details-page.html">Realm Bone</a>
-                                                                        </h5>
-                                                                        <ul>
-                                                                            <li><span>Brown</span></li>
-                                                                            <li><span>XL</span></li>
-                                                                            <li>
-                                                                                <a class="delete" href="javascript:void(0)">
-                                                                                    <i class="mdi mdi-delete"></i>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="checkout-quantity">
-                                                                <div class="product-quantity d-inline-flex">
-                                                                    <button type="button" id="sub" class="sub">
-                                                                        <i class="mdi mdi-minus"></i>
-                                                                    </button>
-                                                                    <input type="text" value="1">
-                                                                    <button type="button" id="add" class="add">
-                                                                        <i class="mdi mdi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </td>
-                                                            <td class="checkout-price">
-                                                                <p class="price">$36.00</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="checkout-product">
-                                                                <div class="product-cart d-flex">
-                                                                    <div class="product-thumb">
-                                                                        <img src="images/product-cart/product-4.png"
-                                                                            alt="Product">
-                                                                    </div>
-                                                                    <div class="product-content media-body">
-                                                                        <h5 class="title">
-                                                                            <a href="product-details-page.html">Circular Sienna</a>
-                                                                        </h5>
-                                                                        <ul>
-                                                                            <li><span>Brown</span></li>
-                                                                            <li><span>XL</span></li>
-                                                                            <li>
-                                                                                <a class="delete" href="javascript:void(0)">
-                                                                                    <i class="mdi mdi-delete"></i>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="checkout-quantity">
-                                                                <div class="product-quantity d-inline-flex">
-                                                                    <button type="button" id="sub" class="sub">
-                                                                        <i class="mdi mdi-minus"></i>
-                                                                    </button>
-                                                                    <input type="text" value="1">
-                                                                    <button type="button" id="add" class="add">
-                                                                        <i class="mdi mdi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </td>
-                                                            <td class="checkout-price">
-                                                                <p class="price">$36.00</p>
-                                                            </td>
-                                                        </tr>
+                                                                </td>
+                                                                <td class="checkout-price">
+                                                                    <p class="price">{{ produCesta.producto.getPvp() }}€</p>
+                                                                </td>
+                                                            </tr>
+                                                        {% endfor %}
                                                     </tbody>
                                                 </table>
                                             </div>
-    
+
                                             <div class="checkout-footer">
                                                 <div class="checkout-sub-total d-flex justify-content-between">
                                                     <p class="value">Subtotal Price:</p>
-                                                    <p class="price">$144</p>
+                                                    <p class="price">{{ precioCesta }}€</p>
                                                 </div>
                                                 <div class="checkout-btn">
-                                                    <a href="cart-page.html" class="main-btn primary-btn-border">Ver Carro</a>
+                                                    <a href="cart-page.html" class="main-btn primary-btn-border">View
+                                                                                                                                                                    Cart</a>
+                                                    <a href="checkout-page.html" class="main-btn primary-btn">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -617,11 +369,13 @@
                         </td>
                         <td>{{ producto.codigo }}</td>
                         <td></td>
-                        <td></td>
+                        <td>{{ producto.pp }}€</td>
                         <td>{{ producto.pvp }}€</td>
                         <td>                            
                             <button type="button" class="btn btn-success">Editar</button>
-                            <button type="button" class="btn btn-danger">Borrar</button>
+                            <form id="form_seleccion" action="{{ path('eliminarProductos', {'idProducto': producto.getId()}) }}" method="post">
+                                <input type="submit" class="btn btn-danger" value="Eliminar"/>
+                            </form>
                         </td>
                     </tr>
                 {% endfor %}
@@ -754,13 +508,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="footer-copyright text-center">
-				<p>Developed by
-					<a href="https://graygrids.com/" rel="nofollow" target="_blank">GrayGrids</a>. Basesd on
-					<a href="https://ecommercehtml.com/" rel="nofollow" target="_blank">eCommerceHTML</a>
-				</p>
 			</div>
 		</div>
 	</section>

@@ -20,6 +20,9 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+#map {
+  height: 100%;
+}
 
 img {
   max-width: 100%;
@@ -1385,18 +1388,6 @@ p {
   color: #000;
   display: block;
   position: relative
-}
-
-.filter-style-1 .filter-title .title::before {
-  position: absolute;
-  content: "\F0143";
-  font-family: material design icons;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 0;
-  font-size: 24px;
-  color: #542ded
 }
 
 .filter-style-1 .filter-title .title.collapsed::before {

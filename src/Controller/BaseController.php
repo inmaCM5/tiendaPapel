@@ -15,8 +15,8 @@ use Symfony\Component\Routing\Annotation\Route;
 class BaseController extends AbstractController
 {
 #[Route('/index', name:'index')]
-function index(ManagerRegistry $doctrine): Response
-    {
+function index(ManagerRegistry $doctrine, CestaCompra $cesta): Response
+{
     $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
     $categorias=[];
 
@@ -26,39 +26,56 @@ function index(ManagerRegistry $doctrine): Response
     }
 
     return $this->render('index.html.twig',
-        array('categorias' => $categorias)
+        array('categorias' => $categorias, 'cesta' => $cesta->get_productos(), 
+        'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta())
     );
 }
 
-#[Route('/productos/{categoria}', name:'productos')]
-function productos(ManagerRegistry $doctrine, $categoria): Response
-    {
-    $categoriasSecundarias = $doctrine->getRepository(CategoriasSecundarias::class)->findBy(['codigoCatPrincipalSeC' => $categoria]);
-    $productos = $doctrine->getRepository(Productos::class)->findBy(['categoria' => $categoriasSecundarias]);
-    $categorias = $doctrine->getRepository(CategoriasPrincipales::class)->findAll();
-    $categoriasSecundarias = $doctrine->getRepository(CategoriasSecundarias::class)->findAll();
+#[Route('/productos/{categoria}', name:'productosCat')]
+function productos(ManagerRegistry $doctrine, $categoria, CestaCompra $cesta): Response
+{
+    $productos = $doctrine->getRepository(Productos::class)->findBy(['categoria' => $categoria]);
+    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
+    $categorias=[];
+
+    foreach ($categoriaPrincipal as $categoria) {
+        $categorias[$categoria->getId()][0]= $categoria;
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
+    }
 
     return $this->render('productos.html.twig',
-        array('productos' => $productos, 'categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias));
+        array('categorias' => $categorias, 'productos' => $productos,
+        'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
 }
 
 #[Route('/detalles/{producto}', name:'detalles')]
-function detalleProducto(ManagerRegistry $doctrine, $producto): Response
-    {
+function detalleProducto(ManagerRegistry $doctrine, $producto, CestaCompra $cesta): Response
+{
     $producto = $doctrine->getRepository(Productos::class)->find($producto);
-    $categorias = $doctrine->getRepository(CategoriasPrincipales::class)->findAll();
-    $categoriasSecundarias = $doctrine->getRepository(CategoriasSecundarias::class)->findAll();
+    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
+    $categorias=[];
+
+    foreach ($categoriaPrincipal as $categoria) {
+        $categorias[$categoria->getId()][0]= $categoria;
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
+    }
 
     return $this->render('detallesProducto.html.twig',
-        array('producto' => $producto, 'categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias));
+        array('producto' => $producto, 'categorias' => $categorias,
+        'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
 }
 
 #[Route('/productos', name:'productos')]
 function productosGlobales(ManagerRegistry $doctrine, CestaCompra $cesta): Response
-    {
+{
     $productos = $doctrine->getRepository(Productos::class)->findAll();
-    $categorias = $doctrine->getRepository(CategoriasPrincipales::class)->findAll();
-    $categoriasSecundarias = $doctrine->getRepository(CategoriasSecundarias::class)->findAll();
+    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
+    $categorias=[];
+
+    foreach ($categoriaPrincipal as $categoria) {
+        $categorias[$categoria->getId()][0]= $categoria;
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
+    }
 
     $arrayProductos = array();
 
@@ -68,31 +85,41 @@ function productosGlobales(ManagerRegistry $doctrine, CestaCompra $cesta): Respo
     }
 
     return $this->render('productos.html.twig',
-        array('productos' => array_unique($arrayProductos, SORT_REGULAR), 'categorias' => $categorias, 
-        'categoriasSecundarias' => $categoriasSecundarias, 'cesta' => $cesta->get_productos(), 
-        'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
+        array('productos' => array_unique($arrayProductos, SORT_REGULAR), 'categorias' => $categorias,
+        'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
 }
 
 #[Route('/contacto', name: 'contacto')]
-public function contacto(ManagerRegistry $doctrine): Response
+public function contacto(ManagerRegistry $doctrine, CestaCompra $cesta): Response
 {
-    $categorias = $doctrine->getRepository(CategoriasPrincipales::class)->findAll();    
-    $categoriasSecundarias = $doctrine->getRepository(CategoriasSecundarias::class)->findAll();
+    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
+    $categorias=[];
+
+    foreach ($categoriaPrincipal as $categoria) {
+        $categorias[$categoria->getId()][0]= $categoria;
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
+    }
 
     return $this->render('contacto.html.twig',
-        array('categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias)
-    );
+        array('categorias' => $categorias, 'cesta' => $cesta->get_productos(), 
+        'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
 }
 
 #[Route('/adminProductos', name:'adminProductos')]
-function administrarProductos(ManagerRegistry $doctrine): Response
+function administrarProductos(ManagerRegistry $doctrine, CestaCompra $cesta): Response
     {
     $productos = $doctrine->getRepository(Productos::class)->findAll();
-    $categorias = $doctrine->getRepository(CategoriasPrincipales::class)->findAll();
-    $categoriasSecundarias = $doctrine->getRepository(CategoriasSecundarias::class)->findAll();
+    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
+    $categorias=[];
+
+    foreach ($categoriaPrincipal as $categoria) {
+        $categorias[$categoria->getId()][0]= $categoria;
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
+    }
 
     return $this->render('adminProductos.html.twig',
-        array('productos' => $productos, 'categorias' => $categorias, 'categoriasSecundarias' => $categoriasSecundarias));
+        array('productos' => $productos, 'categorias' => $categorias,
+        'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
 }
 
 #[Route('/anadir/{idProducto}', name:'anadir')]
@@ -107,5 +134,21 @@ public function cambiarUnidades(ManagerRegistry $doctrine, $idProducto, CestaCom
     $producto = $doctrine->getRepository(Productos::class)->find($idProducto);
     $cesta->cambiar_unidades($producto, $_POST['unidades']);
     return $this->redirectToRoute('productos');
+}
+
+#[Route('/eliminarProductosCesta/{idProducto}', name:'eliminarProductosCesta')]
+public function eliminarProductosCesta(ManagerRegistry $doctrine, $idProducto, CestaCompra $cesta): Response {
+    $producto = $doctrine->getRepository(Productos::class)->find($idProducto);
+    $cesta->eliminar_productos($producto);
+    return $this->redirectToRoute('productos');
+}
+
+#[Route('/eliminarProductos/{idProducto}', name:'eliminarProductos')]
+public function eliminarProductos(ManagerRegistry $doctrine, $idProducto, CestaCompra $cesta): Response {
+    $entityManager = $doctrine->getManager();
+    $producto = $doctrine->getRepository(Productos::class)->find($idProducto);
+    $entityManager->remove($producto);
+    $flush = $entityManager->flush();
+    return $this->redirectToRoute('adminProductos');
 }
 }

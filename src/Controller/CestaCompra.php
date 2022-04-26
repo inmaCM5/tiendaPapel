@@ -33,7 +33,7 @@ class CestaCompra {
         $this->guarda_cesta();
     }
     
-    public function eliminar_productos($producto, $unidades) {
+    public function eliminar_productos($producto) {
         $codProd = $producto->getCodigo();
         if (array_key_exists($codProd, $this->cesta)) {
                 unset($this->cesta[$codProd]);

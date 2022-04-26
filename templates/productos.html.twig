@@ -59,7 +59,6 @@
 						class="col-3">
 						<!-- navbar cart start -->
 						<div class="navbar-cart">
-						{# <img src="{{ producto.displayImagen() }}" alt="product"> #}
 							<a class="icon-btn primary-icon-text icon-text-btn" href="javascript:void(0)">
 								<img src="images/icon-svg/cart-1.svg" alt="Icon">
 								<span class="icon-text text-style-1">{{ unidades }}</span>
@@ -71,16 +70,17 @@
 										<h6 class="title">Shopping Cart</h6>
 									</div>
 
-									<div class="checkout-table table-responsive">
+									<div class="checkout-table">
 										<table class="table">
 											<tbody>
+													
 												{% for produCesta in cesta %}
 													<tr>
 														<td class="checkout-product">
 															<div class="product-cart d-flex">
 																<div class="product-content media-body">
 																	<h5 class="title">
-																		<a href="product-details-page.html">{{ produCesta.producto.getCodigo() }}</a>
+																		<a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
 																	</h5>
 																	<ul>
 																		<li>
@@ -94,20 +94,14 @@
 														</td>
 														<td class="checkout-quantity">
 															<div class="product-quantity d-inline-flex">
-																<button type="button" id="sub" class="sub">
-																	<i class="mdi mdi-minus"></i>
-																</button>
-																<form id="form_seleccion" action="{{ path('anadir', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-																	<input type="number" name="unidades" value="{{ produCesta.unidades }}">
+																<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
+																	<input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
 																	<input type='hidden' name='codProduc' value= "{{ produCesta.producto.getCodigo() }}" />
 																</form>
-																<button type="button" id="add" class="add">
-																	<i class="mdi mdi-plus"></i>
-																</button>
 															</div>
 														</td>
 														<td class="checkout-price">
-															<p class="price">$36.00</p>
+															<p class="price">{{ produCesta.producto.getPvp() }}€</p>
 														</td>
 													</tr>
 												{% endfor %}
@@ -118,7 +112,7 @@
 									<div class="checkout-footer">
 										<div class="checkout-sub-total d-flex justify-content-between">
 											<p class="value">Subtotal Price:</p>
-											<p class="price">$144</p>
+											<p class="price">{{ precioCesta }}€</p>
 										</div>
 										<div class="checkout-btn">
 											<a href="cart-page.html" class="main-btn primary-btn-border">View Cart</a>
@@ -220,31 +214,19 @@
 										<li>
 											<div class="mega-dropdown-menu">
 												<ul class="container mega-dropdown d-flex flex-wrap">
-													{% for categoria in categorias %}
-														<li class="mega-dropdown-list menu-item-has-children">
-															<h6 class="heading-6 font-weight-500 mega-title">{{ categoria.nombreCatPrincipal }}
-															</h6>
-															<ul>
-																{% for categoriasSec in categoriasSecundarias %}
-																	<li>
-																		<a href="#">{{ categoriasSec.nombreCatSecun }}</a>
-																	</li>
-																{% endfor %}
-															</ul>
-														</li>
-													{% endfor %}
-													<li class="mega-dropdown-list menu-item-has-children">
-														<h6 class="heading-6 font-weight-500 mega-title">Accessories
+												{% for lista in categorias %}
+													<li class="mega-dropdown-list menu-item-has-children">  
+														<h6 class="heading-6 font-weight-500 mega-title">{{ lista[0].nombre}}
 														</h6>
 														<ul>
-															<li><a href="category.html">Hoodies & Sweatshirts</a></li>
-															<li><a href="category.html">Jackets & Coats</a></li>
-															<li><a href="category.html">Pants</a></li>
-															<li><a href="category.html">Jeans</a></li>
-															<li><a href="category.html">Tops & Tees</a></li>
-															<li><a href="category.html">Casual Shorts</a></li>
+														{% for categoriaSecu in lista[1] %}
+															<li>
+																<a href="{{ path('productosCat', {'categoria': categoriaSecu.getId()}) }}">{{ categoriaSecu.nombre }}</a> 
+															</li>
+														{% endfor %}
 														</ul>
 													</li>
+												{% endfor %}
 												</ul>
 											</div>
 										</li>
@@ -256,9 +238,6 @@
 								</li>
 								<li>
 									<a href="#">Imprimir apuntes</a>
-								</li>
-								<li>
-									<a href="#">Accessories</a>
 								</li>
 								{% if is_granted('ROLE_ADMIN') %}
 									<li class="menu-item-has-children">
@@ -351,8 +330,7 @@
 												<p class="price">{{ precioCesta }}€</p>
 											</div>
 											<div class="checkout-btn">
-												<a href="cart-page.html" class="main-btn primary-btn-border">View
-																										                                                        Cart</a>
+												<a href="cart-page.html" class="main-btn primary-btn-border">View Cart</a>
 												<a href="checkout-page.html" class="main-btn primary-btn">Checkout</a>
 											</div>
 										</div>
@@ -401,15 +379,28 @@
 						<h4 class="title">Categorías</h4>
 					</div>
 					<div class="filter-type">
-						<ul>
-							<li>
-								<div class="type-check">
-									<a class="link-dark" href="#">Categoría1</a>
-								</div>
-							</li>
-						</ul>
-					</div>
+						<div class="accordion" id="accordionExample">
+							{% for lista in categorias %}
+								<div class="card">
+									<div class="card-header" id="headingOne">
+										<h2 class="mb-0">
+											<button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											{{ lista[0].nombre}}
+											</button>
+										</h2>
+									</div>
 
+									{% for categoriaSecu in lista[1] %}
+										<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+											<div class="card-body">
+												<a class="link-dark" href="#">{{ categoriaSecu.nombre }}</a> 
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+							{% endfor %}						
+						</div>
+					</div>
 				</div>				
 			</div>
 			<div class="col-lg-8">
@@ -571,34 +562,6 @@
 	</div>
 </section>
 
-<section class="subscribe-section pt-70 pb-70 bg-primary-4">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 mx-auto">
-				<div class="heading text-center">
-					<h1 class="heading-1 font-weight-700 text-white mb-10">Subscribe Newsletter</h1>
-					<p class="gray-3">Be the first to know when new products drop and get behind-the-scenes content
-						straight.</p>
-				</div>
-				<div class="subscribe-form">
-					<form action="#" class="has-validation-callback">
-						<div class="single-form form-default">
-							<label class="text-white-50">Enter your email address</label>
-							<div class="form-input">
-								<input type="text" placeholder="user@email.com">
-								<i class="mdi mdi-account"></i>
-								<button class="main-btn primary-btn">
-									<span class="mdi mdi-send"></span>
-								</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 <section class="footer-style-3 pt-100 pb-100">
 	<div class="container">
 		<div class="footer-top">
@@ -724,13 +687,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="footer-copyright text-center">
-			<p>Developed by
-				<a href="https://graygrids.com/" rel="nofollow" target="_blank">GrayGrids</a>. Basesd on
-				<a href="https://ecommercehtml.com/" rel="nofollow" target="_blank">eCommerceHTML</a>
-			</p>
 		</div>
     </div>
 </section>

@@ -36,6 +36,9 @@ class Productos
     #[ORM\ManyToOne(targetEntity: Categoria::class, inversedBy: 'productos')]
     #[ORM\JoinColumn(nullable: false)]
     private $categoria;
+
+    #[ORM\Column(type: 'integer')]
+    private $unidades;
     public function displayImagen()
     {
         if(null === $this->rawImagen) {
@@ -136,6 +139,18 @@ class Productos
     public function setCategoria(?categoria $categoria): self
     {
         $this->categoria = $categoria;
+
+        return $this;
+    }
+
+    public function getUnidades(): ?int
+    {
+        return $this->unidades;
+    }
+
+    public function setUnidades(int $unidades): self
+    {
+        $this->unidades = $unidades;
 
         return $this;
     }
