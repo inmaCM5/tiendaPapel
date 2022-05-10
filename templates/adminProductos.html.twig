@@ -347,12 +347,13 @@
         <table class="table table-striped contact-style-2">
             <thead>
                 <tr>
-                    <a href="#" class="btn btn-primary float-right mb-4">Añadir producto</a>
+                    <a href="{{ path('anadirProducto') }}" class="btn btn-primary float-right mb-4">Añadir producto</a>
                 </tr>
                 <tr>
                     <th>Producto</th>
                     <th>Código</th>
                     <th>Unidades</th>
+                    <th>Proveedor</th>
                     <th>Precio proveedor</th>
                     <th>PVP</th>
                     <th>Acciones</th>
@@ -368,12 +369,13 @@
                             {{ producto.nombre }}                       
                         </td>
                         <td>{{ producto.codigo }}</td>
-                        <td></td>
+                        <td>{{ producto.unidades }}</td>
+                        <td>{{ producto.proveedor }}</td>
                         <td>{{ producto.pp }}€</td>
                         <td>{{ producto.pvp }}€</td>
                         <td>                            
                             <button type="button" class="btn btn-success">Editar</button>
-                            <form id="form_seleccion" action="{{ path('eliminarProductos', {'idProducto': producto.getId()}) }}" method="post">
+                            <form id="form_seleccion" class="d-inline" action="{{ path('eliminarProductos', {'idProducto': producto.getId()}) }}" method="post">
                                 <input type="submit" class="btn btn-danger" value="Eliminar"/>
                             </form>
                         </td>

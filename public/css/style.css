@@ -930,6 +930,10 @@ p {
                            Pruebas
 ==================================================================*/
 
+label {
+  color: black;
+}
+
 .checkout-style-2 {
   -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, .32);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, .32);

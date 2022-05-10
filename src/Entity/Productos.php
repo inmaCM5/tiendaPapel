@@ -39,6 +39,9 @@ class Productos
 
     #[ORM\Column(type: 'integer')]
     private $unidades;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $proveedor;
     public function displayImagen()
     {
         if(null === $this->rawImagen) {
@@ -151,6 +154,18 @@ class Productos
     public function setUnidades(int $unidades): self
     {
         $this->unidades = $unidades;
+
+        return $this;
+    }
+
+    public function getProveedor(): ?string
+    {
+        return $this->proveedor;
+    }
+
+    public function setProveedor(string $proveedor): self
+    {
+        $this->proveedor = $proveedor;
 
         return $this;
     }

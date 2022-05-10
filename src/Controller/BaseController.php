@@ -107,7 +107,7 @@ public function contacto(ManagerRegistry $doctrine, CestaCompra $cesta): Respons
 
 #[Route('/adminProductos', name:'adminProductos')]
 function administrarProductos(ManagerRegistry $doctrine, CestaCompra $cesta): Response
-    {
+{
     $productos = $doctrine->getRepository(Productos::class)->findAll();
     $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
     $categorias=[];
@@ -118,6 +118,23 @@ function administrarProductos(ManagerRegistry $doctrine, CestaCompra $cesta): Re
     }
 
     return $this->render('adminProductos.html.twig',
+        array('productos' => $productos, 'categorias' => $categorias,
+        'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
+}
+
+#[Route('/anadirProducto', name:'anadirProducto')]
+function anadirProducto(ManagerRegistry $doctrine, CestaCompra $cesta): Response
+{
+    $productos = $doctrine->getRepository(Productos::class)->findAll();
+    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
+    $categorias=[];
+
+    foreach ($categoriaPrincipal as $categoria) {
+        $categorias[$categoria->getId()][0]= $categoria;
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
+    }
+
+    return $this->render('anadirProducto.html.twig',
         array('productos' => $productos, 'categorias' => $categorias,
         'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
 }
@@ -144,11 +161,11 @@ public function eliminarProductosCesta(ManagerRegistry $doctrine, $idProducto, C
 }
 
 #[Route('/eliminarProductos/{idProducto}', name:'eliminarProductos')]
-public function eliminarProductos(ManagerRegistry $doctrine, $idProducto, CestaCompra $cesta): Response {
+public function eliminarProductos(ManagerRegistry $doctrine, $idProducto): Response {
     $entityManager = $doctrine->getManager();
     $producto = $doctrine->getRepository(Productos::class)->find($idProducto);
     $entityManager->remove($producto);
-    $flush = $entityManager->flush();
+    $entityManager->flush();
     return $this->redirectToRoute('adminProductos');
 }
 }
