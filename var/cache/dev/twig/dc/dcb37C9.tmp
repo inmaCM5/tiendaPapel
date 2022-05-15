@@ -1,0 +1,1013 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* productos.html.twig */
+class __TwigTemplate_1a77e5c72ea329f426875a01004adeba extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'stylesheets' => [$this, 'block_stylesheets'],
+            'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
+        ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "base.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "productos.html.twig"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "productos.html.twig"));
+
+        $this->parent = $this->loadTemplate("base.html.twig", "productos.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 3
+    public function block_stylesheets($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 4
+        echo "\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
+\t<link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css\" rel=\"stylesheet\">
+\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css\">
+\t<link href=\"";
+        // line 7
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/slick.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+\t<link href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/slick-theme.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+\t<link href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 12
+    public function block_body($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 13
+        echo "\t<!-- Top bar Start -->
+\t<div class=\"top-bar\">
+\t\t<div class=\"container-fluid\">
+\t\t\t<div class=\"row\">
+\t\t\t\t<div class=\"col-sm-6\">
+\t\t\t\t\t<i class=\"fa fa-envelope\"></i>
+\t\t\t\t\timpresionacopisteria@gmail.comgital.es
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-sm-6\">
+\t\t\t\t\t<i class=\"fa fa-phone-alt\"></i>
+\t\t\t\t\t+34 684 00 10 65
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+\t<!-- Top bar End -->
+
+\t<!-- Nav Bar Start -->
+\t<div class=\"nav\">
+\t\t<div class=\"container-fluid\">
+\t\t\t<nav class=\"navbar navbar-expand-md bg-dark navbar-dark\">
+\t\t\t\t<a href=\"#\" class=\"navbar-brand\">MENU</a>
+\t\t\t\t<button type=\"button\" class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\">
+\t\t\t\t\t<span class=\"navbar-toggler-icon\"></span>
+\t\t\t\t</button>
+
+\t\t\t\t<div class=\"collapse navbar-collapse justify-content-between\" id=\"navbarCollapse\">
+\t\t\t\t\t<div class=\"navbar-nav mr-auto\">
+\t\t\t\t\t\t<div class=\"navbar-nav ml-auto\" id=\"navbarNavDarkDropdown\">
+\t\t\t\t\t\t\t<ul class=\"navbar-nav\">
+\t\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDarkDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t\t\tCategorías
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDarkDropdownMenuLink\">
+\t\t\t\t\t\t\t\t\t\t";
+        // line 48
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["categorias"]) || array_key_exists("categorias", $context) ? $context["categorias"] : (function () { throw new RuntimeError('Variable "categorias" does not exist.', 48, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["categoria"]) {
+            // line 49
+            echo "\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 50
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productos", ["categoria" => twig_get_attribute($this->env, $this->source, $context["categoria"], "getId", [], "method", false, false, false, 50)]), "html", null, true);
+            echo "\" class=\"dropdown-item\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categoria"], "nombreCatPrincipal", [], "any", false, false, false, 50), "html", null, true);
+            echo "</a>
+\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categoria'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 53
+        echo "\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<a href=\"#\" class=\"nav-item nav-link\">Productos</a>
+\t\t\t\t\t\t<a href=\"cart.html\" class=\"nav-item nav-link\">Cart</a>
+\t\t\t\t\t\t<a href=\"checkout.html\" class=\"nav-item nav-link\">Checkout</a>
+\t\t\t\t\t\t<a href=\"my-account.html\" class=\"nav-item nav-link\">My Account</a>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"navbar-nav ml-auto\" id=\"navbarNavDarkDropdown\">
+\t\t\t\t\t\t<ul class=\"navbar-nav\">
+\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDarkDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t\tCuenta
+\t\t\t\t\t\t\t\t\t<i class=\"bi bi-person-circle\"></i>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDarkDropdownMenuLink\">
+\t\t\t\t\t\t\t\t\t";
+        // line 70
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 70, $this->source); })()), "user", [], "any", false, false, false, 70)) {
+            // line 71
+            echo "\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 72
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+            echo "\" class=\"dropdown-item\">Cerrar sesión
+\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 73
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 73, $this->source); })()), "user", [], "any", false, false, false, 73), "username", [], "any", false, false, false, 73), "html", null, true);
+            echo "</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t";
+        } else {
+            // line 76
+            echo "\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 77
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+            echo "\" class=\"dropdown-item\">Iniciar sesión</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t";
+        }
+        // line 80
+        echo "\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">Registrarse</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</nav>
+\t</div>
+</div>
+<div class=\"bottom-bar\">
+\t<div class=\"container-fluid\">
+\t\t<div class=\"row align-items-center\">
+\t\t\t<div class=\"col-md-3\">
+\t\t\t\t<div class=\"logo\">
+\t\t\t\t\t<a href=\"";
+        // line 97
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo "\">
+\t\t\t\t\t\t<img src=\"";
+        // line 98
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo.png"), "html", null, true);
+        echo "\" alt=\"Logo\">
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-md-6\">
+\t\t\t\t<div class=\"search\">
+\t\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t\t<button>
+\t\t\t\t\t\t<i class=\"fa fa-search\"></i>
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-md-3\">
+\t\t\t\t<div class=\"user\">
+\t\t\t\t\t<a href=\"wishlist.html\" class=\"btn wishlist\">
+\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>
+\t\t\t\t\t\t<span>(0)</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<a href=\"cart.html\" class=\"btn cart\">
+\t\t\t\t\t\t<i class=\"fa fa-shopping-cart\"></i>
+\t\t\t\t\t\t<span>(0)</span>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+</div>
+<!-- Bottom Bar End -->
+
+<!-- Breadcrumb Start -->
+<div class=\"breadcrumb-wrap\">
+\t<div class=\"container-fluid\">
+\t\t<ul class=\"breadcrumb\">
+\t\t\t<li class=\"breadcrumb-item\">
+\t\t\t\t<a href=\"#\">Home</a>
+\t\t\t</li>
+\t\t\t<li class=\"breadcrumb-item\">
+\t\t\t\t<a href=\"#\">Products</a>
+\t\t\t</li>
+\t\t\t<li class=\"breadcrumb-item active\">Product List</li>
+\t\t</ul>
+\t</div>
+</div>
+<!-- Breadcrumb End -->
+
+<!-- Product List Start -->
+<div class=\"product-view\">
+\t<div class=\"container-fluid\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-lg-8\">
+\t\t\t\t<div class=\"row\">
+\t\t\t\t\t<div class=\"col-md-12\">
+\t\t\t\t\t\t<div class=\"product-view-top\">
+\t\t\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t\t\t<div class=\"product-search\">
+\t\t\t\t\t\t\t\t\t\t<input type=\"email\" value=\"Search\">
+\t\t\t\t\t\t\t\t\t\t<button>
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-search\"></i>
+\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t\t\t<div class=\"product-short\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown-toggle\" data-toggle=\"dropdown\">Product short by</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-right\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">Newest</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">Popular</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">Most sale</a>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t\t\t<div class=\"product-price-range\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown-toggle\" data-toggle=\"dropdown\">Product price range</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-right\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$0 to \$50</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$51 to \$100</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$101 to \$150</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$151 to \$200</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$201 to \$250</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$251 to \$300</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$301 to \$350</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$351 to \$400</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$401 to \$450</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$451 to \$500</a>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+
+\t\t\t\t\t";
+        // line 195
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["productos"]) || array_key_exists("productos", $context) ? $context["productos"] : (function () { throw new RuntimeError('Variable "productos" does not exist.', 195, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["producto"]) {
+            // line 196
+            echo "\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<div class=\"product-item\">
+\t\t\t\t\t\t\t\t<div class=\"product-title\">
+\t\t\t\t\t\t\t\t\t<a href=\"#\">";
+            // line 199
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["producto"], "nombre", [], "any", false, false, false, 199), "html", null, true);
+            echo "</a>
+\t\t\t\t\t\t\t\t\t<div class=\"ratting\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"product-image\">
+\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\">
+\t\t\t\t\t\t\t\t\t\t<img style=\" width=400px;\" src=\"data:image/jpeg;base64,";
+            // line 210
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["producto"], "imagen", [], "any", false, false, false, 210), "html", null, true);
+            echo "\" alt=\"Product Image\">
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t<div class=\"product-action\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\">s
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-cart-plus\"></i>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-search\"></i>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"product-price\">
+\t\t\t\t\t\t\t\t\t<h3>
+\t\t\t\t\t\t\t\t\t\t<span>\$</span>99</h3>
+\t\t\t\t\t\t\t\t\t<a class=\"btn\" href=\"\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-shopping-cart\"></i>Buy Now</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['producto'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 233
+        echo "\t\t\t\t</div>
+
+\t\t\t\t<!-- Pagination Start -->
+\t\t\t\t<div class=\"col-md-12\">
+\t\t\t\t\t<nav aria-label=\"Page navigation example\">
+\t\t\t\t\t\t<ul class=\"pagination justify-content-center\">
+\t\t\t\t\t\t\t<li class=\"page-item disabled\">
+\t\t\t\t\t\t\t\t<a class=\"page-link\" href=\"#\" tabindex=\"-1\">Previous</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"page-item active\">
+\t\t\t\t\t\t\t\t<a class=\"page-link\" href=\"#\">1</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"page-item\">
+\t\t\t\t\t\t\t\t<a class=\"page-link\" href=\"#\">2</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"page-item\">
+\t\t\t\t\t\t\t\t<a class=\"page-link\" href=\"#\">3</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"page-item\">
+\t\t\t\t\t\t\t\t<a class=\"page-link\" href=\"#\">Next</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</nav>
+\t\t\t\t</div>
+\t\t\t\t<!-- Pagination Start -->
+\t\t\t</div>
+
+\t\t\t<!-- Side Bar Start -->
+\t\t\t<div class=\"col-lg-4 sidebar\">
+\t\t\t\t<div class=\"sidebar-widget category\">
+\t\t\t\t\t<h2 class=\"title\">Category</h2>
+\t\t\t\t\t<nav class=\"navbar bg-light\">
+\t\t\t\t\t\t<ul class=\"navbar-nav\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"#\">
+\t\t\t\t\t\t\t\t\t<i class=\"fa fa-female\"></i>Fashion & Beauty</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"#\">
+\t\t\t\t\t\t\t\t\t<i class=\"fa fa-child\"></i>Kids & Babies Clothes</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"#\">
+\t\t\t\t\t\t\t\t\t<i class=\"fa fa-tshirt\"></i>Men & Women Clothes</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"#\">
+\t\t\t\t\t\t\t\t\t<i class=\"fa fa-mobile-alt\"></i>Gadgets & Accessories</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"#\">
+\t\t\t\t\t\t\t\t\t<i class=\"fa fa-microchip\"></i>Electronics & Accessories</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</nav>
+\t\t\t\t</div>
+\t\t\t\t
+\t\t\t\t<div class=\"sidebar-widget brands\">
+\t\t\t\t\t<h2 class=\"title\">Our Brands</h2>
+\t\t\t\t\t<ul>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Nulla
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<span>(45)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Curabitur
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<span>(34)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Nunc
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<span>(67)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Ullamcorper</a>
+\t\t\t\t\t\t\t<span>(74)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Fusce
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<span>(89)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Sagittis</a>
+\t\t\t\t\t\t\t<span>(28)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t</ul>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<!-- Side Bar End -->
+\t\t</div>
+\t</div>
+</div>
+<!-- Product List End -->
+
+<div class=\"footer\">
+\t<div class=\"container-fluid\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-lg-3 col-md-6\">
+\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t<h2>Get in Touch</h2>
+\t\t\t\t\t<div class=\"contact-info\">
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t<i class=\"fa fa-map-marker\"></i>Pl. el Juncal, 6, B, 41005 Sevilla</p>
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t<i class=\"fa fa-envelope\"></i>impresionacopisteria@gmail.comgital.es</p>
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t<i class=\"fa fa-phone\"></i>+34 684 00 10 65</p>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t<div class=\"col-lg-3 col-md-6\">
+\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t<h2>Follow Us</h2>
+\t\t\t\t\t<div class=\"contact-info\">
+\t\t\t\t\t\t<div class=\"social\">
+\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
+\t\t\t\t\t\t\t\t<i class=\"fab fa-facebook-f\"></i>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
+\t\t\t\t\t\t\t\t<i class=\"fab fa-instagram\"></i>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t<div class=\"col-lg-3 col-md-6\">
+\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t<h2>Company Info</h2>
+\t\t\t\t\t<ul>
+\t\t\t\t\t\t<li><a href=\"#\">About Us</a></li>
+\t\t\t\t\t\t<li><a href=\"#\">Privacy Policy</a></li>
+\t\t\t\t\t\t<li><a href=\"#\">Terms & Condition</a></li>
+\t\t\t\t\t</ul>
+\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t<div class=\"col-lg-3 col-md-6\">
+\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t<h2>Purchase Info</h2>
+\t\t\t\t\t<ul>
+\t\t\t\t\t\t<li><a href=\"#\">Pyament Policy</a></li>
+\t\t\t\t\t\t<li><a href=\"#\">Shipping Policy</a></li>
+\t\t\t\t\t\t<li><a href=\"#\">Return Policy</a></li>
+\t\t\t\t\t</ul>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+
+\t\t<div class=\"row payment align-items-center\">
+\t\t\t<div class=\"col-md-6\">
+\t\t\t\t<div class=\"payment-method\">
+\t\t\t\t\t<h2>We Accept:</h2>
+\t\t\t\t\t<img src=\"img/payment-method.png\" alt=\"Payment Method\"/>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-md-6\">
+\t\t\t\t<div class=\"payment-security\">
+\t\t\t\t\t<h2>Secured By:</h2>
+\t\t\t\t\t<img src=\"img/godaddy.svg\" alt=\"Payment Security\"/>
+\t\t\t\t\t<img src=\"img/norton.svg\" alt=\"Payment Security\"/>
+\t\t\t\t\t<img src=\"img/ssl.svg\" alt=\"Payment Security\"/>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+</div>
+<a href=\"#\" class=\"back-to-top\">
+\t<i class=\"fa fa-chevron-up\"></i>
+</a>";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 406
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 407
+        echo "<script src=\"https://code.jquery.com/jquery-3.4.1.min.js\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
+<script src=\"js/easing.min.js\"></script>
+<script src=\"js/slick.min.js\"></script>
+<script src=\"js/main.js\"></script>";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "productos.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  571 => 407,  561 => 406,  378 => 233,  349 => 210,  335 => 199,  330 => 196,  326 => 195,  226 => 98,  222 => 97,  203 => 80,  197 => 77,  194 => 76,  188 => 73,  184 => 72,  181 => 71,  179 => 70,  160 => 53,  149 => 50,  146 => 49,  142 => 48,  105 => 13,  95 => 12,  83 => 9,  79 => 8,  75 => 7,  70 => 4,  60 => 3,  37 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
+\t<link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css\" rel=\"stylesheet\">
+\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css\">
+\t<link href=\"{{ asset('css/slick.css') }}\" rel=\"stylesheet\">
+\t<link href=\"{{ asset('css/slick-theme.css') }}\" rel=\"stylesheet\">
+\t<link href=\"{{ asset('css/style.css') }}\" rel=\"stylesheet\">
+{% endblock %}
+
+{% block body %}
+\t<!-- Top bar Start -->
+\t<div class=\"top-bar\">
+\t\t<div class=\"container-fluid\">
+\t\t\t<div class=\"row\">
+\t\t\t\t<div class=\"col-sm-6\">
+\t\t\t\t\t<i class=\"fa fa-envelope\"></i>
+\t\t\t\t\timpresionacopisteria@gmail.comgital.es
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-sm-6\">
+\t\t\t\t\t<i class=\"fa fa-phone-alt\"></i>
+\t\t\t\t\t+34 684 00 10 65
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+\t<!-- Top bar End -->
+
+\t<!-- Nav Bar Start -->
+\t<div class=\"nav\">
+\t\t<div class=\"container-fluid\">
+\t\t\t<nav class=\"navbar navbar-expand-md bg-dark navbar-dark\">
+\t\t\t\t<a href=\"#\" class=\"navbar-brand\">MENU</a>
+\t\t\t\t<button type=\"button\" class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\">
+\t\t\t\t\t<span class=\"navbar-toggler-icon\"></span>
+\t\t\t\t</button>
+
+\t\t\t\t<div class=\"collapse navbar-collapse justify-content-between\" id=\"navbarCollapse\">
+\t\t\t\t\t<div class=\"navbar-nav mr-auto\">
+\t\t\t\t\t\t<div class=\"navbar-nav ml-auto\" id=\"navbarNavDarkDropdown\">
+\t\t\t\t\t\t\t<ul class=\"navbar-nav\">
+\t\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDarkDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t\t\tCategorías
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDarkDropdownMenuLink\">
+\t\t\t\t\t\t\t\t\t\t{% for categoria in categorias %}
+\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('productos', {'categoria': categoria.getId()}) }}\" class=\"dropdown-item\">{{ categoria.nombreCatPrincipal }}</a>
+\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<a href=\"#\" class=\"nav-item nav-link\">Productos</a>
+\t\t\t\t\t\t<a href=\"cart.html\" class=\"nav-item nav-link\">Cart</a>
+\t\t\t\t\t\t<a href=\"checkout.html\" class=\"nav-item nav-link\">Checkout</a>
+\t\t\t\t\t\t<a href=\"my-account.html\" class=\"nav-item nav-link\">My Account</a>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"navbar-nav ml-auto\" id=\"navbarNavDarkDropdown\">
+\t\t\t\t\t\t<ul class=\"navbar-nav\">
+\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDarkDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t\tCuenta
+\t\t\t\t\t\t\t\t\t<i class=\"bi bi-person-circle\"></i>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDarkDropdownMenuLink\">
+\t\t\t\t\t\t\t\t\t{% if app.user %}
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('logout') }}\" class=\"dropdown-item\">Cerrar sesión
+\t\t\t\t\t\t\t\t\t\t\t\t{{ app.user.username }}</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('login') }}\" class=\"dropdown-item\">Iniciar sesión</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">Registrarse</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</nav>
+\t</div>
+</div>
+<div class=\"bottom-bar\">
+\t<div class=\"container-fluid\">
+\t\t<div class=\"row align-items-center\">
+\t\t\t<div class=\"col-md-3\">
+\t\t\t\t<div class=\"logo\">
+\t\t\t\t\t<a href=\"{{ path('index') }}\">
+\t\t\t\t\t\t<img src=\"{{ asset('img/logo.png') }}\" alt=\"Logo\">
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-md-6\">
+\t\t\t\t<div class=\"search\">
+\t\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t\t<button>
+\t\t\t\t\t\t<i class=\"fa fa-search\"></i>
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-md-3\">
+\t\t\t\t<div class=\"user\">
+\t\t\t\t\t<a href=\"wishlist.html\" class=\"btn wishlist\">
+\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>
+\t\t\t\t\t\t<span>(0)</span>
+\t\t\t\t\t</a>
+\t\t\t\t\t<a href=\"cart.html\" class=\"btn cart\">
+\t\t\t\t\t\t<i class=\"fa fa-shopping-cart\"></i>
+\t\t\t\t\t\t<span>(0)</span>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+</div>
+<!-- Bottom Bar End -->
+
+<!-- Breadcrumb Start -->
+<div class=\"breadcrumb-wrap\">
+\t<div class=\"container-fluid\">
+\t\t<ul class=\"breadcrumb\">
+\t\t\t<li class=\"breadcrumb-item\">
+\t\t\t\t<a href=\"#\">Home</a>
+\t\t\t</li>
+\t\t\t<li class=\"breadcrumb-item\">
+\t\t\t\t<a href=\"#\">Products</a>
+\t\t\t</li>
+\t\t\t<li class=\"breadcrumb-item active\">Product List</li>
+\t\t</ul>
+\t</div>
+</div>
+<!-- Breadcrumb End -->
+
+<!-- Product List Start -->
+<div class=\"product-view\">
+\t<div class=\"container-fluid\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-lg-8\">
+\t\t\t\t<div class=\"row\">
+\t\t\t\t\t<div class=\"col-md-12\">
+\t\t\t\t\t\t<div class=\"product-view-top\">
+\t\t\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t\t\t<div class=\"product-search\">
+\t\t\t\t\t\t\t\t\t\t<input type=\"email\" value=\"Search\">
+\t\t\t\t\t\t\t\t\t\t<button>
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-search\"></i>
+\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t\t\t<div class=\"product-short\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown-toggle\" data-toggle=\"dropdown\">Product short by</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-right\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">Newest</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">Popular</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">Most sale</a>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t\t\t<div class=\"product-price-range\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown-toggle\" data-toggle=\"dropdown\">Product price range</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-right\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$0 to \$50</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$51 to \$100</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$101 to \$150</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$151 to \$200</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$201 to \$250</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$251 to \$300</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$301 to \$350</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$351 to \$400</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$401 to \$450</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"dropdown-item\">\$451 to \$500</a>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+
+\t\t\t\t\t{% for producto in productos %}
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<div class=\"product-item\">
+\t\t\t\t\t\t\t\t<div class=\"product-title\">
+\t\t\t\t\t\t\t\t\t<a href=\"#\">{{ producto.nombre }}</a>
+\t\t\t\t\t\t\t\t\t<div class=\"ratting\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"product-image\">
+\t\t\t\t\t\t\t\t\t<a href=\"product-detail.html\">
+\t\t\t\t\t\t\t\t\t\t<img style=\" width=400px;\" src=\"data:image/jpeg;base64,{{ producto.imagen }}\" alt=\"Product Image\">
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t<div class=\"product-action\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\">s
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-cart-plus\"></i>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-search\"></i>
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"product-price\">
+\t\t\t\t\t\t\t\t\t<h3>
+\t\t\t\t\t\t\t\t\t\t<span>\$</span>99</h3>
+\t\t\t\t\t\t\t\t\t<a class=\"btn\" href=\"\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-shopping-cart\"></i>Buy Now</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t{% endfor %}
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Pagination Start -->
+\t\t\t\t<div class=\"col-md-12\">
+\t\t\t\t\t<nav aria-label=\"Page navigation example\">
+\t\t\t\t\t\t<ul class=\"pagination justify-content-center\">
+\t\t\t\t\t\t\t<li class=\"page-item disabled\">
+\t\t\t\t\t\t\t\t<a class=\"page-link\" href=\"#\" tabindex=\"-1\">Previous</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"page-item active\">
+\t\t\t\t\t\t\t\t<a class=\"page-link\" href=\"#\">1</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"page-item\">
+\t\t\t\t\t\t\t\t<a class=\"page-link\" href=\"#\">2</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"page-item\">
+\t\t\t\t\t\t\t\t<a class=\"page-link\" href=\"#\">3</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"page-item\">
+\t\t\t\t\t\t\t\t<a class=\"page-link\" href=\"#\">Next</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</nav>
+\t\t\t\t</div>
+\t\t\t\t<!-- Pagination Start -->
+\t\t\t</div>
+
+\t\t\t<!-- Side Bar Start -->
+\t\t\t<div class=\"col-lg-4 sidebar\">
+\t\t\t\t<div class=\"sidebar-widget category\">
+\t\t\t\t\t<h2 class=\"title\">Category</h2>
+\t\t\t\t\t<nav class=\"navbar bg-light\">
+\t\t\t\t\t\t<ul class=\"navbar-nav\">
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"#\">
+\t\t\t\t\t\t\t\t\t<i class=\"fa fa-female\"></i>Fashion & Beauty</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"#\">
+\t\t\t\t\t\t\t\t\t<i class=\"fa fa-child\"></i>Kids & Babies Clothes</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"#\">
+\t\t\t\t\t\t\t\t\t<i class=\"fa fa-tshirt\"></i>Men & Women Clothes</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"#\">
+\t\t\t\t\t\t\t\t\t<i class=\"fa fa-mobile-alt\"></i>Gadgets & Accessories</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"#\">
+\t\t\t\t\t\t\t\t\t<i class=\"fa fa-microchip\"></i>Electronics & Accessories</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</nav>
+\t\t\t\t</div>
+\t\t\t\t
+\t\t\t\t<div class=\"sidebar-widget brands\">
+\t\t\t\t\t<h2 class=\"title\">Our Brands</h2>
+\t\t\t\t\t<ul>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Nulla
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<span>(45)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Curabitur
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<span>(34)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Nunc
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<span>(67)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Ullamcorper</a>
+\t\t\t\t\t\t\t<span>(74)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Fusce
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<span>(89)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"#\">Sagittis</a>
+\t\t\t\t\t\t\t<span>(28)</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t</ul>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<!-- Side Bar End -->
+\t\t</div>
+\t</div>
+</div>
+<!-- Product List End -->
+
+<div class=\"footer\">
+\t<div class=\"container-fluid\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-lg-3 col-md-6\">
+\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t<h2>Get in Touch</h2>
+\t\t\t\t\t<div class=\"contact-info\">
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t<i class=\"fa fa-map-marker\"></i>Pl. el Juncal, 6, B, 41005 Sevilla</p>
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t<i class=\"fa fa-envelope\"></i>impresionacopisteria@gmail.comgital.es</p>
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t<i class=\"fa fa-phone\"></i>+34 684 00 10 65</p>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t<div class=\"col-lg-3 col-md-6\">
+\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t<h2>Follow Us</h2>
+\t\t\t\t\t<div class=\"contact-info\">
+\t\t\t\t\t\t<div class=\"social\">
+\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
+\t\t\t\t\t\t\t\t<i class=\"fab fa-facebook-f\"></i>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
+\t\t\t\t\t\t\t\t<i class=\"fab fa-instagram\"></i>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t<div class=\"col-lg-3 col-md-6\">
+\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t<h2>Company Info</h2>
+\t\t\t\t\t<ul>
+\t\t\t\t\t\t<li><a href=\"#\">About Us</a></li>
+\t\t\t\t\t\t<li><a href=\"#\">Privacy Policy</a></li>
+\t\t\t\t\t\t<li><a href=\"#\">Terms & Condition</a></li>
+\t\t\t\t\t</ul>
+\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t<div class=\"col-lg-3 col-md-6\">
+\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t<h2>Purchase Info</h2>
+\t\t\t\t\t<ul>
+\t\t\t\t\t\t<li><a href=\"#\">Pyament Policy</a></li>
+\t\t\t\t\t\t<li><a href=\"#\">Shipping Policy</a></li>
+\t\t\t\t\t\t<li><a href=\"#\">Return Policy</a></li>
+\t\t\t\t\t</ul>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+
+\t\t<div class=\"row payment align-items-center\">
+\t\t\t<div class=\"col-md-6\">
+\t\t\t\t<div class=\"payment-method\">
+\t\t\t\t\t<h2>We Accept:</h2>
+\t\t\t\t\t<img src=\"img/payment-method.png\" alt=\"Payment Method\"/>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-md-6\">
+\t\t\t\t<div class=\"payment-security\">
+\t\t\t\t\t<h2>Secured By:</h2>
+\t\t\t\t\t<img src=\"img/godaddy.svg\" alt=\"Payment Security\"/>
+\t\t\t\t\t<img src=\"img/norton.svg\" alt=\"Payment Security\"/>
+\t\t\t\t\t<img src=\"img/ssl.svg\" alt=\"Payment Security\"/>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+</div>
+<a href=\"#\" class=\"back-to-top\">
+\t<i class=\"fa fa-chevron-up\"></i>
+</a>{% endblock %}{% block javascripts %}
+<script src=\"https://code.jquery.com/jquery-3.4.1.min.js\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
+<script src=\"js/easing.min.js\"></script>
+<script src=\"js/slick.min.js\"></script>
+<script src=\"js/main.js\"></script>{% endblock %}", "productos.html.twig", "C:\\xampp\\htdocs\\tienda\\tiendaPapel\\templates\\productos.html.twig");
+    }
+}
