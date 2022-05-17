@@ -56,7 +56,7 @@ abstract class DoctrineType extends AbstractType implements ResetInterface
      */
     public static function createChoiceLabel(object $choice): string
     {
-        return (string) $choice;
+        return (string) $choice->getNombre();
     }
 
     /**

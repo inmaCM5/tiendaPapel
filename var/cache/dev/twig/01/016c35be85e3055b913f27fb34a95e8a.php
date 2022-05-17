@@ -160,7 +160,9 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
 \t\t\t\t\t\t\t<a href=\"";
         // line 54
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\"><img src=\"images/logo.svg\" alt=\"Logo\"></a>
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
+        echo "\" alt=\"Logo\" style=\"width: 150px;\"></a>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<!-- desktop logo Ends -->
 \t\t\t\t\t</div>
@@ -368,8 +370,8 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
         // line 205
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
-        echo "\" alt=\"Logo\"></a>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
+        echo "\" alt=\"Logo\" style=\"width: 150px;\"></a>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<!-- desktop logo Ends -->
 \t\t\t\t\t\t<!-- navbar menu Start -->
@@ -405,10 +407,12 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
             foreach ($context['_seq'] as $context["_key"] => $context["categoriaSecu"]) {
                 // line 227
                 echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
                 // line 228
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productosCat", ["categoria" => twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "getId", [], "method", false, false, false, 228)]), "html", null, true);
+                echo "\">";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "nombre", [], "any", false, false, false, 228), "html", null, true);
-                echo "</a> 
+                echo "</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
             }
@@ -746,44 +750,7 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
 </section>
 
 
-<section class=\"clients-logo-section pt-70 pb-70\">
-\t<div class=\"container\">
-\t\t<div class=\"row client-logo-active\">
-\t\t\t<div class=\"col-lg-3\">
-\t\t\t\t<div class=\"single-logo-wrapper\">
-\t\t\t\t\t<img src=\"";
-        // line 489
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/client-logo/uideck-logo.svg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<div class=\"col-lg-3\">
-\t\t\t\t<div class=\"single-logo-wrapper\">
-\t\t\t\t\t<img src=\"";
-        // line 494
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/client-logo/graygrids-logo.svg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<div class=\"col-lg-3\">
-\t\t\t\t<div class=\"single-logo-wrapper\">
-\t\t\t\t\t<img src=\"";
-        // line 499
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/client-logo/lineicons-logo.svg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<div class=\"col-lg-3\">
-\t\t\t\t<div class=\"single-logo-wrapper\">
-\t\t\t\t\t<img src=\"";
-        // line 504
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/client-logo/pagebulb-logo.svg"), "html", null, true);
-        echo "\" alt=\"\">
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-\t</div>
-</section>
+
 
 <section class=\"footer-style-3 pt-100 pb-100\">
 \t<div class=\"container\">
@@ -792,12 +759,12 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
 \t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
 \t\t\t\t\t<div class=\"footer-logo text-center\">
 \t\t\t\t\t\t<a href=\"";
-        // line 517
+        // line 492
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 518
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
+        // line 493
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
         echo "\" alt=\"\">
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</div>
@@ -928,7 +895,7 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
 
     }
 
-    // line 641
+    // line 616
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -938,52 +905,52 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 642
+        // line 617
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 643
+        // line 618
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 644
+        // line 619
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/jquery-3.5.1.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 645
+        // line 620
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/modernizr-3.7.1.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 646
+        // line 621
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/slick.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 647
+        // line 622
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-vj-accordion-steps.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 648
+        // line 623
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 649
+        // line 624
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.form-validator.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 650
+        // line 625
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.nice-select.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 651
+        // line 626
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.formatter.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 652
+        // line 627
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/count-up.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 653
+        // line 628
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -1007,7 +974,7 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
 
     public function getDebugInfo()
     {
-        return array (  987 => 653,  983 => 652,  979 => 651,  975 => 650,  971 => 649,  967 => 648,  963 => 647,  959 => 646,  955 => 645,  951 => 644,  947 => 643,  942 => 642,  932 => 641,  800 => 518,  796 => 517,  780 => 504,  772 => 499,  764 => 494,  756 => 489,  737 => 473,  732 => 471,  719 => 461,  714 => 459,  677 => 425,  670 => 421,  648 => 402,  635 => 392,  607 => 367,  574 => 337,  565 => 330,  555 => 326,  547 => 321,  543 => 320,  539 => 319,  522 => 305,  515 => 300,  511 => 299,  495 => 286,  491 => 285,  469 => 265,  458 => 257,  449 => 250,  447 => 249,  439 => 244,  427 => 234,  419 => 231,  410 => 228,  407 => 227,  403 => 226,  397 => 223,  394 => 222,  390 => 221,  369 => 205,  352 => 190,  345 => 186,  342 => 185,  336 => 182,  331 => 180,  328 => 179,  326 => 178,  309 => 164,  257 => 115,  248 => 108,  238 => 104,  230 => 99,  226 => 98,  222 => 97,  205 => 83,  198 => 78,  194 => 77,  178 => 64,  174 => 63,  162 => 54,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  954 => 628,  950 => 627,  946 => 626,  942 => 625,  938 => 624,  934 => 623,  930 => 622,  926 => 621,  922 => 620,  918 => 619,  914 => 618,  909 => 617,  899 => 616,  767 => 493,  763 => 492,  741 => 473,  736 => 471,  723 => 461,  718 => 459,  681 => 425,  674 => 421,  652 => 402,  639 => 392,  611 => 367,  578 => 337,  569 => 330,  559 => 326,  551 => 321,  547 => 320,  543 => 319,  526 => 305,  519 => 300,  515 => 299,  499 => 286,  495 => 285,  473 => 265,  462 => 257,  453 => 250,  451 => 249,  443 => 244,  431 => 234,  423 => 231,  412 => 228,  409 => 227,  405 => 226,  399 => 223,  396 => 222,  392 => 221,  371 => 205,  354 => 190,  347 => 186,  344 => 185,  338 => 182,  333 => 180,  330 => 179,  328 => 178,  311 => 164,  259 => 115,  250 => 108,  240 => 104,  232 => 99,  228 => 98,  224 => 97,  207 => 83,  200 => 78,  196 => 77,  180 => 64,  176 => 63,  162 => 54,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1065,7 +1032,7 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
 \t\t\t\t\t\tclass=\"col-6\">
 \t\t\t\t\t\t<!-- desktop logo Start -->
 \t\t\t\t\t\t<div class=\"mobile-logo text-center\">
-\t\t\t\t\t\t\t<a href=\"{{ path('index') }}\"><img src=\"images/logo.svg\" alt=\"Logo\"></a>
+\t\t\t\t\t\t\t<a href=\"{{ path('index') }}\"><img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"Logo\" style=\"width: 150px;\"></a>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<!-- desktop logo Ends -->
 \t\t\t\t\t</div>
@@ -1216,7 +1183,7 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
 \t\t\t\t\t\tclass=\"main-navbar d-lg-flex justify-content-between align-items-center\">
 \t\t\t\t\t\t<!-- desktop logo Start -->
 \t\t\t\t\t\t<div class=\"desktop-logo d-none d-lg-block\">
-\t\t\t\t\t\t\t<a href=\"{{ path('index') }}\"><img src=\"{{ asset('images/logo.svg') }}\" alt=\"Logo\"></a>
+\t\t\t\t\t\t\t<a href=\"{{ path('index') }}\"><img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"Logo\" style=\"width: 150px;\"></a>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<!-- desktop logo Ends -->
 \t\t\t\t\t\t<!-- navbar menu Start -->
@@ -1239,7 +1206,7 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% for categoriaSecu in lista[1] %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">{{ categoriaSecu.nombre }}</a> 
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('productosCat', {'categoria': categoriaSecu.getId()}) }}\">{{ categoriaSecu.nombre }}</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
@@ -1495,32 +1462,7 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
 </section>
 
 
-<section class=\"clients-logo-section pt-70 pb-70\">
-\t<div class=\"container\">
-\t\t<div class=\"row client-logo-active\">
-\t\t\t<div class=\"col-lg-3\">
-\t\t\t\t<div class=\"single-logo-wrapper\">
-\t\t\t\t\t<img src=\"{{ asset('images/client-logo/uideck-logo.svg') }}\" alt=\"\">
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<div class=\"col-lg-3\">
-\t\t\t\t<div class=\"single-logo-wrapper\">
-\t\t\t\t\t<img src=\"{{ asset('images/client-logo/graygrids-logo.svg') }}\" alt=\"\">
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<div class=\"col-lg-3\">
-\t\t\t\t<div class=\"single-logo-wrapper\">
-\t\t\t\t\t<img src=\"{{ asset('images/client-logo/lineicons-logo.svg') }}\" alt=\"\">
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<div class=\"col-lg-3\">
-\t\t\t\t<div class=\"single-logo-wrapper\">
-\t\t\t\t\t<img src=\"{{ asset('images/client-logo/pagebulb-logo.svg') }}\" alt=\"\">
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-\t</div>
-</section>
+
 
 <section class=\"footer-style-3 pt-100 pb-100\">
 \t<div class=\"container\">
@@ -1529,7 +1471,7 @@ class __TwigTemplate_bd813647ab0683350a49544a40f2d3eb extends Template
 \t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
 \t\t\t\t\t<div class=\"footer-logo text-center\">
 \t\t\t\t\t\t<a href=\"{{ path('index') }}\">
-\t\t\t\t\t\t\t<img src=\"{{ asset('images/logo.svg') }}\" alt=\"\">
+\t\t\t\t\t\t\t<img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</div>
 \t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>

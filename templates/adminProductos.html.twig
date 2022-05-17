@@ -47,7 +47,7 @@
                         <div class="col-6">
                             <!-- desktop logo Start -->
                             <div class="mobile-logo text-center">
-                                <a href="{{ path('index') }}"><img src="images/logo.svg" alt="Logo"></a>
+                                <a href="{{ path('index') }}"><img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="Logo" style="width: 150px;"></a>
                             </div>
                             <!-- desktop logo Ends -->
                         </div>
@@ -186,7 +186,7 @@
                         <nav class="main-navbar d-lg-flex justify-content-between align-items-center">
                             <!-- desktop logo Start -->
                             <div class="desktop-logo d-none d-lg-block">
-                                <a href="{{ path('index') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo"></a>
+                                <a href="{{ path('index') }}"><img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="Logo" style="width: 150px;"></a>
                             </div>
                             <!-- desktop logo Ends -->
                             <!-- navbar menu Start -->
@@ -206,7 +206,7 @@
                                                             <ul>
                                                             {% for categoriaSecu in lista[1] %}
                                                                 <li>
-                                                                    <a href="#">{{ categoriaSecu.nombre }}</a> 
+                                                                    <a href="{{ path('productosCat', {'categoria': categoriaSecu.getId()}) }}">{{ categoriaSecu.nombre }}</a>
                                                                 </li>
                                                             {% endfor %}
                                                             </ul>
@@ -347,7 +347,7 @@
         <table class="table table-striped contact-style-2">
             <thead>
                 <tr>
-                    <a href="{{ path('anadirProducto') }}" class="btn btn-primary float-right mb-4">Añadir producto</a>
+                    <a href="{{ path('app_productos_new') }}" class="btn btn-primary float-right mb-4">Añadir producto</a>
                 </tr>
                 <tr>
                     <th>Producto</th>
@@ -392,7 +392,7 @@
 					<div class="col-lg-5 col-md-7 col-sm-10">
 						<div class="footer-logo text-center">
 							<a href="{{ path('index') }}">
-								<img src="{{ asset('images/logo.svg') }}" alt="">
+								<img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="">
 							</a>
 						</div>
 						<h5 class="heading-5 text-center mt-30">Follow Us</h5>

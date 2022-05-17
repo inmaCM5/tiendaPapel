@@ -156,7 +156,9 @@ class __TwigTemplate_c98ecbfdda522a9aaa73acd7cdb3bf3e extends Template
                                 <a href=\"";
         // line 50
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\"><img src=\"images/logo.svg\" alt=\"Logo\"></a>
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
+        echo "\" alt=\"Logo\" style=\"width: 150px;\"></a>
                             </div>
                             <!-- desktop logo Ends -->
                         </div>
@@ -349,8 +351,8 @@ class __TwigTemplate_c98ecbfdda522a9aaa73acd7cdb3bf3e extends Template
         // line 189
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
-        echo "\" alt=\"Logo\"></a>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
+        echo "\" alt=\"Logo\" style=\"width: 150px;\"></a>
                             </div>
                             <!-- desktop logo Ends -->
                             <!-- navbar menu Start -->
@@ -383,10 +385,12 @@ class __TwigTemplate_c98ecbfdda522a9aaa73acd7cdb3bf3e extends Template
             foreach ($context['_seq'] as $context["_key"] => $context["categoriaSecu"]) {
                 // line 208
                 echo "                                                                <li>
-                                                                    <a href=\"#\">";
+                                                                    <a href=\"";
                 // line 209
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productosCat", ["categoria" => twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "getId", [], "method", false, false, false, 209)]), "html", null, true);
+                echo "\">";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "nombre", [], "any", false, false, false, 209), "html", null, true);
-                echo "</a> 
+                echo "</a>
                                                                 </li>
                                                             ";
             }
@@ -667,7 +671,7 @@ class __TwigTemplate_c98ecbfdda522a9aaa73acd7cdb3bf3e extends Template
         echo "\">
                                 <img src=\"";
         // line 429
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
         echo "\" alt=\"\">
                             </a>
                         </div>
@@ -886,7 +890,7 @@ class __TwigTemplate_c98ecbfdda522a9aaa73acd7cdb3bf3e extends Template
 
     public function getDebugInfo()
     {
-        return array (  862 => 566,  858 => 565,  854 => 564,  850 => 563,  846 => 562,  842 => 561,  838 => 560,  834 => 559,  830 => 558,  826 => 557,  822 => 556,  818 => 555,  813 => 554,  803 => 553,  670 => 429,  666 => 428,  650 => 414,  567 => 332,  534 => 302,  525 => 295,  515 => 291,  507 => 286,  503 => 285,  499 => 284,  482 => 270,  475 => 265,  471 => 264,  455 => 251,  434 => 232,  426 => 228,  420 => 224,  418 => 223,  413 => 221,  405 => 215,  397 => 212,  388 => 209,  385 => 208,  381 => 207,  375 => 204,  372 => 203,  368 => 202,  350 => 189,  334 => 175,  328 => 172,  325 => 171,  319 => 168,  315 => 167,  312 => 166,  310 => 165,  294 => 152,  249 => 110,  240 => 103,  230 => 99,  222 => 94,  218 => 93,  214 => 92,  197 => 78,  190 => 73,  186 => 72,  170 => 59,  158 => 50,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  866 => 566,  862 => 565,  858 => 564,  854 => 563,  850 => 562,  846 => 561,  842 => 560,  838 => 559,  834 => 558,  830 => 557,  826 => 556,  822 => 555,  817 => 554,  807 => 553,  674 => 429,  670 => 428,  654 => 414,  571 => 332,  538 => 302,  529 => 295,  519 => 291,  511 => 286,  507 => 285,  503 => 284,  486 => 270,  479 => 265,  475 => 264,  459 => 251,  438 => 232,  430 => 228,  424 => 224,  422 => 223,  417 => 221,  409 => 215,  401 => 212,  390 => 209,  387 => 208,  383 => 207,  377 => 204,  374 => 203,  370 => 202,  352 => 189,  336 => 175,  330 => 172,  327 => 171,  321 => 168,  317 => 167,  314 => 166,  312 => 165,  296 => 152,  251 => 110,  242 => 103,  232 => 99,  224 => 94,  220 => 93,  216 => 92,  199 => 78,  192 => 73,  188 => 72,  172 => 59,  158 => 50,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -940,7 +944,7 @@ class __TwigTemplate_c98ecbfdda522a9aaa73acd7cdb3bf3e extends Template
                         <div class=\"col-6\">
                             <!-- desktop logo Start -->
                             <div class=\"mobile-logo text-center\">
-                                <a href=\"{{ path('index') }}\"><img src=\"images/logo.svg\" alt=\"Logo\"></a>
+                                <a href=\"{{ path('index') }}\"><img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"Logo\" style=\"width: 150px;\"></a>
                             </div>
                             <!-- desktop logo Ends -->
                         </div>
@@ -1079,7 +1083,7 @@ class __TwigTemplate_c98ecbfdda522a9aaa73acd7cdb3bf3e extends Template
                         <nav class=\"main-navbar d-lg-flex justify-content-between align-items-center\">
                             <!-- desktop logo Start -->
                             <div class=\"desktop-logo d-none d-lg-block\">
-                                <a href=\"{{ path('index') }}\"><img src=\"{{ asset('images/logo.svg') }}\" alt=\"Logo\"></a>
+                                <a href=\"{{ path('index') }}\"><img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"Logo\" style=\"width: 150px;\"></a>
                             </div>
                             <!-- desktop logo Ends -->
                             <!-- navbar menu Start -->
@@ -1099,7 +1103,7 @@ class __TwigTemplate_c98ecbfdda522a9aaa73acd7cdb3bf3e extends Template
                                                             <ul>
                                                             {% for categoriaSecu in lista[1] %}
                                                                 <li>
-                                                                    <a href=\"#\">{{ categoriaSecu.nombre }}</a> 
+                                                                    <a href=\"{{ path('productosCat', {'categoria': categoriaSecu.getId()}) }}\">{{ categoriaSecu.nombre }}</a>
                                                                 </li>
                                                             {% endfor %}
                                                             </ul>
@@ -1319,7 +1323,7 @@ class __TwigTemplate_c98ecbfdda522a9aaa73acd7cdb3bf3e extends Template
                     <div class=\"col-lg-5 col-md-7 col-sm-10\">
                         <div class=\"footer-logo text-center\">
                             <a href=\"{{ path('index') }}\">
-                                <img src=\"{{ asset('images/logo.svg') }}\" alt=\"\">
+                                <img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
                             </a>
                         </div>
                         <h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>

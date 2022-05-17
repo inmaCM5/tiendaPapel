@@ -67,34 +67,34 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
-        echo "    <link rel=\"stylesheet\" href=\"";
+        echo "\t<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/slick.css"), "html", null, true);
         echo "\">
-    <link rel=\"stylesheet\" href=\"";
+\t<link rel=\"stylesheet\" href=\"";
         // line 5
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/LineIcons.css"), "html", null, true);
         echo "\">
-    <link rel=\"stylesheet\" href=\"";
+\t<link rel=\"stylesheet\" href=\"";
         // line 6
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/materialdesignicons.min.css"), "html", null, true);
         echo "\">
-    <link rel=\"stylesheet\" href=\"";
+\t<link rel=\"stylesheet\" href=\"";
         // line 7
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/jquery-ui.min.css"), "html", null, true);
         echo "\">
-    <link rel=\"stylesheet\" href=\"";
+\t<link rel=\"stylesheet\" href=\"";
         // line 8
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/nice-select.css"), "html", null, true);
         echo "\">
-    <link rel=\"stylesheet\" href=\"";
+\t<link rel=\"stylesheet\" href=\"";
         // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/bootstrap.min.css"), "html", null, true);
         echo "\">
-    <link rel=\"stylesheet\" href=\"";
+\t<link rel=\"stylesheet\" href=\"";
         // line 10
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/default.css"), "html", null, true);
         echo "\">
-    <link rel=\"stylesheet\" href=\"";
+\t<link rel=\"stylesheet\" href=\"";
         // line 11
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\">
@@ -118,58 +118,64 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenido"));
 
         // line 15
-        echo "    <div class=\"preloader\">
-        <div class=\"loader\">
-            <div class=\"ytp-spinner\">
-                <div class=\"ytp-spinner-container\">
-                    <div class=\"ytp-spinner-rotator\">
-                        <div class=\"ytp-spinner-left\">
-                            <div class=\"ytp-spinner-circle\"></div>
-                        </div>
-                        <div class=\"ytp-spinner-right\">
-                            <div class=\"ytp-spinner-circle\"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--====== Preloader Part Ends ======-->
+        echo "\t<div class=\"preloader\">
+\t\t<div class=\"loader\">
+\t\t\t<div class=\"ytp-spinner\">
+\t\t\t\t<div class=\"ytp-spinner-container\">
+\t\t\t\t\t<div class=\"ytp-spinner-rotator\">
+\t\t\t\t\t\t<div class=\"ytp-spinner-left\">
+\t\t\t\t\t\t\t<div class=\"ytp-spinner-circle\"></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"ytp-spinner-right\">
+\t\t\t\t\t\t\t<div class=\"ytp-spinner-circle\"></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+\t<!--====== Preloader Part Ends ======-->
 
-    <!--====== Navbar Style 7 Part Start ======-->
-    <div class=\"navigation\">
-        <header class=\"navbar-style-7 position-relative\">
-            <div class=\"container\">
-                <!-- navbar mobile Start -->
-                <div class=\"navbar-mobile d-lg-none\">
-                    <div class=\"row align-items-center\">
-                        <div class=\"col-3\">
-                            <!-- navbar cart start -->
-                            <div class=\"navbar-toggle icon-text-btn\">
-                                <a class=\"icon-btn primary-icon-text mobile-menu-open-7\" href=\"javascript:void(0)\">
-                                    <i class=\"mdi mdi-menu\"></i>
-                                </a>
-                            </div>
-                            <!-- navbar cart Ends -->
-                        </div>
-                        <div class=\"col-6\">
-                            <!-- desktop logo Start -->
-                            <div class=\"mobile-logo text-center\">
-                                <a href=\"";
-        // line 52
+\t<!--====== Navbar Style 7 Part Start ======-->
+\t<div class=\"navigation\">
+\t\t<header class=\"navbar-style-7 position-relative\">
+\t\t\t<div
+\t\t\t\tclass=\"container\">
+\t\t\t\t<!-- navbar mobile Start -->
+\t\t\t\t<div class=\"navbar-mobile d-lg-none\">
+\t\t\t\t\t<div class=\"row align-items-center\">
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"col-3\">
+\t\t\t\t\t\t\t<!-- navbar cart start -->
+\t\t\t\t\t\t\t<div class=\"navbar-toggle icon-text-btn\">
+\t\t\t\t\t\t\t\t<a class=\"icon-btn primary-icon-text mobile-menu-open-7\" href=\"javascript:void(0)\">
+\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-menu\"></i>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- navbar cart Ends -->
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"col-6\">
+\t\t\t\t\t\t\t<!-- desktop logo Start -->
+\t\t\t\t\t\t\t<div class=\"mobile-logo text-center\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 55
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\"><img src=\"images/logo.svg\" alt=\"Logo\"></a>
-                            </div>
-                            <!-- desktop logo Ends -->
-                        </div>
-                        <div class=\"col-3\">
-                            <!-- navbar cart start -->
-                            <div class=\"navbar-cart\">
-                                <a class=\"icon-btn primary-icon-text icon-text-btn\" href=\"javascript:void(0)\">
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
+        echo "\" alt=\"Logo\" style=\"width: 150px;\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- desktop logo Ends -->
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"col-3\">
+\t\t\t\t\t\t\t<!-- navbar cart start -->
+\t\t\t\t\t\t\t<div class=\"navbar-cart\">
+\t\t\t\t\t\t\t\t<a class=\"icon-btn primary-icon-text icon-text-btn\" href=\"javascript:void(0)\">
 \t\t\t\t\t\t\t\t\t<img src=\"images/icon-svg/cart-1.svg\" alt=\"Icon\">
 \t\t\t\t\t\t\t\t\t<span class=\"icon-text text-style-1\">";
-        // line 61
-        echo twig_escape_filter($this->env, (isset($context["unidades"]) || array_key_exists("unidades", $context) ? $context["unidades"] : (function () { throw new RuntimeError('Variable "unidades" does not exist.', 61, $this->source); })()), "html", null, true);
+        // line 65
+        echo twig_escape_filter($this->env, (isset($context["unidades"]) || array_key_exists("unidades", $context) ? $context["unidades"] : (function () { throw new RuntimeError('Variable "unidades" does not exist.', 65, $this->source); })()), "html", null, true);
         echo "</span>
 \t\t\t\t\t\t\t\t</a>
 
@@ -182,29 +188,25 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t\t<div class=\"checkout-table\">
 \t\t\t\t\t\t\t\t\t\t\t<table class=\"table\">
 \t\t\t\t\t\t\t\t\t\t\t\t<tbody>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 74
+        // line 78
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["cesta"]) || array_key_exists("cesta", $context) ? $context["cesta"] : (function () { throw new RuntimeError('Variable "cesta" does not exist.', 74, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["cesta"]) || array_key_exists("cesta", $context) ? $context["cesta"] : (function () { throw new RuntimeError('Variable "cesta" does not exist.', 78, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produCesta"]) {
-            // line 75
+            // line 79
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-product\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-cart d-flex\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-content media-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"title\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"product-details-page.html\">";
-            // line 80
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 80), "getNombre", [], "method", false, false, false, 80), "html", null, true);
+            // line 84
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 84), "getNombre", [], "method", false, false, false, 84), "html", null, true);
             echo "</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"delete\" href=\"javascript:void(0)\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-delete\"></i>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"javascript:void(0)\"><i class=\"mdi mdi-delete\"></i></a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -219,10 +221,10 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
             // line 95
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produCesta"], "unidades", [], "any", false, false, false, 95), "html", null, true);
             echo "\" size=\"3\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value= \"";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"";
             // line 96
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 96), "getCodigo", [], "method", false, false, false, 96), "html", null, true);
-            echo "\" />
+            echo "\"/>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
@@ -252,811 +254,613 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
         echo "€</p>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-btn\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"cart-page.html\" class=\"main-btn primary-btn-border\">View
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                        Cart</a>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"checkout-page.html\" class=\"main-btn primary-btn\">Checkout</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 115
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo "\" class=\"main-btn primary-btn-border\">Actualizar</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"main-btn primary-btn\">Resumen</a>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
-                            <!-- navbar cart Ends -->
-                        </div>
-                    </div>
-                    <!-- navbar search start -->
-                    <div class=\"navbar-search mt-15 search-style-5\">
-                        <div class=\"search-input\">
-                            <input type=\"text\" placeholder=\"Search\">
-                        </div>
-                        <div class=\"search-btn\">
-                            <button><i class=\"lni lni-search-alt\"></i></button>
-                        </div>
-                    </div>
-                    <!-- navbar search Ends -->
-                </div>
-                <!-- navbar mobile Start -->
-            </div>
-    
-            <div class=\"navbar-container navbar-sidebar-7\">
-                <!-- navbar close  Ends -->
-                <div class=\"navbar-close d-lg-none\">
-                    <a class=\"close-mobile-menu-7\" href=\"javascript:void(0)\"><i class=\"mdi mdi-close\"></i></a>
-                </div>
-                <!-- navbar close  Ends -->
-    
-                <!-- navbar top Start -->
-                <div class=\"navbar-top-wrapper\">
-                    <div class=\"container-lg\">
-                        <div class=\"navbar-top d-lg-flex justify-content-between\">
-                            <!-- navbar top left Start -->
-                            <div class=\"navbar-top-left\">
-                                <ul class=\"navbar-top-link\">
-                                    <li><a href=\"";
-        // line 154
+\t\t\t\t\t\t\t<!-- navbar cart Ends -->
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- navbar search start -->
+\t\t\t\t\t<div class=\"navbar-search mt-15 search-style-5\">
+\t\t\t\t\t\t<div class=\"search-input\">
+\t\t\t\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"search-btn\">
+\t\t\t\t\t\t\t<button>
+\t\t\t\t\t\t\t\t<i class=\"lni lni-search-alt\"></i>
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- navbar search Ends -->
+\t\t\t\t</div>
+\t\t\t\t<!-- navbar mobile Start -->
+\t\t\t</div>
+
+\t\t\t<div
+\t\t\t\tclass=\"navbar-container navbar-sidebar-7\">
+\t\t\t\t<!-- navbar close  Ends -->
+\t\t\t\t<div class=\"navbar-close d-lg-none\">
+\t\t\t\t\t<a class=\"close-mobile-menu-7\" href=\"javascript:void(0)\">
+\t\t\t\t\t\t<i class=\"mdi mdi-close\"></i>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t\t<!-- navbar close  Ends -->
+
+\t\t\t\t<!-- navbar top Start -->
+\t\t\t\t<div class=\"navbar-top-wrapper\">
+\t\t\t\t\t<div class=\"container-lg\">
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"navbar-top d-lg-flex justify-content-between\">
+\t\t\t\t\t\t\t<!-- navbar top left Start -->
+\t\t\t\t\t\t\t<div class=\"navbar-top-left\">
+\t\t\t\t\t\t\t\t<ul class=\"navbar-top-link\">
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 160
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contacto");
-        echo "\">Contacto</a></li>
-                                    <li>
-                                        <a href=\"javascript:void(0)\">
-                                            <i class=\"mdi mdi-phone-in-talk\"></i>
-                                            +34 684 00 10 65
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- navbar top left Ends -->
-                            <!-- navbar top right Start -->
-                            <div class=\"navbar-top-right\">
-                                <ul class=\"navbar-top-link\">
-                                    ";
-        // line 167
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 167, $this->source); })()), "user", [], "any", false, false, false, 167)) {
-            // line 168
+        echo "\">Contacto</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-phone-in-talk\"></i>
+\t\t\t\t\t\t\t\t\t\t\t+34 684 00 10 65
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- navbar top left Ends -->
+\t\t\t\t\t\t\t<!-- navbar top right Start -->
+\t\t\t\t\t\t\t<div class=\"navbar-top-right\">
+\t\t\t\t\t\t\t\t<ul class=\"navbar-top-link\">
+\t\t\t\t\t\t\t\t\t";
+        // line 174
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 174, $this->source); })()), "user", [], "any", false, false, false, 174)) {
+            // line 175
             echo "\t\t\t\t\t\t\t\t\t\t<li>
-                                            <a href=\"";
-            // line 169
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 176
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
-            echo "\"><i class=\"mdi mdi-account\"></i>Cerrar sesión
+            echo "\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-account\"></i>Cerrar sesión
 \t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 170
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 170, $this->source); })()), "user", [], "any", false, false, false, 170), "username", [], "any", false, false, false, 170), "html", null, true);
+            // line 178
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 178, $this->source); })()), "user", [], "any", false, false, false, 178), "username", [], "any", false, false, false, 178), "html", null, true);
             echo "</a>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t";
         } else {
-            // line 173
-            echo "                                        <li>
-                                            <a href=\"";
-            // line 174
+            // line 181
+            echo "\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 182
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
-            echo "\"><i class=\"mdi mdi-account\"></i>Iniciar sesión</a>
-                                        </li>
+            echo "\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-account\"></i>Iniciar sesión</a>
+\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t";
         }
-        // line 177
-        echo "                                </ul>
-                            </div>
-                            <!-- navbar top right Ends -->
-                        </div>
-                    </div>
-                </div>
-                <!-- navbar top Ends -->
-    
-                <!-- main navbar Start -->
-                <div class=\"navbar-wrapper\">
-                    <div class=\"container-lg\">
-                        <nav class=\"main-navbar d-lg-flex justify-content-between align-items-center\">
-                            <!-- desktop logo Start -->
-                            <div class=\"desktop-logo d-none d-lg-block\">
-                                <a href=\"";
-        // line 191
+        // line 186
+        echo "\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- navbar top right Ends -->
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<!-- navbar top Ends -->
+
+\t\t\t\t<!-- main navbar Start -->
+\t\t\t\t<div class=\"navbar-wrapper\">
+\t\t\t\t\t<div class=\"container-lg\">
+\t\t\t\t\t\t<nav
+\t\t\t\t\t\t\tclass=\"main-navbar d-lg-flex justify-content-between align-items-center\">
+\t\t\t\t\t\t\t<!-- desktop logo Start -->
+\t\t\t\t\t\t\t<div class=\"desktop-logo d-none d-lg-block\">
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 201
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
-        echo "\" alt=\"Logo\"></a>
-                            </div>
-                            <!-- desktop logo Ends -->
-                            <!-- navbar menu Start -->
-                            <div class=\"navbar-menu\">
-                                <ul class=\"main-menu\">
-                                    <li class=\"position-static menu-item-has-children\">
-                                        <a href=\"#\">Categorías</a>
-                                        <!-- sub mega dropdown Start -->
-                                        <ul class=\"sub-mega-dropdown\">
-                                            <li>
-                                                <div class=\"mega-dropdown-menu\">
-                                                    <ul class=\"container mega-dropdown d-flex flex-wrap\">
-                                                    ";
-        // line 204
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
+        echo "\" alt=\"Logo\" style=\"width: 150px;\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- desktop logo Ends -->
+\t\t\t\t\t\t\t<!-- navbar menu Start -->
+\t\t\t\t\t\t\t<div class=\"navbar-menu\">
+\t\t\t\t\t\t\t\t<ul class=\"main-menu\">
+\t\t\t\t\t\t\t\t\t<li class=\"position-static menu-item-has-children\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Categorías</a>
+\t\t\t\t\t\t\t\t\t\t<!-- sub mega dropdown Start -->
+\t\t\t\t\t\t\t\t\t\t<ul class=\"sub-mega-dropdown\">
+\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"mega-dropdown-menu\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<ul class=\"container mega-dropdown d-flex flex-wrap\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+        // line 214
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categorias"]) || array_key_exists("categorias", $context) ? $context["categorias"] : (function () { throw new RuntimeError('Variable "categorias" does not exist.', 204, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categorias"]) || array_key_exists("categorias", $context) ? $context["categorias"] : (function () { throw new RuntimeError('Variable "categorias" does not exist.', 214, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["lista"]) {
-            // line 205
-            echo "                                                        <li class=\"mega-dropdown-list menu-item-has-children\">  
-                                                            <h6 class=\"heading-6 font-weight-500 mega-title\">";
-            // line 206
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["lista"], 0, [], "array", false, false, false, 206), "nombre", [], "any", false, false, false, 206), "html", null, true);
+            // line 215
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"mega-dropdown-list menu-item-has-children\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"heading-6 font-weight-500 mega-title\">";
+            // line 216
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["lista"], 0, [], "array", false, false, false, 216), "nombre", [], "any", false, false, false, 216), "html", null, true);
             echo "
-                                                            </h6>
-                                                            <ul>
-                                                            ";
-            // line 209
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h6>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 219
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["lista"], 1, [], "array", false, false, false, 209));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["lista"], 1, [], "array", false, false, false, 219));
             foreach ($context['_seq'] as $context["_key"] => $context["categoriaSecu"]) {
-                // line 210
-                echo "                                                                <li>
-                                                                    <a href=\"#\">";
-                // line 211
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "nombre", [], "any", false, false, false, 211), "html", null, true);
-                echo "</a> 
-                                                                </li>
-                                                            ";
+                // line 220
+                echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+                // line 221
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productosCat", ["categoria" => twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "getId", [], "method", false, false, false, 221)]), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "nombre", [], "any", false, false, false, 221), "html", null, true);
+                echo "</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categoriaSecu'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 214
-            echo "                                                            </ul>
-                                                        </li>
-                                                    ";
+            // line 224
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['lista'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 217
-        echo "                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <!-- sub mega dropdown Ends -->
-                                    </li>
-                                    <li><a href=\"";
-        // line 223
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productos");
-        echo "\">Productos</a></li>
-                                    <li><a href=\"#\">Imprimir apuntes</a></li>
-                                    ";
-        // line 225
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 226
-            echo "                                        <li class=\"menu-item-has-children\">
-                                            <a href=\"#\">Administrar...</a>
-                                            <ul class=\"sub-menu\">
-                                                <li><a href=\"#\">Administrar categorías</a></li>
-                                                <li><a href=\"";
-            // line 230
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminProductos");
-            echo "\">Administrar productos</a></li>
-                                                <li><a href=\"#\">Administrar apuntes</a></li>
-                                            </ul>
-                                        </li>
-                                    ";
-        }
+        // line 227
+        echo "\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t<!-- sub mega dropdown Ends -->
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"";
         // line 234
-        echo "                                    
-                                </ul>
-                            </div>
-                            <!-- navbar menu Ends -->
-                            <div class=\"navbar-search-cart d-none d-lg-flex\">
-                                <!-- navbar search start -->
-                                <div class=\"navbar-search search-style-5\">
-                                    <div class=\"search-input\">
-                                        <input type=\"text\" placeholder=\"Search\">
-                                    </div>
-                                    <div class=\"search-btn\">
-                                        <button><i class=\"lni lni-search-alt\"></i></button>
-                                    </div>
-                                </div>
-                                <!-- navbar search Ends -->
-                                <!-- navbar cart start -->
-                                <div class=\"navbar-cart\">
-                                    <a class=\"icon-btn primary-icon-text icon-text-btn\" href=\"javascript:void(0)\">
-                                        <img src=\"images/icon-svg/cart-1.svg\" alt=\"Icon\">
-                                        <span class=\"icon-text text-style-1\">";
-        // line 253
-        echo twig_escape_filter($this->env, (isset($context["unidades"]) || array_key_exists("unidades", $context) ? $context["unidades"] : (function () { throw new RuntimeError('Variable "unidades" does not exist.', 253, $this->source); })()), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productos");
+        echo "\">Productos</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Imprimir apuntes</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t";
+        // line 239
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 240
+            echo "\t\t\t\t\t\t\t\t\t\t<li class=\"menu-item-has-children\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Administrar...</a>
+\t\t\t\t\t\t\t\t\t\t\t<ul class=\"sub-menu\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Administrar categorías</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 247
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminProductos");
+            echo "\">Administrar productos</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Administrar apuntes</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t";
+        }
+        // line 255
+        echo "\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- navbar menu Ends -->
+\t\t\t\t\t\t\t<div
+\t\t\t\t\t\t\t\tclass=\"navbar-search-cart d-none d-lg-flex\">
+\t\t\t\t\t\t\t\t<!-- navbar search start -->
+\t\t\t\t\t\t\t\t<div class=\"navbar-search search-style-5\">
+\t\t\t\t\t\t\t\t\t<div class=\"search-input\">
+\t\t\t\t\t\t\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"search-btn\">
+\t\t\t\t\t\t\t\t\t\t<button>
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"lni lni-search-alt\"></i>
+\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<!-- navbar search Ends -->
+\t\t\t\t\t\t\t\t<!-- navbar cart start -->
+\t\t\t\t\t\t\t\t<div class=\"navbar-cart\">
+\t\t\t\t\t\t\t\t\t<a class=\"icon-btn primary-icon-text icon-text-btn\" href=\"javascript:void(0)\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"images/icon-svg/cart-1.svg\" alt=\"Icon\">
+\t\t\t\t\t\t\t\t\t\t<span class=\"icon-text text-style-1\">";
+        // line 276
+        echo twig_escape_filter($this->env, (isset($context["unidades"]) || array_key_exists("unidades", $context) ? $context["unidades"] : (function () { throw new RuntimeError('Variable "unidades" does not exist.', 276, $this->source); })()), "html", null, true);
         echo "</span>
-                                    </a>
+\t\t\t\t\t\t\t\t\t</a>
 
-                                    <div class=\"navbar-cart-dropdown\">
-                                        <div class=\"checkout-style-2\">
-                                            <div class=\"checkout-header d-flex justify-content-between\">
-                                                <h6 class=\"title\">Shopping Cart</h6>
-                                            </div>
+\t\t\t\t\t\t\t\t\t<div class=\"navbar-cart-dropdown\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-style-2\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-header d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">Shopping Cart</h6>
+\t\t\t\t\t\t\t\t\t\t\t</div>
 
-                                            <div class=\"checkout-table\">
-                                                <table class=\"table\">
-                                                    <tbody>
-                                                            
-                                                        ";
-        // line 266
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-table\">
+\t\t\t\t\t\t\t\t\t\t\t\t<table class=\"table\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<tbody>
+
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
+        // line 289
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["cesta"]) || array_key_exists("cesta", $context) ? $context["cesta"] : (function () { throw new RuntimeError('Variable "cesta" does not exist.', 266, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["cesta"]) || array_key_exists("cesta", $context) ? $context["cesta"] : (function () { throw new RuntimeError('Variable "cesta" does not exist.', 289, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produCesta"]) {
-            // line 267
-            echo "                                                            <tr>
-                                                                <td class=\"checkout-product\">
-                                                                    <div class=\"product-cart d-flex\">
-                                                                        <div class=\"product-content media-body\">
-                                                                            <h5 class=\"title\">
-                                                                                <a href=\"product-details-page.html\">";
-            // line 272
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 272), "getNombre", [], "method", false, false, false, 272), "html", null, true);
-            echo "</a>
-                                                                            </h5>
-                                                                            <ul>
-                                                                                <li>
-                                                                                    <form id=\"form_seleccion\" action=\"";
-            // line 276
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminarProductosCesta", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 276), "getId", [], "method", false, false, false, 276)]), "html", null, true);
-            echo "\" method=\"post\">
-                                                                                        <input type=\"submit\" class=\"delete\" value=\"Borrar\">
-                                                                                            <i class=\"mdi mdi-delete\"></i>
-                                                                                        </input>
-                                                                                    </form>
-                                                                                    
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class=\"checkout-quantity\">
-                                                                    <div class=\"product-quantity d-inline-flex\">
-                                                                        <form id=\"form_seleccion\" action=\"";
-            // line 289
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cambiarUnidades", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 289), "getId", [], "method", false, false, false, 289)]), "html", null, true);
-            echo "\" method=\"post\">
-                                                                            <input type=\"number\" name=\"unidades\" value=\"";
             // line 290
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produCesta"], "unidades", [], "any", false, false, false, 290), "html", null, true);
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-product\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-cart d-flex\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-content media-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"title\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"product-details-page.html\">";
+            // line 295
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 295), "getNombre", [], "method", false, false, false, 295), "html", null, true);
+            echo "</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"";
+            // line 299
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminarProductosCesta", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 299), "getId", [], "method", false, false, false, 299)]), "html", null, true);
+            echo "\" method=\"post\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"delete\" value=\"Borrar\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-delete\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</input>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
+
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-quantity\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-quantity d-inline-flex\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"";
+            // line 316
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cambiarUnidades", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 316), "getId", [], "method", false, false, false, 316)]), "html", null, true);
+            echo "\" method=\"post\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"";
+            // line 317
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produCesta"], "unidades", [], "any", false, false, false, 317), "html", null, true);
             echo "\" size=\"3\">
-                                                                            <input type='hidden' name='codProduc' value= \"";
-            // line 291
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 291), "getCodigo", [], "method", false, false, false, 291), "html", null, true);
-            echo "\" />
-                                                                        </form>
-                                                                    </div>
-                                                                </td>
-                                                                <td class=\"checkout-price\">
-                                                                    <p class=\"price\">";
-            // line 296
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 296), "getPvp", [], "method", false, false, false, 296), "html", null, true);
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"";
+            // line 318
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 318), "getCodigo", [], "method", false, false, false, 318), "html", null, true);
+            echo "\"/>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-price\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"price\">";
+            // line 323
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 323), "getPvp", [], "method", false, false, false, 323), "html", null, true);
             echo "€</p>
-                                                                </td>
-                                                            </tr>
-                                                        ";
+\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produCesta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 300
-        echo "                                                    </tbody>
-                                                </table>
-                                            </div>
+        // line 327
+        echo "\t\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t\t</table>
+\t\t\t\t\t\t\t</div>
 
-                                            <div class=\"checkout-footer\">
-                                                <div class=\"checkout-sub-total d-flex justify-content-between\">
-                                                    <p class=\"value\">Subtotal Price:</p>
-                                                    <p class=\"price\">";
-        // line 307
-        echo twig_escape_filter($this->env, (isset($context["precioCesta"]) || array_key_exists("precioCesta", $context) ? $context["precioCesta"] : (function () { throw new RuntimeError('Variable "precioCesta" does not exist.', 307, $this->source); })()), "html", null, true);
+\t\t\t\t\t\t\t<div class=\"checkout-footer\">
+\t\t\t\t\t\t\t\t<div class=\"checkout-sub-total d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t<p class=\"value\">Subtotal Price:</p>
+\t\t\t\t\t\t\t\t\t<p class=\"price\">";
+        // line 334
+        echo twig_escape_filter($this->env, (isset($context["precioCesta"]) || array_key_exists("precioCesta", $context) ? $context["precioCesta"] : (function () { throw new RuntimeError('Variable "precioCesta" does not exist.', 334, $this->source); })()), "html", null, true);
         echo "€</p>
-                                                </div>
-                                                <div class=\"checkout-btn\">
-                                                    <a href=\"cart-page.html\" class=\"main-btn primary-btn-border\">View
-                                                                                                                                                                    Cart</a>
-                                                    <a href=\"checkout-page.html\" class=\"main-btn primary-btn\">Checkout</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- navbar cart Ends -->
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <!-- main navbar Ends -->
-            </div>
-            <div class=\"overlay-7\"></div>
-        </header>
-    </div>
-    <!--====== Navbar Style 7 Part Ends ======-->
-
-    <!--====== Header Style 1 Part Start ======-->
-    <section class=\"header-style-1\">
-        <div class=\"header-big\">
-            <div class=\"header-items-active\">
-                <div class=\"single-header-item bg_cover\"
-                    style=\"background-image: url(images/header-1/header-big-1.jpg);\">
-                    <div class=\"header-item-content\">
-                        <h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
-                        <a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
-                    </div>
-                </div>
-                <div class=\"single-header-item bg_cover\"
-                    style=\"background-image: url(images/header-1/header-big-2.jpg);\">
-                    <div class=\"header-item-content\">
-                        <h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
-                        <a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
-                    </div>
-                </div>
-                <div class=\"single-header-item bg_cover\"
-                    style=\"background-image: url(images/header-1/header-big-1.jpg);\">
-                    <div class=\"header-item-content\">
-                        <h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
-                        <a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=\"header-min\">
-            <div class=\"header-min-item product-style-25 bg_cover\"
-                style=\"background-image: url(images/header-1/header-min-1.jpg);\">
-                <div class=\"product-content\">
-                    <h4 class=\"title\"><a href=\"product-details-page.html\">Metro 38 Date</a></h4>
-                    <p>Reference 1102</p>
-                    <a href=\"javascript:void(0)\" class=\"main-btn primary-btn-border\"> <img src=\"images/icon-svg/cart-5.svg\" alt=\"\">\$
-                        399</a>
-                </div>
-            </div>
-            <div class=\"header-min-item product-style-25 bg_cover\"
-                style=\"background-image: url(images/header-1/header-min-2.jpg);\">
-                <div class=\"product-content\">
-                    <h4 class=\"title\"><a href=\"product-details-page.html\">Metro 38 Date</a></h4>
-                    <p>Reference 1102</p>
-                    <a href=\"javascript:void(0)\" class=\"main-btn primary-btn-border\"> <img src=\"images/icon-svg/cart-5.svg\" alt=\"\">\$
-                        399</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Header Style 1 Part Ends ======-->
-
-    <!--====== Content Card Style 4 Part Start ======-->
-    <section class=\"content-card-style-4 pt-70 pb-100\">
-        <div class=\"container\">
-            <div class=\"row justify-content-center\">
-                <div class=\"col-lg-4 col-md-7 col-sm-8\">
-                    <div class=\"single-content mt-15 text-center\">
-                        <div class=\"content-icon\">
-                            <i class=\"mdi mdi-truck-fast\"></i>
-                        </div>
-                        <div class=\"content-content\">
-                            <h4 class=\"title\"><a href=\"javascript:void(0)\">Two-hour delivery</a></h4>
-                            <p>Available in most metros on selected in-stock products</p>
-                            <a href=\"javascript:void(0)\" class=\"more\">learn more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-7 col-sm-8\">
-                    <div class=\"single-content mt-15 text-center\">
-                        <div class=\"content-icon\">
-                            <i class=\"mdi mdi-message-text\"></i>
-                        </div>
-                        <div class=\"content-content\">
-                            <h4 class=\"title\"><a href=\"javascript:void(0)\">Get help buying</a></h4>
-                            <p>Have a question? Call a Specialist or chat online for help</p>
-                            <a href=\"contact-page.html\" class=\"more\">Contact us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-7 col-sm-8\">
-                    <div class=\"single-content mt-15 text-center\">
-                        <div class=\"content-icon\">
-                            <i class=\"mdi mdi-ticket-percent\"></i>
-                        </div>
-                        <div class=\"content-content\">
-                            <h4 class=\"title\"><a href=\"javascript:void(0)\">Find the card for you</a></h4>
-                            <p>Get 3% Daily Cash with special financing offers from us</p>
-                            <a href=\"javascript:void(0)\" class=\"more\">learn more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Content Card Style 4 Part Ends ======-->
-
-    <!--====== Product Style 1 Part Start ======-->
-    <section class=\"product-wrapper pt-100 pb-70\">
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <div class=\"mb-50\">
-                        <h1 class=\"heading-1 font-weight-700\">Featured Items</h1>
-                    </div>
-                </div>
-            </div>
-            <div class=\"row\">
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <span class=\"icon-text text-style-1\">NEW</span>
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-1.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-2.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Metro 38 Date</a></h4>
-                            <p>Reference 1102</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <span class=\"icon-text text-style-1\">20% off</span>
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-5.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-6.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Lady Shoe</a></h4>
-                            <p>Reference 1103</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-3.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-4.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Casio 09 Date</a></h4>
-                            <p>Reference 1112</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-7.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-8.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Man's Shoe</a></h4>
-                            <p>Reference 102</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-9.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-10.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Polo T Shirt</a></h4>
-                            <p>Reference 1202</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <span class=\"icon-text text-style-1\">40% off</span>
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-11.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-12.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Lotto T Shirt</a></h4>
-                            <p>Reference 112</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Product Style 1 Part Ends ======-->
-
-    <!--====== Features Part Start ======-->
-    <section class=\"features-section pt-100 pb-50 gray-bg\">
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <div class=\"features-title text-center mb-50\">
-                        <h1 class=\"heading-1 font-weight-700\">Awesome Features</h1>
-                    </div>
-                </div>
-            </div>
-            <div class=\"row\">
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-cog\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Bootstrap 5</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-code\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Clean Design</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-layers\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Included Business Pages</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-laptop-phone\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Fully Responsive</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-brush\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Completely Customizable</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-rocket\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Fast and Well-optimized</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Features Part Ends ======-->
-
-    <!--====== Clients Logo Part Start ======-->
-    <section class=\"clients-logo-section pt-70 pb-70\">
-        <div class=\"container\">
-            <div class=\"row client-logo-active\">
-                <div class=\"col-lg-3\">
-                    <div class=\"single-logo-wrapper\">
-                        <img src=\"images/client-logo/uideck-logo.svg\" alt=\"\">
-                    </div>
-                </div>
-                <div class=\"col-lg-3\">
-                    <div class=\"single-logo-wrapper\">
-                        <img src=\"images/client-logo/graygrids-logo.svg\" alt=\"\">
-                    </div>
-                </div>
-                <div class=\"col-lg-3\">
-                    <div class=\"single-logo-wrapper\">
-                        <img src=\"images/client-logo/lineicons-logo.svg\" alt=\"\">
-                    </div>
-                </div>
-                <div class=\"col-lg-3\">
-                    <div class=\"single-logo-wrapper\">
-                        <img src=\"images/client-logo/pagebulb-logo.svg\" alt=\"\">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Clients Logo Part Ends ======-->
-
-    <!--====== Footer Style 3 Part Start ======-->
-    <section class=\"footer-style-3 pt-100 pb-100\">
-        <div class=\"container\">
-            <div class=\"footer-top\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-5 col-md-7 col-sm-10\">
-                        <div class=\"footer-logo text-center\">
-                            <a href=\"";
-        // line 694
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"checkout-btn\">
+\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 337
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo "\" class=\"main-btn primary-btn-border\">Actualizar</a>
+\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"main-btn primary-btn\">Resumen</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<!-- navbar cart Ends -->
+\t\t\t</div>
+\t\t</nav>
+\t</div>
+</div>
+<!-- main navbar Ends -->
+</div>
+<div class=\"overlay-7\">
+</div></header></div><!--====== Navbar Style 7 Part Ends ======-->
+<!--====== Header Style 1 Part Start ======--><section class=\"header-style-1\"><div class=\"header-big\"><div class=\"header-items-active\">
+<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-cartulina.jpg);\">
+\t<div class=\"header-item-content\">
+\t\t<h3 class=\"title\">Tenemos un amplio catálogo de cartulinas, para realizar cualquier manualidad.</h3>
+\t\t<a href=\"";
+        // line 357
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productos");
+        echo "\" class=\"link\">Pulsa aquí para ver todas las opciones.</a>
+\t</div>
+</div>
+<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-gonzalo.jpg);\">
+\t<div class=\"header-item-content\">
+\t\t<h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
+\t\t<a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
+\t</div>
+</div>
+<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-puerta.jpg);\">
+\t<div class=\"header-item-content\">
+\t\t<h3 class=\"title\">Fachada de nuestra papeleria, situada en la plazoleta del juncal.</h3>
+\t\t<a href=\"";
+        // line 369
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contacto");
+        echo "\" class=\"link\">Página de contacto</a>
+\t</div>
+</div></div></div>
+</section>
+<!--====== Header Style 1 Part Ends ======-->
+<!--====== Content Card Style 4 Part Start ======--><section class=\"content-card-style-4 pt-70 pb-100\"><div class=\"container\"><div class=\"row justify-content-center\">
+<div class=\"col-lg-4 col-md-7 col-sm-8\">
+\t<div class=\"single-content mt-15 text-center\">
+\t\t<div class=\"content-icon\">
+\t\t\t<i class=\"mdi mdi-truck-fast\"></i>
+\t\t</div>
+\t\t<div class=\"content-content\">
+\t\t\t<h4 class=\"title\">
+\t\t\t\t<a href=\"javascript:void(0)\">Two-hour delivery</a>
+\t\t\t</h4>
+\t\t\t<p>Available in most metros on selected in-stock products</p>
+\t\t\t<a href=\"javascript:void(0)\" class=\"more\">learn more</a>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-7 col-sm-8\">
+\t<div class=\"single-content mt-15 text-center\">
+\t\t<div class=\"content-icon\">
+\t\t\t<i class=\"mdi mdi-message-text\"></i>
+\t\t</div>
+\t\t<div class=\"content-content\">
+\t\t\t<h4 class=\"title\">
+\t\t\t\t<a href=\"javascript:void(0)\">Get help buying</a>
+\t\t\t</h4>
+\t\t\t<p>Have a question? Call a Specialist or chat online for help</p>
+\t\t\t<a href=\"contact-page.html\" class=\"more\">Contact us</a>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-7 col-sm-8\">
+\t<div class=\"single-content mt-15 text-center\">
+\t\t<div class=\"content-icon\">
+\t\t\t<i class=\"mdi mdi-ticket-percent\"></i>
+\t\t</div>
+\t\t<div class=\"content-content\">
+\t\t\t<h4 class=\"title\">
+\t\t\t\t<a href=\"javascript:void(0)\">Find the card for you</a>
+\t\t\t</h4>
+\t\t\t<p>Get 3% Daily Cash with special financing offers from us</p>
+\t\t\t<a href=\"javascript:void(0)\" class=\"more\">learn more</a>
+\t\t</div>
+\t</div>
+</div></div></div></section><!--====== Content Card Style 4 Part Ends ======--><!--====== Features Part Start ======--><section class=\"features-section pt-100 pb-50 gray-bg\"><div class=\"container\"><div class=\"row\">
+<div class=\"col-lg-12\">
+\t<div class=\"features-title text-center mb-50\">
+\t\t<h1 class=\"heading-1 font-weight-700\">Awesome Features</h1>
+\t</div>
+</div></div><div class=\"row\">
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-cog\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Bootstrap 5</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-code\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Clean Design</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-layers\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Included Business Pages</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-laptop-phone\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Fully Responsive</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-brush\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Completely Customizable</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-rocket\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Fast and Well-optimized</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div></div></div></section><!--====== Features Part Ends ======--><!--====== Footer Style 3 Part Start ======--><section class=\"footer-style-3 pt-100 pb-100\"><div class=\"container\"><div class=\"footer-top\">
+<div class=\"row justify-content-center\">
+\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
+\t\t<div class=\"footer-logo text-center\">
+\t\t\t<a href=\"";
+        // line 491
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">
-                                <img src=\"";
-        // line 695
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
+\t\t\t\t<img src=\"";
+        // line 492
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
         echo "\" alt=\"\">
-                            </a>
-                        </div>
-                        <h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>
-                        <ul class=\"footer-follow text-center\">
-                            <li>
-                                <a href=\"https://www.facebook.com/impresionacopisteria/\">
-                                    <i class=\"lni lni-facebook-filled\"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href=\"https://www.instagram.com/impresionacopisteria/\">
-                                    <i class=\"lni lni-instagram-original\"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+\t\t\t</a>
+\t\t</div>
+\t\t<h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>
+\t\t<ul class=\"footer-follow text-center\">
+\t\t\t<li>
+\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
+\t\t\t\t\t<i class=\"lni lni-facebook-filled\"></i>
+\t\t\t\t</a>
+\t\t\t</li>
+\t\t\t<li>
+\t\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
+\t\t\t\t\t<i class=\"lni lni-instagram-original\"></i>
+\t\t\t\t</a>
+\t\t\t</li>
+\t\t</ul>
+\t</div>
+</div></div><div class=\"footer-widget-wrapper text-center pt-20\">
+<div class=\"row\">
+\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t<div class=\"footer-widget\">
+\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
 
-            <div class=\"footer-widget-wrapper text-center pt-20\">
-                <div class=\"row\">
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
+\t\t\t<ul class=\"footer-link\">
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Quest</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Rift S</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Gear VR</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Oculus for Business</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t<div class=\"footer-widget\">
+\t\t\t<h5 class=\"footer-title\">DEVELOPERS</h5>
 
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">Quest</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Rift S</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Gear VR</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Apps and Games</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Apps and Games</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Oculus for Business</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">DEVELOPERS</h5>
+\t\t\t<ul class=\"footer-link\">
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Centre</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Docs</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Downloads</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Tools</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Blog</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Forums</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t<div class=\"footer-widget\">
+\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
 
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">Developer Centre</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Docs</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Downloads</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Tools</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Developer Blog</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Developer Forums</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
+\t\t\t<ul class=\"footer-link\">
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Blog</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Careers</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Brand Centre</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Connect</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t<div class=\"footer-widget\">
+\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
 
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">Blog</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Careers</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Brand Centre</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Connect</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
-
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">VR for Good</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Launch Pad</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Creators Lab</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Forums</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Support</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-";
+\t\t\t<ul class=\"footer-link\">
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">VR for Good</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Launch Pad</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Creators Lab</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Forums</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Support</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+</div></div></div></section>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -1065,7 +869,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 
     }
 
-    // line 819
+    // line 606
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1075,55 +879,31 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 820
-        echo "\t<script src=\"";
+        echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.min.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 821
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 822
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/jquery-3.5.1.min.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 823
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/modernizr-3.7.1.min.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 824
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/slick.min.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 825
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-vj-accordion-steps.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 826
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 827
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.form-validator.min.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 828
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.nice-select.min.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 829
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.formatter.min.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 830
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/count-up.min.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 831
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
-        echo "\"></script>
-";
+        echo "\"></script>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -1144,7 +924,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 
     public function getDebugInfo()
     {
-        return array (  1124 => 831,  1120 => 830,  1116 => 829,  1112 => 828,  1108 => 827,  1104 => 826,  1100 => 825,  1096 => 824,  1092 => 823,  1088 => 822,  1084 => 821,  1079 => 820,  1069 => 819,  936 => 695,  932 => 694,  542 => 307,  533 => 300,  523 => 296,  515 => 291,  511 => 290,  507 => 289,  491 => 276,  484 => 272,  477 => 267,  473 => 266,  457 => 253,  436 => 234,  428 => 230,  422 => 226,  420 => 225,  415 => 223,  407 => 217,  399 => 214,  390 => 211,  387 => 210,  383 => 209,  377 => 206,  374 => 205,  370 => 204,  352 => 191,  336 => 177,  330 => 174,  327 => 173,  321 => 170,  317 => 169,  314 => 168,  312 => 167,  296 => 154,  251 => 112,  242 => 105,  232 => 101,  224 => 96,  220 => 95,  216 => 94,  199 => 80,  192 => 75,  188 => 74,  172 => 61,  160 => 52,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  873 => 606,  748 => 492,  744 => 491,  619 => 369,  604 => 357,  581 => 337,  575 => 334,  566 => 327,  556 => 323,  548 => 318,  544 => 317,  540 => 316,  520 => 299,  513 => 295,  506 => 290,  502 => 289,  486 => 276,  463 => 255,  452 => 247,  443 => 240,  441 => 239,  433 => 234,  424 => 227,  416 => 224,  405 => 221,  402 => 220,  398 => 219,  392 => 216,  389 => 215,  385 => 214,  367 => 201,  350 => 186,  343 => 182,  340 => 181,  334 => 178,  329 => 176,  326 => 175,  324 => 174,  307 => 160,  259 => 115,  253 => 112,  244 => 105,  234 => 101,  226 => 96,  222 => 95,  218 => 94,  205 => 84,  198 => 79,  194 => 78,  178 => 65,  163 => 55,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1152,62 +932,66 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
         return new Source("{% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel=\"stylesheet\" href=\"{{ asset('css/slick.css') }}\">
-    <link rel=\"stylesheet\" href=\"{{ asset('css/LineIcons.css') }}\">
-    <link rel=\"stylesheet\" href=\"{{ asset('css/materialdesignicons.min.css') }}\">
-    <link rel=\"stylesheet\" href=\"{{ asset('css/jquery-ui.min.css') }}\">
-    <link rel=\"stylesheet\" href=\"{{ asset('css/nice-select.css') }}\">
-    <link rel=\"stylesheet\" href=\"{{ asset('css/bootstrap.min.css') }}\">
-    <link rel=\"stylesheet\" href=\"{{ asset('css/default.css') }}\">
-    <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\">
-{% endblock %}    
+\t<link rel=\"stylesheet\" href=\"{{ asset('css/slick.css') }}\">
+\t<link rel=\"stylesheet\" href=\"{{ asset('css/LineIcons.css') }}\">
+\t<link rel=\"stylesheet\" href=\"{{ asset('css/materialdesignicons.min.css') }}\">
+\t<link rel=\"stylesheet\" href=\"{{ asset('css/jquery-ui.min.css') }}\">
+\t<link rel=\"stylesheet\" href=\"{{ asset('css/nice-select.css') }}\">
+\t<link rel=\"stylesheet\" href=\"{{ asset('css/bootstrap.min.css') }}\">
+\t<link rel=\"stylesheet\" href=\"{{ asset('css/default.css') }}\">
+\t<link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\">
+{% endblock %}
 
 {% block contenido %}
-    <div class=\"preloader\">
-        <div class=\"loader\">
-            <div class=\"ytp-spinner\">
-                <div class=\"ytp-spinner-container\">
-                    <div class=\"ytp-spinner-rotator\">
-                        <div class=\"ytp-spinner-left\">
-                            <div class=\"ytp-spinner-circle\"></div>
-                        </div>
-                        <div class=\"ytp-spinner-right\">
-                            <div class=\"ytp-spinner-circle\"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--====== Preloader Part Ends ======-->
+\t<div class=\"preloader\">
+\t\t<div class=\"loader\">
+\t\t\t<div class=\"ytp-spinner\">
+\t\t\t\t<div class=\"ytp-spinner-container\">
+\t\t\t\t\t<div class=\"ytp-spinner-rotator\">
+\t\t\t\t\t\t<div class=\"ytp-spinner-left\">
+\t\t\t\t\t\t\t<div class=\"ytp-spinner-circle\"></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"ytp-spinner-right\">
+\t\t\t\t\t\t\t<div class=\"ytp-spinner-circle\"></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+\t<!--====== Preloader Part Ends ======-->
 
-    <!--====== Navbar Style 7 Part Start ======-->
-    <div class=\"navigation\">
-        <header class=\"navbar-style-7 position-relative\">
-            <div class=\"container\">
-                <!-- navbar mobile Start -->
-                <div class=\"navbar-mobile d-lg-none\">
-                    <div class=\"row align-items-center\">
-                        <div class=\"col-3\">
-                            <!-- navbar cart start -->
-                            <div class=\"navbar-toggle icon-text-btn\">
-                                <a class=\"icon-btn primary-icon-text mobile-menu-open-7\" href=\"javascript:void(0)\">
-                                    <i class=\"mdi mdi-menu\"></i>
-                                </a>
-                            </div>
-                            <!-- navbar cart Ends -->
-                        </div>
-                        <div class=\"col-6\">
-                            <!-- desktop logo Start -->
-                            <div class=\"mobile-logo text-center\">
-                                <a href=\"{{ path('index') }}\"><img src=\"images/logo.svg\" alt=\"Logo\"></a>
-                            </div>
-                            <!-- desktop logo Ends -->
-                        </div>
-                        <div class=\"col-3\">
-                            <!-- navbar cart start -->
-                            <div class=\"navbar-cart\">
-                                <a class=\"icon-btn primary-icon-text icon-text-btn\" href=\"javascript:void(0)\">
+\t<!--====== Navbar Style 7 Part Start ======-->
+\t<div class=\"navigation\">
+\t\t<header class=\"navbar-style-7 position-relative\">
+\t\t\t<div
+\t\t\t\tclass=\"container\">
+\t\t\t\t<!-- navbar mobile Start -->
+\t\t\t\t<div class=\"navbar-mobile d-lg-none\">
+\t\t\t\t\t<div class=\"row align-items-center\">
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"col-3\">
+\t\t\t\t\t\t\t<!-- navbar cart start -->
+\t\t\t\t\t\t\t<div class=\"navbar-toggle icon-text-btn\">
+\t\t\t\t\t\t\t\t<a class=\"icon-btn primary-icon-text mobile-menu-open-7\" href=\"javascript:void(0)\">
+\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-menu\"></i>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- navbar cart Ends -->
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"col-6\">
+\t\t\t\t\t\t\t<!-- desktop logo Start -->
+\t\t\t\t\t\t\t<div class=\"mobile-logo text-center\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('index') }}\"><img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"Logo\" style=\"width: 150px;\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- desktop logo Ends -->
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"col-3\">
+\t\t\t\t\t\t\t<!-- navbar cart start -->
+\t\t\t\t\t\t\t<div class=\"navbar-cart\">
+\t\t\t\t\t\t\t\t<a class=\"icon-btn primary-icon-text icon-text-btn\" href=\"javascript:void(0)\">
 \t\t\t\t\t\t\t\t\t<img src=\"images/icon-svg/cart-1.svg\" alt=\"Icon\">
 \t\t\t\t\t\t\t\t\t<span class=\"icon-text text-style-1\">{{ unidades }}</span>
 \t\t\t\t\t\t\t\t</a>
@@ -1221,7 +1005,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t\t<div class=\"checkout-table\">
 \t\t\t\t\t\t\t\t\t\t\t<table class=\"table\">
 \t\t\t\t\t\t\t\t\t\t\t\t<tbody>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+
 \t\t\t\t\t\t\t\t\t\t\t\t\t{% for produCesta in cesta %}
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-product\">
@@ -1231,11 +1015,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"product-details-page.html\">{{ produCesta.producto.getNombre() }}</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"delete\" href=\"javascript:void(0)\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-delete\"></i>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"javascript:void(0)\"><i class=\"mdi mdi-delete\"></i></a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -1244,7 +1024,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-quantity d-inline-flex\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}\" method=\"post\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"{{ produCesta.unidades }}\" size=\"3\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value= \"{{ produCesta.producto.getCodigo() }}\" />
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"{{ produCesta.producto.getCodigo() }}\"/>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
@@ -1263,725 +1043,498 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t<p class=\"price\">{{ precioCesta }}€</p>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-btn\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"cart-page.html\" class=\"main-btn primary-btn-border\">View
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                        Cart</a>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"checkout-page.html\" class=\"main-btn primary-btn\">Checkout</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('index') }}\" class=\"main-btn primary-btn-border\">Actualizar</a>
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"main-btn primary-btn\">Resumen</a>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
-                            <!-- navbar cart Ends -->
-                        </div>
-                    </div>
-                    <!-- navbar search start -->
-                    <div class=\"navbar-search mt-15 search-style-5\">
-                        <div class=\"search-input\">
-                            <input type=\"text\" placeholder=\"Search\">
-                        </div>
-                        <div class=\"search-btn\">
-                            <button><i class=\"lni lni-search-alt\"></i></button>
-                        </div>
-                    </div>
-                    <!-- navbar search Ends -->
-                </div>
-                <!-- navbar mobile Start -->
-            </div>
-    
-            <div class=\"navbar-container navbar-sidebar-7\">
-                <!-- navbar close  Ends -->
-                <div class=\"navbar-close d-lg-none\">
-                    <a class=\"close-mobile-menu-7\" href=\"javascript:void(0)\"><i class=\"mdi mdi-close\"></i></a>
-                </div>
-                <!-- navbar close  Ends -->
-    
-                <!-- navbar top Start -->
-                <div class=\"navbar-top-wrapper\">
-                    <div class=\"container-lg\">
-                        <div class=\"navbar-top d-lg-flex justify-content-between\">
-                            <!-- navbar top left Start -->
-                            <div class=\"navbar-top-left\">
-                                <ul class=\"navbar-top-link\">
-                                    <li><a href=\"{{ path('contacto') }}\">Contacto</a></li>
-                                    <li>
-                                        <a href=\"javascript:void(0)\">
-                                            <i class=\"mdi mdi-phone-in-talk\"></i>
-                                            +34 684 00 10 65
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- navbar top left Ends -->
-                            <!-- navbar top right Start -->
-                            <div class=\"navbar-top-right\">
-                                <ul class=\"navbar-top-link\">
-                                    {% if app.user %}
+\t\t\t\t\t\t\t<!-- navbar cart Ends -->
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- navbar search start -->
+\t\t\t\t\t<div class=\"navbar-search mt-15 search-style-5\">
+\t\t\t\t\t\t<div class=\"search-input\">
+\t\t\t\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"search-btn\">
+\t\t\t\t\t\t\t<button>
+\t\t\t\t\t\t\t\t<i class=\"lni lni-search-alt\"></i>
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- navbar search Ends -->
+\t\t\t\t</div>
+\t\t\t\t<!-- navbar mobile Start -->
+\t\t\t</div>
+
+\t\t\t<div
+\t\t\t\tclass=\"navbar-container navbar-sidebar-7\">
+\t\t\t\t<!-- navbar close  Ends -->
+\t\t\t\t<div class=\"navbar-close d-lg-none\">
+\t\t\t\t\t<a class=\"close-mobile-menu-7\" href=\"javascript:void(0)\">
+\t\t\t\t\t\t<i class=\"mdi mdi-close\"></i>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t\t<!-- navbar close  Ends -->
+
+\t\t\t\t<!-- navbar top Start -->
+\t\t\t\t<div class=\"navbar-top-wrapper\">
+\t\t\t\t\t<div class=\"container-lg\">
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"navbar-top d-lg-flex justify-content-between\">
+\t\t\t\t\t\t\t<!-- navbar top left Start -->
+\t\t\t\t\t\t\t<div class=\"navbar-top-left\">
+\t\t\t\t\t\t\t\t<ul class=\"navbar-top-link\">
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('contacto') }}\">Contacto</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-phone-in-talk\"></i>
+\t\t\t\t\t\t\t\t\t\t\t+34 684 00 10 65
+\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- navbar top left Ends -->
+\t\t\t\t\t\t\t<!-- navbar top right Start -->
+\t\t\t\t\t\t\t<div class=\"navbar-top-right\">
+\t\t\t\t\t\t\t\t<ul class=\"navbar-top-link\">
+\t\t\t\t\t\t\t\t\t{% if app.user %}
 \t\t\t\t\t\t\t\t\t\t<li>
-                                            <a href=\"{{ path('logout') }}\"><i class=\"mdi mdi-account\"></i>Cerrar sesión
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('logout') }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-account\"></i>Cerrar sesión
 \t\t\t\t\t\t\t\t\t\t\t\t{{ app.user.username }}</a>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t{% else %}
-                                        <li>
-                                            <a href=\"{{ path('login') }}\"><i class=\"mdi mdi-account\"></i>Iniciar sesión</a>
-                                        </li>
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('login') }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-account\"></i>Iniciar sesión</a>
+\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t{% endif %}
-                                </ul>
-                            </div>
-                            <!-- navbar top right Ends -->
-                        </div>
-                    </div>
-                </div>
-                <!-- navbar top Ends -->
-    
-                <!-- main navbar Start -->
-                <div class=\"navbar-wrapper\">
-                    <div class=\"container-lg\">
-                        <nav class=\"main-navbar d-lg-flex justify-content-between align-items-center\">
-                            <!-- desktop logo Start -->
-                            <div class=\"desktop-logo d-none d-lg-block\">
-                                <a href=\"{{ path('index') }}\"><img src=\"{{ asset('images/logo.svg') }}\" alt=\"Logo\"></a>
-                            </div>
-                            <!-- desktop logo Ends -->
-                            <!-- navbar menu Start -->
-                            <div class=\"navbar-menu\">
-                                <ul class=\"main-menu\">
-                                    <li class=\"position-static menu-item-has-children\">
-                                        <a href=\"#\">Categorías</a>
-                                        <!-- sub mega dropdown Start -->
-                                        <ul class=\"sub-mega-dropdown\">
-                                            <li>
-                                                <div class=\"mega-dropdown-menu\">
-                                                    <ul class=\"container mega-dropdown d-flex flex-wrap\">
-                                                    {% for lista in categorias %}
-                                                        <li class=\"mega-dropdown-list menu-item-has-children\">  
-                                                            <h6 class=\"heading-6 font-weight-500 mega-title\">{{ lista[0].nombre}}
-                                                            </h6>
-                                                            <ul>
-                                                            {% for categoriaSecu in lista[1] %}
-                                                                <li>
-                                                                    <a href=\"#\">{{ categoriaSecu.nombre }}</a> 
-                                                                </li>
-                                                            {% endfor %}
-                                                            </ul>
-                                                        </li>
-                                                    {% endfor %}
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <!-- sub mega dropdown Ends -->
-                                    </li>
-                                    <li><a href=\"{{ path('productos') }}\">Productos</a></li>
-                                    <li><a href=\"#\">Imprimir apuntes</a></li>
-                                    {% if is_granted('ROLE_ADMIN') %}
-                                        <li class=\"menu-item-has-children\">
-                                            <a href=\"#\">Administrar...</a>
-                                            <ul class=\"sub-menu\">
-                                                <li><a href=\"#\">Administrar categorías</a></li>
-                                                <li><a href=\"{{ path('adminProductos') }}\">Administrar productos</a></li>
-                                                <li><a href=\"#\">Administrar apuntes</a></li>
-                                            </ul>
-                                        </li>
-                                    {% endif %}                                    
-                                </ul>
-                            </div>
-                            <!-- navbar menu Ends -->
-                            <div class=\"navbar-search-cart d-none d-lg-flex\">
-                                <!-- navbar search start -->
-                                <div class=\"navbar-search search-style-5\">
-                                    <div class=\"search-input\">
-                                        <input type=\"text\" placeholder=\"Search\">
-                                    </div>
-                                    <div class=\"search-btn\">
-                                        <button><i class=\"lni lni-search-alt\"></i></button>
-                                    </div>
-                                </div>
-                                <!-- navbar search Ends -->
-                                <!-- navbar cart start -->
-                                <div class=\"navbar-cart\">
-                                    <a class=\"icon-btn primary-icon-text icon-text-btn\" href=\"javascript:void(0)\">
-                                        <img src=\"images/icon-svg/cart-1.svg\" alt=\"Icon\">
-                                        <span class=\"icon-text text-style-1\">{{ unidades }}</span>
-                                    </a>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- navbar top right Ends -->
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<!-- navbar top Ends -->
 
-                                    <div class=\"navbar-cart-dropdown\">
-                                        <div class=\"checkout-style-2\">
-                                            <div class=\"checkout-header d-flex justify-content-between\">
-                                                <h6 class=\"title\">Shopping Cart</h6>
-                                            </div>
+\t\t\t\t<!-- main navbar Start -->
+\t\t\t\t<div class=\"navbar-wrapper\">
+\t\t\t\t\t<div class=\"container-lg\">
+\t\t\t\t\t\t<nav
+\t\t\t\t\t\t\tclass=\"main-navbar d-lg-flex justify-content-between align-items-center\">
+\t\t\t\t\t\t\t<!-- desktop logo Start -->
+\t\t\t\t\t\t\t<div class=\"desktop-logo d-none d-lg-block\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('index') }}\"><img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"Logo\" style=\"width: 150px;\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- desktop logo Ends -->
+\t\t\t\t\t\t\t<!-- navbar menu Start -->
+\t\t\t\t\t\t\t<div class=\"navbar-menu\">
+\t\t\t\t\t\t\t\t<ul class=\"main-menu\">
+\t\t\t\t\t\t\t\t\t<li class=\"position-static menu-item-has-children\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Categorías</a>
+\t\t\t\t\t\t\t\t\t\t<!-- sub mega dropdown Start -->
+\t\t\t\t\t\t\t\t\t\t<ul class=\"sub-mega-dropdown\">
+\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"mega-dropdown-menu\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<ul class=\"container mega-dropdown d-flex flex-wrap\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% for lista in categorias %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"mega-dropdown-list menu-item-has-children\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"heading-6 font-weight-500 mega-title\">{{ lista[0].nombre}}
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h6>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% for categoriaSecu in lista[1] %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('productosCat', {'categoria': categoriaSecu.getId()}) }}\">{{ categoriaSecu.nombre }}</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t<!-- sub mega dropdown Ends -->
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('productos') }}\">Productos</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Imprimir apuntes</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t{% if is_granted('ROLE_ADMIN') %}
+\t\t\t\t\t\t\t\t\t\t<li class=\"menu-item-has-children\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Administrar...</a>
+\t\t\t\t\t\t\t\t\t\t\t<ul class=\"sub-menu\">
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Administrar categorías</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('adminProductos') }}\">Administrar productos</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Administrar apuntes</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<!-- navbar menu Ends -->
+\t\t\t\t\t\t\t<div
+\t\t\t\t\t\t\t\tclass=\"navbar-search-cart d-none d-lg-flex\">
+\t\t\t\t\t\t\t\t<!-- navbar search start -->
+\t\t\t\t\t\t\t\t<div class=\"navbar-search search-style-5\">
+\t\t\t\t\t\t\t\t\t<div class=\"search-input\">
+\t\t\t\t\t\t\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"search-btn\">
+\t\t\t\t\t\t\t\t\t\t<button>
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"lni lni-search-alt\"></i>
+\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<!-- navbar search Ends -->
+\t\t\t\t\t\t\t\t<!-- navbar cart start -->
+\t\t\t\t\t\t\t\t<div class=\"navbar-cart\">
+\t\t\t\t\t\t\t\t\t<a class=\"icon-btn primary-icon-text icon-text-btn\" href=\"javascript:void(0)\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"images/icon-svg/cart-1.svg\" alt=\"Icon\">
+\t\t\t\t\t\t\t\t\t\t<span class=\"icon-text text-style-1\">{{ unidades }}</span>
+\t\t\t\t\t\t\t\t\t</a>
 
-                                            <div class=\"checkout-table\">
-                                                <table class=\"table\">
-                                                    <tbody>
-                                                            
-                                                        {% for produCesta in cesta %}
-                                                            <tr>
-                                                                <td class=\"checkout-product\">
-                                                                    <div class=\"product-cart d-flex\">
-                                                                        <div class=\"product-content media-body\">
-                                                                            <h5 class=\"title\">
-                                                                                <a href=\"product-details-page.html\">{{ produCesta.producto.getNombre() }}</a>
-                                                                            </h5>
-                                                                            <ul>
-                                                                                <li>
-                                                                                    <form id=\"form_seleccion\" action=\"{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}\" method=\"post\">
-                                                                                        <input type=\"submit\" class=\"delete\" value=\"Borrar\">
-                                                                                            <i class=\"mdi mdi-delete\"></i>
-                                                                                        </input>
-                                                                                    </form>
-                                                                                    
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class=\"checkout-quantity\">
-                                                                    <div class=\"product-quantity d-inline-flex\">
-                                                                        <form id=\"form_seleccion\" action=\"{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}\" method=\"post\">
-                                                                            <input type=\"number\" name=\"unidades\" value=\"{{ produCesta.unidades }}\" size=\"3\">
-                                                                            <input type='hidden' name='codProduc' value= \"{{ produCesta.producto.getCodigo() }}\" />
-                                                                        </form>
-                                                                    </div>
-                                                                </td>
-                                                                <td class=\"checkout-price\">
-                                                                    <p class=\"price\">{{ produCesta.producto.getPvp() }}€</p>
-                                                                </td>
-                                                            </tr>
-                                                        {% endfor %}
-                                                    </tbody>
-                                                </table>
-                                            </div>
+\t\t\t\t\t\t\t\t\t<div class=\"navbar-cart-dropdown\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-style-2\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-header d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">Shopping Cart</h6>
+\t\t\t\t\t\t\t\t\t\t\t</div>
 
-                                            <div class=\"checkout-footer\">
-                                                <div class=\"checkout-sub-total d-flex justify-content-between\">
-                                                    <p class=\"value\">Subtotal Price:</p>
-                                                    <p class=\"price\">{{ precioCesta }}€</p>
-                                                </div>
-                                                <div class=\"checkout-btn\">
-                                                    <a href=\"cart-page.html\" class=\"main-btn primary-btn-border\">View
-                                                                                                                                                                    Cart</a>
-                                                    <a href=\"checkout-page.html\" class=\"main-btn primary-btn\">Checkout</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- navbar cart Ends -->
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <!-- main navbar Ends -->
-            </div>
-            <div class=\"overlay-7\"></div>
-        </header>
-    </div>
-    <!--====== Navbar Style 7 Part Ends ======-->
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-table\">
+\t\t\t\t\t\t\t\t\t\t\t\t<table class=\"table\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<tbody>
 
-    <!--====== Header Style 1 Part Start ======-->
-    <section class=\"header-style-1\">
-        <div class=\"header-big\">
-            <div class=\"header-items-active\">
-                <div class=\"single-header-item bg_cover\"
-                    style=\"background-image: url(images/header-1/header-big-1.jpg);\">
-                    <div class=\"header-item-content\">
-                        <h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
-                        <a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
-                    </div>
-                </div>
-                <div class=\"single-header-item bg_cover\"
-                    style=\"background-image: url(images/header-1/header-big-2.jpg);\">
-                    <div class=\"header-item-content\">
-                        <h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
-                        <a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
-                    </div>
-                </div>
-                <div class=\"single-header-item bg_cover\"
-                    style=\"background-image: url(images/header-1/header-big-1.jpg);\">
-                    <div class=\"header-item-content\">
-                        <h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
-                        <a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=\"header-min\">
-            <div class=\"header-min-item product-style-25 bg_cover\"
-                style=\"background-image: url(images/header-1/header-min-1.jpg);\">
-                <div class=\"product-content\">
-                    <h4 class=\"title\"><a href=\"product-details-page.html\">Metro 38 Date</a></h4>
-                    <p>Reference 1102</p>
-                    <a href=\"javascript:void(0)\" class=\"main-btn primary-btn-border\"> <img src=\"images/icon-svg/cart-5.svg\" alt=\"\">\$
-                        399</a>
-                </div>
-            </div>
-            <div class=\"header-min-item product-style-25 bg_cover\"
-                style=\"background-image: url(images/header-1/header-min-2.jpg);\">
-                <div class=\"product-content\">
-                    <h4 class=\"title\"><a href=\"product-details-page.html\">Metro 38 Date</a></h4>
-                    <p>Reference 1102</p>
-                    <a href=\"javascript:void(0)\" class=\"main-btn primary-btn-border\"> <img src=\"images/icon-svg/cart-5.svg\" alt=\"\">\$
-                        399</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Header Style 1 Part Ends ======-->
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t{% for produCesta in cesta %}
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-product\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-cart d-flex\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-content media-body\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"title\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"product-details-page.html\">{{ produCesta.producto.getNombre() }}</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}\" method=\"post\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"delete\" value=\"Borrar\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-delete\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</input>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
 
-    <!--====== Content Card Style 4 Part Start ======-->
-    <section class=\"content-card-style-4 pt-70 pb-100\">
-        <div class=\"container\">
-            <div class=\"row justify-content-center\">
-                <div class=\"col-lg-4 col-md-7 col-sm-8\">
-                    <div class=\"single-content mt-15 text-center\">
-                        <div class=\"content-icon\">
-                            <i class=\"mdi mdi-truck-fast\"></i>
-                        </div>
-                        <div class=\"content-content\">
-                            <h4 class=\"title\"><a href=\"javascript:void(0)\">Two-hour delivery</a></h4>
-                            <p>Available in most metros on selected in-stock products</p>
-                            <a href=\"javascript:void(0)\" class=\"more\">learn more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-7 col-sm-8\">
-                    <div class=\"single-content mt-15 text-center\">
-                        <div class=\"content-icon\">
-                            <i class=\"mdi mdi-message-text\"></i>
-                        </div>
-                        <div class=\"content-content\">
-                            <h4 class=\"title\"><a href=\"javascript:void(0)\">Get help buying</a></h4>
-                            <p>Have a question? Call a Specialist or chat online for help</p>
-                            <a href=\"contact-page.html\" class=\"more\">Contact us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-7 col-sm-8\">
-                    <div class=\"single-content mt-15 text-center\">
-                        <div class=\"content-icon\">
-                            <i class=\"mdi mdi-ticket-percent\"></i>
-                        </div>
-                        <div class=\"content-content\">
-                            <h4 class=\"title\"><a href=\"javascript:void(0)\">Find the card for you</a></h4>
-                            <p>Get 3% Daily Cash with special financing offers from us</p>
-                            <a href=\"javascript:void(0)\" class=\"more\">learn more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Content Card Style 4 Part Ends ======-->
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-quantity\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-quantity d-inline-flex\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}\" method=\"post\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"{{ produCesta.unidades }}\" size=\"3\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"{{ produCesta.producto.getCodigo() }}\"/>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-price\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"price\">{{ produCesta.producto.getPvp() }}€</p>
+\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t\t</table>
+\t\t\t\t\t\t\t</div>
 
-    <!--====== Product Style 1 Part Start ======-->
-    <section class=\"product-wrapper pt-100 pb-70\">
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <div class=\"mb-50\">
-                        <h1 class=\"heading-1 font-weight-700\">Featured Items</h1>
-                    </div>
-                </div>
-            </div>
-            <div class=\"row\">
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <span class=\"icon-text text-style-1\">NEW</span>
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-1.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-2.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Metro 38 Date</a></h4>
-                            <p>Reference 1102</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <span class=\"icon-text text-style-1\">20% off</span>
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-5.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-6.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Lady Shoe</a></h4>
-                            <p>Reference 1103</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-3.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-4.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Casio 09 Date</a></h4>
-                            <p>Reference 1112</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-7.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-8.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Man's Shoe</a></h4>
-                            <p>Reference 102</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-9.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-10.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Polo T Shirt</a></h4>
-                            <p>Reference 1202</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-sm-6\">
-                    <div class=\"product-style-1 mt-30\">
-                        <div class=\"product-image\">
-                            <span class=\"icon-text text-style-1\">40% off</span>
-                            <div class=\"product-active\">
-                                <div class=\"product-item active\">
-                                    <img src=\"images/product-1/product-11.jpg\" alt=\"product\">
-                                </div>
-                                <div class=\"product-item\">
-                                    <img src=\"images/product-1/product-12.jpg\" alt=\"product\">
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"product-content text-center\">
-                            <h4 class=\"title\"><a href=\"product-details-page.html\">Lotto T Shirt</a></h4>
-                            <p>Reference 112</p>
-                            <a href=\"javascript:void(0)\" class=\"main-btn secondary-1-btn\">
-                                <img src=\"images/icon-svg/cart-7.svg\" alt=\"\">
-                                \$ 399
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Product Style 1 Part Ends ======-->
+\t\t\t\t\t\t\t<div class=\"checkout-footer\">
+\t\t\t\t\t\t\t\t<div class=\"checkout-sub-total d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t<p class=\"value\">Subtotal Price:</p>
+\t\t\t\t\t\t\t\t\t<p class=\"price\">{{ precioCesta }}€</p>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"checkout-btn\">
+\t\t\t\t\t\t\t\t\t<a href=\"{{ path('index') }}\" class=\"main-btn primary-btn-border\">Actualizar</a>
+\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"main-btn primary-btn\">Resumen</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<!-- navbar cart Ends -->
+\t\t\t</div>
+\t\t</nav>
+\t</div>
+</div>
+<!-- main navbar Ends -->
+</div>
+<div class=\"overlay-7\">
+</div></header></div><!--====== Navbar Style 7 Part Ends ======-->
+<!--====== Header Style 1 Part Start ======--><section class=\"header-style-1\"><div class=\"header-big\"><div class=\"header-items-active\">
+<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-cartulina.jpg);\">
+\t<div class=\"header-item-content\">
+\t\t<h3 class=\"title\">Tenemos un amplio catálogo de cartulinas, para realizar cualquier manualidad.</h3>
+\t\t<a href=\"{{path('productos')}}\" class=\"link\">Pulsa aquí para ver todas las opciones.</a>
+\t</div>
+</div>
+<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-gonzalo.jpg);\">
+\t<div class=\"header-item-content\">
+\t\t<h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
+\t\t<a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
+\t</div>
+</div>
+<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-puerta.jpg);\">
+\t<div class=\"header-item-content\">
+\t\t<h3 class=\"title\">Fachada de nuestra papeleria, situada en la plazoleta del juncal.</h3>
+\t\t<a href=\"{{ path('contacto') }}\" class=\"link\">Página de contacto</a>
+\t</div>
+</div></div></div>
+</section>
+<!--====== Header Style 1 Part Ends ======-->
+<!--====== Content Card Style 4 Part Start ======--><section class=\"content-card-style-4 pt-70 pb-100\"><div class=\"container\"><div class=\"row justify-content-center\">
+<div class=\"col-lg-4 col-md-7 col-sm-8\">
+\t<div class=\"single-content mt-15 text-center\">
+\t\t<div class=\"content-icon\">
+\t\t\t<i class=\"mdi mdi-truck-fast\"></i>
+\t\t</div>
+\t\t<div class=\"content-content\">
+\t\t\t<h4 class=\"title\">
+\t\t\t\t<a href=\"javascript:void(0)\">Two-hour delivery</a>
+\t\t\t</h4>
+\t\t\t<p>Available in most metros on selected in-stock products</p>
+\t\t\t<a href=\"javascript:void(0)\" class=\"more\">learn more</a>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-7 col-sm-8\">
+\t<div class=\"single-content mt-15 text-center\">
+\t\t<div class=\"content-icon\">
+\t\t\t<i class=\"mdi mdi-message-text\"></i>
+\t\t</div>
+\t\t<div class=\"content-content\">
+\t\t\t<h4 class=\"title\">
+\t\t\t\t<a href=\"javascript:void(0)\">Get help buying</a>
+\t\t\t</h4>
+\t\t\t<p>Have a question? Call a Specialist or chat online for help</p>
+\t\t\t<a href=\"contact-page.html\" class=\"more\">Contact us</a>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-7 col-sm-8\">
+\t<div class=\"single-content mt-15 text-center\">
+\t\t<div class=\"content-icon\">
+\t\t\t<i class=\"mdi mdi-ticket-percent\"></i>
+\t\t</div>
+\t\t<div class=\"content-content\">
+\t\t\t<h4 class=\"title\">
+\t\t\t\t<a href=\"javascript:void(0)\">Find the card for you</a>
+\t\t\t</h4>
+\t\t\t<p>Get 3% Daily Cash with special financing offers from us</p>
+\t\t\t<a href=\"javascript:void(0)\" class=\"more\">learn more</a>
+\t\t</div>
+\t</div>
+</div></div></div></section><!--====== Content Card Style 4 Part Ends ======--><!--====== Features Part Start ======--><section class=\"features-section pt-100 pb-50 gray-bg\"><div class=\"container\"><div class=\"row\">
+<div class=\"col-lg-12\">
+\t<div class=\"features-title text-center mb-50\">
+\t\t<h1 class=\"heading-1 font-weight-700\">Awesome Features</h1>
+\t</div>
+</div></div><div class=\"row\">
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-cog\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Bootstrap 5</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-code\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Clean Design</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-layers\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Included Business Pages</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-laptop-phone\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Fully Responsive</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-brush\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Completely Customizable</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div>
+<div class=\"col-lg-4 col-md-6\">
+\t<div class=\"single-feature-wrapper\">
+\t\t<div class=\"feature-icon\">
+\t\t\t<i class=\"lni lni-rocket\"></i>
+\t\t</div>
+\t\t<div class=\"feature-content\">
+\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Fast and Well-optimized</h5>
+\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
+\t\t</div>
+\t</div>
+</div></div></div></section><!--====== Features Part Ends ======--><!--====== Footer Style 3 Part Start ======--><section class=\"footer-style-3 pt-100 pb-100\"><div class=\"container\"><div class=\"footer-top\">
+<div class=\"row justify-content-center\">
+\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
+\t\t<div class=\"footer-logo text-center\">
+\t\t\t<a href=\"{{ path('index') }}\">
+\t\t\t\t<img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
+\t\t\t</a>
+\t\t</div>
+\t\t<h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>
+\t\t<ul class=\"footer-follow text-center\">
+\t\t\t<li>
+\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
+\t\t\t\t\t<i class=\"lni lni-facebook-filled\"></i>
+\t\t\t\t</a>
+\t\t\t</li>
+\t\t\t<li>
+\t\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
+\t\t\t\t\t<i class=\"lni lni-instagram-original\"></i>
+\t\t\t\t</a>
+\t\t\t</li>
+\t\t</ul>
+\t</div>
+</div></div><div class=\"footer-widget-wrapper text-center pt-20\">
+<div class=\"row\">
+\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t<div class=\"footer-widget\">
+\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
 
-    <!--====== Features Part Start ======-->
-    <section class=\"features-section pt-100 pb-50 gray-bg\">
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <div class=\"features-title text-center mb-50\">
-                        <h1 class=\"heading-1 font-weight-700\">Awesome Features</h1>
-                    </div>
-                </div>
-            </div>
-            <div class=\"row\">
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-cog\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Bootstrap 5</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-code\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Clean Design</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-layers\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Included Business Pages</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-laptop-phone\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Fully Responsive</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-brush\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Completely Customizable</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-wrapper\">
-                        <div class=\"feature-icon\">
-                            <i class=\"lni lni-rocket\"></i>
-                        </div>
-                        <div class=\"feature-content\">
-                            <h5 class=\"heading-5 font-weight-500 mb-10\">Fast and Well-optimized</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Features Part Ends ======-->
+\t\t\t<ul class=\"footer-link\">
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Quest</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Rift S</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Gear VR</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Oculus for Business</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t<div class=\"footer-widget\">
+\t\t\t<h5 class=\"footer-title\">DEVELOPERS</h5>
 
-    <!--====== Clients Logo Part Start ======-->
-    <section class=\"clients-logo-section pt-70 pb-70\">
-        <div class=\"container\">
-            <div class=\"row client-logo-active\">
-                <div class=\"col-lg-3\">
-                    <div class=\"single-logo-wrapper\">
-                        <img src=\"images/client-logo/uideck-logo.svg\" alt=\"\">
-                    </div>
-                </div>
-                <div class=\"col-lg-3\">
-                    <div class=\"single-logo-wrapper\">
-                        <img src=\"images/client-logo/graygrids-logo.svg\" alt=\"\">
-                    </div>
-                </div>
-                <div class=\"col-lg-3\">
-                    <div class=\"single-logo-wrapper\">
-                        <img src=\"images/client-logo/lineicons-logo.svg\" alt=\"\">
-                    </div>
-                </div>
-                <div class=\"col-lg-3\">
-                    <div class=\"single-logo-wrapper\">
-                        <img src=\"images/client-logo/pagebulb-logo.svg\" alt=\"\">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Clients Logo Part Ends ======-->
+\t\t\t<ul class=\"footer-link\">
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Centre</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Docs</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Downloads</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Tools</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Blog</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Forums</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t<div class=\"footer-widget\">
+\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
 
-    <!--====== Footer Style 3 Part Start ======-->
-    <section class=\"footer-style-3 pt-100 pb-100\">
-        <div class=\"container\">
-            <div class=\"footer-top\">
-                <div class=\"row justify-content-center\">
-                    <div class=\"col-lg-5 col-md-7 col-sm-10\">
-                        <div class=\"footer-logo text-center\">
-                            <a href=\"{{ path('index') }}\">
-                                <img src=\"{{ asset('images/logo.svg') }}\" alt=\"\">
-                            </a>
-                        </div>
-                        <h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>
-                        <ul class=\"footer-follow text-center\">
-                            <li>
-                                <a href=\"https://www.facebook.com/impresionacopisteria/\">
-                                    <i class=\"lni lni-facebook-filled\"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href=\"https://www.instagram.com/impresionacopisteria/\">
-                                    <i class=\"lni lni-instagram-original\"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+\t\t\t<ul class=\"footer-link\">
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Blog</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Careers</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Brand Centre</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Connect</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t<div class=\"footer-widget\">
+\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
 
-            <div class=\"footer-widget-wrapper text-center pt-20\">
-                <div class=\"row\">
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
-
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">Quest</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Rift S</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Gear VR</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Apps and Games</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Apps and Games</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Oculus for Business</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">DEVELOPERS</h5>
-
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">Developer Centre</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Docs</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Downloads</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Tools</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Developer Blog</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Developer Forums</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
-
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">Blog</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Careers</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Brand Centre</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Connect</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
-
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">VR for Good</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Launch Pad</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Creators Lab</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Forums</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Support</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-{% endblock %}
-
-{% block javascripts %}
-\t<script src=\"{{ asset('js/popper.min.js') }}\"></script>
-    <script src=\"{{ asset('js/bootstrap.min.js') }}\"></script>
-    <script src=\"{{ asset('js/vendor/jquery-3.5.1.min.js') }}\"></script>
-    <script src=\"{{ asset('js/vendor/modernizr-3.7.1.min.js') }}\"></script>
-    <script src=\"{{ asset('js/slick.min.js') }}\"></script>
-    <script src=\"{{ asset('js/jquery-vj-accordion-steps.js') }}\"></script>
-    <script src=\"{{ asset('js/jquery-ui.min.js') }}\"></script>
-    <script src=\"{{ asset('js/jquery.form-validator.min.js') }}\"></script>
-    <script src=\"{{ asset('js/jquery.nice-select.min.js') }}\"></script>
-    <script src=\"{{ asset('js/jquery.formatter.min.js') }}\"></script>
-    <script src=\"{{ asset('js/count-up.min.js') }}\"></script>
-    <script src=\"{{ asset('js/main.js') }}\"></script>
-{% endblock %} 
-
+\t\t\t<ul class=\"footer-link\">
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">VR for Good</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Launch Pad</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Creators Lab</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Forums</a>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<a href=\"javascript:void(0)\">Support</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+</div></div></div></section>{% endblock %}{% block javascripts %}<script src=\"{{ asset('js/popper.min.js') }}\"></script><script src=\"{{ asset('js/bootstrap.min.js') }}\"></script><script src=\"{{ asset('js/vendor/jquery-3.5.1.min.js') }}\"></script><script src=\"{{ asset('js/vendor/modernizr-3.7.1.min.js') }}\"></script><script src=\"{{ asset('js/slick.min.js') }}\"></script><script src=\"{{ asset('js/jquery-vj-accordion-steps.js') }}\"></script><script src=\"{{ asset('js/jquery-ui.min.js') }}\"></script><script src=\"{{ asset('js/jquery.form-validator.min.js') }}\"></script><script src=\"{{ asset('js/jquery.nice-select.min.js') }}\"></script><script src=\"{{ asset('js/jquery.formatter.min.js') }}\"></script><script src=\"{{ asset('js/count-up.min.js') }}\"></script><script src=\"{{ asset('js/main.js') }}\"></script>{% endblock %}
 ", "index.html.twig", "C:\\xampp\\htdocs\\tienda\\tiendaPapel\\templates\\index.html.twig");
     }
 }

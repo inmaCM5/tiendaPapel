@@ -51,7 +51,7 @@
 						class="col-6">
 						<!-- desktop logo Start -->
 						<div class="mobile-logo text-center">
-							<a href="{{ path('index') }}"><img src="images/logo.svg" alt="Logo"></a>
+							<a href="{{ path('index') }}"><img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="Logo" style="width: 150px;"></a>
 						</div>
 						<!-- desktop logo Ends -->
 					</div>
@@ -202,7 +202,7 @@
 						class="main-navbar d-lg-flex justify-content-between align-items-center">
 						<!-- desktop logo Start -->
 						<div class="desktop-logo d-none d-lg-block">
-							<a href="{{ path('index') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo"></a>
+							<a href="{{ path('index') }}"><img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="Logo" style="width: 150px;"></a>
 						</div>
 						<!-- desktop logo Ends -->
 						<!-- navbar menu Start -->
@@ -225,7 +225,7 @@
 																	<ul>
 																	{% for categoriaSecu in lista[1] %}
 																		<li>
-																			<a href="#">{{ categoriaSecu.nombre }}</a> 
+																			<a href="{{ path('productosCat', {'categoria': categoriaSecu.getId()}) }}">{{ categoriaSecu.nombre }}</a>
 																		</li>
 																	{% endfor %}
 																	</ul>
@@ -481,32 +481,7 @@
 </section>
 
 
-<section class="clients-logo-section pt-70 pb-70">
-	<div class="container">
-		<div class="row client-logo-active">
-			<div class="col-lg-3">
-				<div class="single-logo-wrapper">
-					<img src="{{ asset('images/client-logo/uideck-logo.svg') }}" alt="">
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="single-logo-wrapper">
-					<img src="{{ asset('images/client-logo/graygrids-logo.svg') }}" alt="">
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="single-logo-wrapper">
-					<img src="{{ asset('images/client-logo/lineicons-logo.svg') }}" alt="">
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="single-logo-wrapper">
-					<img src="{{ asset('images/client-logo/pagebulb-logo.svg') }}" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+
 
 <section class="footer-style-3 pt-100 pb-100">
 	<div class="container">
@@ -515,7 +490,7 @@
 				<div class="col-lg-5 col-md-7 col-sm-10">
 					<div class="footer-logo text-center">
 						<a href="{{ path('index') }}">
-							<img src="{{ asset('images/logo.svg') }}" alt="">
+							<img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="">
 						</a>
 					</div>
 					<h5 class="heading-5 text-center mt-30">Follow Us</h5>

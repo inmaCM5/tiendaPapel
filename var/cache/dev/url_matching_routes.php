@@ -18,6 +18,8 @@ return [
         '/adminProductos' => [[['_route' => 'adminProductos', '_controller' => 'App\\Controller\\BaseController::administrarProductos'], null, null, null, false, false, null]],
         '/anadirProducto' => [[['_route' => 'anadirProducto', '_controller' => 'App\\Controller\\BaseController::anadirProducto'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],
+        '/productosPrueba' => [[['_route' => 'app_productos_index', '_controller' => 'App\\Controller\\ProductosController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/productosPrueba/new' => [[['_route' => 'app_productos_new', '_controller' => 'App\\Controller\\ProductosController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/registro' => [[['_route' => 'registro', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\BaseController::index'], null, null, null, false, false, null]],
@@ -39,13 +41,20 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/productos/([^/]++)(*:188)'
-                .'|/detalles/([^/]++)(*:214)'
-                .'|/anadir/([^/]++)(*:238)'
-                .'|/cambiarUnidades/([^/]++)(*:271)'
+                .'|/productos(?'
+                    .'|/([^/]++)(*:191)'
+                    .'|Prueba/([^/]++)(?'
+                        .'|(*:217)'
+                        .'|/edit(*:230)'
+                        .'|(*:238)'
+                    .')'
+                .')'
+                .'|/detalles/([^/]++)(*:266)'
+                .'|/anadir/([^/]++)(*:290)'
+                .'|/cambiarUnidades/([^/]++)(*:323)'
                 .'|/eliminarProductos(?'
-                    .'|Cesta/([^/]++)(*:314)'
-                    .'|/([^/]++)(*:331)'
+                    .'|Cesta/([^/]++)(*:366)'
+                    .'|/([^/]++)(*:383)'
                 .')'
             .')/?$}sDu',
     ],
@@ -57,12 +66,15 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        188 => [[['_route' => 'productosCat', '_controller' => 'App\\Controller\\BaseController::productos'], ['categoria'], null, null, false, true, null]],
-        214 => [[['_route' => 'detalles', '_controller' => 'App\\Controller\\BaseController::detalleProducto'], ['producto'], null, null, false, true, null]],
-        238 => [[['_route' => 'anadir', '_controller' => 'App\\Controller\\BaseController::anadir'], ['idProducto'], null, null, false, true, null]],
-        271 => [[['_route' => 'cambiarUnidades', '_controller' => 'App\\Controller\\BaseController::cambiarUnidades'], ['idProducto'], null, null, false, true, null]],
-        314 => [[['_route' => 'eliminarProductosCesta', '_controller' => 'App\\Controller\\BaseController::eliminarProductosCesta'], ['idProducto'], null, null, false, true, null]],
-        331 => [
+        191 => [[['_route' => 'productosCat', '_controller' => 'App\\Controller\\BaseController::productos'], ['categoria'], null, null, false, true, null]],
+        217 => [[['_route' => 'app_productos_show', '_controller' => 'App\\Controller\\ProductosController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        230 => [[['_route' => 'app_productos_edit', '_controller' => 'App\\Controller\\ProductosController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        238 => [[['_route' => 'app_productos_delete', '_controller' => 'App\\Controller\\ProductosController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        266 => [[['_route' => 'detalles', '_controller' => 'App\\Controller\\BaseController::detalleProducto'], ['producto'], null, null, false, true, null]],
+        290 => [[['_route' => 'anadir', '_controller' => 'App\\Controller\\BaseController::anadir'], ['idProducto'], null, null, false, true, null]],
+        323 => [[['_route' => 'cambiarUnidades', '_controller' => 'App\\Controller\\BaseController::cambiarUnidades'], ['idProducto'], null, null, false, true, null]],
+        366 => [[['_route' => 'eliminarProductosCesta', '_controller' => 'App\\Controller\\BaseController::eliminarProductosCesta'], ['idProducto'], null, null, false, true, null]],
+        383 => [
             [['_route' => 'eliminarProductos', '_controller' => 'App\\Controller\\BaseController::eliminarProductos'], ['idProducto'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

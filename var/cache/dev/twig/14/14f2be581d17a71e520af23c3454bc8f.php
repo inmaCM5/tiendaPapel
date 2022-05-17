@@ -156,7 +156,9 @@ class __TwigTemplate_4075ac9f3dc4baf867f0aef5a256ab75 extends Template
                                 <a href=\"";
         // line 50
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\"><img src=\"images/logo.svg\" alt=\"Logo\"></a>
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo.png"), "html", null, true);
+        echo "\" alt=\"Logo\">Impresiòna</a>
                             </div>
                             <!-- desktop logo Ends -->
                         </div>
@@ -349,8 +351,8 @@ class __TwigTemplate_4075ac9f3dc4baf867f0aef5a256ab75 extends Template
         // line 189
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
-        echo "\" alt=\"Logo\"></a>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo.png"), "html", null, true);
+        echo "\" alt=\"Logo\">Impresiòna</a>
                             </div>
                             <!-- desktop logo Ends -->
                             <!-- navbar menu Start -->
@@ -585,7 +587,7 @@ class __TwigTemplate_4075ac9f3dc4baf867f0aef5a256ab75 extends Template
                 <tr>
                     <a href=\"";
         // line 350
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("anadirProducto");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_productos_new");
         echo "\" class=\"btn btn-primary float-right mb-4\">Añadir producto</a>
                 </tr>
                 <tr>
@@ -880,7 +882,7 @@ class __TwigTemplate_4075ac9f3dc4baf867f0aef5a256ab75 extends Template
 
     public function getDebugInfo()
     {
-        return array (  860 => 530,  856 => 529,  852 => 528,  848 => 527,  844 => 526,  840 => 525,  836 => 524,  832 => 523,  828 => 522,  824 => 521,  820 => 520,  815 => 519,  805 => 518,  673 => 395,  669 => 394,  657 => 384,  645 => 378,  639 => 375,  635 => 374,  631 => 373,  627 => 372,  623 => 371,  618 => 369,  613 => 367,  608 => 364,  604 => 363,  588 => 350,  567 => 332,  534 => 302,  525 => 295,  515 => 291,  507 => 286,  503 => 285,  499 => 284,  482 => 270,  475 => 265,  471 => 264,  455 => 251,  434 => 232,  426 => 228,  420 => 224,  418 => 223,  413 => 221,  405 => 215,  397 => 212,  388 => 209,  385 => 208,  381 => 207,  375 => 204,  372 => 203,  368 => 202,  350 => 189,  334 => 175,  328 => 172,  325 => 171,  319 => 168,  315 => 167,  312 => 166,  310 => 165,  294 => 152,  249 => 110,  240 => 103,  230 => 99,  222 => 94,  218 => 93,  214 => 92,  197 => 78,  190 => 73,  186 => 72,  170 => 59,  158 => 50,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  862 => 530,  858 => 529,  854 => 528,  850 => 527,  846 => 526,  842 => 525,  838 => 524,  834 => 523,  830 => 522,  826 => 521,  822 => 520,  817 => 519,  807 => 518,  675 => 395,  671 => 394,  659 => 384,  647 => 378,  641 => 375,  637 => 374,  633 => 373,  629 => 372,  625 => 371,  620 => 369,  615 => 367,  610 => 364,  606 => 363,  590 => 350,  569 => 332,  536 => 302,  527 => 295,  517 => 291,  509 => 286,  505 => 285,  501 => 284,  484 => 270,  477 => 265,  473 => 264,  457 => 251,  436 => 232,  428 => 228,  422 => 224,  420 => 223,  415 => 221,  407 => 215,  399 => 212,  390 => 209,  387 => 208,  383 => 207,  377 => 204,  374 => 203,  370 => 202,  352 => 189,  336 => 175,  330 => 172,  327 => 171,  321 => 168,  317 => 167,  314 => 166,  312 => 165,  296 => 152,  251 => 110,  242 => 103,  232 => 99,  224 => 94,  220 => 93,  216 => 92,  199 => 78,  192 => 73,  188 => 72,  172 => 59,  158 => 50,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -934,7 +936,7 @@ class __TwigTemplate_4075ac9f3dc4baf867f0aef5a256ab75 extends Template
                         <div class=\"col-6\">
                             <!-- desktop logo Start -->
                             <div class=\"mobile-logo text-center\">
-                                <a href=\"{{ path('index') }}\"><img src=\"images/logo.svg\" alt=\"Logo\"></a>
+                                <a href=\"{{ path('index') }}\"><img src=\"{{ asset('imagenes/logo.png') }}\" alt=\"Logo\">Impresiòna</a>
                             </div>
                             <!-- desktop logo Ends -->
                         </div>
@@ -1073,7 +1075,7 @@ class __TwigTemplate_4075ac9f3dc4baf867f0aef5a256ab75 extends Template
                         <nav class=\"main-navbar d-lg-flex justify-content-between align-items-center\">
                             <!-- desktop logo Start -->
                             <div class=\"desktop-logo d-none d-lg-block\">
-                                <a href=\"{{ path('index') }}\"><img src=\"{{ asset('images/logo.svg') }}\" alt=\"Logo\"></a>
+                                <a href=\"{{ path('index') }}\"><img src=\"{{ asset('imagenes/logo.png') }}\" alt=\"Logo\">Impresiòna</a>
                             </div>
                             <!-- desktop logo Ends -->
                             <!-- navbar menu Start -->
@@ -1234,7 +1236,7 @@ class __TwigTemplate_4075ac9f3dc4baf867f0aef5a256ab75 extends Template
         <table class=\"table table-striped contact-style-2\">
             <thead>
                 <tr>
-                    <a href=\"{{ path('anadirProducto') }}\" class=\"btn btn-primary float-right mb-4\">Añadir producto</a>
+                    <a href=\"{{ path('app_productos_new') }}\" class=\"btn btn-primary float-right mb-4\">Añadir producto</a>
                 </tr>
                 <tr>
                     <th>Producto</th>
