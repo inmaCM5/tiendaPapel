@@ -17,6 +17,7 @@ return [
         '/contacto' => [[['_route' => 'contacto', '_controller' => 'App\\Controller\\BaseController::contacto'], null, null, null, false, false, null]],
         '/adminProductos' => [[['_route' => 'adminProductos', '_controller' => 'App\\Controller\\BaseController::administrarProductos'], null, null, null, false, false, null]],
         '/anadirProducto' => [[['_route' => 'anadirProducto', '_controller' => 'App\\Controller\\BaseController::anadirProducto'], null, null, null, false, false, null]],
+        '/resumenCesta' => [[['_route' => 'resumenCesta', '_controller' => 'App\\Controller\\BaseController::resumenCesta'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],
         '/productosPrueba' => [[['_route' => 'app_productos_index', '_controller' => 'App\\Controller\\ProductosController::index'], null, ['GET' => 0], null, true, false, null]],
         '/productosPrueba/new' => [[['_route' => 'app_productos_new', '_controller' => 'App\\Controller\\ProductosController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],

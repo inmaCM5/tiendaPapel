@@ -5933,7 +5933,7 @@
         <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
-    <service id=".service_locator.oCupcIO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.outCI4z" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\BaseController::administrarProductos" type="service_closure" id=".service_locator.G8FcB2Q"/>
@@ -5947,6 +5947,7 @@
         <argument key="App\Controller\BaseController::index" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController::productos" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController::productosGlobales" type="service_closure" id=".service_locator.G8FcB2Q"/>
+        <argument key="App\Controller\BaseController::resumenCesta" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\ProductosController::delete" type="service_closure" id=".service_locator.YXRTGfP"/>
         <argument key="App\Controller\ProductosController::edit" type="service_closure" id=".service_locator.YXRTGfP"/>
         <argument key="App\Controller\ProductosController::index" type="service_closure" id=".service_locator.lITy1C5"/>
@@ -5970,6 +5971,7 @@
         <argument key="App\Controller\BaseController:index" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController:productos" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController:productosGlobales" type="service_closure" id=".service_locator.G8FcB2Q"/>
+        <argument key="App\Controller\BaseController:resumenCesta" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\ProductosController:delete" type="service_closure" id=".service_locator.YXRTGfP"/>
         <argument key="App\Controller\ProductosController:edit" type="service_closure" id=".service_locator.YXRTGfP"/>
         <argument key="App\Controller\ProductosController:index" type="service_closure" id=".service_locator.lITy1C5"/>
@@ -6518,12 +6520,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.oCupcIO"/>
+      <argument type="service" id=".service_locator.outCI4z"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.oCupcIO"/>
+      <argument type="service" id=".service_locator.outCI4z"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7352,7 +7354,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.oCupcIO"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.outCI4z"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -7372,7 +7374,7 @@
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
     <service id=".service_locator.zD441.5" alias=".service_locator.G8FcB2Q"/>
     <service id=".service_locator.riGN6sa" alias=".service_locator.YU8H6ve"/>
-    <service id=".service_locator.5foxKIi" alias=".service_locator.oCupcIO"/>
+    <service id=".service_locator.fZaTAnB" alias=".service_locator.outCI4z"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.Owi5zKP" alias=".service_locator.TaBHGAI"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>

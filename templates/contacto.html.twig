@@ -59,64 +59,80 @@
                                     <span class="icon-text text-style-1">{{ unidades }}</span>
                                 </a>
 
-                                <div class="navbar-cart-dropdown">
-                                    <div class="checkout-style-2">
-                                        <div class="checkout-header d-flex justify-content-between">
-                                            <h6 class="title">Shopping Cart</h6>
-                                        </div>
+                                
+                                  <div class="navbar-cart-dropdown">
+										<div class="checkout-style-2">
+											<div class="checkout-header d-flex justify-content-between">
+												<h6 class="title">Cesta compra</h6>
+											</div>
 
-                                        <div class="checkout-table">
-                                            <table class="table">
-                                                <tbody>
-                                                        
-                                                    {% for produCesta in cesta %}
-                                                        <tr>
-                                                            <td class="checkout-product">
-                                                                <div class="product-cart d-flex">
-                                                                    <div class="product-content media-body">
-                                                                        <h5 class="title">
-                                                                            <a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
-                                                                        </h5>
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a class="delete" href="javascript:void(0)">
-                                                                                    <i class="mdi mdi-delete"></i>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="checkout-quantity">
-                                                                <div class="product-quantity d-inline-flex">
-                                                                    <form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-                                                                        <input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
-                                                                        <input type='hidden' name='codProduc' value= "{{ produCesta.producto.getCodigo() }}" />
-                                                                    </form>
-                                                                </div>
-                                                            </td>
-                                                            <td class="checkout-price">
-                                                                <p class="price">{{ produCesta.producto.getPvp() }}€</p>
-                                                            </td>
-                                                        </tr>
-                                                    {% endfor %}
-                                                </tbody>
-                                            </table>
-                                        </div>
+											{% if cesta | length == 0 %}
+												<div class="checkout-table">
+													<table class="table">
+														<tbody>
+															<tr>
+																<td class="checkout-product">
+																	<div class="product-cart d-flex">
+																		<div class="product-content media-body">
+																			<p class="title">
+																				Cesta vacía
+																			</p>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											{% else %}
+												<div class="checkout-table">
+													<table class="table">
+														<tbody>
 
-                                        <div class="checkout-footer">
-                                            <div class="checkout-sub-total d-flex justify-content-between">
-                                                <p class="value">Subtotal Price:</p>
-                                                <p class="price">{{ precioCesta }}€</p>
-                                            </div>
-                                            <div class="checkout-btn">
-                                                <a href="cart-page.html" class="main-btn primary-btn-border">View
-                                                                                                                                                                Cart</a>
-                                                <a href="checkout-page.html" class="main-btn primary-btn">Checkout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+															{% for produCesta in cesta %}
+																<tr>
+																	<td class="checkout-product">
+																		<div class="product-cart d-flex">
+																			<div class="product-content media-body">
+																				<h5 class="title">
+																					<a href="{{path('detalles', { 'producto': produCesta.producto.getId() }) }}">{{produCesta.producto.getNombre() }}</a>
+																				</h5>
+																				<ul>
+																					<li><a class="delete" href="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}"><i class="mdi mdi-delete"></i></a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</td>
+																	<td class="checkout-quantity">
+																		<div class="product-quantity d-inline-flex">
+																			<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
+																				<input type="number" name="unidades" min="1" max="{{ produCesta.producto.getUnidades() }}" value="{{ produCesta.unidades }}" size="3">
+																				<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
+																			</form>
+																		</div>
+																	</td>
+																	<td class="checkout-price">
+																		<p class="price">{{ produCesta.producto.getPvp() }}€</p>
+																	</td>
+																</tr>
+															{% endfor %}
+														</tbody>
+													</table>
+												</div>
+
+												<div class="checkout-footer">
+													<div class="checkout-sub-total d-flex justify-content-between">
+														<p class="value">Total precio:</p>
+														<p class="price">{{ precioCesta }}€</p>
+													</div>
+													<div class="checkout-btn">
+														{# <a href="{{ path('productos') }}" class="main-btn primary-btn-border">Actualizar</a> #}
+														<a href="{{ path('resumenCesta') }}" class="main-btn primary-btn">Resumen</a>
+													</div>
+												</div>
+											{% endif %}
+										</div>
+									</div>
                             </div>
                             <!-- navbar cart Ends -->
                         </div>
@@ -251,64 +267,79 @@
                                         <span class="icon-text text-style-1">{{ unidades }}</span>
                                     </a>
 
-                                    <div class="navbar-cart-dropdown">
-                                        <div class="checkout-style-2">
-                                            <div class="checkout-header d-flex justify-content-between">
-                                                <h6 class="title">Shopping Cart</h6>
-                                            </div>
+                                   <div class="navbar-cart-dropdown">
+										<div class="checkout-style-2">
+											<div class="checkout-header d-flex justify-content-between">
+												<h6 class="title">Cesta compra</h6>
+											</div>
 
-                                            <div class="checkout-table">
-                                                <table class="table">
-                                                    <tbody>
-                                                            
-                                                        {% for produCesta in cesta %}
-                                                            <tr>
-                                                                <td class="checkout-product">
-                                                                    <div class="product-cart d-flex">
-                                                                        <div class="product-content media-body">
-                                                                            <h5 class="title">
-                                                                                <a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
-                                                                            </h5>
-                                                                            <ul>
-                                                                                <li>
-                                                                                    <a class="delete" href="javascript:void(0)">
-                                                                                        <i class="mdi mdi-delete"></i>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="checkout-quantity">
-                                                                    <div class="product-quantity d-inline-flex">
-                                                                        <form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-                                                                            <input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
-                                                                            <input type='hidden' name='codProduc' value= "{{ produCesta.producto.getCodigo() }}" />
-                                                                        </form>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="checkout-price">
-                                                                    <p class="price">{{ produCesta.producto.getPvp() }}€</p>
-                                                                </td>
-                                                            </tr>
-                                                        {% endfor %}
-                                                    </tbody>
-                                                </table>
-                                            </div>
+											{% if cesta | length == 0 %}
+												<div class="checkout-table">
+													<table class="table">
+														<tbody>
+															<tr>
+																<td class="checkout-product">
+																	<div class="product-cart d-flex">
+																		<div class="product-content media-body">
+																			<p class="title">
+																				Cesta vacía
+																			</p>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											{% else %}
+												<div class="checkout-table">
+													<table class="table">
+														<tbody>
 
-                                            <div class="checkout-footer">
-                                                <div class="checkout-sub-total d-flex justify-content-between">
-                                                    <p class="value">Subtotal Price:</p>
-                                                    <p class="price">{{ precioCesta }}€</p>
-                                                </div>
-                                                <div class="checkout-btn">
-                                                    <a href="cart-page.html" class="main-btn primary-btn-border">View
-                                                                                                                                                                    Cart</a>
-                                                    <a href="checkout-page.html" class="main-btn primary-btn">Checkout</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+															{% for produCesta in cesta %}
+																<tr>
+																	<td class="checkout-product">
+																		<div class="product-cart d-flex">
+																			<div class="product-content media-body">
+																				<h5 class="title">
+																					<a href="{{path('detalles', { 'producto': produCesta.producto.getId() }) }}">{{produCesta.producto.getNombre() }}</a>
+																				</h5>
+																				<ul>
+																					<li><a class="delete" href="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}"><i class="mdi mdi-delete"></i></a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</td>
+																	<td class="checkout-quantity">
+																		<div class="product-quantity d-inline-flex">
+																			<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
+																				<input type="number" name="unidades" min="1" max="{{ produCesta.producto.getUnidades() }}" value="{{ produCesta.unidades }}" size="3">
+																				<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
+																			</form>
+																		</div>
+																	</td>
+																	<td class="checkout-price">
+																		<p class="price">{{ produCesta.producto.getPvp() }}€</p>
+																	</td>
+																</tr>
+															{% endfor %}
+														</tbody>
+													</table>
+												</div>
+
+												<div class="checkout-footer">
+													<div class="checkout-sub-total d-flex justify-content-between">
+														<p class="value">Total precio:</p>
+														<p class="price">{{ precioCesta }}€</p>
+													</div>
+													<div class="checkout-btn">
+														{# <a href="{{ path('productos') }}" class="main-btn primary-btn-border">Actualizar</a> #}
+														<a href="{{ path('resumenCesta') }}" class="main-btn primary-btn">Resumen</a>
+													</div>
+												</div>
+											{% endif %}
+										</div>
+									</div> 
                                 </div>
                                 <!-- navbar cart Ends -->
                             </div>
@@ -383,15 +414,12 @@
                         </ul>
                         <h4 class="heading-4 font-weight-500 title">Horario y redes sociales</h4>
                         <ul>
-                            <li class="paragraph-small sub-title">Lunes 9:00-13:30, 17:00-20:30</li>
-                            <li class="paragraph-small sub-title">Martes 9:00-13:30, 17:00-20:30</li>
-                            <li class="paragraph-small sub-title">Miércoles 9:00-13:30, 17:00-20:30</li>
-                            <li class="paragraph-small sub-title">Jueves 9:00-13:30, 17:00-20:30</li>
+                            <li class="paragraph-small sub-title">Lunes a jueves 9:00-13:30, 17:00-20:30</li>
                             <li class="paragraph-small sub-title">Viernes 9:00-13:30, 17:00-20:00</li>
                             <li class="paragraph-small sub-title">Sábado 10:00-13:30</li>
                             <li class="paragraph-small sub-title">Domingo cerrado</li>
                         </ul>
-                        <div class="contact-social d-flex">
+                        <div class="contact-social d-flex mt-4">
                             <p>Síguenos:</p>
                             <ul class="social media-body">
                                 <li>
@@ -409,9 +437,8 @@
                     </div>
                 </div>
                  <div class="col-lg-7">
-{#                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12682.672708410544!2d-5.9673155!3d37.3740277!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb152915ec6c34c1f!2sImpresi%C3%B2na%2C%20Servicio%20de%20Papeler%C3%ADa%20y%20Copister%C3%ADa!5e0!3m2!1ses!2ses!4v1650362018296!5m2!1ses!2ses" width="800" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
- #}
-                    <div id="map">hola</div>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12682.672708410544!2d-5.9673155!3d37.3740277!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb152915ec6c34c1f!2sImpresi%C3%B2na%2C%20Servicio%20de%20Papeler%C3%ADa%20y%20Copister%C3%ADa!5e0!3m2!1ses!2ses!4v1650362018296!5m2!1ses!2ses" width="800" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
                  </div> 
                 
             </div>
@@ -429,7 +456,7 @@
                                 <img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="">
                             </a>
                         </div>
-                        <h5 class="heading-5 text-center mt-30">Follow Us</h5>
+                        <h5 class="heading-5 text-center mt-30">Síguenos</h5>
                         <ul class="footer-follow text-center">
                             <li>
                                 <a href="https://www.facebook.com/impresionacopisteria/">

@@ -67,54 +67,74 @@
 								<div class="navbar-cart-dropdown">
 									<div class="checkout-style-2">
 										<div class="checkout-header d-flex justify-content-between">
-											<h6 class="title">Shopping Cart</h6>
+											<h6 class="title">Cesta compra</h6>
 										</div>
-
-										<div class="checkout-table">
-											<table class="table">
-												<tbody>
-
-													{% for produCesta in cesta %}
+										{% if cesta | length == 0 %}
+											<div class="checkout-table">
+												<table class="table">
+													<tbody>
 														<tr>
 															<td class="checkout-product">
 																<div class="product-cart d-flex">
 																	<div class="product-content media-body">
-																		<h5 class="title">
-																			<a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
-																		</h5>
-																		<ul>
-																			<li><a class="delete" href="javascript:void(0)"><i class="mdi mdi-delete"></i></a></li>
-																		</ul>
+																		<p class="title">
+																			Cesta vacía
+																		</p>
 																	</div>
 																</div>
 															</td>
-															<td class="checkout-quantity">
-																<div class="product-quantity d-inline-flex">
-																	<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-																		<input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
-																		<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
-																	</form>
-																</div>
-															</td>
-															<td class="checkout-price">
-																<p class="price">{{ produCesta.producto.getPvp() }}€</p>
-															</td>
 														</tr>
-													{% endfor %}
-												</tbody>
-											</table>
-										</div>
+													</tbody>
+												</table>
+											</div>
+										{% else %}
+											<div class="checkout-table">
+												<table class="table">
+													<tbody>
 
-										<div class="checkout-footer">
-											<div class="checkout-sub-total d-flex justify-content-between">
-												<p class="value">Subtotal Price:</p>
-												<p class="price">{{ precioCesta }}€</p>
+														{% for produCesta in cesta %}
+															<tr>
+																<td class="checkout-product">
+																	<div class="product-cart d-flex">
+																		<div class="product-content media-body">
+																			<h5 class="title">
+																			{# {{ path('detalles/produCesta.producto.getId()') }} #}
+																				<a href="{{path('detalles', { 'producto': produCesta.producto.getId() }) }}">{{produCesta.producto.getNombre() }}</a>
+																			</h5>
+																			<ul>
+																				<li><a class="delete" href="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}"><i class="mdi mdi-delete"></i></a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</td>
+																<td class="checkout-quantity">
+																	<div class="product-quantity d-inline-flex">
+																		<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
+																			<input type="number" name="unidades" min="1" max="{{ produCesta.producto.getUnidades() }}" value="{{ produCesta.unidades }}" size="3">
+																			<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
+																		</form>
+																	</div>
+																</td>
+																<td class="checkout-price">
+																	<p class="price">{{ produCesta.producto.getPvp() }}€</p>
+																</td>
+															</tr>
+														{% endfor %}
+													</tbody>
+												</table>
 											</div>
-											<div class="checkout-btn">
-												<a href="{{ path('productos') }}" class="main-btn primary-btn-border">Actualizar</a>
-												<a href="#" class="main-btn primary-btn">Resumen</a>
+
+											<div class="checkout-footer">
+												<div class="checkout-sub-total d-flex justify-content-between">
+													<p class="value">Total precio:</p>
+													<p class="price">{{ precioCesta }}€</p>
+												</div>
+												<div class="checkout-btn">
+													{# <a href="{{ path('productos') }}" class="main-btn primary-btn-border">Actualizar</a> #}
+													<a href="{{ path('resumenCesta') }}" class="main-btn primary-btn">Resumen</a>
+												</div>
 											</div>
-										</div>
+										{% endif %}
 									</div>
 								</div>
 							</div>
@@ -278,53 +298,74 @@
 									<div class="navbar-cart-dropdown">
 										<div class="checkout-style-2">
 											<div class="checkout-header d-flex justify-content-between">
-												<h6 class="title">Shopping Cart</h6>
+												<h6 class="title">Cesta compra</h6>
 											</div>
 
-											<div class="checkout-table">
-												<table class="table">
-													<tbody>
-														{% for produCesta in cesta %}
+											{% if cesta | length == 0 %}
+												<div class="checkout-table">
+													<table class="table">
+														<tbody>
 															<tr>
 																<td class="checkout-product">
 																	<div class="product-cart d-flex">
 																		<div class="product-content media-body">
-																			<h5 class="title">
-																				<a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
-																			</h5>
-																			<ul>
-																				<li><a class="delete" href="javascript:void(0)"><i class="mdi mdi-delete"></i></a></li>
-																			</ul>
+																			<p class="title">
+																				Cesta vacía
+																			</p>
 																		</div>
 																	</div>
 																</td>
-																<td class="checkout-quantity">
-																	<div class="product-quantity d-inline-flex">
-																		<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-																			<input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
-																			<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
-																		</form>
-																	</div>
-																</td>
-																<td class="checkout-price">
-																	<p class="price">{{ produCesta.producto.getPvp() }}€</p>
-																</td>
 															</tr>
-														{% endfor %}
-													</tbody>
-												</table>
-											</div>
+														</tbody>
+													</table>
+												</div>
+											{% else %}
+												<div class="checkout-table">
+													<table class="table">
+														<tbody>
 
-											<div class="checkout-footer">
-												<div class="checkout-sub-total d-flex justify-content-between">
-													<p class="value">Subtotal Price:</p>
-													<p class="price">{{ precioCesta }}€</p>
+															{% for produCesta in cesta %}
+																<tr>
+																	<td class="checkout-product">
+																		<div class="product-cart d-flex">
+																			<div class="product-content media-body">
+																				<h5 class="title">
+																					<a href="{{path('detalles', { 'producto': produCesta.producto.getId() }) }}">{{produCesta.producto.getNombre() }}</a>
+																				</h5>
+																				<ul>
+																					<li><a class="delete" href="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}"><i class="mdi mdi-delete"></i></a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</td>
+																	<td class="checkout-quantity">
+																		<div class="product-quantity d-inline-flex">
+																			<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
+																				<input type="number" name="unidades" min="1" max="{{ produCesta.producto.getUnidades() }}" value="{{ produCesta.unidades }}" size="3">
+																				<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
+																			</form>
+																		</div>
+																	</td>
+																	<td class="checkout-price">
+																		<p class="price">{{ produCesta.producto.getPvp() }}€</p>
+																	</td>
+																</tr>
+															{% endfor %}
+														</tbody>
+													</table>
 												</div>
-												<div class="checkout-btn">
-													<a href="{{ path('productos') }}" class="main-btn primary-btn-border">Actualizar</a>
-													<a href="#" class="main-btn primary-btn">Resumen</a>
+
+												<div class="checkout-footer">
+													<div class="checkout-sub-total d-flex justify-content-between">
+														<p class="value">Total precio:</p>
+														<p class="price">{{ precioCesta }}€</p>
+													</div>
+													<div class="checkout-btn">
+														{# <a href="{{ path('productos') }}" class="main-btn primary-btn-border">Actualizar</a> #}
+														<a href="{{ path('resumenCesta') }}" class="main-btn primary-btn">Resumen</a>
+													</div>
 												</div>
-											</div>
+											{% endif %}
 										</div>
 									</div>
 								</div>
@@ -424,7 +465,7 @@
 															<div class="slick-list draggable">
 																<div class="slick-track" style="opacity: 1; width: 480px; transform: translate3d(0px, 0px, 0px);">
 																	<div class="product-item active slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 240px;">
-																		<img src="{{ producto.displayImagen() }}" alt="product">
+																		<img width="100" height="150" src="{{ producto.displayImagen() }}" alt="product">
 																	</div>
 																</div>
 															</div>
@@ -437,7 +478,11 @@
 														<span class="price">{{ producto.getPvp() }}€</span>
 														<form id="form_seleccion" action="{{ path('anadir', {'idProducto': producto.getId()}) }}" method="post">
 															<input type='hidden' name='unidades' value='1' size='3'/>
-															<input class="main-btn secondary-1-btn" type="image" name='anadir' src="{{ asset('images/icon-svg/cart-7.svg') }}" width="55px"/>
+															{% if producto.getUnidades() == 0 %}
+																<h4 class="text-warning mt-2">Sin stock</h4>
+															{% else %}
+																<input class="main-btn secondary-1-btn" type="image" name='anadir' src="{{ asset('images/icon-svg/cart-7.svg') }}" width="55px"/>
+															{% endif %}
 															<input type='hidden' name='codProduc' value="{{ producto.getCodigo() }}"/>
 														</form>
 													</div>
@@ -456,7 +501,7 @@
 															<div class="slick-list draggable">
 																<div class="slick-track" style="opacity: 1; width: 828px; transform: translate3d(0px, 0px, 0px);">
 																	<div class="product-item active slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 414px;">
-																		<img src="{{ producto.displayImagen() }}" alt="product">
+																		<img width="200" height="300" src="{{ producto.displayImagen() }}" alt="product">
 																	</div>
 																</div>
 															</div>
@@ -469,7 +514,11 @@
 														<p>{{ producto.getPvp() }}€</p>
 														<form id="form_seleccion" action="{{ path('anadir', {'idProducto': producto.getId()}) }}" method="post">
 															<input type='hidden' name='unidades' value='1' size='3'/>
-															<input class="main-btn secondary-1-btn" type="image" name='anadir' src=" {{ asset('images/icon-svg/cart-7.svg') }}" width="55px"/>
+															{% if producto.getUnidades() == 0 %}
+																<h4 class="text-warning mt-2">Sin stock</h4>
+															{% else %}
+																<input class="main-btn secondary-1-btn" type="image" name='anadir' src="{{ asset('images/icon-svg/cart-7.svg') }}" width="55px"/>
+															{% endif %}
 															<input type='hidden' name='codProduc' value="{{ producto.getCodigo() }}"/>
 														</form>
 													</div>
@@ -481,36 +530,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="pagination-wrapper pt-70">
-								<ul class="d-flex justify-content-center">
-									<li>
-										<a href="javascript:void(0)">
-											<i class="lni lni-chevron-left"></i>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:void(0)" class="active">1</a>
-									</li>
-									<li>
-										<a href="javascript:void(0)">2</a>
-									</li>
-									<li>
-										<a href="javascript:void(0)">3</a>
-									</li>
-									<li>
-										<a href="javascript:void(0)">4</a>
-									</li>
-									<li>
-										<a href="javascript:void(0)">
-											<i class="lni lni-chevron-right"></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -528,7 +548,7 @@
 								<img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="">
 							</a>
 						</div>
-						<h5 class="heading-5 text-center mt-30">Follow Us</h5>
+						<h5 class="heading-5 text-center mt-30">Síguenos</h5>
 						<ul class="footer-follow text-center">
 							<li>
 								<a href="https://www.facebook.com/impresionacopisteria/">

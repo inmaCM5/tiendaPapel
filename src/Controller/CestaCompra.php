@@ -81,4 +81,10 @@ class CestaCompra {
         }
         return $unidades;
     }
+
+    public function longitudCesta(){
+        $cestalongitud = $this->cesta;
+        $longitud = count($cestalongitud);
+        return $longitud;
+    }
 }

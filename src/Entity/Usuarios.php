@@ -12,6 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UsuariosRepository::class)]
 #[UniqueEntity(fields: ['usuario'], message: 'There is already an account with this usuario')]
+#[UniqueEntity(fields: ['usuario'], message: 'There is already an account with this usuario')]
 class Usuarios implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -40,7 +41,7 @@ class Usuarios implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string', length: 255)]
     private $apellidos;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 255, unique: true)]
     private $email;
 
     #[ORM\Column(type: 'string', length: 255)]

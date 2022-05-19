@@ -53,8 +53,6 @@ class __TwigTemplate_74442364a6d05dd2e76d47769108ef27 extends Template
 ";
         // line 4
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), 'form_end');
-        echo "
-";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -83,7 +81,6 @@ class __TwigTemplate_74442364a6d05dd2e76d47769108ef27 extends Template
         return new Source("{{ form_start(form) }}
     {{ form_widget(form) }}
     <button class=\"btn\">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
-", "productos/_form.html.twig", "C:\\xampp\\htdocs\\tienda\\tiendaPapel\\templates\\productos\\_form.html.twig");
+{{ form_end(form) }}", "productos/_form.html.twig", "C:\\xampp\\htdocs\\tienda\\tiendaPapel\\templates\\productos\\_form.html.twig");
     }
 }

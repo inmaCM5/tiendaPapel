@@ -25,6 +25,7 @@ return [
     'cambiarUnidades' => [['idProducto'], ['_controller' => 'App\\Controller\\BaseController::cambiarUnidades'], [], [['variable', '/', '[^/]++', 'idProducto', true], ['text', '/cambiarUnidades']], [], [], []],
     'eliminarProductosCesta' => [['idProducto'], ['_controller' => 'App\\Controller\\BaseController::eliminarProductosCesta'], [], [['variable', '/', '[^/]++', 'idProducto', true], ['text', '/eliminarProductosCesta']], [], [], []],
     'eliminarProductos' => [['idProducto'], ['_controller' => 'App\\Controller\\BaseController::eliminarProductos'], [], [['variable', '/', '[^/]++', 'idProducto', true], ['text', '/eliminarProductos']], [], [], []],
+    'resumenCesta' => [[], ['_controller' => 'App\\Controller\\BaseController::resumenCesta'], [], [['text', '/resumenCesta']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
     'app_productos_index' => [[], ['_controller' => 'App\\Controller\\ProductosController::index'], [], [['text', '/productosPrueba/']], [], [], []],
     'app_productos_new' => [[], ['_controller' => 'App\\Controller\\ProductosController::new'], [], [['text', '/productosPrueba/new']], [], [], []],

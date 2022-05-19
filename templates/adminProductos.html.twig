@@ -12,6 +12,7 @@
 {% endblock %}    
 
 {% block contenido %}
+
     <div class="preloader">
         <div class="loader">
             <div class="ytp-spinner">
@@ -62,7 +63,7 @@
                                 <div class="navbar-cart-dropdown">
                                     <div class="checkout-style-2">
                                         <div class="checkout-header d-flex justify-content-between">
-                                            <h6 class="title">Shopping Cart</h6>
+                                            <h6 class="title">Cesta compra</h6>
                                         </div>
 
                                         <div class="checkout-table">
@@ -78,11 +79,7 @@
                                                                             <a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
                                                                         </h5>
                                                                         <ul>
-                                                                            <li>
-                                                                                <a class="delete" href="javascript:void(0)">
-                                                                                    <i class="mdi mdi-delete"></i>
-                                                                                </a>
-                                                                            </li>
+                                                                            <li><a class="delete" href="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}"><i class="mdi mdi-delete"></i></a></li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -90,7 +87,7 @@
                                                             <td class="checkout-quantity">
                                                                 <div class="product-quantity d-inline-flex">
                                                                     <form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-                                                                        <input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
+                                                                        <input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3" min="1" max="{{ produCesta.producto.getUnidades() }}">
                                                                         <input type='hidden' name='codProduc' value= "{{ produCesta.producto.getCodigo() }}" />
                                                                     </form>
                                                                 </div>
@@ -106,13 +103,11 @@
 
                                         <div class="checkout-footer">
                                             <div class="checkout-sub-total d-flex justify-content-between">
-                                                <p class="value">Subtotal Price:</p>
+                                                <p class="value">Precio total:</p>
                                                 <p class="price">{{ precioCesta }}€</p>
                                             </div>
                                             <div class="checkout-btn">
-                                                <a href="cart-page.html" class="main-btn primary-btn-border">View
-                                                                                                                                                                Cart</a>
-                                                <a href="checkout-page.html" class="main-btn primary-btn">Checkout</a>
+                                                <a href="{{ path('resumenCesta') }}" class="main-btn primary-btn">Resumen</a>
                                             </div>
                                         </div>
                                     </div>
@@ -254,7 +249,7 @@
                                     <div class="navbar-cart-dropdown">
                                         <div class="checkout-style-2">
                                             <div class="checkout-header d-flex justify-content-between">
-                                                <h6 class="title">Shopping Cart</h6>
+                                                <h6 class="title">Cesta Compra</h6>
                                             </div>
 
                                             <div class="checkout-table">
@@ -270,11 +265,7 @@
                                                                                 <a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
                                                                             </h5>
                                                                             <ul>
-                                                                                <li>
-                                                                                    <a class="delete" href="javascript:void(0)">
-                                                                                        <i class="mdi mdi-delete"></i>
-                                                                                    </a>
-                                                                                </li>
+                                                                                <li><a class="delete" href="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}"><i class="mdi mdi-delete"></i></a></li>
                                                                             </ul>
                                                                         </div>
                                                                     </div>
@@ -282,7 +273,7 @@
                                                                 <td class="checkout-quantity">
                                                                     <div class="product-quantity d-inline-flex">
                                                                         <form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-                                                                            <input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
+                                                                            <input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3" min="1" max="{{ produCesta.producto.getUnidades() }}">
                                                                             <input type='hidden' name='codProduc' value= "{{ produCesta.producto.getCodigo() }}" />
                                                                         </form>
                                                                     </div>
@@ -298,13 +289,11 @@
 
                                             <div class="checkout-footer">
                                                 <div class="checkout-sub-total d-flex justify-content-between">
-                                                    <p class="value">Subtotal Price:</p>
+                                                    <p class="value">Total precio:</p>
                                                     <p class="price">{{ precioCesta }}€</p>
                                                 </div>
                                                 <div class="checkout-btn">
-                                                    <a href="cart-page.html" class="main-btn primary-btn-border">View
-                                                                                                                                                                    Cart</a>
-                                                    <a href="checkout-page.html" class="main-btn primary-btn">Checkout</a>
+                                                    <a href="{{ path('resumenCesta') }}" class="main-btn primary-btn">Resumen</a>
                                                 </div>
                                             </div>
                                         </div>

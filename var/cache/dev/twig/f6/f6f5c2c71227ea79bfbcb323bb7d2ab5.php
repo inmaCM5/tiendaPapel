@@ -189,14 +189,54 @@ class __TwigTemplate_9beabc3c524ff24604ba5ed2dd292686 extends Template
         echo "
                                     </div>
                                 </div>
+\t\t\t\t\t\t\t\t<div class=\"single-form form-default form-border\">
+                                    <div class=\"form-input\">
+                                        ";
+        // line 77
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 77, $this->source); })()), "nombre", [], "any", false, false, false, 77), 'row');
+        echo "
+                                    </div>
+                                </div>
+\t\t\t\t\t\t\t\t<div class=\"single-form form-default form-border\">
+                                    <div class=\"form-input\">
+                                        ";
+        // line 82
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 82, $this->source); })()), "apellidos", [], "any", false, false, false, 82), 'row');
+        echo "
+                                    </div>
+                                </div>
+\t\t\t\t\t\t\t\t<div class=\"single-form form-default form-border\">
+                                    <div class=\"form-input\">
+                                        ";
+        // line 87
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 87, $this->source); })()), "email", [], "any", false, false, false, 87), 'row');
+        echo "
+                                    </div>
+                                </div>
+\t\t\t\t\t\t\t\t<div class=\"single-form form-default form-border\">
+                                    <div class=\"form-input\">
+                                        ";
+        // line 92
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 92, $this->source); })()), "direccion", [], "any", false, false, false, 92), 'row');
+        echo "
+                                    </div>
+                                </div>
+\t\t\t\t\t\t\t\t<div class=\"single-form form-default form-border\">
+                                    <div class=\"form-input\">
+                                        ";
+        // line 97
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 97, $this->source); })()), "telefono", [], "any", false, false, false, 97), 'row');
+        echo "
+                                    </div>
+                                </div>
                                 <div class=\"single-form\">
                                     <button class=\"btn primary-btn sign-up\" type=\"submit\">Registrarse                  
                                         <i class=\"fa fa-user-plus\" aria-hidden=\"true\"></i>
                                     </button>
                                 </div>
                             ";
-        // line 80
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 80, $this->source); })()), 'form_end');
+        // line 105
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 105, $this->source); })()), 'form_end');
         echo "
                         </div>
                     </div>
@@ -214,16 +254,16 @@ class __TwigTemplate_9beabc3c524ff24604ba5ed2dd292686 extends Template
 \t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
 \t\t\t\t\t<div class=\"footer-logo text-center\">
 \t\t\t\t\t\t<a href=\"";
-        // line 96
+        // line 121
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 97
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
+        // line 122
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
         echo "\" alt=\"\">
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</div>
-\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>
+\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
 \t\t\t\t\t<ul class=\"footer-follow text-center\">
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
@@ -358,7 +398,7 @@ class __TwigTemplate_9beabc3c524ff24604ba5ed2dd292686 extends Template
 
     }
 
-    // line 228
+    // line 253
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -368,52 +408,52 @@ class __TwigTemplate_9beabc3c524ff24604ba5ed2dd292686 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 229
+        // line 254
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 230
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 231
+        // line 256
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/jquery-3.5.1.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 232
+        // line 257
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/modernizr-3.7.1.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 233
+        // line 258
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/slick.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 234
+        // line 259
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-vj-accordion-steps.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 235
+        // line 260
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 236
+        // line 261
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.form-validator.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 237
+        // line 262
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.nice-select.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 238
+        // line 263
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.formatter.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 239
+        // line 264
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/count-up.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 240
+        // line 265
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -437,7 +477,7 @@ class __TwigTemplate_9beabc3c524ff24604ba5ed2dd292686 extends Template
 
     public function getDebugInfo()
     {
-        return array (  417 => 240,  413 => 239,  409 => 238,  405 => 237,  401 => 236,  397 => 235,  393 => 234,  389 => 233,  385 => 232,  381 => 231,  377 => 230,  372 => 229,  362 => 228,  222 => 97,  218 => 96,  199 => 80,  189 => 72,  187 => 70,  179 => 65,  173 => 62,  149 => 41,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  457 => 265,  453 => 264,  449 => 263,  445 => 262,  441 => 261,  437 => 260,  433 => 259,  429 => 258,  425 => 257,  421 => 256,  417 => 255,  412 => 254,  402 => 253,  262 => 122,  258 => 121,  239 => 105,  228 => 97,  220 => 92,  212 => 87,  204 => 82,  196 => 77,  189 => 72,  187 => 70,  179 => 65,  173 => 62,  149 => 41,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -516,6 +556,31 @@ class __TwigTemplate_9beabc3c524ff24604ba5ed2dd292686 extends Template
                                         }) }}
                                     </div>
                                 </div>
+\t\t\t\t\t\t\t\t<div class=\"single-form form-default form-border\">
+                                    <div class=\"form-input\">
+                                        {{ form_row(registrationForm.nombre) }}
+                                    </div>
+                                </div>
+\t\t\t\t\t\t\t\t<div class=\"single-form form-default form-border\">
+                                    <div class=\"form-input\">
+                                        {{ form_row(registrationForm.apellidos) }}
+                                    </div>
+                                </div>
+\t\t\t\t\t\t\t\t<div class=\"single-form form-default form-border\">
+                                    <div class=\"form-input\">
+                                        {{ form_row(registrationForm.email) }}
+                                    </div>
+                                </div>
+\t\t\t\t\t\t\t\t<div class=\"single-form form-default form-border\">
+                                    <div class=\"form-input\">
+                                        {{ form_row(registrationForm.direccion) }}
+                                    </div>
+                                </div>
+\t\t\t\t\t\t\t\t<div class=\"single-form form-default form-border\">
+                                    <div class=\"form-input\">
+                                        {{ form_row(registrationForm.telefono) }}
+                                    </div>
+                                </div>
                                 <div class=\"single-form\">
                                     <button class=\"btn primary-btn sign-up\" type=\"submit\">Registrarse                  
                                         <i class=\"fa fa-user-plus\" aria-hidden=\"true\"></i>
@@ -538,10 +603,10 @@ class __TwigTemplate_9beabc3c524ff24604ba5ed2dd292686 extends Template
 \t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
 \t\t\t\t\t<div class=\"footer-logo text-center\">
 \t\t\t\t\t\t<a href=\"{{ path('index') }}\">
-\t\t\t\t\t\t\t<img src=\"{{ asset('images/logo.svg') }}\" alt=\"\">
+\t\t\t\t\t\t\t<img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</div>
-\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>
+\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
 \t\t\t\t\t<ul class=\"footer-follow text-center\">
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">

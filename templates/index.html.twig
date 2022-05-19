@@ -68,7 +68,7 @@
 								<div class="navbar-cart-dropdown">
 									<div class="checkout-style-2">
 										<div class="checkout-header d-flex justify-content-between">
-											<h6 class="title">Shopping Cart</h6>
+											<h6 class="title">Cesta compra</h6>
 										</div>
 
 										<div class="checkout-table">
@@ -84,7 +84,7 @@
 																			<a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
 																		</h5>
 																		<ul>
-																			<li><a class="delete" href="javascript:void(0)"><i class="mdi mdi-delete"></i></a></li>
+																			<li><a class="delete" href="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}"><i class="mdi mdi-delete"></i></a></li>
 																		</ul>
 																	</div>
 																</div>
@@ -92,7 +92,7 @@
 															<td class="checkout-quantity">
 																<div class="product-quantity d-inline-flex">
 																	<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-																		<input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
+																		<input type="number" name="unidades" min="1" max="{{ produCesta.producto.getUnidades() }}" value="{{ produCesta.unidades }}" size="3" min="1" max="{{ produCesta.producto.getUnidades() }}">
 																		<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
 																	</form>
 																</div>
@@ -108,7 +108,7 @@
 
 										<div class="checkout-footer">
 											<div class="checkout-sub-total d-flex justify-content-between">
-												<p class="value">Subtotal Price:</p>
+												<p class="value">Precio total:</p>
 												<p class="price">{{ precioCesta }}€</p>
 											</div>
 											<div class="checkout-btn">
@@ -279,7 +279,7 @@
 									<div class="navbar-cart-dropdown">
 										<div class="checkout-style-2">
 											<div class="checkout-header d-flex justify-content-between">
-												<h6 class="title">Shopping Cart</h6>
+												<h6 class="title">Cesta compra</h6>
 											</div>
 
 											<div class="checkout-table">
@@ -295,14 +295,7 @@
 																				<a href="product-details-page.html">{{ produCesta.producto.getNombre() }}</a>
 																			</h5>
 																			<ul>
-																				<li>
-																					<form id="form_seleccion" action="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-																						<input type="submit" class="delete" value="Borrar">
-																							<i class="mdi mdi-delete"></i>
-																						</input>
-																					</li>
-																				</form>
-
+																				<li><a class="delete" href="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}"><i class="mdi mdi-delete"></i></a></li>
 																			</li>
 																		</ul>
 																	</td>
@@ -314,7 +307,7 @@
 												<td class="checkout-quantity">
 													<div class="product-quantity d-inline-flex">
 														<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-															<input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3">
+															<input type="number" name="unidades" value="{{ produCesta.unidades }}" size="3" min="1" max="{{ produCesta.producto.getUnidades() }}">
 															<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
 														</form>
 													</div>
@@ -330,12 +323,12 @@
 
 							<div class="checkout-footer">
 								<div class="checkout-sub-total d-flex justify-content-between">
-									<p class="value">Subtotal Price:</p>
+									<p class="value">Precio total:</p>
 									<p class="price">{{ precioCesta }}€</p>
 								</div>
 								<div class="checkout-btn">
-									<a href="{{ path('index') }}" class="main-btn primary-btn-border">Actualizar</a>
-									<a href="#" class="main-btn primary-btn">Resumen</a>
+									{# <a href="{{ path('index') }}" class="main-btn primary-btn-border">Actualizar</a> #}
+									<a href="{{ path('resumenCesta') }}" class="main-btn primary-btn">Resumen</a>
 								</div>
 							</div>
 						</div>
@@ -492,7 +485,7 @@
 				<img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="">
 			</a>
 		</div>
-		<h5 class="heading-5 text-center mt-30">Follow Us</h5>
+		<h5 class="heading-5 text-center mt-30">Síguenos</h5>
 		<ul class="footer-follow text-center">
 			<li>
 				<a href="https://www.facebook.com/impresionacopisteria/">
@@ -603,4 +596,21 @@
 			</ul>
 		</div>
 	</div>
-</div></div></div></section>{% endblock %}{% block javascripts %}<script src="{{ asset('js/popper.min.js') }}"></script><script src="{{ asset('js/bootstrap.min.js') }}"></script><script src="{{ asset('js/vendor/jquery-3.5.1.min.js') }}"></script><script src="{{ asset('js/vendor/modernizr-3.7.1.min.js') }}"></script><script src="{{ asset('js/slick.min.js') }}"></script><script src="{{ asset('js/jquery-vj-accordion-steps.js') }}"></script><script src="{{ asset('js/jquery-ui.min.js') }}"></script><script src="{{ asset('js/jquery.form-validator.min.js') }}"></script><script src="{{ asset('js/jquery.nice-select.min.js') }}"></script><script src="{{ asset('js/jquery.formatter.min.js') }}"></script><script src="{{ asset('js/count-up.min.js') }}"></script><script src="{{ asset('js/main.js') }}"></script>{% endblock %}
+</div></div></div></section>
+
+
+{% endblock %}
+{% block javascripts %}
+	<script src="{{ asset('js/popper.min.js') }}"></script>
+	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('js/vendor/jquery-3.5.1.min.js') }}"></script>
+	<script src="{{ asset('js/vendor/modernizr-3.7.1.min.js') }}"></script>
+	<script src="{{ asset('js/slick.min.js') }}"></script>
+	<script src="{{ asset('js/jquery-vj-accordion-steps.js') }}"></script>
+	<script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.form-validator.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.nice-select.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.formatter.min.js') }}"></script>
+	<script src="{{ asset('js/count-up.min.js') }}"></script>
+	<script src="{{ asset('js/main.js') }}"></script>
+{% endblock %}

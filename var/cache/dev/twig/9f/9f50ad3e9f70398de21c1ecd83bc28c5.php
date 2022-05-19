@@ -182,7 +182,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t<div class=\"navbar-cart-dropdown\">
 \t\t\t\t\t\t\t\t\t<div class=\"checkout-style-2\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"checkout-header d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">Shopping Cart</h6>
+\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">Cesta compra</h6>
 \t\t\t\t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t\t\t\t<div class=\"checkout-table\">
@@ -206,7 +206,10 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
             echo "</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"javascript:void(0)\"><i class=\"mdi mdi-delete\"></i></a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"";
+            // line 87
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminarProductosCesta", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 87), "getId", [], "method", false, false, false, 87)]), "html", null, true);
+            echo "\"><i class=\"mdi mdi-delete\"></i></a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -217,10 +220,14 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
             // line 94
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cambiarUnidades", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 94), "getId", [], "method", false, false, false, 94)]), "html", null, true);
             echo "\" method=\"post\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" min=\"1\" max=\"";
             // line 95
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 95), "getUnidades", [], "method", false, false, false, 95), "html", null, true);
+            echo "\" value=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produCesta"], "unidades", [], "any", false, false, false, 95), "html", null, true);
-            echo "\" size=\"3\">
+            echo "\" size=\"3\" min=\"1\" max=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 95), "getUnidades", [], "method", false, false, false, 95), "html", null, true);
+            echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"";
             // line 96
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 96), "getCodigo", [], "method", false, false, false, 96), "html", null, true);
@@ -247,7 +254,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 
 \t\t\t\t\t\t\t\t\t\t<div class=\"checkout-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-sub-total d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"value\">Subtotal Price:</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"value\">Precio total:</p>
 \t\t\t\t\t\t\t\t\t\t\t\t<p class=\"price\">";
         // line 112
         echo twig_escape_filter($this->env, (isset($context["precioCesta"]) || array_key_exists("precioCesta", $context) ? $context["precioCesta"] : (function () { throw new RuntimeError('Variable "precioCesta" does not exist.', 112, $this->source); })()), "html", null, true);
@@ -490,7 +497,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t<div class=\"navbar-cart-dropdown\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"checkout-style-2\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-header d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">Shopping Cart</h6>
+\t\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">Cesta compra</h6>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-table\">
@@ -514,17 +521,10 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
             echo "</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"";
-            // line 299
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminarProductosCesta", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 299), "getId", [], "method", false, false, false, 299)]), "html", null, true);
-            echo "\" method=\"post\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"delete\" value=\"Borrar\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-delete\"></i>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</input>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
-
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"";
+            // line 298
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminarProductosCesta", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 298), "getId", [], "method", false, false, false, 298)]), "html", null, true);
+            echo "\"><i class=\"mdi mdi-delete\"></i></a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
@@ -536,24 +536,26 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-quantity\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-quantity d-inline-flex\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"";
-            // line 316
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cambiarUnidades", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 316), "getId", [], "method", false, false, false, 316)]), "html", null, true);
+            // line 309
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cambiarUnidades", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 309), "getId", [], "method", false, false, false, 309)]), "html", null, true);
             echo "\" method=\"post\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"";
-            // line 317
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produCesta"], "unidades", [], "any", false, false, false, 317), "html", null, true);
-            echo "\" size=\"3\">
+            // line 310
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produCesta"], "unidades", [], "any", false, false, false, 310), "html", null, true);
+            echo "\" size=\"3\" min=\"1\" max=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 310), "getUnidades", [], "method", false, false, false, 310), "html", null, true);
+            echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"";
-            // line 318
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 318), "getCodigo", [], "method", false, false, false, 318), "html", null, true);
+            // line 311
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 311), "getCodigo", [], "method", false, false, false, 311), "html", null, true);
             echo "\"/>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
 \t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-price\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"price\">";
-            // line 323
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 323), "getPvp", [], "method", false, false, false, 323), "html", null, true);
+            // line 316
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 316), "getPvp", [], "method", false, false, false, 316), "html", null, true);
             echo "€</p>
 \t\t\t\t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t\t\t</tr>
@@ -562,25 +564,25 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produCesta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 327
+        // line 320
         echo "\t\t\t\t\t\t\t\t\t</tbody>
 \t\t\t\t\t\t\t\t</table>
 \t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t<div class=\"checkout-footer\">
 \t\t\t\t\t\t\t\t<div class=\"checkout-sub-total d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t\t<p class=\"value\">Subtotal Price:</p>
+\t\t\t\t\t\t\t\t\t<p class=\"value\">Precio total:</p>
 \t\t\t\t\t\t\t\t\t<p class=\"price\">";
-        // line 334
-        echo twig_escape_filter($this->env, (isset($context["precioCesta"]) || array_key_exists("precioCesta", $context) ? $context["precioCesta"] : (function () { throw new RuntimeError('Variable "precioCesta" does not exist.', 334, $this->source); })()), "html", null, true);
+        // line 327
+        echo twig_escape_filter($this->env, (isset($context["precioCesta"]) || array_key_exists("precioCesta", $context) ? $context["precioCesta"] : (function () { throw new RuntimeError('Variable "precioCesta" does not exist.', 327, $this->source); })()), "html", null, true);
         echo "€</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"checkout-btn\">
-\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 337
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\" class=\"main-btn primary-btn-border\">Actualizar</a>
-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"main-btn primary-btn\">Resumen</a>
+\t\t\t\t\t\t\t\t\t";
+        // line 331
+        echo "\t\t\t\t\t\t\t\t\t<a href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("resumenCesta");
+        echo "\" class=\"main-btn primary-btn\">Resumen</a>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -600,7 +602,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t<div class=\"header-item-content\">
 \t\t<h3 class=\"title\">Tenemos un amplio catálogo de cartulinas, para realizar cualquier manualidad.</h3>
 \t\t<a href=\"";
-        // line 357
+        // line 350
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productos");
         echo "\" class=\"link\">Pulsa aquí para ver todas las opciones.</a>
 \t</div>
@@ -615,7 +617,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t<div class=\"header-item-content\">
 \t\t<h3 class=\"title\">Fachada de nuestra papeleria, situada en la plazoleta del juncal.</h3>
 \t\t<a href=\"";
-        // line 369
+        // line 362
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contacto");
         echo "\" class=\"link\">Página de contacto</a>
 \t</div>
@@ -740,16 +742,16 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t<div class=\"col-lg-5 col-md-7 col-sm-10\">
 \t\t<div class=\"footer-logo text-center\">
 \t\t\t<a href=\"";
-        // line 491
+        // line 484
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">
 \t\t\t\t<img src=\"";
-        // line 492
+        // line 485
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
         echo "\" alt=\"\">
 \t\t\t</a>
 \t\t</div>
-\t\t<h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>
+\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
 \t\t<ul class=\"footer-follow text-center\">
 \t\t\t<li>
 \t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
@@ -860,7 +862,10 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t</ul>
 \t\t</div>
 \t</div>
-</div></div></div></section>";
+</div></div></div></section>
+
+
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -869,7 +874,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 
     }
 
-    // line 606
+    // line 603
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -879,31 +884,55 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        echo "<script src=\"";
+        // line 604
+        echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.min.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 605
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 606
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/jquery-3.5.1.min.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 607
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/modernizr-3.7.1.min.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 608
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/slick.min.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 609
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-vj-accordion-steps.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 610
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 611
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.form-validator.min.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 612
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.nice-select.min.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 613
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.formatter.min.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 614
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/count-up.min.js"), "html", null, true);
-        echo "\"></script><script src=\"";
+        echo "\"></script>
+\t<script src=\"";
+        // line 615
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
-        echo "\"></script>";
+        echo "\"></script>
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -924,7 +953,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 
     public function getDebugInfo()
     {
-        return array (  873 => 606,  748 => 492,  744 => 491,  619 => 369,  604 => 357,  581 => 337,  575 => 334,  566 => 327,  556 => 323,  548 => 318,  544 => 317,  540 => 316,  520 => 299,  513 => 295,  506 => 290,  502 => 289,  486 => 276,  463 => 255,  452 => 247,  443 => 240,  441 => 239,  433 => 234,  424 => 227,  416 => 224,  405 => 221,  402 => 220,  398 => 219,  392 => 216,  389 => 215,  385 => 214,  367 => 201,  350 => 186,  343 => 182,  340 => 181,  334 => 178,  329 => 176,  326 => 175,  324 => 174,  307 => 160,  259 => 115,  253 => 112,  244 => 105,  234 => 101,  226 => 96,  222 => 95,  218 => 94,  205 => 84,  198 => 79,  194 => 78,  178 => 65,  163 => 55,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  933 => 615,  929 => 614,  925 => 613,  921 => 612,  917 => 611,  913 => 610,  909 => 609,  905 => 608,  901 => 607,  897 => 606,  893 => 605,  888 => 604,  878 => 603,  750 => 485,  746 => 484,  621 => 362,  606 => 350,  583 => 331,  577 => 327,  568 => 320,  558 => 316,  550 => 311,  544 => 310,  540 => 309,  526 => 298,  520 => 295,  513 => 290,  509 => 289,  493 => 276,  470 => 255,  459 => 247,  450 => 240,  448 => 239,  440 => 234,  431 => 227,  423 => 224,  412 => 221,  409 => 220,  405 => 219,  399 => 216,  396 => 215,  392 => 214,  374 => 201,  357 => 186,  350 => 182,  347 => 181,  341 => 178,  336 => 176,  333 => 175,  331 => 174,  314 => 160,  266 => 115,  260 => 112,  251 => 105,  241 => 101,  233 => 96,  225 => 95,  221 => 94,  211 => 87,  205 => 84,  198 => 79,  194 => 78,  178 => 65,  163 => 55,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -999,7 +1028,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t<div class=\"navbar-cart-dropdown\">
 \t\t\t\t\t\t\t\t\t<div class=\"checkout-style-2\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"checkout-header d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">Shopping Cart</h6>
+\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">Cesta compra</h6>
 \t\t\t\t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t\t\t\t<div class=\"checkout-table\">
@@ -1015,7 +1044,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"product-details-page.html\">{{ produCesta.producto.getNombre() }}</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"javascript:void(0)\"><i class=\"mdi mdi-delete\"></i></a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}\"><i class=\"mdi mdi-delete\"></i></a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -1023,7 +1052,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-quantity\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-quantity d-inline-flex\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}\" method=\"post\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"{{ produCesta.unidades }}\" size=\"3\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" min=\"1\" max=\"{{ produCesta.producto.getUnidades() }}\" value=\"{{ produCesta.unidades }}\" size=\"3\" min=\"1\" max=\"{{ produCesta.producto.getUnidades() }}\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"{{ produCesta.producto.getCodigo() }}\"/>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -1039,7 +1068,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 
 \t\t\t\t\t\t\t\t\t\t<div class=\"checkout-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-sub-total d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"value\">Subtotal Price:</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"value\">Precio total:</p>
 \t\t\t\t\t\t\t\t\t\t\t\t<p class=\"price\">{{ precioCesta }}€</p>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-btn\">
@@ -1210,7 +1239,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t<div class=\"navbar-cart-dropdown\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"checkout-style-2\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-header d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">Shopping Cart</h6>
+\t\t\t\t\t\t\t\t\t\t\t\t<h6 class=\"title\">Cesta compra</h6>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"checkout-table\">
@@ -1226,14 +1255,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"product-details-page.html\">{{ produCesta.producto.getNombre() }}</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}\" method=\"post\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"delete\" value=\"Borrar\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-delete\"></i>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</input>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
-
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}\"><i class=\"mdi mdi-delete\"></i></a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
@@ -1245,7 +1267,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-quantity\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-quantity d-inline-flex\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}\" method=\"post\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"{{ produCesta.unidades }}\" size=\"3\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"{{ produCesta.unidades }}\" size=\"3\" min=\"1\" max=\"{{ produCesta.producto.getUnidades() }}\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"{{ produCesta.producto.getCodigo() }}\"/>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
 \t\t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -1261,12 +1283,12 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 
 \t\t\t\t\t\t\t<div class=\"checkout-footer\">
 \t\t\t\t\t\t\t\t<div class=\"checkout-sub-total d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t\t<p class=\"value\">Subtotal Price:</p>
+\t\t\t\t\t\t\t\t\t<p class=\"value\">Precio total:</p>
 \t\t\t\t\t\t\t\t\t<p class=\"price\">{{ precioCesta }}€</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"checkout-btn\">
-\t\t\t\t\t\t\t\t\t<a href=\"{{ path('index') }}\" class=\"main-btn primary-btn-border\">Actualizar</a>
-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"main-btn primary-btn\">Resumen</a>
+\t\t\t\t\t\t\t\t\t{# <a href=\"{{ path('index') }}\" class=\"main-btn primary-btn-border\">Actualizar</a> #}
+\t\t\t\t\t\t\t\t\t<a href=\"{{ path('resumenCesta') }}\" class=\"main-btn primary-btn\">Resumen</a>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -1423,7 +1445,7 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t\t<img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
 \t\t\t</a>
 \t\t</div>
-\t\t<h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>
+\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
 \t\t<ul class=\"footer-follow text-center\">
 \t\t\t<li>
 \t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
@@ -1534,7 +1556,24 @@ class __TwigTemplate_eb3949e46d0f3e1023351f5a41d4f6ad extends Template
 \t\t\t</ul>
 \t\t</div>
 \t</div>
-</div></div></div></section>{% endblock %}{% block javascripts %}<script src=\"{{ asset('js/popper.min.js') }}\"></script><script src=\"{{ asset('js/bootstrap.min.js') }}\"></script><script src=\"{{ asset('js/vendor/jquery-3.5.1.min.js') }}\"></script><script src=\"{{ asset('js/vendor/modernizr-3.7.1.min.js') }}\"></script><script src=\"{{ asset('js/slick.min.js') }}\"></script><script src=\"{{ asset('js/jquery-vj-accordion-steps.js') }}\"></script><script src=\"{{ asset('js/jquery-ui.min.js') }}\"></script><script src=\"{{ asset('js/jquery.form-validator.min.js') }}\"></script><script src=\"{{ asset('js/jquery.nice-select.min.js') }}\"></script><script src=\"{{ asset('js/jquery.formatter.min.js') }}\"></script><script src=\"{{ asset('js/count-up.min.js') }}\"></script><script src=\"{{ asset('js/main.js') }}\"></script>{% endblock %}
+</div></div></div></section>
+
+
+{% endblock %}
+{% block javascripts %}
+\t<script src=\"{{ asset('js/popper.min.js') }}\"></script>
+\t<script src=\"{{ asset('js/bootstrap.min.js') }}\"></script>
+\t<script src=\"{{ asset('js/vendor/jquery-3.5.1.min.js') }}\"></script>
+\t<script src=\"{{ asset('js/vendor/modernizr-3.7.1.min.js') }}\"></script>
+\t<script src=\"{{ asset('js/slick.min.js') }}\"></script>
+\t<script src=\"{{ asset('js/jquery-vj-accordion-steps.js') }}\"></script>
+\t<script src=\"{{ asset('js/jquery-ui.min.js') }}\"></script>
+\t<script src=\"{{ asset('js/jquery.form-validator.min.js') }}\"></script>
+\t<script src=\"{{ asset('js/jquery.nice-select.min.js') }}\"></script>
+\t<script src=\"{{ asset('js/jquery.formatter.min.js') }}\"></script>
+\t<script src=\"{{ asset('js/count-up.min.js') }}\"></script>
+\t<script src=\"{{ asset('js/main.js') }}\"></script>
+{% endblock %}
 ", "index.html.twig", "C:\\xampp\\htdocs\\tienda\\tiendaPapel\\templates\\index.html.twig");
     }
 }

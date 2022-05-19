@@ -753,6 +753,18 @@ p {
   background-color: #FBE8E7;
 }
 
+.ir-arriba{
+  display:none;
+	padding:20px;
+	background:#00ACB2; 
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+
 /*========== Primary Gradients Color =========*/
 .primary-gradient-1 {
   background: -webkit-gradient(linear, left top, left bottom, from(#542DED), to(#2A21DE));

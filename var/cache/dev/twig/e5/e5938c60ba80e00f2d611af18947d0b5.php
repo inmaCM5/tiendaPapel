@@ -128,7 +128,7 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
                         </div>
                         <div class=\"ytp-spinner-right\">
                             <div class=\"ytp-spinner-circle\"></div>
-                        </div>
+                        </div>o
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
             <div class=\"row\">
                 <div class=\"col-lg-6 mx-auto\">
                     <div class=\"login-registration-style-2 mt-50\">
-                        <h1 class=\"heading-4 font-weight-500 title\">Login</h1>
+                        <h1 class=\"heading-4 font-weight-500 title\">Inicia sesión</h1>
                         <div class=\"login-registration-form pt-10\">
                             <form action=\"";
         // line 62
@@ -180,24 +180,24 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
                                     </div>
                                 </div>
                                 <div class=\"single-form form-default form-border\">
-                                    <label>Password</label>
+                                    <label>Contraseña</label>
                                     <div class=\"form-input\">
-                                        <input type=\"password\" placeholder=\"Password\" id=\"password-7\" name=\"_password\" required>
+                                        <input type=\"password\" placeholder=\"Contraseña\" id=\"password-7\" name=\"_password\" required>
                                         <i class=\"mdi mdi-lock\"></i>
                                         <span toggle=\"#password-7\" class=\"mdi mdi-eye-outline toggle-password\"></span>
                                     </div>
                                 </div>
                                 <div class=\"single-form\">
-                                    <button class=\"main-btn primary-btn\" type=\"submit\">Sign in</button>
+                                    <button class=\"main-btn primary-btn\" type=\"submit\">Inicia sesión</button>
                                 </div>
                             </form>
                         </div>
                         <div class=\"text-center\">
-                            <p class=\"login\">Don’t have an account?
+                            <p class=\"login\">¿No tienes cuenta?
                                 <a href=\"";
         // line 85
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("registro");
-        echo "\">Sign up</a>
+        echo "\">Registrate</a>
                             </p>
                         </div>
                     </div>
@@ -220,11 +220,11 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
         echo "\">
 \t\t\t\t\t\t\t<img src=\"";
         // line 103
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
         echo "\" alt=\"\">
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</div>
-\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>
+\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
 \t\t\t\t\t<ul class=\"footer-follow text-center\">
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
@@ -460,7 +460,7 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
                         </div>
                         <div class=\"ytp-spinner-right\">
                             <div class=\"ytp-spinner-circle\"></div>
-                        </div>
+                        </div>o
                     </div>
                 </div>
             </div>
@@ -495,7 +495,7 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
             <div class=\"row\">
                 <div class=\"col-lg-6 mx-auto\">
                     <div class=\"login-registration-style-2 mt-50\">
-                        <h1 class=\"heading-4 font-weight-500 title\">Login</h1>
+                        <h1 class=\"heading-4 font-weight-500 title\">Inicia sesión</h1>
                         <div class=\"login-registration-form pt-10\">
                             <form action=\"{{ path('login') }}\" class=\"has-validation-callback\" method=\"post\">
                                 <div class=\"single-form form-default form-border\">
@@ -506,21 +506,21 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
                                     </div>
                                 </div>
                                 <div class=\"single-form form-default form-border\">
-                                    <label>Password</label>
+                                    <label>Contraseña</label>
                                     <div class=\"form-input\">
-                                        <input type=\"password\" placeholder=\"Password\" id=\"password-7\" name=\"_password\" required>
+                                        <input type=\"password\" placeholder=\"Contraseña\" id=\"password-7\" name=\"_password\" required>
                                         <i class=\"mdi mdi-lock\"></i>
                                         <span toggle=\"#password-7\" class=\"mdi mdi-eye-outline toggle-password\"></span>
                                     </div>
                                 </div>
                                 <div class=\"single-form\">
-                                    <button class=\"main-btn primary-btn\" type=\"submit\">Sign in</button>
+                                    <button class=\"main-btn primary-btn\" type=\"submit\">Inicia sesión</button>
                                 </div>
                             </form>
                         </div>
                         <div class=\"text-center\">
-                            <p class=\"login\">Don’t have an account?
-                                <a href=\"{{ path('registro') }}\">Sign up</a>
+                            <p class=\"login\">¿No tienes cuenta?
+                                <a href=\"{{ path('registro') }}\">Registrate</a>
                             </p>
                         </div>
                     </div>
@@ -538,10 +538,10 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
 \t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
 \t\t\t\t\t<div class=\"footer-logo text-center\">
 \t\t\t\t\t\t<a href=\"{{ path('index') }}\">
-\t\t\t\t\t\t\t<img src=\"{{ asset('images/logo.svg') }}\" alt=\"\">
+\t\t\t\t\t\t\t<img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</div>
-\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>
+\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
 \t\t\t\t\t<ul class=\"footer-follow text-center\">
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">

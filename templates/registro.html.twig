@@ -72,6 +72,31 @@
                                         }) }}
                                     </div>
                                 </div>
+								<div class="single-form form-default form-border">
+                                    <div class="form-input">
+                                        {{ form_row(registrationForm.nombre) }}
+                                    </div>
+                                </div>
+								<div class="single-form form-default form-border">
+                                    <div class="form-input">
+                                        {{ form_row(registrationForm.apellidos) }}
+                                    </div>
+                                </div>
+								<div class="single-form form-default form-border">
+                                    <div class="form-input">
+                                        {{ form_row(registrationForm.email) }}
+                                    </div>
+                                </div>
+								<div class="single-form form-default form-border">
+                                    <div class="form-input">
+                                        {{ form_row(registrationForm.direccion) }}
+                                    </div>
+                                </div>
+								<div class="single-form form-default form-border">
+                                    <div class="form-input">
+                                        {{ form_row(registrationForm.telefono) }}
+                                    </div>
+                                </div>
                                 <div class="single-form">
                                     <button class="btn primary-btn sign-up" type="submit">Registrarse                  
                                         <i class="fa fa-user-plus" aria-hidden="true"></i>
@@ -94,10 +119,10 @@
 				<div class="col-lg-5 col-md-7 col-sm-10">
 					<div class="footer-logo text-center">
 						<a href="{{ path('index') }}">
-							<img src="{{ asset('images/logo.svg') }}" alt="">
+							<img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="">
 						</a>
 					</div>
-					<h5 class="heading-5 text-center mt-30">Follow Us</h5>
+					<h5 class="heading-5 text-center mt-30">Síguenos</h5>
 					<ul class="footer-follow text-center">
 						<li>
 							<a href="https://www.facebook.com/impresionacopisteria/">
