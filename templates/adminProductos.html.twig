@@ -116,16 +116,6 @@
                             <!-- navbar cart Ends -->
                         </div>
                     </div>
-                    <!-- navbar search start -->
-                    <div class="navbar-search mt-15 search-style-5">
-                        <div class="search-input">
-                            <input type="text" placeholder="Search">
-                        </div>
-                        <div class="search-btn">
-                            <button><i class="lni lni-search-alt"></i></button>
-                        </div>
-                    </div>
-                    <!-- navbar search Ends -->
                 </div>
                 <!-- navbar mobile Start -->
             </div>
@@ -214,14 +204,12 @@
                                         <!-- sub mega dropdown Ends -->
                                     </li>
                                     <li><a href="{{ path('productos') }}">Productos</a></li>
-                                    <li><a href="#">Imprimir apuntes</a></li>
                                     {% if is_granted('ROLE_ADMIN') %}
                                         <li class="menu-item-has-children">
                                             <a href="#">Administrar...</a>
                                             <ul class="sub-menu">
                                                 <li><a href="#">Administrar categorías</a></li>
                                                 <li><a href="{{ path('adminProductos') }}">Administrar productos</a></li>
-                                                <li><a href="#">Administrar apuntes</a></li>
                                             </ul>
                                         </li>
                                     {% endif %}                                    
@@ -229,16 +217,6 @@
                             </div>
                             <!-- navbar menu Ends -->
                             <div class="navbar-search-cart d-none d-lg-flex">
-                                <!-- navbar search start -->
-                                <div class="navbar-search search-style-5">
-                                    <div class="search-input">
-                                        <input type="text" placeholder="Search">
-                                    </div>
-                                    <div class="search-btn">
-                                        <button><i class="lni lni-search-alt"></i></button>
-                                    </div>
-                                </div>
-                                <!-- navbar search Ends -->
                                 <!-- navbar cart start -->
                                 <div class="navbar-cart">
                                     <a class="icon-btn primary-icon-text icon-text-btn" href="javascript:void(0)">
@@ -336,7 +314,7 @@
         <table class="table table-striped contact-style-2">
             <thead>
                 <tr>
-                    <a href="{{ path('app_productos_new') }}" class="btn btn-primary float-right mb-4">Añadir producto</a>
+                    <a href="{{ path('anadirProducto') }}" class="btn btn-primary float-right mb-4">Añadir producto</a>
                 </tr>
                 <tr>
                     <th>Producto</th>

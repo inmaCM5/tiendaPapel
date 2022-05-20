@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProductosRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProductosRepository::class)]
@@ -42,6 +44,14 @@ class Productos
 
     #[ORM\Column(type: 'string', length: 255)]
     private $proveedor;
+
+    #[ORM\OneToMany(mappedBy: 'codProducto', targetEntity: PedidosProducto::class)]
+    private $productosPedidos;
+
+    public function __construct()
+    {
+        $this->productosPedidos = new ArrayCollection();
+    }
     public function displayImagen()
     {
         if(null === $this->rawImagen) {
@@ -166,6 +176,36 @@ class Productos
     public function setProveedor(string $proveedor): self
     {
         $this->proveedor = $proveedor;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, PedidosProducto>
+     */
+    public function getProductosPedidos(): Collection
+    {
+        return $this->productosPedidos;
+    }
+
+    public function addProductosPedido(PedidosProducto $productosPedido): self
+    {
+        if (!$this->productosPedidos->contains($productosPedido)) {
+            $this->productosPedidos[] = $productosPedido;
+            $productosPedido->setCodProducto($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProductosPedido(PedidosProducto $productosPedido): self
+    {
+        if ($this->productosPedidos->removeElement($productosPedido)) {
+            // set the owning side to null (unless already changed)
+            if ($productosPedido->getCodProducto() === $this) {
+                $productosPedido->setCodProducto(null);
+            }
+        }
 
         return $this;
     }

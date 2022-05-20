@@ -337,7 +337,6 @@
                                         <!-- sub mega dropdown Ends -->
                                     </li>
                                     <li><a href="{{ path('productos') }}">Productos</a></li>
-                                    <li><a href="#">Imprimir apuntes</a></li>
                                     <li><a href="#">Accessories</a></li>
                                     {% if is_granted('ROLE_ADMIN') %}
                                         <li class="menu-item-has-children">
@@ -345,7 +344,6 @@
                                             <ul class="sub-menu">
                                                 <li><a href="#">Administrar categorías</a></li>
                                                 <li><a href="{{ path('adminProductos') }}">Administrar productos</a></li>
-                                                <li><a href="#">Administrar apuntes</a></li>
                                             </ul>
                                         </li>
                                     {% endif %}                                    

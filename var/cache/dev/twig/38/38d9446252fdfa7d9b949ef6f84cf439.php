@@ -70,10 +70,10 @@ class __TwigTemplate_4f274f26ee6527a84ffcec641257bc80 extends Template
 \t\t";
         // line 17
         $this->displayBlock('body', $context, $blocks);
-        // line 30
+        // line 24
         echo "\t\t";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 31
+        // line 25
         echo "\t</body>
 </html>";
         
@@ -138,18 +138,16 @@ class __TwigTemplate_4f274f26ee6527a84ffcec641257bc80 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 18
-        echo "<!-- Boton hacia arriba -->
-<span class=\"ir-arriba icon-arrow-up2\">";
+        echo "\t\t\t<!-- Boton hacia arriba -->
+\t\t\t<span class=\"ir-arriba icon-arrow-up2\">";
         // line 19
         echo " <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"25\" fill=\"currentColor\" class=\"bi bi-arrow-up-circle-fill\" viewBox=\"0 0 16 16\">
-  <path d=\"M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z\"/>
-</svg></span>
-
+\t\t\t<path d=\"M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z\"/>
+\t\t\t</svg></span>
 \t\t\t";
-        // line 28
-        echo "\t\t\t";
+        // line 22
         $this->displayBlock('contenido', $context, $blocks);
-        // line 29
+        // line 23
         echo "\t\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -159,7 +157,7 @@ class __TwigTemplate_4f274f26ee6527a84ffcec641257bc80 extends Template
 
     }
 
-    // line 28
+    // line 22
     public function block_contenido($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -177,7 +175,7 @@ class __TwigTemplate_4f274f26ee6527a84ffcec641257bc80 extends Template
 
     }
 
-    // line 30
+    // line 24
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -207,7 +205,7 @@ class __TwigTemplate_4f274f26ee6527a84ffcec641257bc80 extends Template
 
     public function getDebugInfo()
     {
-        return array (  181 => 30,  163 => 28,  153 => 29,  150 => 28,  144 => 19,  141 => 18,  131 => 17,  118 => 13,  108 => 12,  88 => 6,  77 => 31,  74 => 30,  72 => 17,  68 => 15,  65 => 12,  61 => 10,  57 => 8,  55 => 6,  48 => 1,);
+        return array (  179 => 24,  161 => 22,  151 => 23,  149 => 22,  144 => 19,  141 => 18,  131 => 17,  118 => 13,  108 => 12,  88 => 6,  77 => 25,  74 => 24,  72 => 17,  68 => 15,  65 => 12,  61 => 10,  57 => 8,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -229,16 +227,10 @@ class __TwigTemplate_4f274f26ee6527a84ffcec641257bc80 extends Template
 \t</head>
 \t<body>
 \t\t{% block body %}
-<!-- Boton hacia arriba -->
-<span class=\"ir-arriba icon-arrow-up2\">{# Ir hacia arriba #} <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"25\" fill=\"currentColor\" class=\"bi bi-arrow-up-circle-fill\" viewBox=\"0 0 16 16\">
-  <path d=\"M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z\"/>
-</svg></span>
-
-\t\t\t{# <header>
-\t\t\t\t{% block header %}
-\t\t\t\t\t{{ include ('menu.html.twig') }}
-\t\t\t\t{% endblock %}
-\t\t\t</header> #}
+\t\t\t<!-- Boton hacia arriba -->
+\t\t\t<span class=\"ir-arriba icon-arrow-up2\">{# Ir hacia arriba #} <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"25\" fill=\"currentColor\" class=\"bi bi-arrow-up-circle-fill\" viewBox=\"0 0 16 16\">
+\t\t\t<path d=\"M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z\"/>
+\t\t\t</svg></span>
 \t\t\t{% block contenido %}{% endblock %}
 \t\t{% endblock %}
 \t\t{% block javascripts %}{% endblock %}

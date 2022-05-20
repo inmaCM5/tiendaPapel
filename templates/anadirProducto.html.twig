@@ -219,14 +219,12 @@
                                         <!-- sub mega dropdown Ends -->
                                     </li>
                                     <li><a href="{{ path('productos') }}">Productos</a></li>
-                                    <li><a href="#">Imprimir apuntes</a></li>
                                     {% if is_granted('ROLE_ADMIN') %}
                                         <li class="menu-item-has-children">
                                             <a href="#">Administrar...</a>
                                             <ul class="sub-menu">
                                                 <li><a href="#">Administrar categorías</a></li>
                                                 <li><a href="{{ path('adminProductos') }}">Administrar productos</a></li>
-                                                <li><a href="#">Administrar apuntes</a></li>
                                             </ul>
                                         </li>
                                     {% endif %}                                    
@@ -346,89 +344,86 @@
     <section class="category-wrapper pt-50 pb-50">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="filter-style-1 mt-0">
-                        <div class="filter-title">
-                            <h4 class="title">Foto</h4>
-                            <form>
+                <form id="form_seleccion" action="{{ path('anadirProducto') }}" method="post">
+                    <div class="col-lg-4">
+                        <div class="filter-style-1 mt-0">
+                            <div class="filter-title">
+                                <h4 class="title">Foto</h4>
                                 <div class="form-group">
-                                    <input type="file" class="form-control-file text-dark">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="filter-type">
-                            
-                        </div>
-                    </div>	
-                    <div class="filter-style-1 mt-4">
-                        <div class="filter-title">
-                            <h4 class="title">Categoría</h4>
-                        </div>
-                        <div class="filter-type">
-                            <div class="dropdown show">
-                                <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Seleccione una opción
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    {% for lista in categorias %}
-                                            {% for categoriaSecu in lista[1] %}
-                                                <a class="dropdown-item" href="#">{{ categoriaSecu.nombre }}</a>
-                                            {% endfor %}
-                                    {% endfor %}
+                                    <input name="imagen" type="file" class="form-control-file text-dark">
                                 </div>
                             </div>
-                        </div>
-                    </div>			
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="filter-style-1 mt-0">
-                                <div class="filter-title">
-                                    <h4 class="title">Datos generales</h4>
+                        </div>	
+                        <div class="filter-style-1 mt-4">
+                            <div class="filter-title">
+                                <h4 class="title">Categoría</h4>
+                            </div>
+                            <div class="filter-type">
+                                <div class="dropdown show">
+                                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Seleccione una opción
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        {% for lista in categorias %}
+                                                {% for categoriaSecu in lista[1] %}
+                                                    <a class="dropdown-item" href="#" name="categoria">{{ categoriaSecu.nombre }}</a>
+                                                {% endfor %}
+                                        {% endfor %}
+                                    </div>
                                 </div>
-                                <div class="filter-type">
-                                    {# <form> #}
-                                        <div class="form-row mb-4">
-                                            <label>Nombre producto</label>
-                                            <input type="text" class="form-control" placeholder="Nombre producto">
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label>Descripción</label>
-                                            <textarea class="form-control" rows="5" cols="50" placeholder="Escribe la descripción aquí..."></textarea>
-                                        </div>
-                                        <div class="form-group d-flex mb-4">
-                                            <div class="col-md-6" style="margin-right: 2rem">
-                                                <label>Código</label>
-                                                <input type="text" class="form-control" placeholder="Código">
+                            </div>
+                        </div>			
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="filter-style-1 mt-0">
+                                    <div class="filter-title">
+                                        <h4 class="title">Datos generales</h4>
+                                    </div>
+                                    <div class="filter-type">
+                                        {# <form> #}
+                                            <div class="form-row mb-4">
+                                                <label>Nombre producto</label>
+                                                <input name="nombreProducto" type="text" class="form-control" placeholder="Nombre producto">
                                             </div>
-                                            <div class="col-md-5">
-                                                <label>PVP</label>
-                                                <input type="text" class="form-control" placeholder="Precio venta público">
+                                            <div class="form-group mb-4">
+                                                <label>Descripción</label>
+                                                <textarea name="descripcion" class="form-control" rows="5" cols="50" placeholder="Escribe la descripción aquí..."></textarea>
                                             </div>
-                                        </div>
-                                        <div class="form-group d-flex mb-4">
-                                            <div class="col-md-6" style="margin-right: 2rem">
-                                                <label>Unidades</label>
-                                                <input type="text" class="form-control" placeholder="Unidades">
+                                            <div class="form-group d-flex mb-4">
+                                                <div class="col-md-6" style="margin-right: 2rem">
+                                                    <label>Código</label>
+                                                    <input name="codigo" type="text" class="form-control" placeholder="Código">
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label>PVP</label>
+                                                    <input name="pvp" type="text" class="form-control" placeholder="Precio venta público">
+                                                </div>
                                             </div>
-                                            <div class="col-md-5">
-                                                <label>PP</label>
-                                                <input type="text" class="form-control" placeholder="Precio proveedor">
+                                            <div class="form-group d-flex mb-4">
+                                                <div class="col-md-6" style="margin-right: 2rem">
+                                                    <label>Unidades</label>
+                                                    <input name="unidades" type="text" class="form-control" placeholder="Unidades">
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label>PP</label>
+                                                    <input name="pp" type="text" class="form-control" placeholder="Precio proveedor">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label>Proveedor</label>
-                                            <input type="text" class="form-control" placeholder="Proveedor">
-                                        </div>                                       
-                                        <button type="submit" class="btn btn-primary">Guardar</button>
-                                    {# </form> #}
+                                            <div class="form-group mb-4">
+                                                <label>Proveedor</label>
+                                                <input name="proveedor" type="text" class="form-control" placeholder="Proveedor">
+                                            </div>                                       
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        {# </form> #}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>

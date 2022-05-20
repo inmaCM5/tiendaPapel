@@ -141,18 +141,6 @@
 							<!-- navbar cart Ends -->
 						</div>
 					</div>
-					<!-- navbar search start -->
-					<div class="navbar-search mt-15 search-style-5">
-						<div class="search-input">
-							<input type="text" placeholder="Search">
-						</div>
-						<div class="search-btn">
-							<button>
-								<i class="lni lni-search-alt"></i>
-							</button>
-						</div>
-					</div>
-					<!-- navbar search Ends -->
 				</div>
 				<!-- navbar mobile Start -->
 			</div>
@@ -258,9 +246,6 @@
 									<li>
 										<a href="{{ path('productos') }}">Productos</a>
 									</li>
-									<li>
-										<a href="#">Imprimir apuntes</a>
-									</li>
 									{% if is_granted('ROLE_ADMIN') %}
 										<li class="menu-item-has-children">
 											<a href="#">Administrar...</a>
@@ -271,29 +256,13 @@
 												<li>
 													<a href="{{ path('adminProductos') }}">Administrar productos</a>
 												</li>
-												<li>
-													<a href="#">Administrar apuntes</a>
-												</li>
 											</ul>
 										</li>
 									{% endif %}
 								</ul>
 							</div>
 							<!-- navbar menu Ends -->
-							<div
-								class="navbar-search-cart d-none d-lg-flex">
-								<!-- navbar search start -->
-								<div class="navbar-search search-style-5">
-									<div class="search-input">
-										<input type="text" placeholder="Search">
-									</div>
-									<div class="search-btn">
-										<button>
-											<i class="lni lni-search-alt"></i>
-										</button>
-									</div>
-								</div>
-								<!-- navbar search Ends -->
+							<div class="navbar-search-cart d-none d-lg-flex">
 								<!-- navbar cart start -->
 								<div class="navbar-cart">
 									<a class="icon-btn primary-icon-text icon-text-btn" href="javascript:void(0)">

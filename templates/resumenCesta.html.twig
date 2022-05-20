@@ -31,132 +31,7 @@
 
     <div class="navigation">
         <header class="navbar-style-7 position-relative">
-            <div class="container">
-                <!-- navbar mobile Start -->
-                <div class="navbar-mobile d-lg-none">
-                    <div class="row align-items-center">
-                        <div class="col-3">
-                            <!-- navbar cart start -->
-                            <div class="navbar-toggle icon-text-btn">
-                                <a class="icon-btn primary-icon-text mobile-menu-open-7" href="javascript:void(0)">
-                                    <i class="mdi mdi-menu"></i>
-                                </a>
-                            </div>
-                            <!-- navbar cart Ends -->
-                        </div>
-                        <div class="col-6">
-                            <!-- desktop logo Start -->
-                            <div class="mobile-logo text-center">
-                                <a href="{{ path('index') }}"><img src="{{ asset('imagenes/logo-nombre.jpg') }}" alt="Logo" style="width: 150px;"></a>
-                            </div>
-                            <!-- desktop logo Ends -->
-                        </div>
-                        <div class="col-3">
-                            <!-- navbar cart start -->
-                            <div class="navbar-cart">
-                                <a class="icon-btn primary-icon-text icon-text-btn" href="javascript:void(0)">
-                                    <img src="images/icon-svg/cart-1.svg" alt="Icon">
-                                    <span class="icon-text text-style-1">{{ unidades }}</span>
-                                </a>
-
-                                <div class="navbar-cart-dropdown">
-										<div class="checkout-style-2">
-											<div class="checkout-header d-flex justify-content-between">
-												<h6 class="title">Cesta compra</h6>
-											</div>
-
-											{% if cesta | length == 0 %}
-												<div class="checkout-table">
-													<table class="table">
-														<tbody>
-															<tr>
-																<td class="checkout-product">
-																	<div class="product-cart d-flex">
-																		<div class="product-content media-body">
-																			<p class="title">
-																				Cesta vacía
-																			</p>
-																		</div>
-																	</div>
-																</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-											{% else %}
-												<div class="checkout-table">
-													<table class="table">
-														<tbody>
-
-															{% for produCesta in cesta %}
-																<tr>
-																	<td class="checkout-product">
-																		<div class="product-cart d-flex">
-																			<div class="product-content media-body">
-																				<h5 class="title">
-																					<a href="{{path('detalles', { 'producto': produCesta.producto.getId() }) }}">{{produCesta.producto.getNombre() }}</a>
-																				</h5>
-																				<ul>
-																					<li><a class="delete" href="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}"><i class="mdi mdi-delete"></i></a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</td>
-																	<td class="checkout-quantity">
-																		<div class="product-quantity d-inline-flex">
-																			<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-																				<input type="number" name="unidades" min="1" max="{{ produCesta.producto.getUnidades() }}" value="{{ produCesta.unidades }}" size="3">
-																				<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
-																			</form>
-																		</div>
-																	</td>
-																	<td class="checkout-price">
-																		<p class="price">{{ produCesta.producto.getPvp() }}€</p>
-																	</td>
-																</tr>
-															{% endfor %}
-														</tbody>
-													</table>
-												</div>
-
-												<div class="checkout-footer">
-													<div class="checkout-sub-total d-flex justify-content-between">
-														<p class="value">Total precio:</p>
-														<p class="price">{{ precioCesta }}€</p>
-													</div>
-													<div class="checkout-btn">
-														{# <a href="{{ path('productos') }}" class="main-btn primary-btn-border">Actualizar</a> #}
-														<a href="{{ path('resumenCesta') }}" class="main-btn primary-btn">Resumen</a>
-													</div>
-												</div>
-											{% endif %}
-										</div>
-									</div>
-                            </div>
-                            <!-- navbar cart Ends -->
-                        </div>
-                    </div>
-                    <!-- navbar search start -->
-                    <div class="navbar-search mt-15 search-style-5">
-                        <div class="search-input">
-                            <input type="text" placeholder="Search">
-                        </div>
-                        <div class="search-btn">
-                            <button><i class="lni lni-search-alt"></i></button>
-                        </div>
-                    </div>
-                    <!-- navbar search Ends -->
-                </div>
-                <!-- navbar mobile Start -->
-            </div>
-    
             <div class="navbar-container navbar-sidebar-7">
-                <!-- navbar close  Ends -->
-                <div class="navbar-close d-lg-none">
-                    <a class="close-mobile-menu-7" href="javascript:void(0)"><i class="mdi mdi-close"></i></a>
-                </div>
-                <!-- navbar close  Ends -->
-    
                 <!-- navbar top Start -->
                 <div class="navbar-top-wrapper">
                     <div class="container-lg">
@@ -234,114 +109,19 @@
                                         <!-- sub mega dropdown Ends -->
                                     </li>
                                     <li><a href="{{ path('productos') }}">Productos</a></li>
-                                    <li><a href="#">Imprimir apuntes</a></li>
                                     {% if is_granted('ROLE_ADMIN') %}
                                         <li class="menu-item-has-children">
                                             <a href="#">Administrar...</a>
                                             <ul class="sub-menu">
                                                 <li><a href="#">Administrar categorías</a></li>
                                                 <li><a href="{{ path('adminProductos') }}">Administrar productos</a></li>
-                                                <li><a href="#">Administrar apuntes</a></li>
                                             </ul>
                                         </li>
                                     {% endif %}                                    
                                 </ul>
                             </div>
                             <!-- navbar menu Ends -->
-                            <div class="navbar-search-cart d-none d-lg-flex">
-                                <!-- navbar search start -->
-                                <div class="navbar-search search-style-5">
-                                    <div class="search-input">
-                                        <input type="text" placeholder="Search">
-                                    </div>
-                                    <div class="search-btn">
-                                        <button><i class="lni lni-search-alt"></i></button>
-                                    </div>
-                                </div>
-                                <!-- navbar search Ends -->
-                                <!-- navbar cart start -->
-                                <div class="navbar-cart">
-                                    <a class="icon-btn primary-icon-text icon-text-btn" href="javascript:void(0)">
-                                        <img src="images/icon-svg/cart-1.svg" alt="Icon">
-                                        <span class="icon-text text-style-1">{{ unidades }}</span>
-                                    </a>
-
-                                    <div class="navbar-cart-dropdown">
-										<div class="checkout-style-2">
-											<div class="checkout-header d-flex justify-content-between">
-												<h6 class="title">Cesta compra</h6>
-											</div>
-
-											{% if cesta | length == 0 %}
-												<div class="checkout-table">
-													<table class="table">
-														<tbody>
-															<tr>
-																<td class="checkout-product">
-																	<div class="product-cart d-flex">
-																		<div class="product-content media-body">
-																			<p class="title">
-																				Cesta vacía
-																			</p>
-																		</div>
-																	</div>
-																</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-											{% else %}
-												<div class="checkout-table">
-													<table class="table">
-														<tbody>
-
-															{% for produCesta in cesta %}
-																<tr>
-																	<td class="checkout-product">
-																		<div class="product-cart d-flex">
-																			<div class="product-content media-body">
-																				<h5 class="title">
-																					<a href="{{path('detalles', { 'producto': produCesta.producto.getId() }) }}">{{produCesta.producto.getNombre() }}</a>
-																				</h5>
-																				<ul>
-																					<li><a class="delete" href="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}"><i class="mdi mdi-delete"></i></a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</td>
-																	<td class="checkout-quantity">
-																		<div class="product-quantity d-inline-flex">
-																			<form id="form_seleccion" action="{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}" method="post">
-																				<input type="number" name="unidades" min="1" max="{{ produCesta.producto.getUnidades() }}" value="{{ produCesta.unidades }}" size="3">
-																				<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
-																			</form>
-																		</div>
-																	</td>
-																	<td class="checkout-price">
-																		<p class="price">{{ produCesta.producto.getPvp() }}€</p>
-																	</td>
-																</tr>
-															{% endfor %}
-														</tbody>
-													</table>
-												</div>
-
-												<div class="checkout-footer">
-													<div class="checkout-sub-total d-flex justify-content-between">
-														<p class="value">Total precio:</p>
-														<p class="price">{{ precioCesta }}€</p>
-													</div>
-													<div class="checkout-btn">
-														{# <a href="{{ path('productos') }}" class="main-btn primary-btn-border">Actualizar</a> #}
-														<a href="{{ path('resumenCesta') }}" class="main-btn primary-btn">Resumen</a>
-													</div>
-												</div>
-											{% endif %}
-										</div>
-									</div>
-                                </div>
-                                <!-- navbar cart Ends -->
-                            </div>
+                            <div></div>
                         </nav>
                     </div>
                 </div>
@@ -377,7 +157,7 @@
         <table class="table table-striped contact-style-2">
             <thead>
                 <tr>
-                    <a href="#" class="btn btn-primary float-right mb-4">Comprar</a>
+                    <a href="{{ path('pedido') }}" class="btn btn-primary float-right mb-4">Comprar</a>
                 </tr>
                 <tr>
                     <th>Producto</th>
@@ -391,13 +171,15 @@
                 {% for produCesta in cesta %}
                     <tr>
                         <td>
-                            {# <span>
-                                <img class="rounded" width="60px" height="60px" src="{{ producto.displayImagen() }}">
-                            </span> #}
                             {{ produCesta.producto.getNombre() }}                       
                         </td>
                         <td>{{ produCesta.producto.getCodigo() }}</td>
-                        <td>{{ produCesta.unidades }}</td>
+						<td>
+							<form id="form_seleccion" action="{{ path('cambiarUnidadesResumen', {'idProducto': produCesta.producto.getId()}) }}" method="post">
+								<input type="number" name="unidades" min="1" max="{{ produCesta.producto.getUnidades() }}" value="{{ produCesta.unidades }}" size="3">
+								<input type='hidden' name='codProduc' value="{{ produCesta.producto.getCodigo() }}"/>
+							</form>
+						</td>
                         <td>{{ produCesta.producto.getPvp() }}€</td>
                         <td>                            
                             <form id="form_seleccion" class="d-inline" action="{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}" method="post">
@@ -408,6 +190,9 @@
                 {% endfor %}
             </tbody>
         </table>
+		<div class="checkout-sub-total d-flex justify-content-end">
+			<h4 class="value">Total precio: {{ precioCesta }}€</h4>
+		</div>
     </section>
     
 	<section class="footer-style-3 pt-100 pb-100">

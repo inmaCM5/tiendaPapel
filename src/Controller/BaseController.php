@@ -2,15 +2,18 @@
 
 namespace App\Controller;
 
-use App\Entity\CategoriasPrincipales;
-use App\Entity\CategoriasSecundarias;
 use App\Entity\Productos;
 use App\Entity\Usuarios;
 use App\Entity\Categoria;
+use App\Entity\Pedido;
+use App\Entity\PedidosProducto;
 use Doctrine\Persistence\ManagerRegistry;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 
 class BaseController extends AbstractController
 {
@@ -122,6 +125,39 @@ function administrarProductos(ManagerRegistry $doctrine, CestaCompra $cesta): Re
         'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
 }
 
+#[Route('/adminPedidos', name:'adminPedidos')]
+function administrarPedidos(ManagerRegistry $doctrine, CestaCompra $cesta): Response
+{
+    $pedidos = $doctrine->getRepository(Pedido::class)->findAll();
+    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
+    $categorias=[];
+
+    foreach ($categoriaPrincipal as $categoria) {
+        $categorias[$categoria->getId()][0]= $categoria;
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
+    }
+
+    return $this->render('adminPedidos.html.twig',
+        array('pedidos' => $pedidos, 'categorias' => $categorias,
+        'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
+}
+
+#[Route('/pedidosProductos/{idPedido}', name:'pedidosProductos')]
+public function mostrarPedidosProductos(ManagerRegistry $doctrine, $idPedido, CestaCompra $cesta): Response {
+    $pedidosProductos = $doctrine->getRepository(PedidosProducto::class)->find($idPedido);
+    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
+    $categorias=[];
+
+    foreach ($categoriaPrincipal as $categoria) {
+        $categorias[$categoria->getId()][0]= $categoria;
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
+    }
+
+    return $this->render('pedidosProductos.html.twig',
+        array('pedidosProductos' => $pedidosProductos, 'categorias' => $categorias,
+        'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
+}
+
 #[Route('/anadirProducto', name:'anadirProducto')]
 function anadirProducto(ManagerRegistry $doctrine, CestaCompra $cesta): Response
 {
@@ -133,6 +169,23 @@ function anadirProducto(ManagerRegistry $doctrine, CestaCompra $cesta): Response
         $categorias[$categoria->getId()][0]= $categoria;
         $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
     }
+
+    /* $entityManager = $doctrine->getManager();
+    $producto = new Productos(); */
+    /* $producto->setImagen($_POST['imagen']); */
+    /* $producto->setCategoria($_POST['categoria']); */
+    /* $producto->setNombre($_POST['nombreProducto']);
+    $producto->setDescripcion($_POST['descripcion']);
+    $producto->setCodigo($_POST['codigo']);
+    $producto->setPvp($_POST['pvp']);
+    $producto->setUnidades($_POST['unidades']);
+    $producto->setPp($_POST['pp']);
+    $producto->setProveedor($_POST['proveedor']);
+    
+    $entityManager->persist($producto);
+    $entityManager->flush(); */
+
+    /* print($_POST['nombreProducto']); */
 
     return $this->render('anadirProducto.html.twig',
         array('productos' => $productos, 'categorias' => $categorias,
@@ -169,6 +222,15 @@ public function eliminarProductos(ManagerRegistry $doctrine, $idProducto): Respo
     return $this->redirectToRoute('adminProductos');
 }
 
+#[Route('/completarPedido/{idPedido}', name:'completarPedido')]
+public function completarPedido(ManagerRegistry $doctrine, $idPedido): Response {
+    $entityManager = $doctrine->getManager();
+    $pedido = $doctrine->getRepository(Pedido::class)->find($idPedido);
+    $pedido->setCompletado(1);
+    $entityManager->flush();
+    return $this->redirectToRoute('adminPedidos');
+}
+
 #[Route('/resumenCesta', name:'resumenCesta')]
 function resumenCesta(ManagerRegistry $doctrine, CestaCompra $cesta): Response
 {
@@ -184,5 +246,68 @@ function resumenCesta(ManagerRegistry $doctrine, CestaCompra $cesta): Response
     return $this->render('resumenCesta.html.twig',
         array('productos' => $productos, 'categorias' => $categorias,
         'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
+}
+
+#[Route('/cambiarUnidadesResumen/{idProducto}', name:'cambiarUnidadesResumen')]
+public function cambiarUnidadesResumen(ManagerRegistry $doctrine, $idProducto, CestaCompra $cesta): Response {
+    $producto = $doctrine->getRepository(Productos::class)->find($idProducto);
+    $cesta->cambiar_unidades($producto, $_POST['unidades']);
+    return $this->redirectToRoute('resumenCesta');
+}
+
+#[Route('/pedido', name:'pedido')]
+public function realizarPedido(ManagerRegistry $doctrine, CestaCompra $cesta, MailerInterface $mailer): Response {
+    $productos = $cesta->get_productos();
+    $costeTotal = 0;
+    $error = false;
+
+    if (count($productos) > 0) {
+        $entityManager = $doctrine->getManager();
+        $pedido = new Pedido();
+        $pedido->setFecha(\DateTime::createFromFormat('Y-m-d', date("Y-m-d")));
+        $pedido->setCoste($cesta->get_coste());
+        $pedido->setUsuario($this->getUser());
+
+        $entityManager->persist($pedido);
+        $entityManager->flush();
+
+        foreach ($productos as $producto) {
+            $pedidoProducto = new PedidosProducto();
+            $pedidoProducto->setUnidades($producto['unidades']);
+            $pedidoProducto->setCodPedido($pedido);
+            $pedidoProducto->setCodProducto($doctrine->getRepository(Productos::class)->find($producto['producto']->getId()));
+            $entityManager->persist($pedidoProducto);
+
+            $productoCompra = $doctrine->getRepository(Productos::class)->find($doctrine->getRepository(Productos::class)->find($producto['producto']->getId()));
+            $productoCompra->setUnidades(($productoCompra->getUnidades()) - ($producto['unidades']));
+            $entityManager->persist($productoCompra);
+        }
+
+        try {
+            $entityManager->flush();
+        } catch (Exception $err) {
+            $error = true;
+        }
+
+        if (!$error) {            
+            $email = (new TemplatedEmail())
+                    ->from('impresionaweb@gmail.com')
+                    ->to('impresionaweb@gmail.com')
+                    ->subject('Confirmación de pedido.')
+                    ->htmlTemplate('correo.html.twig')
+                    ->context(['numPedido' => $pedido->getId(), 'usuario' => $this->getUser()->getUserIdentifier(), 'cesta' => $cesta->get_productos()]);
+            $mailer->send($email);
+        }
+    } else {
+        $error = true;
+    }
+
+    $cesta->vaciarCesta();
+    return $this->render('pedido.html.twig',
+                    array('comprobar' => $error,
+                        'numPedido' => $pedido->getId(),
+                        'usuario' => $this->getUser()->getUserIdentifier(),
+                        'cesta' => $cesta->get_productos(),
+    ));
 }
 }

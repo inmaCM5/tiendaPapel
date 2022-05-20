@@ -156,7 +156,9 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
                                 <a href=\"";
         // line 50
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\"><img src=\"images/logo.svg\" alt=\"Logo\"></a>
+        echo "\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
+        echo "\" alt=\"Logo\" style=\"width: 150px;\"></a>
                             </div>
                             <!-- desktop logo Ends -->
                         </div>
@@ -349,8 +351,8 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
         // line 189
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
-        echo "\" alt=\"Logo\"></a>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
+        echo "\" alt=\"Logo\" style=\"width: 150px;\"></a>
                             </div>
                             <!-- desktop logo Ends -->
                             <!-- navbar menu Start -->
@@ -383,10 +385,12 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
             foreach ($context['_seq'] as $context["_key"] => $context["categoriaSecu"]) {
                 // line 208
                 echo "                                                                <li>
-                                                                    <a href=\"#\">";
+                                                                    <a href=\"";
                 // line 209
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productosCat", ["categoria" => twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "getId", [], "method", false, false, false, 209)]), "html", null, true);
+                echo "\">";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "nombre", [], "any", false, false, false, 209), "html", null, true);
-                echo "</a> 
+                echo "</a>
                                                                 </li>
                                                             ";
             }
@@ -582,112 +586,112 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
     <section class=\"category-wrapper pt-50 pb-50\">
         <div class=\"container\">
             <div class=\"row\">
-                <div class=\"col-lg-4\">
-                    <div class=\"filter-style-1 mt-0\">
-                        <div class=\"filter-title\">
-                            <h4 class=\"title\">Foto</h4>
-                            <form>
+                <form id=\"form_seleccion\" action=\"";
+        // line 349
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("anadirProducto");
+        echo "\" method=\"post\">
+                    <div class=\"col-lg-4\">
+                        <div class=\"filter-style-1 mt-0\">
+                            <div class=\"filter-title\">
+                                <h4 class=\"title\">Foto</h4>
                                 <div class=\"form-group\">
-                                    <input type=\"file\" class=\"form-control-file text-dark\">
+                                    <input name=\"imagen\" type=\"file\" class=\"form-control-file text-dark\">
                                 </div>
-                            </form>
-                        </div>
-                        <div class=\"filter-type\">
-                            
-                        </div>
-                    </div>\t
-                    <div class=\"filter-style-1 mt-4\">
-                        <div class=\"filter-title\">
-                            <h4 class=\"title\">Categoría</h4>
-                        </div>
-                        <div class=\"filter-type\">
-                            <div class=\"dropdown show\">
-                                <a class=\"btn btn-light dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                                    Seleccione una opción
-                                </a>
+                            </div>
+                        </div>\t
+                        <div class=\"filter-style-1 mt-4\">
+                            <div class=\"filter-title\">
+                                <h4 class=\"title\">Categoría</h4>
+                            </div>
+                            <div class=\"filter-type\">
+                                <div class=\"dropdown show\">
+                                    <a class=\"btn btn-light dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                        Seleccione una opción
+                                    </a>
 
-                                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">
-                                    ";
-        // line 374
+                                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">
+                                        ";
+        // line 370
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categorias"]) || array_key_exists("categorias", $context) ? $context["categorias"] : (function () { throw new RuntimeError('Variable "categorias" does not exist.', 374, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categorias"]) || array_key_exists("categorias", $context) ? $context["categorias"] : (function () { throw new RuntimeError('Variable "categorias" does not exist.', 370, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["lista"]) {
-            // line 375
-            echo "                                            ";
+            // line 371
+            echo "                                                ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["lista"], 1, [], "array", false, false, false, 375));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["lista"], 1, [], "array", false, false, false, 371));
             foreach ($context['_seq'] as $context["_key"] => $context["categoriaSecu"]) {
-                // line 376
-                echo "                                                <a class=\"dropdown-item\" href=\"#\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "nombre", [], "any", false, false, false, 376), "html", null, true);
+                // line 372
+                echo "                                                    <a class=\"dropdown-item\" href=\"#\" name=\"categoria\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categoriaSecu"], "nombre", [], "any", false, false, false, 372), "html", null, true);
                 echo "</a>
-                                            ";
+                                                ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categoriaSecu'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 378
-            echo "                                    ";
+            // line 374
+            echo "                                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['lista'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 379
-        echo "                                </div>
-                            </div>
-                        </div>
-                    </div>\t\t\t
-                </div>
-                <div class=\"col-lg-8\">
-                    <div class=\"row\">
-                        <div class=\"col-lg-12\">
-                            <div class=\"filter-style-1 mt-0\">
-                                <div class=\"filter-title\">
-                                    <h4 class=\"title\">Datos generales</h4>
+        // line 375
+        echo "                                    </div>
                                 </div>
-                                <div class=\"filter-type\">
-                                    ";
-        // line 393
-        echo "                                        <div class=\"form-row mb-4\">
-                                            <label>Nombre producto</label>
-                                            <input type=\"text\" class=\"form-control\" placeholder=\"Nombre producto\">
-                                        </div>
-                                        <div class=\"form-group mb-4\">
-                                            <label>Descripción</label>
-                                            <textarea class=\"form-control\" rows=\"5\" cols=\"50\" placeholder=\"Escribe la descripción aquí...\"></textarea>
-                                        </div>
-                                        <div class=\"form-group d-flex mb-4\">
-                                            <div class=\"col-md-6\" style=\"margin-right: 2rem\">
-                                                <label>Código</label>
-                                                <input type=\"text\" class=\"form-control\" placeholder=\"Código\">
+                            </div>
+                        </div>\t\t\t
+                    </div>
+                    <div class=\"col-lg-8\">
+                        <div class=\"row\">
+                            <div class=\"col-lg-12\">
+                                <div class=\"filter-style-1 mt-0\">
+                                    <div class=\"filter-title\">
+                                        <h4 class=\"title\">Datos generales</h4>
+                                    </div>
+                                    <div class=\"filter-type\">
+                                        ";
+        // line 389
+        echo "                                            <div class=\"form-row mb-4\">
+                                                <label>Nombre producto</label>
+                                                <input name=\"nombreProducto\" type=\"text\" class=\"form-control\" placeholder=\"Nombre producto\">
                                             </div>
-                                            <div class=\"col-md-5\">
-                                                <label>PVP</label>
-                                                <input type=\"text\" class=\"form-control\" placeholder=\"Precio venta público\">
+                                            <div class=\"form-group mb-4\">
+                                                <label>Descripción</label>
+                                                <textarea name=\"descripcion\" class=\"form-control\" rows=\"5\" cols=\"50\" placeholder=\"Escribe la descripción aquí...\"></textarea>
                                             </div>
-                                        </div>
-                                        <div class=\"form-group d-flex mb-4\">
-                                            <div class=\"col-md-6\" style=\"margin-right: 2rem\">
-                                                <label>Unidades</label>
-                                                <input type=\"text\" class=\"form-control\" placeholder=\"Unidades\">
+                                            <div class=\"form-group d-flex mb-4\">
+                                                <div class=\"col-md-6\" style=\"margin-right: 2rem\">
+                                                    <label>Código</label>
+                                                    <input name=\"codigo\" type=\"text\" class=\"form-control\" placeholder=\"Código\">
+                                                </div>
+                                                <div class=\"col-md-5\">
+                                                    <label>PVP</label>
+                                                    <input name=\"pvp\" type=\"text\" class=\"form-control\" placeholder=\"Precio venta público\">
+                                                </div>
                                             </div>
-                                            <div class=\"col-md-5\">
-                                                <label>PP</label>
-                                                <input type=\"text\" class=\"form-control\" placeholder=\"Precio proveedor\">
+                                            <div class=\"form-group d-flex mb-4\">
+                                                <div class=\"col-md-6\" style=\"margin-right: 2rem\">
+                                                    <label>Unidades</label>
+                                                    <input name=\"unidades\" type=\"text\" class=\"form-control\" placeholder=\"Unidades\">
+                                                </div>
+                                                <div class=\"col-md-5\">
+                                                    <label>PP</label>
+                                                    <input name=\"pp\" type=\"text\" class=\"form-control\" placeholder=\"Precio proveedor\">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class=\"form-group mb-4\">
-                                            <label>Proveedor</label>
-                                            <input type=\"text\" class=\"form-control\" placeholder=\"Proveedor\">
-                                        </div>                                       
-                                        <button type=\"submit\" class=\"btn btn-primary\">Guardar</button>
-                                    ";
-        // line 427
-        echo "                                </div>
+                                            <div class=\"form-group mb-4\">
+                                                <label>Proveedor</label>
+                                                <input name=\"proveedor\" type=\"text\" class=\"form-control\" placeholder=\"Proveedor\">
+                                            </div>                                       
+                                            <button type=\"submit\" class=\"btn btn-primary\">Guardar</button>
+                                        ";
+        // line 423
+        echo "                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -699,12 +703,12 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
 \t\t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
 \t\t\t\t\t\t<div class=\"footer-logo text-center\">
 \t\t\t\t\t\t\t<a href=\"";
-        // line 442
+        // line 439
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 443
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.svg"), "html", null, true);
+        // line 440
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</div>
@@ -835,7 +839,7 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
 
     }
 
-    // line 566
+    // line 563
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -845,52 +849,52 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 567
+        // line 564
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 568
+        // line 565
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 569
+        // line 566
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/jquery-3.5.1.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 570
+        // line 567
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/modernizr-3.7.1.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 571
+        // line 568
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/slick.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 572
+        // line 569
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-vj-accordion-steps.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 573
+        // line 570
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 574
+        // line 571
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.form-validator.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 575
+        // line 572
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.nice-select.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 576
+        // line 573
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.formatter.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 577
+        // line 574
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/count-up.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 578
+        // line 575
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -914,7 +918,7 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
 
     public function getDebugInfo()
     {
-        return array (  894 => 578,  890 => 577,  886 => 576,  882 => 575,  878 => 574,  874 => 573,  870 => 572,  866 => 571,  862 => 570,  858 => 569,  854 => 568,  849 => 567,  839 => 566,  707 => 443,  703 => 442,  686 => 427,  651 => 393,  636 => 379,  630 => 378,  621 => 376,  616 => 375,  612 => 374,  567 => 332,  534 => 302,  525 => 295,  515 => 291,  507 => 286,  503 => 285,  499 => 284,  482 => 270,  475 => 265,  471 => 264,  455 => 251,  434 => 232,  426 => 228,  420 => 224,  418 => 223,  413 => 221,  405 => 215,  397 => 212,  388 => 209,  385 => 208,  381 => 207,  375 => 204,  372 => 203,  368 => 202,  350 => 189,  334 => 175,  328 => 172,  325 => 171,  319 => 168,  315 => 167,  312 => 166,  310 => 165,  294 => 152,  249 => 110,  240 => 103,  230 => 99,  222 => 94,  218 => 93,  214 => 92,  197 => 78,  190 => 73,  186 => 72,  170 => 59,  158 => 50,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  898 => 575,  894 => 574,  890 => 573,  886 => 572,  882 => 571,  878 => 570,  874 => 569,  870 => 568,  866 => 567,  862 => 566,  858 => 565,  853 => 564,  843 => 563,  711 => 440,  707 => 439,  689 => 423,  654 => 389,  639 => 375,  633 => 374,  624 => 372,  619 => 371,  615 => 370,  591 => 349,  571 => 332,  538 => 302,  529 => 295,  519 => 291,  511 => 286,  507 => 285,  503 => 284,  486 => 270,  479 => 265,  475 => 264,  459 => 251,  438 => 232,  430 => 228,  424 => 224,  422 => 223,  417 => 221,  409 => 215,  401 => 212,  390 => 209,  387 => 208,  383 => 207,  377 => 204,  374 => 203,  370 => 202,  352 => 189,  336 => 175,  330 => 172,  327 => 171,  321 => 168,  317 => 167,  314 => 166,  312 => 165,  296 => 152,  251 => 110,  242 => 103,  232 => 99,  224 => 94,  220 => 93,  216 => 92,  199 => 78,  192 => 73,  188 => 72,  172 => 59,  158 => 50,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -968,7 +972,7 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
                         <div class=\"col-6\">
                             <!-- desktop logo Start -->
                             <div class=\"mobile-logo text-center\">
-                                <a href=\"{{ path('index') }}\"><img src=\"images/logo.svg\" alt=\"Logo\"></a>
+                                <a href=\"{{ path('index') }}\"><img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"Logo\" style=\"width: 150px;\"></a>
                             </div>
                             <!-- desktop logo Ends -->
                         </div>
@@ -1107,7 +1111,7 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
                         <nav class=\"main-navbar d-lg-flex justify-content-between align-items-center\">
                             <!-- desktop logo Start -->
                             <div class=\"desktop-logo d-none d-lg-block\">
-                                <a href=\"{{ path('index') }}\"><img src=\"{{ asset('images/logo.svg') }}\" alt=\"Logo\"></a>
+                                <a href=\"{{ path('index') }}\"><img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"Logo\" style=\"width: 150px;\"></a>
                             </div>
                             <!-- desktop logo Ends -->
                             <!-- navbar menu Start -->
@@ -1127,7 +1131,7 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
                                                             <ul>
                                                             {% for categoriaSecu in lista[1] %}
                                                                 <li>
-                                                                    <a href=\"#\">{{ categoriaSecu.nombre }}</a> 
+                                                                    <a href=\"{{ path('productosCat', {'categoria': categoriaSecu.getId()}) }}\">{{ categoriaSecu.nombre }}</a>
                                                                 </li>
                                                             {% endfor %}
                                                             </ul>
@@ -1267,89 +1271,86 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
     <section class=\"category-wrapper pt-50 pb-50\">
         <div class=\"container\">
             <div class=\"row\">
-                <div class=\"col-lg-4\">
-                    <div class=\"filter-style-1 mt-0\">
-                        <div class=\"filter-title\">
-                            <h4 class=\"title\">Foto</h4>
-                            <form>
+                <form id=\"form_seleccion\" action=\"{{ path('anadirProducto') }}\" method=\"post\">
+                    <div class=\"col-lg-4\">
+                        <div class=\"filter-style-1 mt-0\">
+                            <div class=\"filter-title\">
+                                <h4 class=\"title\">Foto</h4>
                                 <div class=\"form-group\">
-                                    <input type=\"file\" class=\"form-control-file text-dark\">
-                                </div>
-                            </form>
-                        </div>
-                        <div class=\"filter-type\">
-                            
-                        </div>
-                    </div>\t
-                    <div class=\"filter-style-1 mt-4\">
-                        <div class=\"filter-title\">
-                            <h4 class=\"title\">Categoría</h4>
-                        </div>
-                        <div class=\"filter-type\">
-                            <div class=\"dropdown show\">
-                                <a class=\"btn btn-light dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                                    Seleccione una opción
-                                </a>
-
-                                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">
-                                    {% for lista in categorias %}
-                                            {% for categoriaSecu in lista[1] %}
-                                                <a class=\"dropdown-item\" href=\"#\">{{ categoriaSecu.nombre }}</a>
-                                            {% endfor %}
-                                    {% endfor %}
+                                    <input name=\"imagen\" type=\"file\" class=\"form-control-file text-dark\">
                                 </div>
                             </div>
-                        </div>
-                    </div>\t\t\t
-                </div>
-                <div class=\"col-lg-8\">
-                    <div class=\"row\">
-                        <div class=\"col-lg-12\">
-                            <div class=\"filter-style-1 mt-0\">
-                                <div class=\"filter-title\">
-                                    <h4 class=\"title\">Datos generales</h4>
+                        </div>\t
+                        <div class=\"filter-style-1 mt-4\">
+                            <div class=\"filter-title\">
+                                <h4 class=\"title\">Categoría</h4>
+                            </div>
+                            <div class=\"filter-type\">
+                                <div class=\"dropdown show\">
+                                    <a class=\"btn btn-light dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                        Seleccione una opción
+                                    </a>
+
+                                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">
+                                        {% for lista in categorias %}
+                                                {% for categoriaSecu in lista[1] %}
+                                                    <a class=\"dropdown-item\" href=\"#\" name=\"categoria\">{{ categoriaSecu.nombre }}</a>
+                                                {% endfor %}
+                                        {% endfor %}
+                                    </div>
                                 </div>
-                                <div class=\"filter-type\">
-                                    {# <form> #}
-                                        <div class=\"form-row mb-4\">
-                                            <label>Nombre producto</label>
-                                            <input type=\"text\" class=\"form-control\" placeholder=\"Nombre producto\">
-                                        </div>
-                                        <div class=\"form-group mb-4\">
-                                            <label>Descripción</label>
-                                            <textarea class=\"form-control\" rows=\"5\" cols=\"50\" placeholder=\"Escribe la descripción aquí...\"></textarea>
-                                        </div>
-                                        <div class=\"form-group d-flex mb-4\">
-                                            <div class=\"col-md-6\" style=\"margin-right: 2rem\">
-                                                <label>Código</label>
-                                                <input type=\"text\" class=\"form-control\" placeholder=\"Código\">
+                            </div>
+                        </div>\t\t\t
+                    </div>
+                    <div class=\"col-lg-8\">
+                        <div class=\"row\">
+                            <div class=\"col-lg-12\">
+                                <div class=\"filter-style-1 mt-0\">
+                                    <div class=\"filter-title\">
+                                        <h4 class=\"title\">Datos generales</h4>
+                                    </div>
+                                    <div class=\"filter-type\">
+                                        {# <form> #}
+                                            <div class=\"form-row mb-4\">
+                                                <label>Nombre producto</label>
+                                                <input name=\"nombreProducto\" type=\"text\" class=\"form-control\" placeholder=\"Nombre producto\">
                                             </div>
-                                            <div class=\"col-md-5\">
-                                                <label>PVP</label>
-                                                <input type=\"text\" class=\"form-control\" placeholder=\"Precio venta público\">
+                                            <div class=\"form-group mb-4\">
+                                                <label>Descripción</label>
+                                                <textarea name=\"descripcion\" class=\"form-control\" rows=\"5\" cols=\"50\" placeholder=\"Escribe la descripción aquí...\"></textarea>
                                             </div>
-                                        </div>
-                                        <div class=\"form-group d-flex mb-4\">
-                                            <div class=\"col-md-6\" style=\"margin-right: 2rem\">
-                                                <label>Unidades</label>
-                                                <input type=\"text\" class=\"form-control\" placeholder=\"Unidades\">
+                                            <div class=\"form-group d-flex mb-4\">
+                                                <div class=\"col-md-6\" style=\"margin-right: 2rem\">
+                                                    <label>Código</label>
+                                                    <input name=\"codigo\" type=\"text\" class=\"form-control\" placeholder=\"Código\">
+                                                </div>
+                                                <div class=\"col-md-5\">
+                                                    <label>PVP</label>
+                                                    <input name=\"pvp\" type=\"text\" class=\"form-control\" placeholder=\"Precio venta público\">
+                                                </div>
                                             </div>
-                                            <div class=\"col-md-5\">
-                                                <label>PP</label>
-                                                <input type=\"text\" class=\"form-control\" placeholder=\"Precio proveedor\">
+                                            <div class=\"form-group d-flex mb-4\">
+                                                <div class=\"col-md-6\" style=\"margin-right: 2rem\">
+                                                    <label>Unidades</label>
+                                                    <input name=\"unidades\" type=\"text\" class=\"form-control\" placeholder=\"Unidades\">
+                                                </div>
+                                                <div class=\"col-md-5\">
+                                                    <label>PP</label>
+                                                    <input name=\"pp\" type=\"text\" class=\"form-control\" placeholder=\"Precio proveedor\">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class=\"form-group mb-4\">
-                                            <label>Proveedor</label>
-                                            <input type=\"text\" class=\"form-control\" placeholder=\"Proveedor\">
-                                        </div>                                       
-                                        <button type=\"submit\" class=\"btn btn-primary\">Guardar</button>
-                                    {# </form> #}
+                                            <div class=\"form-group mb-4\">
+                                                <label>Proveedor</label>
+                                                <input name=\"proveedor\" type=\"text\" class=\"form-control\" placeholder=\"Proveedor\">
+                                            </div>                                       
+                                            <button type=\"submit\" class=\"btn btn-primary\">Guardar</button>
+                                        {# </form> #}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -1361,7 +1362,7 @@ class __TwigTemplate_08386ea19195df9fa9a115048d082b4a extends Template
 \t\t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
 \t\t\t\t\t\t<div class=\"footer-logo text-center\">
 \t\t\t\t\t\t\t<a href=\"{{ path('index') }}\">
-\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/logo.svg') }}\" alt=\"\">
+\t\t\t\t\t\t\t\t<img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Follow Us</h5>

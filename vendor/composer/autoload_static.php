@@ -73,6 +73,7 @@ class ComposerStaticInite151619a9d4508753b0913207aba2ec0
             'Symfony\\Component\\OptionsResolver\\' => 34,
             'Symfony\\Component\\Notifier\\' => 27,
             'Symfony\\Component\\Mime\\' => 23,
+            'Symfony\\Component\\Mailer\\Bridge\\Google\\' => 39,
             'Symfony\\Component\\Mailer\\' => 25,
             'Symfony\\Component\\Intl\\' => 23,
             'Symfony\\Component\\HttpKernel\\' => 29,
@@ -311,6 +312,10 @@ class ComposerStaticInite151619a9d4508753b0913207aba2ec0
         'Symfony\\Component\\Mime\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/mime',
+        ),
+        'Symfony\\Component\\Mailer\\Bridge\\Google\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/google-mailer',
         ),
         'Symfony\\Component\\Mailer\\' => 
         array (
@@ -570,11 +575,22 @@ class ComposerStaticInite151619a9d4508753b0913207aba2ec0
 
     public static $classMap = array (
         'App\\Controller\\BaseController' => __DIR__ . '/../..' . '/src/Controller/BaseController.php',
+        'App\\Controller\\CestaCompra' => __DIR__ . '/../..' . '/src/Controller/CestaCompra.php',
         'App\\Controller\\LoginController' => __DIR__ . '/../..' . '/src/Controller/LoginController.php',
-        'App\\Entity\\Categorias' => __DIR__ . '/../..' . '/src/Entity/Categorias.php',
+        'App\\Controller\\ProductosController' => __DIR__ . '/../..' . '/src/Controller/ProductosController.php',
+        'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
+        'App\\Entity\\Categoria' => __DIR__ . '/../..' . '/src/Entity/Categoria.php',
+        'App\\Entity\\Pedido' => __DIR__ . '/../..' . '/src/Entity/Pedido.php',
+        'App\\Entity\\PedidosProducto' => __DIR__ . '/../..' . '/src/Entity/PedidosProducto.php',
+        'App\\Entity\\Productos' => __DIR__ . '/../..' . '/src/Entity/Productos.php',
         'App\\Entity\\Usuarios' => __DIR__ . '/../..' . '/src/Entity/Usuarios.php',
+        'App\\Form\\ProductosType' => __DIR__ . '/../..' . '/src/Form/ProductosType.php',
+        'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
-        'App\\Repository\\CategoriasRepository' => __DIR__ . '/../..' . '/src/Repository/CategoriasRepository.php',
+        'App\\Repository\\CategoriaRepository' => __DIR__ . '/../..' . '/src/Repository/CategoriaRepository.php',
+        'App\\Repository\\PedidoRepository' => __DIR__ . '/../..' . '/src/Repository/PedidoRepository.php',
+        'App\\Repository\\PedidosProductoRepository' => __DIR__ . '/../..' . '/src/Repository/PedidosProductoRepository.php',
+        'App\\Repository\\ProductosRepository' => __DIR__ . '/../..' . '/src/Repository/ProductosRepository.php',
         'App\\Repository\\UsuariosRepository' => __DIR__ . '/../..' . '/src/Repository/UsuariosRepository.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -4741,6 +4757,8 @@ class ComposerStaticInite151619a9d4508753b0913207aba2ec0
         'Symfony\\Component\\Intl\\Util\\IcuVersion' => __DIR__ . '/..' . '/symfony/intl/Util/IcuVersion.php',
         'Symfony\\Component\\Intl\\Util\\IntlTestHelper' => __DIR__ . '/..' . '/symfony/intl/Util/IntlTestHelper.php',
         'Symfony\\Component\\Intl\\Util\\Version' => __DIR__ . '/..' . '/symfony/intl/Util/Version.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Google\\Transport\\GmailSmtpTransport' => __DIR__ . '/..' . '/symfony/google-mailer/Transport/GmailSmtpTransport.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Google\\Transport\\GmailTransportFactory' => __DIR__ . '/..' . '/symfony/google-mailer/Transport/GmailTransportFactory.php',
         'Symfony\\Component\\Mailer\\DataCollector\\MessageDataCollector' => __DIR__ . '/..' . '/symfony/mailer/DataCollector/MessageDataCollector.php',
         'Symfony\\Component\\Mailer\\DelayedEnvelope' => __DIR__ . '/..' . '/symfony/mailer/DelayedEnvelope.php',
         'Symfony\\Component\\Mailer\\Envelope' => __DIR__ . '/..' . '/symfony/mailer/Envelope.php',

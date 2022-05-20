@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UsuariosRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Driver\API\SQLite\UserDefinedFunctions;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -11,7 +13,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 
 #[ORM\Entity(repositoryClass: UsuariosRepository::class)]
-#[UniqueEntity(fields: ['usuario'], message: 'There is already an account with this usuario')]
 #[UniqueEntity(fields: ['usuario'], message: 'There is already an account with this usuario')]
 class Usuarios implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -49,6 +50,14 @@ class Usuarios implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(type: 'string', length: 9)]
     private $telefono;
+
+    #[ORM\OneToMany(mappedBy: 'usuario', targetEntity: Pedido::class)]
+    private $pedidos;
+
+    public function __construct()
+    {
+        $this->pedidos = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -203,6 +212,36 @@ class Usuarios implements UserInterface, PasswordAuthenticatedUserInterface
     public function setTelefono(int $telefono): self
     {
         $this->telefono = $telefono;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Pedido>
+     */
+    public function getPedidos(): Collection
+    {
+        return $this->pedidos;
+    }
+
+    public function addPedido(Pedido $pedido): self
+    {
+        if (!$this->pedidos->contains($pedido)) {
+            $this->pedidos[] = $pedido;
+            $pedido->setUsuario($this);
+        }
+
+        return $this;
+    }
+
+    public function removePedido(Pedido $pedido): self
+    {
+        if ($this->pedidos->removeElement($pedido)) {
+            // set the owning side to null (unless already changed)
+            if ($pedido->getUsuario() === $this) {
+                $pedido->setUsuario(null);
+            }
+        }
 
         return $this;
     }
