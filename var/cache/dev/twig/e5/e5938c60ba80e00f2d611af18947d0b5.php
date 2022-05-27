@@ -206,142 +206,141 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
         </div>
     </section>
 
-
     <!--====== Footer Style 3 Part Start ======-->
-<section class=\"footer-style-3 pt-100 pb-100\">
-\t<div class=\"container\">
-\t\t<div class=\"footer-top\">
-\t\t\t<div class=\"row justify-content-center\">
-\t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
-\t\t\t\t\t<div class=\"footer-logo text-center\">
-\t\t\t\t\t\t<a href=\"";
-        // line 102
+\t<section class=\"footer-style-3 pt-100 pb-100\">
+\t\t<div class=\"container\">
+\t\t\t<div class=\"footer-top\">
+\t\t\t\t<div class=\"row justify-content-center\">
+\t\t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
+\t\t\t\t\t\t<div class=\"footer-logo text-center\">
+\t\t\t\t\t\t\t<a href=\"";
+        // line 101
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">
-\t\t\t\t\t\t\t<img src=\"";
-        // line 103
+\t\t\t\t\t\t\t\t<img src=\"";
+        // line 102
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
         echo "\" alt=\"\">
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</div>
-\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
-\t\t\t\t\t<ul class=\"footer-follow text-center\">
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
-\t\t\t\t\t\t\t\t<i class=\"lni lni-facebook-filled\"></i>
 \t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
-\t\t\t\t\t\t\t\t<i class=\"lni lni-instagram-original\"></i>
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t</ul>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-
-\t\t<div class=\"footer-widget-wrapper text-center pt-20\">
-\t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t\t\t\t<ul class=\"footer-link\">
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
+\t\t\t\t\t\t<ul class=\"footer-follow text-center\">
 \t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Quest</a>
+\t\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
+\t\t\t\t\t\t\t\t\t<i class=\"lni lni-facebook-filled\"></i>
+\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Rift S</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Gear VR</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Oculus for Business</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t<h5 class=\"footer-title\">DEVELOPERS</h5>
-
-\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Centre</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Docs</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Downloads</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Tools</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Blog</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Forums</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Blog</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Careers</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Brand Centre</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Connect</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">VR for Good</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Launch Pad</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Creators Lab</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Forums</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Support</a>
+\t\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
+\t\t\t\t\t\t\t\t\t<i class=\"lni lni-instagram-original\"></i>
+\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
+
+\t\t\t<div class=\"footer-widget-wrapper text-center pt-20\">
+\t\t\t\t<div class=\"row\">
+\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
+
+\t\t\t\t\t\t\t<ul class=\"footer-link\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Quest</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Rift S</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Gear VR</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Oculus for Business</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t\t\t<h5 class=\"footer-title\">DEVELOPERS</h5>
+
+\t\t\t\t\t\t\t<ul class=\"footer-link\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Centre</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Docs</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Downloads</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Tools</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Blog</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Forums</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
+
+\t\t\t\t\t\t\t<ul class=\"footer-link\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Blog</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Careers</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Brand Centre</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Connect</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
+
+\t\t\t\t\t\t\t<ul class=\"footer-link\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">VR for Good</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Launch Pad</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Creators Lab</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Forums</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Support</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
 \t\t</div>
-\t</div>
-</section>
+\t</section>
 
 ";
         
@@ -352,7 +351,7 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
 
     }
 
-    // line 227
+    // line 226
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -362,52 +361,52 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 228
+        // line 227
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 229
+        // line 228
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 230
+        // line 229
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/jquery-3.5.1.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 231
+        // line 230
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/modernizr-3.7.1.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 232
+        // line 231
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/slick.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 233
+        // line 232
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-vj-accordion-steps.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 234
+        // line 233
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 235
+        // line 234
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.form-validator.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 236
+        // line 235
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.nice-select.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 237
+        // line 236
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.formatter.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 238
+        // line 237
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/count-up.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 239
+        // line 238
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -431,7 +430,7 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
 
     public function getDebugInfo()
     {
-        return array (  411 => 239,  407 => 238,  403 => 237,  399 => 236,  395 => 235,  391 => 234,  387 => 233,  383 => 232,  379 => 231,  375 => 230,  371 => 229,  366 => 228,  356 => 227,  223 => 103,  219 => 102,  199 => 85,  173 => 62,  149 => 41,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  410 => 238,  406 => 237,  402 => 236,  398 => 235,  394 => 234,  390 => 233,  386 => 232,  382 => 231,  378 => 230,  374 => 229,  370 => 228,  365 => 227,  355 => 226,  222 => 102,  218 => 101,  199 => 85,  173 => 62,  149 => 41,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -529,136 +528,135 @@ class __TwigTemplate_ef881a4610afc9b37f0ca42763d57478 extends Template
         </div>
     </section>
 
-
     <!--====== Footer Style 3 Part Start ======-->
-<section class=\"footer-style-3 pt-100 pb-100\">
-\t<div class=\"container\">
-\t\t<div class=\"footer-top\">
-\t\t\t<div class=\"row justify-content-center\">
-\t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
-\t\t\t\t\t<div class=\"footer-logo text-center\">
-\t\t\t\t\t\t<a href=\"{{ path('index') }}\">
-\t\t\t\t\t\t\t<img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</div>
-\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
-\t\t\t\t\t<ul class=\"footer-follow text-center\">
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
-\t\t\t\t\t\t\t\t<i class=\"lni lni-facebook-filled\"></i>
+\t<section class=\"footer-style-3 pt-100 pb-100\">
+\t\t<div class=\"container\">
+\t\t\t<div class=\"footer-top\">
+\t\t\t\t<div class=\"row justify-content-center\">
+\t\t\t\t\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
+\t\t\t\t\t\t<div class=\"footer-logo text-center\">
+\t\t\t\t\t\t\t<a href=\"{{ path('index') }}\">
+\t\t\t\t\t\t\t\t<img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
 \t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
-\t\t\t\t\t\t\t\t<i class=\"lni lni-instagram-original\"></i>
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t</ul>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-
-\t\t<div class=\"footer-widget-wrapper text-center pt-20\">
-\t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t\t\t\t<ul class=\"footer-link\">
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
+\t\t\t\t\t\t<ul class=\"footer-follow text-center\">
 \t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Quest</a>
+\t\t\t\t\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
+\t\t\t\t\t\t\t\t\t<i class=\"lni lni-facebook-filled\"></i>
+\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Rift S</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Gear VR</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Oculus for Business</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t<h5 class=\"footer-title\">DEVELOPERS</h5>
-
-\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Centre</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Docs</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Downloads</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Tools</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Blog</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Forums</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Blog</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Careers</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Brand Centre</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Connect</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">VR for Good</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Launch Pad</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Creators Lab</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Forums</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Support</a>
+\t\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
+\t\t\t\t\t\t\t\t\t<i class=\"lni lni-instagram-original\"></i>
+\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
+
+\t\t\t<div class=\"footer-widget-wrapper text-center pt-20\">
+\t\t\t\t<div class=\"row\">
+\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
+
+\t\t\t\t\t\t\t<ul class=\"footer-link\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Quest</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Rift S</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Gear VR</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Oculus for Business</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t\t\t<h5 class=\"footer-title\">DEVELOPERS</h5>
+
+\t\t\t\t\t\t\t<ul class=\"footer-link\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Centre</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Docs</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Downloads</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Tools</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Blog</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Forums</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
+
+\t\t\t\t\t\t\t<ul class=\"footer-link\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Blog</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Careers</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Brand Centre</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Connect</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t\t\t\t\t<div class=\"footer-widget\">
+\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
+
+\t\t\t\t\t\t\t<ul class=\"footer-link\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">VR for Good</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Launch Pad</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Creators Lab</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Forums</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Support</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
 \t\t</div>
-\t</div>
-</section>
+\t</section>
 
 {% endblock %}
 

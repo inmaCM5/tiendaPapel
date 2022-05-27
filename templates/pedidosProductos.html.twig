@@ -56,7 +56,7 @@
                             <!-- navbar cart start -->
                             <div class="navbar-cart">
                                 <a class="icon-btn primary-icon-text icon-text-btn" href="javascript:void(0)">
-                                    <img src="images/icon-svg/cart-1.svg" alt="Icon">
+                                    <img src="{{ asset('images/icon-svg/cart-1.svg') }}" alt="Icon">
                                     <span class="icon-text text-style-1">{{ unidades }}</span>
                                 </a>
 
@@ -208,8 +208,9 @@
                                         <li class="menu-item-has-children">
                                             <a href="#">Administrar...</a>
                                             <ul class="sub-menu">
-                                                <li><a href="#">Administrar categorías</a></li>
+                                                <li><a href="{{ path('adminCategorias') }}">Administrar categorías</a></li>
                                                 <li><a href="{{ path('adminProductos') }}">Administrar productos</a></li>
+                                                <li><a href="{{ path('adminPedidos') }}">Administrar pedidos</a></li>
                                             </ul>
                                         </li>
                                     {% endif %}                                    
@@ -220,7 +221,7 @@
                                 <!-- navbar cart start -->
                                 <div class="navbar-cart">
                                     <a class="icon-btn primary-icon-text icon-text-btn" href="javascript:void(0)">
-                                        <img src="images/icon-svg/cart-1.svg" alt="Icon">
+                                        <img src="{{ asset('images/icon-svg/cart-1.svg') }}" alt="Icon">
                                         <span class="icon-text text-style-1">{{ unidades }}</span>
                                     </a>
 
@@ -322,8 +323,8 @@
             <tbody>
                 {% for pedidoProducto in pedidosProductos %}
                     <tr>
-                        {# <td>{{ pedidoProducto. }}</td>
-                        <td>{{ pedidoProducto. }}</td> #}
+                        <td>{{ pedidoProducto.codPedido.id }}</td>
+                        <td>{{ pedidoProducto.codProducto.nombre }}</td>
                         <td>{{ pedidoProducto.unidades }}</td>
                     </tr>
                 {% endfor %}

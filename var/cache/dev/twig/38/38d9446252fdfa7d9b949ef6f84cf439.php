@@ -144,7 +144,7 @@ class __TwigTemplate_4f274f26ee6527a84ffcec641257bc80 extends Template
         echo " <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"25\" fill=\"currentColor\" class=\"bi bi-arrow-up-circle-fill\" viewBox=\"0 0 16 16\">
 \t\t\t<path d=\"M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z\"/>
 \t\t\t</svg></span>
-\t\t\t";
+\t\t";
         // line 22
         $this->displayBlock('contenido', $context, $blocks);
         // line 23
@@ -231,7 +231,7 @@ class __TwigTemplate_4f274f26ee6527a84ffcec641257bc80 extends Template
 \t\t\t<span class=\"ir-arriba icon-arrow-up2\">{# Ir hacia arriba #} <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"25\" fill=\"currentColor\" class=\"bi bi-arrow-up-circle-fill\" viewBox=\"0 0 16 16\">
 \t\t\t<path d=\"M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z\"/>
 \t\t\t</svg></span>
-\t\t\t{% block contenido %}{% endblock %}
+\t\t{% block contenido %}{% endblock %}
 \t\t{% endblock %}
 \t\t{% block javascripts %}{% endblock %}
 \t</body>

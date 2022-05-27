@@ -275,13 +275,13 @@ class __TwigTemplate_e2d25336fb79fc2ff66a4f49793db5a4 extends Template
         // line 141
         if ((isset($context["comprobar"]) || array_key_exists("comprobar", $context) ? $context["comprobar"] : (function () { throw new RuntimeError('Variable "comprobar" does not exist.', 141, $this->source); })())) {
             // line 142
-            echo "        <div class=\"text-center\">
+            echo "        <div class=\"text-center mt-2\">
             <h2 style=\"color:red\">Su pedido no se realizó correctamente</h2>
         </div>
     ";
         } else {
             // line 146
-            echo "        <div class=\"text-center\">
+            echo "        <div class=\"text-center mt-2\">
             <h1>Confirmación de compra</h1>
             <h3>";
             // line 148
@@ -525,11 +525,11 @@ class __TwigTemplate_e2d25336fb79fc2ff66a4f49793db5a4 extends Template
 \t</section>
 
     {% if comprobar %}
-        <div class=\"text-center\">
+        <div class=\"text-center mt-2\">
             <h2 style=\"color:red\">Su pedido no se realizó correctamente</h2>
         </div>
     {% else %}
-        <div class=\"text-center\">
+        <div class=\"text-center mt-2\">
             <h1>Confirmación de compra</h1>
             <h3>{{ usuario }} su número de pedido es {{ numPedido }}</h3>
         </div>

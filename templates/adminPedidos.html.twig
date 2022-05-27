@@ -208,8 +208,9 @@
                                         <li class="menu-item-has-children">
                                             <a href="#">Administrar...</a>
                                             <ul class="sub-menu">
-                                                <li><a href="#">Administrar categorías</a></li>
+                                                <li><a href="{{ path('adminCategorias') }}">Administrar categorías</a></li>
                                                 <li><a href="{{ path('adminProductos') }}">Administrar productos</a></li>
+                                                <li><a href="{{ path('adminPedidos') }}">Administrar pedidos</a></li>
                                             </ul>
                                         </li>
                                     {% endif %}                                    
@@ -315,6 +316,7 @@
             <thead>
                 <tr>
                     <th>Usuario</th>
+                    <th>Dirección</th>
                     <th>Fecha</th>
                     <th>Coste</th>
                     <th>Acciones</th>
@@ -325,6 +327,7 @@
                     {% if pedido.completado == 0 %}
                         <tr>
                             <td>{{ pedido.usuario.usuario }}</td>
+                            <td>{{ pedido.usuario.direccion }}</td>
                             <td>{{ pedido.fecha | date("d/m/Y") }}</td>
                             <td>{{ pedido.coste }}</td>
                             <td>

@@ -110,8 +110,7 @@
                                                 <p class="price">{{ precioCesta }}€</p>
                                             </div>
                                             <div class="checkout-btn">
-                                                <a href="cart-page.html" class="main-btn primary-btn-border">View
-                                                                                                                                                                Cart</a>
+                                                <a href="cart-page.html" class="main-btn primary-btn-border">View Cart</a>
                                                 <a href="checkout-page.html" class="main-btn primary-btn">Checkout</a>
                                             </div>
                                         </div>
@@ -223,8 +222,9 @@
                                         <li class="menu-item-has-children">
                                             <a href="#">Administrar...</a>
                                             <ul class="sub-menu">
-                                                <li><a href="#">Administrar categorías</a></li>
+                                                <li><a href="{{ path('adminCategorias') }}">Administrar categorías</a></li>
                                                 <li><a href="{{ path('adminProductos') }}">Administrar productos</a></li>
+                                                <li><a href="{{ path('adminPedidos') }}">Administrar pedidos</a></li>
                                             </ul>
                                         </li>
                                     {% endif %}                                    

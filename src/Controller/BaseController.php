@@ -14,6 +14,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\Security;
 
 class BaseController extends AbstractController
 {
@@ -125,6 +127,23 @@ function administrarProductos(ManagerRegistry $doctrine, CestaCompra $cesta): Re
         'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
 }
 
+#[Route('/adminCategorias', name:'adminCategorias')]
+function administrarCategorias(ManagerRegistry $doctrine, CestaCompra $cesta): Response
+{
+    $categoriasTabla = $doctrine->getRepository(Categoria::class)->findAll();
+    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
+    $categorias=[];
+
+    foreach ($categoriaPrincipal as $categoria) {
+        $categorias[$categoria->getId()][0]= $categoria;
+        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
+    }
+    
+    return $this->render('adminCategorias.html.twig',
+        array('categoriasTabla' => $categoriasTabla, 'categorias' => $categorias,
+        'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
+}
+
 #[Route('/adminPedidos', name:'adminPedidos')]
 function administrarPedidos(ManagerRegistry $doctrine, CestaCompra $cesta): Response
 {
@@ -144,7 +163,7 @@ function administrarPedidos(ManagerRegistry $doctrine, CestaCompra $cesta): Resp
 
 #[Route('/pedidosProductos/{idPedido}', name:'pedidosProductos')]
 public function mostrarPedidosProductos(ManagerRegistry $doctrine, $idPedido, CestaCompra $cesta): Response {
-    $pedidosProductos = $doctrine->getRepository(PedidosProducto::class)->find($idPedido);
+    $pedidosProductos = $doctrine->getRepository(PedidosProducto::class)->findBy(['codPedido' => $idPedido]);
     $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
     $categorias=[];
 
@@ -222,6 +241,15 @@ public function eliminarProductos(ManagerRegistry $doctrine, $idProducto): Respo
     return $this->redirectToRoute('adminProductos');
 }
 
+#[Route('/eliminarCategoria/{idCategoria}', name:'eliminarCategoria')]
+public function eliminarCategoria(ManagerRegistry $doctrine, $idCategoria): Response {
+    $entityManager = $doctrine->getManager();
+    $categoria = $doctrine->getRepository(Productos::class)->find($idCategoria);
+    $entityManager->remove($categoria);
+    $entityManager->flush();
+    return $this->redirectToRoute('adminCategorias');
+}
+
 #[Route('/completarPedido/{idPedido}', name:'completarPedido')]
 public function completarPedido(ManagerRegistry $doctrine, $idPedido): Response {
     $entityManager = $doctrine->getManager();
@@ -256,10 +284,12 @@ public function cambiarUnidadesResumen(ManagerRegistry $doctrine, $idProducto, C
 }
 
 #[Route('/pedido', name:'pedido')]
-public function realizarPedido(ManagerRegistry $doctrine, CestaCompra $cesta, MailerInterface $mailer): Response {
+public function realizarPedido(ManagerRegistry $doctrine, CestaCompra $cesta, MailerInterface $mailer, Security $security): Response {
     $productos = $cesta->get_productos();
     $costeTotal = 0;
     $error = false;
+
+    $user = $security->getUser();
 
     if (count($productos) > 0) {
         $entityManager = $doctrine->getManager();
@@ -267,6 +297,7 @@ public function realizarPedido(ManagerRegistry $doctrine, CestaCompra $cesta, Ma
         $pedido->setFecha(\DateTime::createFromFormat('Y-m-d', date("Y-m-d")));
         $pedido->setCoste($cesta->get_coste());
         $pedido->setUsuario($this->getUser());
+        $pedido->setCompletado(0);
 
         $entityManager->persist($pedido);
         $entityManager->flush();
@@ -292,7 +323,7 @@ public function realizarPedido(ManagerRegistry $doctrine, CestaCompra $cesta, Ma
         if (!$error) {            
             $email = (new TemplatedEmail())
                     ->from('impresionaweb@gmail.com')
-                    ->to('impresionaweb@gmail.com')
+                    ->to()
                     ->subject('Confirmación de pedido.')
                     ->htmlTemplate('correo.html.twig')
                     ->context(['numPedido' => $pedido->getId(), 'usuario' => $this->getUser()->getUserIdentifier(), 'cesta' => $cesta->get_productos()]);
