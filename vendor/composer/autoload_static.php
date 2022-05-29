@@ -590,6 +590,10 @@ class ComposerStaticInite151619a9d4508753b0913207aba2ec0
     );
 
     public static $classMap = array (
+        'App\\Controller\\Admin\\CategoriaCrudController' => __DIR__ . '/../..' . '/src/Controller/Admin/CategoriaCrudController.php',
+        'App\\Controller\\Admin\\DashboardController' => __DIR__ . '/../..' . '/src/Controller/Admin/DashboardController.php',
+        'App\\Controller\\Admin\\PedidoCrudController' => __DIR__ . '/../..' . '/src/Controller/Admin/PedidoCrudController.php',
+        'App\\Controller\\Admin\\ProductosCrudController' => __DIR__ . '/../..' . '/src/Controller/Admin/ProductosCrudController.php',
         'App\\Controller\\BaseController' => __DIR__ . '/../..' . '/src/Controller/BaseController.php',
         'App\\Controller\\CestaCompra' => __DIR__ . '/../..' . '/src/Controller/CestaCompra.php',
         'App\\Controller\\LoginController' => __DIR__ . '/../..' . '/src/Controller/LoginController.php',

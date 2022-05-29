@@ -177,40 +177,6 @@ public function mostrarPedidosProductos(ManagerRegistry $doctrine, $idPedido, Ce
         'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
 }
 
-#[Route('/anadirProducto', name:'anadirProducto')]
-function anadirProducto(ManagerRegistry $doctrine, CestaCompra $cesta): Response
-{
-    $productos = $doctrine->getRepository(Productos::class)->findAll();
-    $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
-    $categorias=[];
-
-    foreach ($categoriaPrincipal as $categoria) {
-        $categorias[$categoria->getId()][0]= $categoria;
-        $categorias[$categoria->getId()][1]= $doctrine->getRepository(Categoria::class)->findBy(['parents' => $categoria->getId()]);
-    }
-
-    /* $entityManager = $doctrine->getManager();
-    $producto = new Productos(); */
-    /* $producto->setImagen($_POST['imagen']); */
-    /* $producto->setCategoria($_POST['categoria']); */
-    /* $producto->setNombre($_POST['nombreProducto']);
-    $producto->setDescripcion($_POST['descripcion']);
-    $producto->setCodigo($_POST['codigo']);
-    $producto->setPvp($_POST['pvp']);
-    $producto->setUnidades($_POST['unidades']);
-    $producto->setPp($_POST['pp']);
-    $producto->setProveedor($_POST['proveedor']);
-    
-    $entityManager->persist($producto);
-    $entityManager->flush(); */
-
-    /* print($_POST['nombreProducto']); */
-
-    return $this->render('anadirProducto.html.twig',
-        array('productos' => $productos, 'categorias' => $categorias,
-        'cesta' => $cesta->get_productos(), 'precioCesta' => $cesta->get_coste(), 'unidades' => $cesta->unidadesCesta()));
-}
-
 #[Route('/anadir/{idProducto}', name:'anadir')]
 public function anadir(ManagerRegistry $doctrine, $idProducto, CestaCompra $cesta): Response {
     $producto = $doctrine->getRepository(Productos::class)->find($idProducto);
@@ -232,23 +198,6 @@ public function eliminarProductosCesta(ManagerRegistry $doctrine, $idProducto, C
     return $this->redirectToRoute('resumenCesta');
 }
 
-#[Route('/eliminarProductos/{idProducto}', name:'eliminarProductos')]
-public function eliminarProductos(ManagerRegistry $doctrine, $idProducto): Response {
-    $entityManager = $doctrine->getManager();
-    $producto = $doctrine->getRepository(Productos::class)->find($idProducto);
-    $entityManager->remove($producto);
-    $entityManager->flush();
-    return $this->redirectToRoute('adminProductos');
-}
-
-#[Route('/eliminarCategoria/{idCategoria}', name:'eliminarCategoria')]
-public function eliminarCategoria(ManagerRegistry $doctrine, $idCategoria): Response {
-    $entityManager = $doctrine->getManager();
-    $categoria = $doctrine->getRepository(Productos::class)->find($idCategoria);
-    $entityManager->remove($categoria);
-    $entityManager->flush();
-    return $this->redirectToRoute('adminCategorias');
-}
 
 #[Route('/completarPedido/{idPedido}', name:'completarPedido')]
 public function completarPedido(ManagerRegistry $doctrine, $idPedido): Response {

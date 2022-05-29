@@ -19,7 +19,6 @@ return [
         '/adminProductos' => [[['_route' => 'adminProductos', '_controller' => 'App\\Controller\\BaseController::administrarProductos'], null, null, null, false, false, null]],
         '/adminCategorias' => [[['_route' => 'adminCategorias', '_controller' => 'App\\Controller\\BaseController::administrarCategorias'], null, null, null, false, false, null]],
         '/adminPedidos' => [[['_route' => 'adminPedidos', '_controller' => 'App\\Controller\\BaseController::administrarPedidos'], null, null, null, false, false, null]],
-        '/anadirProducto' => [[['_route' => 'anadirProducto', '_controller' => 'App\\Controller\\BaseController::anadirProducto'], null, null, null, false, false, null]],
         '/resumenCesta' => [[['_route' => 'resumenCesta', '_controller' => 'App\\Controller\\BaseController::resumenCesta'], null, null, null, false, false, null]],
         '/pedido' => [[['_route' => 'pedido', '_controller' => 'App\\Controller\\BaseController::realizarPedido'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],
@@ -66,13 +65,7 @@ return [
                     .')'
                     .'|ompletarPedido/([^/]++)(*:421)'
                 .')'
-                .'|/eliminar(?'
-                    .'|Productos(?'
-                        .'|Cesta/([^/]++)(*:468)'
-                        .'|/([^/]++)(*:485)'
-                    .')'
-                    .'|Categoria/([^/]++)(*:512)'
-                .')'
+                .'|/eliminarProductosCesta/([^/]++)(*:462)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -93,10 +86,8 @@ return [
         365 => [[['_route' => 'cambiarUnidades', '_controller' => 'App\\Controller\\BaseController::cambiarUnidades'], ['idProducto'], null, null, false, true, null]],
         389 => [[['_route' => 'cambiarUnidadesResumen', '_controller' => 'App\\Controller\\BaseController::cambiarUnidadesResumen'], ['idProducto'], null, null, false, true, null]],
         421 => [[['_route' => 'completarPedido', '_controller' => 'App\\Controller\\BaseController::completarPedido'], ['idPedido'], null, null, false, true, null]],
-        468 => [[['_route' => 'eliminarProductosCesta', '_controller' => 'App\\Controller\\BaseController::eliminarProductosCesta'], ['idProducto'], null, null, false, true, null]],
-        485 => [[['_route' => 'eliminarProductos', '_controller' => 'App\\Controller\\BaseController::eliminarProductos'], ['idProducto'], null, null, false, true, null]],
-        512 => [
-            [['_route' => 'eliminarCategoria', '_controller' => 'App\\Controller\\BaseController::eliminarCategoria'], ['idCategoria'], null, null, false, true, null],
+        462 => [
+            [['_route' => 'eliminarProductosCesta', '_controller' => 'App\\Controller\\BaseController::eliminarProductosCesta'], ['idProducto'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

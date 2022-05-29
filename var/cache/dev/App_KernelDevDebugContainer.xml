@@ -5205,7 +5205,15 @@
         </service>
       </argument>
     </service>
-    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap"/>
+    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap">
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.5dJADCx"/>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+    </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener">
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.untracked_token_storage"/>
@@ -5716,6 +5724,9 @@
         <argument key="security.firewall.map.context.dev" type="service_closure" id="security.firewall.map.context.dev"/>
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
       </argument>
+    </service>
+    <service id=".security.request_matcher.5dJADCx" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/admin</argument>
     </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">
       <tag name="console.command"/>
@@ -6578,7 +6589,7 @@
         <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
-    <service id=".service_locator.Dpgb4hM" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator..V3R2xD" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\CategoriaCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
@@ -6649,14 +6660,11 @@
         <argument key="App\Controller\BaseController::administrarPedidos" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController::administrarProductos" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController::anadir" type="service_closure" id=".service_locator.G8FcB2Q"/>
-        <argument key="App\Controller\BaseController::anadirProducto" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController::cambiarUnidades" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController::cambiarUnidadesResumen" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController::completarPedido" type="service_closure" id=".service_locator.GQZbvNR"/>
         <argument key="App\Controller\BaseController::contacto" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController::detalleProducto" type="service_closure" id=".service_locator.G8FcB2Q"/>
-        <argument key="App\Controller\BaseController::eliminarCategoria" type="service_closure" id=".service_locator.GQZbvNR"/>
-        <argument key="App\Controller\BaseController::eliminarProductos" type="service_closure" id=".service_locator.GQZbvNR"/>
         <argument key="App\Controller\BaseController::eliminarProductosCesta" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController::index" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController::mostrarPedidosProductos" type="service_closure" id=".service_locator.G8FcB2Q"/>
@@ -6744,14 +6752,11 @@
         <argument key="App\Controller\BaseController:administrarPedidos" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController:administrarProductos" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController:anadir" type="service_closure" id=".service_locator.G8FcB2Q"/>
-        <argument key="App\Controller\BaseController:anadirProducto" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController:cambiarUnidades" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController:cambiarUnidadesResumen" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController:completarPedido" type="service_closure" id=".service_locator.GQZbvNR"/>
         <argument key="App\Controller\BaseController:contacto" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController:detalleProducto" type="service_closure" id=".service_locator.G8FcB2Q"/>
-        <argument key="App\Controller\BaseController:eliminarCategoria" type="service_closure" id=".service_locator.GQZbvNR"/>
-        <argument key="App\Controller\BaseController:eliminarProductos" type="service_closure" id=".service_locator.GQZbvNR"/>
         <argument key="App\Controller\BaseController:eliminarProductosCesta" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController:index" type="service_closure" id=".service_locator.G8FcB2Q"/>
         <argument key="App\Controller\BaseController:mostrarPedidosProductos" type="service_closure" id=".service_locator.G8FcB2Q"/>
@@ -7419,12 +7424,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.Dpgb4hM"/>
+      <argument type="service" id=".service_locator..V3R2xD"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.Dpgb4hM"/>
+      <argument type="service" id=".service_locator..V3R2xD"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -8292,7 +8297,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.Dpgb4hM"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator..V3R2xD"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -8317,7 +8322,7 @@
     <service id=".service_locator.zD441.5" alias=".service_locator.G8FcB2Q"/>
     <service id=".service_locator..FuYs44" alias=".service_locator.t6imHW."/>
     <service id=".service_locator.riGN6sa" alias=".service_locator.YU8H6ve"/>
-    <service id=".service_locator.6z.pok4" alias=".service_locator.Dpgb4hM"/>
+    <service id=".service_locator.PD2GAId" alias=".service_locator..V3R2xD"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.pPPc0.c" alias=".service_locator.B2vzCoo"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>

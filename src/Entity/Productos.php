@@ -5,6 +5,8 @@ namespace App\Entity;
 use App\Repository\ProductosRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProductosRepository::class)]
@@ -27,10 +29,21 @@ class Productos
     #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
     private $pvp;
 
-
     #[ORM\Column(type: 'blob')]
     private $imagen;
     private $rawImagen;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $foto;
+
+    /**
+     * @Vich\UploadableField(mapping="producto_foto", fileNameProperty="foto")
+     * @var File
+     */
+    private $imageFile;
 
     #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
     private $pp;
@@ -208,5 +221,25 @@ class Productos
         }
 
         return $this;
+    }
+
+    public function setImageFile(File $foto = null)
+    {
+        $this->imageFile = $foto;
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage($foto)
+    {
+        $this->foto = $foto;
+    }
+
+    public function getImage()
+    {
+        return $this->foto;
     }
 }

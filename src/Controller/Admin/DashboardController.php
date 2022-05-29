@@ -8,6 +8,7 @@ use App\Entity\Productos;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
+use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -16,7 +17,10 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        return parent::index();
+        $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
+        return $this->redirect($adminUrlGenerator->setController(ProductosCrudController::class)->generateUrl());
+
+        //return parent::index();
 
         // Option 1. You can make your dashboard redirect to some common page of your backend
         //
@@ -38,14 +42,14 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('TiendaPapel');
+            ->setTitle('Impresiòna')
+            ->setFaviconPath('imagenes/logo.png');
     }
 
     public function configureMenuItems(): iterable
     {
         return [
-            MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
-            MenuItem::linkToRoute('Back to Homepage', 'fa fa-home', 'index'),
+            MenuItem::linkToDashboard('Volver a index', 'fa fa-home', 'index'),
             MenuItem::linkToCrud('Categorias', 'fa fa-tags', Categoria::class),
             MenuItem::linkToCrud('Productos', 'fa fa-tags', Productos::class),
             MenuItem::linkToCrud('Pedidos', 'fa fa-tags', Pedido::class)
