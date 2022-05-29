@@ -10,6 +10,9 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProductosRepository::class)]
+/**
+ * @Vich\Uploadable
+ */
 class Productos
 {
     #[ORM\Id]
@@ -40,7 +43,7 @@ class Productos
     private $foto;
 
     /**
-     * @Vich\UploadableField(mapping="producto_foto", fileNameProperty="foto")
+     * @Vich\UploadableField(mapping="productos_fotos", fileNameProperty="foto")
      * @var File
      */
     private $imageFile;

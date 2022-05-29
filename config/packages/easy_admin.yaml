@@ -1,0 +1,12 @@
+easy_admin:
+    entities:
+        Productos:
+            list:
+                fields:
+                    - { property: 'foto', type: 'image', base_path: '%app.path.productos_fotos%' }
+            show:
+                fields:
+                    - { property: 'foto', type: 'image', base_path: '%app.path.productos_fotos%' }
+            form:
+                fields:
+                    - { property: 'imageFile', type: 'vich_image' }

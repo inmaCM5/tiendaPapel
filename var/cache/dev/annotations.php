@@ -164,18 +164,12 @@ return [[
 '[C]App%5CController%5CBaseController%23administrarPedidos' => 1,
 'App%5CController%5CBaseController%23mostrarPedidosProductos' => 0,
 '[C]App%5CController%5CBaseController%23mostrarPedidosProductos' => 1,
-'App%5CController%5CBaseController%23anadirProducto' => 0,
-'[C]App%5CController%5CBaseController%23anadirProducto' => 1,
 'App%5CController%5CBaseController%23anadir' => 0,
 '[C]App%5CController%5CBaseController%23anadir' => 1,
 'App%5CController%5CBaseController%23cambiarUnidades' => 0,
 '[C]App%5CController%5CBaseController%23cambiarUnidades' => 1,
 'App%5CController%5CBaseController%23eliminarProductosCesta' => 0,
 '[C]App%5CController%5CBaseController%23eliminarProductosCesta' => 1,
-'App%5CController%5CBaseController%23eliminarProductos' => 0,
-'[C]App%5CController%5CBaseController%23eliminarProductos' => 1,
-'App%5CController%5CBaseController%23eliminarCategoria' => 0,
-'[C]App%5CController%5CBaseController%23eliminarCategoria' => 1,
 'App%5CController%5CBaseController%23completarPedido' => 0,
 '[C]App%5CController%5CBaseController%23completarPedido' => 1,
 'App%5CController%5CBaseController%23resumenCesta' => 0,
@@ -390,6 +384,14 @@ return [[
 '[C]App%5CEntity%5CProductos%23addProductosPedido' => 1,
 'App%5CEntity%5CProductos%23removeProductosPedido' => 0,
 '[C]App%5CEntity%5CProductos%23removeProductosPedido' => 1,
+'App%5CEntity%5CProductos%23setImageFile' => 0,
+'[C]App%5CEntity%5CProductos%23setImageFile' => 1,
+'App%5CEntity%5CProductos%23getImageFile' => 0,
+'[C]App%5CEntity%5CProductos%23getImageFile' => 1,
+'App%5CEntity%5CProductos%23setImage' => 0,
+'[C]App%5CEntity%5CProductos%23setImage' => 1,
+'App%5CEntity%5CProductos%23getImage' => 0,
+'[C]App%5CEntity%5CProductos%23getImage' => 1,
 'App%5CEntity%5CProductos%24id' => 0,
 '[C]App%5CEntity%5CProductos%24id' => 1,
 'App%5CEntity%5CProductos%24codigo' => 0,
@@ -404,6 +406,10 @@ return [[
 '[C]App%5CEntity%5CProductos%24imagen' => 1,
 'App%5CEntity%5CProductos%24rawImagen' => 0,
 '[C]App%5CEntity%5CProductos%24rawImagen' => 1,
+'App%5CEntity%5CProductos%24foto' => 2,
+'[C]App%5CEntity%5CProductos%24foto' => 1,
+'App%5CEntity%5CProductos%24imageFile' => 3,
+'[C]App%5CEntity%5CProductos%24imageFile' => 1,
 'App%5CEntity%5CProductos%24pp' => 0,
 '[C]App%5CEntity%5CProductos%24pp' => 1,
 'App%5CEntity%5CProductos%24categoria' => 0,
@@ -1112,10 +1118,98 @@ return [[
 '[C]Symfony%5CComponent%5CSecurity%5CHttp%5CController%5CUserValueResolver%23resolve' => 1,
 'Symfony%5CComponent%5CSecurity%5CHttp%5CController%5CUserValueResolver%24tokenStorage' => 0,
 '[C]Symfony%5CComponent%5CSecurity%5CHttp%5CController%5CUserValueResolver%24tokenStorage' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23getName' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23getName' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23setName' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23setName' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23getOriginalName' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23getOriginalName' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23setOriginalName' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23setOriginalName' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23getMimeType' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23getMimeType' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23setMimeType' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23setMimeType' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23getSize' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23getSize' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23setSize' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23setSize' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23getDimensions' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23getDimensions' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23setDimensions' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23setDimensions' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23getWidth' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23getWidth' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23getHeight' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23getHeight' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%23getHtmlDimensions' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%23getHtmlDimensions' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%24name' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%24name' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%24originalName' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%24originalName' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%24mimeType' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%24mimeType' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%24size' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%24size' => 1,
+'Vich%5CUploaderBundle%5CEntity%5CFile%24dimensions' => 0,
+'[C]Vich%5CUploaderBundle%5CEntity%5CFile%24dimensions' => 1,
 
 ], [
 
 0 => [],
-1 => 1653649562,
+1 => 1653850244,
+2 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'type' => [
+                    'string',
+                ],
+                'length' => [
+                    255,
+                ],
+                'precision' => [
+                    null,
+                ],
+                'scale' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+3 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField')),
+        ],
+        null,
+        [
+            'Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField' => [
+                'mapping' => [
+                    'producto_foto',
+                ],
+                'fileNameProperty' => [
+                    'foto',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
 
 ]];
