@@ -79,7 +79,7 @@
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
-    <parameter key="app.path.productos_fotos">/imagenes/productos</parameter>
+    <parameter key="app.path.productos_foto">/imagenes/productos</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -256,9 +256,9 @@
     </parameter>
     <parameter key="vich_uploader.default_filename_attribute_suffix">_name</parameter>
     <parameter key="vich_uploader.mappings" type="collection">
-      <parameter key="productos_fotos" type="collection">
+      <parameter key="productos_foto" type="collection">
         <parameter key="uri_prefix">/imagenes/productos</parameter>
-        <parameter key="upload_destination">C:\xampp\htdocs\tienda\tiendaPapel/public/imagenes/productos</parameter>
+        <parameter key="upload_destination">C:\xampp\htdocs\tienda\tiendaPapel/public//imagenes/productos</parameter>
         <parameter key="namer" type="collection">
           <parameter key="service">null</parameter>
           <parameter key="options">null</parameter>
@@ -393,14 +393,6 @@
         <argument type="service" id=".service_locator.XmW3LYn.App\Controller\Admin\DashboardController"/>
       </call>
     </service>
-    <service id="App\Controller\Admin\PedidoCrudController" class="App\Controller\Admin\PedidoCrudController" public="true" autowire="true" autoconfigure="true">
-      <tag name="ea.crud_controller"/>
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.GymbEAg.App\Controller\Admin\PedidoCrudController"/>
-      </call>
-    </service>
     <service id="App\Controller\Admin\ProductosCrudController" class="App\Controller\Admin\ProductosCrudController" public="true" autowire="true" autoconfigure="true">
       <tag name="ea.crud_controller"/>
       <tag name="controller.service_arguments"/>
@@ -440,9 +432,6 @@
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\RegistrationController"/>
       </call>
     </service>
-    <service id="App\Form\ProductosType" class="App\Form\ProductosType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -459,6 +448,10 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\ProductosRepository" class="App\Repository\ProductosRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\UsuarioRepository" class="App\Repository\UsuarioRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -1096,7 +1089,6 @@
         <argument>Vich\UploaderBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
-        <argument>App\Form\ProductosType</argument>
         <argument>App\Form\RegistrationFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
@@ -3213,7 +3205,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator..vFYEnI"/>
+      <argument type="service" id=".service_locator.xdwQ8hC"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4642,13 +4634,13 @@
       </argument>
     </service>
     <service id="doctrine.dbal.default_connection.event_manager" class="Symfony\Bridge\Doctrine\ContainerAwareEventManager">
-      <argument type="service" id=".service_locator.7lr965y"/>
+      <argument type="service" id=".service_locator.uND3lvo"/>
       <argument type="collection">
-        <argument>vich_uploader.listener.clean.productos_fotos</argument>
+        <argument>vich_uploader.listener.clean.productos_foto</argument>
         <argument>doctrine.orm.listeners.doctrine_dbal_cache_adapter_schema_subscriber</argument>
         <argument>doctrine.orm.listeners.doctrine_token_provider_schema_subscriber</argument>
-        <argument>vich_uploader.listener.remove.productos_fotos</argument>
-        <argument>vich_uploader.listener.upload.productos_fotos</argument>
+        <argument>vich_uploader.listener.remove.productos_foto</argument>
+        <argument>vich_uploader.listener.upload.productos_foto</argument>
         <argument type="collection">
           <argument type="collection">
             <argument>loadClassMetadata</argument>
@@ -4706,7 +4698,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.klHVZDb"/>
+      <argument type="service" id=".service_locator.SbOPgLo"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5273,6 +5265,18 @@
           <argument key="memory_cost">null</argument>
           <argument key="time_cost">null</argument>
         </argument>
+        <argument key="App\Entity\Usuario" type="collection">
+          <argument key="algorithm">auto</argument>
+          <argument key="migrate_from" type="collection"/>
+          <argument key="hash_algorithm">sha512</argument>
+          <argument key="key_length">40</argument>
+          <argument key="ignore_case">false</argument>
+          <argument key="encode_as_base64">true</argument>
+          <argument key="iterations">5000</argument>
+          <argument key="cost">null</argument>
+          <argument key="memory_cost">null</argument>
+          <argument key="time_cost">null</argument>
+        </argument>
       </argument>
     </service>
     <service id="security.user_password_hasher" class="Symfony\Component\PasswordHasher\Hasher\UserPasswordHasher">
@@ -5307,6 +5311,7 @@
       <argument type="service" id="security.untracked_token_storage"/>
       <argument type="iterator">
         <argument type="service" id="security.user.provider.concrete.tiendapapel"/>
+        <argument type="service" id="security.user.provider.concrete.app_user_provider"/>
       </argument>
       <argument type="abstract">Provider Key</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -5424,7 +5429,7 @@
     </service>
     <service id="security.listener.user_provider" class="Symfony\Component\Security\Http\EventListener\UserProviderListener">
       <tag name="kernel.event_listener" event="Symfony\Component\Security\Http\Event\CheckPassportEvent" priority="1024" method="checkPassport"/>
-      <argument type="service" id="security.user.provider.concrete.tiendapapel"/>
+      <argument type="service" id="security.user_providers"/>
     </service>
     <service id="security.listener.user_provider.abstract" class="Symfony\Component\Security\Http\EventListener\UserProviderListener" abstract="true">
       <argument type="abstract">user provider</argument>
@@ -5542,6 +5547,18 @@
       <argument>App\Entity\Usuarios</argument>
       <argument>usuario</argument>
       <argument>null</argument>
+    </service>
+    <service id="security.user.provider.concrete.app_user_provider" class="Symfony\Bridge\Doctrine\Security\User\EntityUserProvider">
+      <argument type="service" id="doctrine"/>
+      <argument>App\Entity\Usuarios</argument>
+      <argument>usuario</argument>
+      <argument>null</argument>
+    </service>
+    <service id="security.user_providers" class="Symfony\Component\Security\Core\User\ChainUserProvider">
+      <argument type="iterator">
+        <argument type="service" id="security.user.provider.concrete.tiendapapel"/>
+        <argument type="service" id="security.user.provider.concrete.app_user_provider"/>
+      </argument>
     </service>
     <service id="security.firewall.map.config.dev" class="Symfony\Bundle\SecurityBundle\Security\FirewallConfig">
       <argument>dev</argument>
@@ -5683,6 +5700,7 @@
       <argument type="service" id="security.untracked_token_storage"/>
       <argument type="iterator">
         <argument type="service" id="security.user.provider.concrete.tiendapapel"/>
+        <argument type="service" id="security.user.provider.concrete.app_user_provider"/>
       </argument>
       <argument>main</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -5822,6 +5840,7 @@
       <argument type="service" id="security.password_hasher_factory"/>
       <argument type="collection">
         <argument>Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface</argument>
+        <argument>App\Entity\Usuario</argument>
       </argument>
       <call method="setName">
         <argument>security:hash-password</argument>
@@ -6350,24 +6369,24 @@
       <tag name="twig.extension"/>
       <argument type="service" id="Vich\UploaderBundle\Templating\Helper\UploaderHelper"/>
     </service>
-    <service id="vich_uploader.metadata.reader" class="Doctrine\Common\Annotations\AnnotationReader"/>
-    <service id="vich_uploader.listener.clean.productos_fotos" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener">
+    <service id="vich_uploader.metadata.reader" class="Vich\UploaderBundle\Metadata\Driver\AttributeReader"/>
+    <service id="vich_uploader.listener.clean.productos_foto" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener">
       <tag name="doctrine.event_subscriber" priority="50"/>
-      <argument>productos_fotos</argument>
+      <argument>productos_foto</argument>
       <argument type="service" id="vich_uploader.adapter.orm"/>
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
     </service>
-    <service id="vich_uploader.listener.remove.productos_fotos" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener">
+    <service id="vich_uploader.listener.remove.productos_foto" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener">
       <tag name="doctrine.event_subscriber" priority="0"/>
-      <argument>productos_fotos</argument>
+      <argument>productos_foto</argument>
       <argument type="service" id="vich_uploader.adapter.orm"/>
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
     </service>
-    <service id="vich_uploader.listener.upload.productos_fotos" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener">
+    <service id="vich_uploader.listener.upload.productos_foto" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener">
       <tag name="doctrine.event_subscriber" priority="0"/>
-      <argument>productos_fotos</argument>
+      <argument>productos_foto</argument>
       <argument type="service" id="vich_uploader.adapter.orm"/>
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
@@ -6380,10 +6399,6 @@
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\DashboardControllerInterface.0.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\PedidoCrudController" class="App\Controller\Admin\PedidoCrudController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\PedidoCrudController" class="App\Controller\Admin\PedidoCrudController" autowire="true" abstract="true"/>
-    <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\PedidoCrudController" class="App\Controller\Admin\PedidoCrudController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\Admin\PedidoCrudController" class="App\Controller\Admin\PedidoCrudController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\ProductosCrudController" class="App\Controller\Admin\ProductosCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\ProductosCrudController" class="App\Controller\Admin\ProductosCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\ProductosCrudController" class="App\Controller\Admin\ProductosCrudController" autowire="true" abstract="true"/>
@@ -6400,8 +6415,6 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ProductosType" class="App\Form\ProductosType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\ProductosType" class="App\Form\ProductosType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategoriaRepository" class="App\Repository\CategoriaRepository" autowire="true" abstract="true"/>
@@ -6412,6 +6425,8 @@
     <service id=".abstract.instanceof.App\Repository\PedidosProductoRepository" class="App\Repository\PedidosProductoRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProductosRepository" class="App\Repository\ProductosRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ProductosRepository" class="App\Repository\ProductosRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UsuarioRepository" class="App\Repository\UsuarioRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UsuarioRepository" class="App\Repository\UsuarioRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UsuariosRepository" class="App\Repository\UsuariosRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UsuariosRepository" class="App\Repository\UsuariosRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Filter\FilterConfiguratorInterface.0.EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" class="EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" abstract="true"/>
@@ -6801,6 +6816,12 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.xUrKPVU.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.R8Qy2_." class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="actions" type="service_closure" id=".errored..service_locator.R8Qy2_..EasyCorp\Bundle\EasyAdminBundle\Config\Actions"/>
+      </argument>
+    </service>
     <service id=".service_locator.XpfeRo6" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6811,12 +6832,6 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="assets" type="service_closure" id=".errored..service_locator.XdMPwIJ.EasyCorp\Bundle\EasyAdminBundle\Config\Assets"/>
-      </argument>
-    </service>
-    <service id=".service_locator.R8Qy2_." class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="actions" type="service_closure" id=".errored..service_locator.R8Qy2_..EasyCorp\Bundle\EasyAdminBundle\Config\Actions"/>
       </argument>
     </service>
     <service id=".service_locator.OGjUKCt" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -6921,7 +6936,7 @@
         <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
-    <service id=".service_locator..V3R2xD" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.0odMCkz" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\CategoriaCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
@@ -6946,27 +6961,6 @@
         <argument key="App\Controller\Admin\CategoriaCrudController::renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\CategoriaCrudController::updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\DashboardController::configureUserMenu" type="service_closure" id=".service_locator.st3ASTR"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
-        <argument key="App\Controller\Admin\PedidoCrudController::configureAssets" type="service_closure" id=".service_locator.XdMPwIJ"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::configureCrud" type="service_closure" id=".service_locator.XpfeRo6"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::configureFilters" type="service_closure" id=".service_locator.OGjUKCt"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::configureResponseParameters" type="service_closure" id=".service_locator.W.c5h2_"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::createEditForm" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::createEditFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::createIndexQueryBuilder" type="service_closure" id=".service_locator.ENGuM7_"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::createNewForm" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::createNewFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::delete" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::deleteEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::detail" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::edit" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::index" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::new" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::persistEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController::updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\ProductosCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\ProductosCrudController::batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
         <argument key="App\Controller\Admin\ProductosCrudController::configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
@@ -7038,27 +7032,6 @@
         <argument key="App\Controller\Admin\CategoriaCrudController:renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\CategoriaCrudController:updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\DashboardController:configureUserMenu" type="service_closure" id=".service_locator.st3ASTR"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
-        <argument key="App\Controller\Admin\PedidoCrudController:configureAssets" type="service_closure" id=".service_locator.XdMPwIJ"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:configureCrud" type="service_closure" id=".service_locator.XpfeRo6"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:configureFilters" type="service_closure" id=".service_locator.OGjUKCt"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:configureResponseParameters" type="service_closure" id=".service_locator.W.c5h2_"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:createEditForm" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:createEditFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:createIndexQueryBuilder" type="service_closure" id=".service_locator.ENGuM7_"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:createNewForm" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:createNewFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:delete" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:deleteEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:detail" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:edit" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:index" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:new" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:persistEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
-        <argument key="App\Controller\Admin\PedidoCrudController:updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\ProductosCrudController:autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\ProductosCrudController:batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
         <argument key="App\Controller\Admin\ProductosCrudController:configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
@@ -7176,10 +7149,9 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator..vFYEnI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.xdwQ8hC" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Form\ProductosType" type="service_closure" id="App\Form\ProductosType"/>
         <argument key="App\Form\RegistrationFormType" type="service_closure" id="App\Form\RegistrationFormType"/>
         <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\CrudFormType" type="service_closure" id="EasyCorp\Bundle\EasyAdminBundle\Form\Type\CrudFormType"/>
         <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\FileUploadType" type="service_closure" id="EasyCorp\Bundle\EasyAdminBundle\Form\Type\FileUploadType"/>
@@ -7374,15 +7346,15 @@
       <configurator class="Symfony\Bundle\FrameworkBundle\DependencyInjection\Compiler\AddDebugLogProcessorPass" method="configureLogger"/>
     </service>
     <service id="monolog.handler.null_internal" class="Monolog\Handler\NullHandler"/>
-    <service id=".service_locator.7lr965y" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.uND3lvo" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service_closure" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
         <argument key="doctrine.orm.listeners.doctrine_dbal_cache_adapter_schema_subscriber" type="service_closure" id="doctrine.orm.listeners.doctrine_dbal_cache_adapter_schema_subscriber"/>
         <argument key="doctrine.orm.listeners.doctrine_token_provider_schema_subscriber" type="service_closure" id="doctrine.orm.listeners.doctrine_token_provider_schema_subscriber"/>
-        <argument key="vich_uploader.listener.clean.productos_fotos" type="service_closure" id="vich_uploader.listener.clean.productos_fotos"/>
-        <argument key="vich_uploader.listener.remove.productos_fotos" type="service_closure" id="vich_uploader.listener.remove.productos_fotos"/>
-        <argument key="vich_uploader.listener.upload.productos_fotos" type="service_closure" id="vich_uploader.listener.upload.productos_fotos"/>
+        <argument key="vich_uploader.listener.clean.productos_foto" type="service_closure" id="vich_uploader.listener.clean.productos_foto"/>
+        <argument key="vich_uploader.listener.remove.productos_foto" type="service_closure" id="vich_uploader.listener.remove.productos_foto"/>
+        <argument key="vich_uploader.listener.upload.productos_foto" type="service_closure" id="vich_uploader.listener.upload.productos_foto"/>
       </argument>
     </service>
     <service id="cache.doctrine.orm.default.query.compatibility_layer" class="Doctrine\Common\Cache\CacheProvider">
@@ -7393,13 +7365,14 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator.klHVZDb" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.SbOPgLo" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\CategoriaRepository" type="service_closure" id="App\Repository\CategoriaRepository"/>
         <argument key="App\Repository\PedidoRepository" type="service_closure" id="App\Repository\PedidoRepository"/>
         <argument key="App\Repository\PedidosProductoRepository" type="service_closure" id="App\Repository\PedidosProductoRepository"/>
         <argument key="App\Repository\ProductosRepository" type="service_closure" id="App\Repository\ProductosRepository"/>
+        <argument key="App\Repository\UsuarioRepository" type="service_closure" id="App\Repository\UsuarioRepository"/>
         <argument key="App\Repository\UsuariosRepository" type="service_closure" id="App\Repository\UsuariosRepository"/>
       </argument>
     </service>
@@ -7452,7 +7425,6 @@
       <argument>%env(APP_SECRET)%</argument>
       <argument type="collection">
         <argument>App\Controller\Admin\CategoriaCrudController</argument>
-        <argument>App\Controller\Admin\PedidoCrudController</argument>
         <argument>App\Controller\Admin\ProductosCrudController</argument>
       </argument>
     </service>
@@ -7527,12 +7499,6 @@
       <argument>App\Controller\Admin\DashboardController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.XmW3LYn" method="withContext"/>
-    </service>
-    <service id=".service_locator.GymbEAg.App\Controller\Admin\PedidoCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\Admin\PedidoCrudController"/>
-      <argument>App\Controller\Admin\PedidoCrudController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.GymbEAg" method="withContext"/>
     </service>
     <service id=".service_locator.GymbEAg.App\Controller\Admin\ProductosCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Admin\ProductosCrudController"/>
@@ -7761,12 +7727,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator..V3R2xD"/>
+      <argument type="service" id=".service_locator.0odMCkz"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator..V3R2xD"/>
+      <argument type="service" id=".service_locator.0odMCkz"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7788,9 +7754,9 @@
     </service>
     <service id=".errored..service_locator.bRdave9.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.xUrKPVU.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator.R8Qy2_..EasyCorp\Bundle\EasyAdminBundle\Config\Actions" class="EasyCorp\Bundle\EasyAdminBundle\Config\Actions"/>
     <service id=".errored..service_locator.XpfeRo6.EasyCorp\Bundle\EasyAdminBundle\Config\Crud" class="EasyCorp\Bundle\EasyAdminBundle\Config\Crud"/>
     <service id=".errored..service_locator.XdMPwIJ.EasyCorp\Bundle\EasyAdminBundle\Config\Assets" class="EasyCorp\Bundle\EasyAdminBundle\Config\Assets"/>
-    <service id=".errored..service_locator.R8Qy2_..EasyCorp\Bundle\EasyAdminBundle\Config\Actions" class="EasyCorp\Bundle\EasyAdminBundle\Config\Actions"/>
     <service id=".errored..service_locator.OGjUKCt.EasyCorp\Bundle\EasyAdminBundle\Config\Filters" class="EasyCorp\Bundle\EasyAdminBundle\Config\Filters"/>
     <service id=".errored..service_locator.kEvhmk9.EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext" class="EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext"/>
     <service id=".errored..service_locator.esmk6IF.EasyCorp\Bundle\EasyAdminBundle\Dto\BatchActionDto" class="EasyCorp\Bundle\EasyAdminBundle\Dto\BatchActionDto"/>
@@ -8636,8 +8602,6 @@
     <service id="Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface" alias="security.user_password_hasher"/>
     <service id="Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface" alias="security.user_authenticator"/>
     <service id="security.firewall" alias="debug.security.firewall"/>
-    <service id="security.user_providers" alias="security.user.provider.concrete.tiendapapel"/>
-    <service id="Symfony\Component\Security\Core\User\UserProviderInterface" alias="security.user.provider.concrete.tiendapapel"/>
     <service id="security.authentication.session_strategy.main" alias="security.authentication.session_strategy"/>
     <service id="security.user_checker.main" alias="security.user_checker"/>
     <service id="security.firewall.context_locator" alias=".service_locator.zJyh7qS"/>
@@ -8663,7 +8627,7 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator..V3R2xD"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.0odMCkz"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -8688,10 +8652,10 @@
     <service id=".service_locator.zD441.5" alias=".service_locator.G8FcB2Q"/>
     <service id=".service_locator..FuYs44" alias=".service_locator.t6imHW."/>
     <service id=".service_locator.riGN6sa" alias=".service_locator.YU8H6ve"/>
-    <service id=".service_locator.PD2GAId" alias=".service_locator..V3R2xD"/>
+    <service id=".service_locator.up3viUP" alias=".service_locator.0odMCkz"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
-    <service id=".service_locator.skT6xD1" alias=".service_locator..vFYEnI"/>
-    <service id=".service_locator.Rt_bDTp" alias=".service_locator.7lr965y"/>
+    <service id=".service_locator.V3EI10T" alias=".service_locator.xdwQ8hC"/>
+    <service id=".service_locator.RxBn.PL" alias=".service_locator.uND3lvo"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>
     <service id=".service_locator.MwlEl_B" alias=".service_locator.GymbEAg"/>
     <service id=".service_locator.Cw5qYVH" alias=".service_locator.XmW3LYn"/>
@@ -8720,9 +8684,9 @@
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.FatRZu2" alias=".service_locator.bRdave9"/>
     <service id=".service_locator.uo5c0SP" alias=".service_locator.xUrKPVU"/>
+    <service id=".service_locator.Uj8JhjH" alias=".service_locator.R8Qy2_."/>
     <service id=".service_locator.Wy8wQ7q" alias=".service_locator.XpfeRo6"/>
     <service id=".service_locator.mZvIess" alias=".service_locator.XdMPwIJ"/>
-    <service id=".service_locator.Uj8JhjH" alias=".service_locator.R8Qy2_."/>
     <service id=".service_locator.O2PHm7f" alias=".service_locator.OGjUKCt"/>
     <service id=".service_locator.nmHbo7B" alias=".service_locator.kEvhmk9"/>
     <service id=".service_locator.6l7iQLM" alias=".service_locator.esmk6IF"/>

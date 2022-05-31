@@ -238,8 +238,6 @@ public function realizarPedido(ManagerRegistry $doctrine, CestaCompra $cesta, Ma
     $costeTotal = 0;
     $error = false;
 
-    $user = $security->getUser();
-
     if (count($productos) > 0) {
         $entityManager = $doctrine->getManager();
         $pedido = new Pedido();

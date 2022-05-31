@@ -22,20 +22,14 @@ class Usuarios implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 180, unique: true)]
     private $usuario;
-
-    #[ORM\Column(type: 'string', length: 255)]
-    private $rol;
-
-    /**
-     * @var string The hashed password
-     */
-    #[ORM\Column(type: 'string', length: 255)]
-    private $password;
 
     #[ORM\Column(type: 'json')]
     private $roles = [];
+
+    #[ORM\Column(type: 'string')]
+    private $password;
 
     #[ORM\Column(type: 'string', length: 255)]
     private $nombre;
@@ -73,18 +67,6 @@ class Usuarios implements UserInterface, PasswordAuthenticatedUserInterface
     public function setUsuario(string $usuario): self
     {
         $this->usuario = $usuario;
-
-        return $this;
-    }
-
-    public function getRol(): ?string
-    {
-        return $this->rol;
-    }
-
-    public function setRol(string $rol): self
-    {
-        $this->rol = $rol;
 
         return $this;
     }

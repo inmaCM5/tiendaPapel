@@ -136,10 +136,6 @@ return [[
 '[C]EasyCorp%5CBundle%5CEasyAdminBundle%5CController%5CAbstractDashboardController%23configureActions' => 1,
 'EasyCorp%5CBundle%5CEasyAdminBundle%5CController%5CAbstractDashboardController%23configureFilters' => 0,
 '[C]EasyCorp%5CBundle%5CEasyAdminBundle%5CController%5CAbstractDashboardController%23configureFilters' => 1,
-'App%5CController%5CAdmin%5CPedidoCrudController' => 0,
-'[C]App%5CController%5CAdmin%5CPedidoCrudController' => 1,
-'App%5CController%5CAdmin%5CPedidoCrudController%23getEntityFqcn' => 0,
-'[C]App%5CController%5CAdmin%5CPedidoCrudController%23getEntityFqcn' => 1,
 'App%5CController%5CAdmin%5CProductosCrudController' => 0,
 '[C]App%5CController%5CAdmin%5CProductosCrudController' => 1,
 'App%5CController%5CAdmin%5CProductosCrudController%23getEntityFqcn' => 0,
@@ -392,6 +388,10 @@ return [[
 '[C]App%5CEntity%5CProductos%23setImage' => 1,
 'App%5CEntity%5CProductos%23getImage' => 0,
 '[C]App%5CEntity%5CProductos%23getImage' => 1,
+'App%5CEntity%5CProductos%23setImageSize' => 0,
+'[C]App%5CEntity%5CProductos%23setImageSize' => 1,
+'App%5CEntity%5CProductos%23getImageSize' => 0,
+'[C]App%5CEntity%5CProductos%23getImageSize' => 1,
 'App%5CEntity%5CProductos%24id' => 0,
 '[C]App%5CEntity%5CProductos%24id' => 1,
 'App%5CEntity%5CProductos%24codigo' => 0,
@@ -406,9 +406,11 @@ return [[
 '[C]App%5CEntity%5CProductos%24imagen' => 1,
 'App%5CEntity%5CProductos%24rawImagen' => 0,
 '[C]App%5CEntity%5CProductos%24rawImagen' => 1,
-'App%5CEntity%5CProductos%24foto' => 2,
+'App%5CEntity%5CProductos%24foto' => 0,
 '[C]App%5CEntity%5CProductos%24foto' => 1,
-'App%5CEntity%5CProductos%24imageFile' => 3,
+'App%5CEntity%5CProductos%24fotoSize' => 0,
+'[C]App%5CEntity%5CProductos%24fotoSize' => 1,
+'App%5CEntity%5CProductos%24imageFile' => 2,
 '[C]App%5CEntity%5CProductos%24imageFile' => 1,
 'App%5CEntity%5CProductos%24pp' => 0,
 '[C]App%5CEntity%5CProductos%24pp' => 1,
@@ -1160,36 +1162,8 @@ return [[
 ], [
 
 0 => [],
-1 => 1653850244,
+1 => 1653898394,
 2 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
-        ],
-        null,
-        [
-            'stdClass' => [
-                'type' => [
-                    'string',
-                ],
-                'length' => [
-                    255,
-                ],
-                'precision' => [
-                    null,
-                ],
-                'scale' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField')),
@@ -1198,7 +1172,7 @@ return [[
         [
             'Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField' => [
                 'mapping' => [
-                    'producto_foto',
+                    'productos_foto',
                 ],
                 'fileNameProperty' => [
                     'foto',

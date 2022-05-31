@@ -3,10 +3,10 @@ easy_admin:
         Productos:
             list:
                 fields:
-                    - { property: 'foto', type: 'image', base_path: '%app.path.productos_fotos%' }
+                    - { property: 'foto', type: 'image', base_path: '%app.path.productos_foto%' }
             show:
                 fields:
-                    - { property: 'foto', type: 'image', base_path: '%app.path.productos_fotos%' }
+                    - { property: 'foto', type: 'image', base_path: '%app.path.productos_foto%' }
             form:
                 fields:
                     - { property: 'imageFile', type: 'vich_image' }

@@ -10,9 +10,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProductosRepository::class)]
-/**
- * @Vich\Uploadable
- */
+#[Vich\Uploadable]
 class Productos
 {
     #[ORM\Id]
@@ -32,20 +30,10 @@ class Productos
     #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
     private $pvp;
 
-    #[ORM\Column(type: 'blob')]
-    private $imagen;
-    private $rawImagen;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @var string
-     */
+    #[ORM\Column(type: 'string', length: 255)]
     private $foto;
 
-    /**
-     * @Vich\UploadableField(mapping="productos_fotos", fileNameProperty="foto")
-     * @var File
-     */
+    #[Vich\UploadableField(mapping: 'productos_foto', fileNameProperty: 'foto')]
     private $imageFile;
 
     #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
@@ -68,14 +56,7 @@ class Productos
     {
         $this->productosPedidos = new ArrayCollection();
     }
-    public function displayImagen()
-    {
-        if(null === $this->rawImagen) {
-            $this->rawImagen = "data:image/png;base64," . base64_encode(stream_get_contents($this->getImagen()));
-        }
     
-        return $this->rawImagen;
-    }
     public function getId(): ?int
     {
         return $this->id;
@@ -125,25 +106,6 @@ class Productos
     public function setPvp(string $pvp): self
     {
         $this->pvp = $pvp;
-
-        return $this;
-    }
-
-
-    public function getImagenCodificada()
-    {
-        $imagen = base64_encode($this->imagen);
-        return $imagen;
-    } 
-
-    public function getImagen()
-    {
-        return $this->imagen;
-    }
-
-    public function setImagen($imagen): self
-    {
-        $this->imagen = $imagen;
 
         return $this;
     }
@@ -226,9 +188,9 @@ class Productos
         return $this;
     }
 
-    public function setImageFile(File $foto = null)
+    public function setImageFile(?File $imageFile = null): void
     {
-        $this->imageFile = $foto;
+        $this->imageFile = $imageFile;
     }
 
     public function getImageFile()
@@ -236,12 +198,12 @@ class Productos
         return $this->imageFile;
     }
 
-    public function setImage($foto)
+    public function setFoto(?string $foto): void
     {
         $this->foto = $foto;
     }
 
-    public function getImage()
+    public function getFoto()
     {
         return $this->foto;
     }
