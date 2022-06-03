@@ -7,8 +7,14 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
+use phpDocumentor\Reflection\Types\Boolean;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
+
 
 class CategoriaCrudController extends AbstractCrudController
 {
@@ -37,14 +43,16 @@ class CategoriaCrudController extends AbstractCrudController
         });
     }
 
-    /*
+    
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            IdField::new('id')->hideOnForm(),
+            BooleanField::new('primaria')->renderAsSwitch(false),
+            AssociationField::new('parents')->setLabel('Categoría'),
+            TextField::new('codigo'),
+            TextField::new('nombre'),
         ];
     }
-    */
+    
 }

@@ -67,10 +67,10 @@ class Categoria extends \App\Entity\Categoria implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'codigo', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'nombre', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'childrens', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'parents', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'productos'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'codigo', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'nombre', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'childrens', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'parents', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'productos', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'primaria'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'codigo', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'nombre', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'childrens', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'parents', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'productos'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'codigo', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'nombre', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'childrens', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'parents', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'productos', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'primaria'];
     }
 
     /**
@@ -322,6 +322,28 @@ class Categoria extends \App\Entity\Categoria implements \Doctrine\ORM\Proxy\Pro
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeProducto', [$producto]);
 
         return parent::removeProducto($producto);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPrimaria(): ?bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPrimaria', []);
+
+        return parent::getPrimaria();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPrimaria(bool $primaria): \App\Entity\Categoria
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPrimaria', [$primaria]);
+
+        return parent::setPrimaria($primaria);
     }
 
 }

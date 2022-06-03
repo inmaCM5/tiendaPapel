@@ -30,6 +30,9 @@ class Categoria
     #[ORM\OneToMany(mappedBy: 'categoria', targetEntity: Productos::class)]
     private $productos;
 
+    #[ORM\Column(type: 'boolean')]
+    private $primaria;
+
     public function __construct()
     {
         $this->childrens = new ArrayCollection();
@@ -133,6 +136,18 @@ class Categoria
                 $producto->setCategoria(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPrimaria(): ?bool
+    {
+        return $this->primaria;
+    }
+
+    public function setPrimaria(bool $primaria): self
+    {
+        $this->primaria = $primaria;
 
         return $this;
     }
