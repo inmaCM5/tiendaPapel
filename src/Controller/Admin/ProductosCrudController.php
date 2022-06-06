@@ -4,7 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Categoria;
 use App\Entity\Productos;
-use Doctrine\ORM\QueryBuilder;
+use Doctrine\ORM\EntityManagerInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -18,13 +18,14 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
-use Doctrine\Persistence\ManagerRegistry;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class ProductosCrudController extends AbstractCrudController
 {
+    private $em;
 
-    public function __construct(private ManagerRegistry $doctrine) {}
+    public function __construct(EntityManagerInterface $em) {
+        $this->em = $em;
+    }
 
     public static function getEntityFqcn(): string
     {
@@ -48,39 +49,30 @@ class ProductosCrudController extends AbstractCrudController
         })
         ->update(Crud::PAGE_EDIT, Action::SAVE_AND_CONTINUE, function(Action $action) {
             return $action->setLabel("Guardar y continuar editando");
+        })
+        ->update(Crud::PAGE_NEW, Action::SAVE_AND_RETURN, function(Action $action) {
+            return $action->setLabel("Crear");
+        })
+        ->update(Crud::PAGE_NEW, Action::SAVE_AND_ADD_ANOTHER, function(Action $action) {
+            return $action->setLabel("Crear y añadir nuevo");
         });
     }
     
     public function configureFields(string $pageName): iterable
     {
-        /* $entityManager = $this->doctrine->getManager();
+        $categoriaRepository = $this->em->getRepository(Categoria::class);
+        $categoriasSecundarias = $categoriaRepository->findParentsNotNull();
         
-        $query = $entityManager->createQuery(
-            'SELECT p
-            FROM AppBundle:Categoria p
-            WHERE p.parents_id = :price'
-        )->setParameter('price', null);
-        
-        $products = $query->getResult(); */
-
-        //$prueba = fn (QueryBuilder $queryBuilder) => $queryBuilder->getEntityManager()->getRepository(Categoria::class)->findAllParent();
-
-        return [
-            IdField::new('id')->hideOnForm(),
-            /* yield AssociationField::new('categoria')->setQueryBuilder(
-                fn (QueryBuilder $queryBuilder) => $queryBuilder->getEntityManager()->getRepository(Categoria::class);
-                //$products
-            ), */
-            AssociationField::new('categoria'),
-            TextField::new('codigo'),
-            TextField::new('nombre'),
-            TextField::new('descripcion'),
-            NumberField::new('pvp'),
-            Field::new('imageFile')->setFormType(VichImageType::class)->setLabel('Imagen'),
-            NumberField::new('pp'),
-            IntegerField::new('unidades'),
-            TextField::new('proveedor'),
-        ];
+        yield IdField::new('id')->hideOnForm();
+        yield AssociationField::new('categoria')->onlyOnForms()->setFormTypeOptions(["choices" => $categoriasSecundarias])->setLabel('Categorías');
+        yield TextField::new('codigo');
+        yield TextField::new('nombre');
+        yield TextField::new('descripcion');
+        yield NumberField::new('pvp');
+        yield Field::new('imageFile')->setFormType(VichImageType::class)->setLabel('Imagen');
+        yield NumberField::new('pp');
+        yield IntegerField::new('unidades');
+        yield TextField::new('proveedor');
     }
    
 }

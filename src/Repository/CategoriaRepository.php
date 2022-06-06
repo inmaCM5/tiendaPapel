@@ -45,25 +45,26 @@ class CategoriaRepository extends ServiceEntityRepository
         }
     }
 
-    /* public function findAllParent(): array
-    {
-        $entityManager = $this->getEntityManager();
-        $query = $entityManager->createQuery(
-            'SELECT categoria
-            FROM App\Entity\Categoria
-            WHERE categoria.parent != :null'
-        )->setParameter('null', null);
-
-        return $query->getResult();
-    } */
-    public function findAllParent(): array
+    public function findAllParents(): array
     {
         $entityManager = $this->getEntityManager();
         $query = $entityManager->createQuery(
             'SELECT c
             FROM App\Entity\Categoria c
-            WHERE c.parents_id = :null'
-        )->setParameter('null', null);
+            WHERE c.parents is null
+        ');
+
+        return $query->getResult();
+    }
+
+    public function findParentsNotNull(): array
+    {
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+            'SELECT c
+            FROM App\Entity\Categoria c
+            WHERE NOT c.parents is null
+        ');
 
         return $query->getResult();
     }

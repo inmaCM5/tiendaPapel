@@ -6,8 +6,9 @@ use App\Repository\CategoriaRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinColumn;
 
-#[ORM\Entity(repositoryClass: CategoriaRepository::class)]
+#[ORM\Entity(repositoryClass: "App\Repository\CategoriaRepository")]
 class Categoria
 {
     #[ORM\Id]
@@ -25,6 +26,7 @@ class Categoria
     private $childrens;
 
     #[ORM\ManyToOne(targetEntity: self::class, inversedBy: 'childrens')]
+    #[JoinColumn(name: 'parents_id', referencedColumnName: 'id')]
     private $parents;
 
     #[ORM\OneToMany(mappedBy: 'categoria', targetEntity: Productos::class)]

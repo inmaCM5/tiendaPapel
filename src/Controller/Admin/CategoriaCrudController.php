@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Categoria;
+use Doctrine\ORM\EntityManagerInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -11,13 +12,16 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
-use phpDocumentor\Reflection\Types\Boolean;
-use Vich\UploaderBundle\Form\Type\VichFileType;
-use Vich\UploaderBundle\Form\Type\VichImageType;
 
 
 class CategoriaCrudController extends AbstractCrudController
 {
+    private $em;
+
+    public function __construct(EntityManagerInterface $em) {
+        $this->em = $em;
+    }
+
     public static function getEntityFqcn(): string
     {
         return Categoria::class;
@@ -46,13 +50,13 @@ class CategoriaCrudController extends AbstractCrudController
     
     public function configureFields(string $pageName): iterable
     {
-        return [
-            IdField::new('id')->hideOnForm(),
-            BooleanField::new('primaria')->renderAsSwitch(false),
-            AssociationField::new('parents')->setLabel('Categoría'),
-            TextField::new('codigo'),
-            TextField::new('nombre'),
-        ];
+        $categoriaRepository = $this->em->getRepository(Categoria::class);
+        $categoriasPadre = $categoriaRepository->findAllParents();
+        
+        yield IdField::new('id')->hideOnForm();
+        yield AssociationField::new('parents')->onlyOnForms()->setFormTypeOptions(["choices" => $categoriasPadre])->setLabel('Categorías');
+        yield BooleanField::new('primaria')->renderAsSwitch(false);
+        yield TextField::new('codigo');
+        yield TextField::new('nombre');
     }
-    
 }
