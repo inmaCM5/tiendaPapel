@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Productos;
+use App\Repository\UsuariosRepository;
 use App\Entity\Usuarios;
 use App\Entity\Categoria;
 use App\Entity\Pedido;
@@ -24,10 +25,6 @@ function index(ManagerRegistry $doctrine, CestaCompra $cesta): Response
 {
     $categoriaPrincipal = $doctrine->getRepository(Categoria::class)->findBy(['parents' => null]);    
     $categorias=[];
-
-    $nombreUsuario =$_SESSION['_sf2_attributes']['_security.last_username'];
-    $emailUsuario = $doctrine->getRepository(Usuarios::class)->find($nombreUsuario)->getEmail();
-        print "emailusuario = " + $emailUsuario;
 
     foreach ($categoriaPrincipal as $categoria) {
         $categorias[$categoria->getId()][0]= $categoria;
@@ -251,20 +248,16 @@ public function realizarPedido(ManagerRegistry $doctrine, CestaCompra $cesta, Ma
 
         $entityManager->persist($pedido);
         $entityManager->flush();
+
         $nombreUsuario =$_SESSION['_sf2_attributes']['_security.last_username'];
-        $emailUsuario = $doctrine->getRepository(Usuarios::class)->findBy(['email' => $nombreUsuario]);
-        //session_start(); 
+        $todosUsuario = $doctrine->getRepository(Usuarios::class)->findAll();
 
-        print_r($emailUsuario); print("pep");
-        print_r($_SESSION);
-        print "emailusuario = " + $emailUsuario;
-        print "holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-        print $_SESSION['_sf2_attributes']['_security.last_username'];
-        print $_SESSION['user'];
-        $usuario =$_SESSION['last_username'];
-        $usuariocorreo = $doctrine->getRepository(Productos::class)->find($usuario)->getEmail();
-        print $usuariocorreo;
-
+        foreach ($todosUsuario as $usuarioSimple) { 
+            if ($usuarioSimple->getUsuario() == $nombreUsuario) {
+                $correoUsuario = $usuarioSimple->getEmail();
+            }
+        }
+        
         foreach ($productos as $producto) {
             $pedidoProducto = new PedidosProducto();
             $pedidoProducto->setUnidades($producto['unidades']);
@@ -286,7 +279,7 @@ public function realizarPedido(ManagerRegistry $doctrine, CestaCompra $cesta, Ma
         if (!$error) {            
             $email = (new TemplatedEmail())
                     ->from('impresionaweb@gmail.com')
-                    ->to('impresionaweb@gmail.com')
+                    ->to($correoUsuario)
                     ->subject('Confirmación de pedido.')
                     ->htmlTemplate('correo.html.twig')
                     ->context(['numPedido' => $pedido->getId(), 'usuario' => $this->getUser()->getUserIdentifier(), 'cesta' => $cesta->get_productos()]);

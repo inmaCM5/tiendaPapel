@@ -52,9 +52,6 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToRoute('Volver a index', 'fa fa-home', 'index'),
             MenuItem::linkToCrud('Categorias', 'fa fa-tags', Categoria::class),
             MenuItem::linkToCrud('Productos', 'fa fa-tags', Productos::class),            
-        ];/* 
-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
-        MenuItem::linktoRoute('Back to the website', 'fas fa-home', 'index'); */
+        ];
     }
 }
