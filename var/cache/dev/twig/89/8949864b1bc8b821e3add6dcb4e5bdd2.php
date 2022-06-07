@@ -736,102 +736,44 @@ class __TwigTemplate_f2e0ab8ab6e67185d79b77126dbc5892 extends Template
 
             <div class=\"footer-widget-wrapper text-center pt-20\">
                 <div class=\"row\">
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t\t\t\t<div class=\"col-lg-6 col-md-6 col-sm-12\">
                         <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
+                            <h5 class=\"footer-title\">PRODUCTOS</h5>
 
                             <ul class=\"footer-link\">
                                 <li>
-                                    <a href=\"javascript:void(0)\">Quest</a>
+                                    <p>Impresión</p>
                                 </li>
                                 <li>
-                                    <a href=\"javascript:void(0)\">Rift S</a>
+                                    <p>Libros</p>
                                 </li>
                                 <li>
-                                    <a href=\"javascript:void(0)\">Gear VR</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Apps and Games</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Apps and Games</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Oculus for Business</a>
+                                    <p>Copistería</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
+                    <div class=\"col-lg-6 col-md-6 col-sm-12\">
                         <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">DEVELOPERS</h5>
+                            <h5 class=\"footer-title\">ATENCIÓN AL CLIENTE</h5>
 
                             <ul class=\"footer-link\">
                                 <li>
-                                    <a href=\"javascript:void(0)\">Developer Centre</a>
+                                    <p>Política de privacidad</p>
                                 </li>
                                 <li>
-                                    <a href=\"javascript:void(0)\">Docs</a>
+                                    <p>Aviso legal</p>
                                 </li>
                                 <li>
-                                    <a href=\"javascript:void(0)\">Downloads</a>
+                                    <p>Condiciones de venta</p>
                                 </li>
                                 <li>
-                                    <a href=\"javascript:void(0)\">Tools</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Developer Blog</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Developer Forums</a>
+                                    <p>Política de Cookies</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
-
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">Blog</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Careers</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Brand Centre</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Connect</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
-
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">VR for Good</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Launch Pad</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Creators Lab</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Forums</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Support</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+\t\t\t\t</div>
             </div>
         </div>
     </section>
@@ -845,7 +787,7 @@ class __TwigTemplate_f2e0ab8ab6e67185d79b77126dbc5892 extends Template
 
     }
 
-    // line 558
+    // line 500
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -855,56 +797,56 @@ class __TwigTemplate_f2e0ab8ab6e67185d79b77126dbc5892 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 559
+        // line 501
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/mapa.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 560
+        // line 502
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 561
+        // line 503
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 562
+        // line 504
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/jquery-3.5.1.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 563
+        // line 505
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/modernizr-3.7.1.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 564
+        // line 506
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/slick.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 565
+        // line 507
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-vj-accordion-steps.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 566
+        // line 508
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 567
+        // line 509
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.form-validator.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 568
+        // line 510
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.nice-select.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 569
+        // line 511
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.formatter.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 570
+        // line 512
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/count-up.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 571
+        // line 513
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
     <script
@@ -932,7 +874,7 @@ class __TwigTemplate_f2e0ab8ab6e67185d79b77126dbc5892 extends Template
 
     public function getDebugInfo()
     {
-        return array (  908 => 571,  904 => 570,  900 => 569,  896 => 568,  892 => 567,  888 => 566,  884 => 565,  880 => 564,  876 => 563,  872 => 562,  868 => 561,  864 => 560,  859 => 559,  849 => 558,  716 => 434,  712 => 433,  617 => 341,  593 => 319,  585 => 315,  579 => 311,  570 => 304,  560 => 300,  552 => 295,  546 => 294,  542 => 293,  532 => 286,  524 => 283,  517 => 278,  513 => 277,  507 => 273,  487 => 255,  485 => 254,  473 => 245,  462 => 236,  455 => 233,  451 => 232,  446 => 229,  444 => 228,  440 => 227,  432 => 221,  424 => 218,  413 => 215,  410 => 214,  406 => 213,  400 => 210,  397 => 209,  393 => 208,  375 => 195,  359 => 181,  353 => 178,  350 => 177,  344 => 174,  340 => 173,  337 => 172,  335 => 171,  319 => 158,  293 => 134,  285 => 130,  279 => 126,  270 => 119,  260 => 115,  252 => 110,  246 => 109,  242 => 108,  232 => 101,  224 => 98,  217 => 93,  213 => 92,  207 => 88,  187 => 70,  185 => 69,  172 => 59,  158 => 50,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  850 => 513,  846 => 512,  842 => 511,  838 => 510,  834 => 509,  830 => 508,  826 => 507,  822 => 506,  818 => 505,  814 => 504,  810 => 503,  806 => 502,  801 => 501,  791 => 500,  716 => 434,  712 => 433,  617 => 341,  593 => 319,  585 => 315,  579 => 311,  570 => 304,  560 => 300,  552 => 295,  546 => 294,  542 => 293,  532 => 286,  524 => 283,  517 => 278,  513 => 277,  507 => 273,  487 => 255,  485 => 254,  473 => 245,  462 => 236,  455 => 233,  451 => 232,  446 => 229,  444 => 228,  440 => 227,  432 => 221,  424 => 218,  413 => 215,  410 => 214,  406 => 213,  400 => 210,  397 => 209,  393 => 208,  375 => 195,  359 => 181,  353 => 178,  350 => 177,  344 => 174,  340 => 173,  337 => 172,  335 => 171,  319 => 158,  293 => 134,  285 => 130,  279 => 126,  270 => 119,  260 => 115,  252 => 110,  246 => 109,  242 => 108,  232 => 101,  224 => 98,  217 => 93,  213 => 92,  207 => 88,  187 => 70,  185 => 69,  172 => 59,  158 => 50,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1392,102 +1334,44 @@ class __TwigTemplate_f2e0ab8ab6e67185d79b77126dbc5892 extends Template
 
             <div class=\"footer-widget-wrapper text-center pt-20\">
                 <div class=\"row\">
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
+\t\t\t\t\t<div class=\"col-lg-6 col-md-6 col-sm-12\">
                         <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
+                            <h5 class=\"footer-title\">PRODUCTOS</h5>
 
                             <ul class=\"footer-link\">
                                 <li>
-                                    <a href=\"javascript:void(0)\">Quest</a>
+                                    <p>Impresión</p>
                                 </li>
                                 <li>
-                                    <a href=\"javascript:void(0)\">Rift S</a>
+                                    <p>Libros</p>
                                 </li>
                                 <li>
-                                    <a href=\"javascript:void(0)\">Gear VR</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Apps and Games</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Apps and Games</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Oculus for Business</a>
+                                    <p>Copistería</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
+                    <div class=\"col-lg-6 col-md-6 col-sm-12\">
                         <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">DEVELOPERS</h5>
+                            <h5 class=\"footer-title\">ATENCIÓN AL CLIENTE</h5>
 
                             <ul class=\"footer-link\">
                                 <li>
-                                    <a href=\"javascript:void(0)\">Developer Centre</a>
+                                    <p>Política de privacidad</p>
                                 </li>
                                 <li>
-                                    <a href=\"javascript:void(0)\">Docs</a>
+                                    <p>Aviso legal</p>
                                 </li>
                                 <li>
-                                    <a href=\"javascript:void(0)\">Downloads</a>
+                                    <p>Condiciones de venta</p>
                                 </li>
                                 <li>
-                                    <a href=\"javascript:void(0)\">Tools</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Developer Blog</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Developer Forums</a>
+                                    <p>Política de Cookies</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
-
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">Blog</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Careers</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Brand Centre</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Connect</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=\"col-lg-3 col-md-3 col-sm-6\">
-                        <div class=\"footer-widget\">
-                            <h5 class=\"footer-title\">PRODUCT</h5>
-
-                            <ul class=\"footer-link\">
-                                <li>
-                                    <a href=\"javascript:void(0)\">VR for Good</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Launch Pad</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Creators Lab</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Forums</a>
-                                </li>
-                                <li>
-                                    <a href=\"javascript:void(0)\">Support</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+\t\t\t\t</div>
             </div>
         </div>
     </section>

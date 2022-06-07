@@ -206,7 +206,7 @@ class __TwigTemplate_25aea286beacef1099c18317ed2f8d7a extends Template
             echo "</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"";
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\"href=\"";
             // line 87
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminarProductosCesta", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 87), "getId", [], "method", false, false, false, 87)]), "html", null, true);
             echo "\"><i class=\"mdi mdi-delete\"></i></a></li>
@@ -441,26 +441,29 @@ class __TwigTemplate_25aea286beacef1099c18317ed2f8d7a extends Template
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
             echo "\">Categorías y productos</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
-            // line 231
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 232
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminPedidos");
-            echo "\">Pedidos</a></li>
+            echo "\">Pedidos</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t";
         }
-        // line 235
+        // line 237
         echo "\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<!-- navbar menu Ends -->
-\t\t\t\t\t\t\t<div class=\"navbar-search-cart d-none d-lg-flex\">
+\t\t\t\t\t\t\t<div
+\t\t\t\t\t\t\t\tclass=\"navbar-search-cart d-none d-lg-flex\">
 \t\t\t\t\t\t\t\t<!-- navbar cart start -->
 \t\t\t\t\t\t\t\t<div class=\"navbar-cart\">
 \t\t\t\t\t\t\t\t\t<a class=\"icon-btn primary-icon-text icon-text-btn\" href=\"javascript:void(0)\">
 \t\t\t\t\t\t\t\t\t\t<img src=\"images/icon-svg/cart-1.svg\" alt=\"Icon\">
 \t\t\t\t\t\t\t\t\t\t<span class=\"icon-text text-style-1\">";
-        // line 243
-        echo twig_escape_filter($this->env, (isset($context["unidades"]) || array_key_exists("unidades", $context) ? $context["unidades"] : (function () { throw new RuntimeError('Variable "unidades" does not exist.', 243, $this->source); })()), "html", null, true);
+        // line 246
+        echo twig_escape_filter($this->env, (isset($context["unidades"]) || array_key_exists("unidades", $context) ? $context["unidades"] : (function () { throw new RuntimeError('Variable "unidades" does not exist.', 246, $this->source); })()), "html", null, true);
         echo "</span>
 \t\t\t\t\t\t\t\t\t</a>
 
@@ -475,367 +478,210 @@ class __TwigTemplate_25aea286beacef1099c18317ed2f8d7a extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t<tbody>
 
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 256
+        // line 259
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["cesta"]) || array_key_exists("cesta", $context) ? $context["cesta"] : (function () { throw new RuntimeError('Variable "cesta" does not exist.', 256, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["cesta"]) || array_key_exists("cesta", $context) ? $context["cesta"] : (function () { throw new RuntimeError('Variable "cesta" does not exist.', 259, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produCesta"]) {
-            // line 257
+            // line 260
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-product\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-cart d-flex\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-content media-body\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"title\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"product-details-page.html\">";
-            // line 262
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 262), "getNombre", [], "method", false, false, false, 262), "html", null, true);
+            // line 265
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 265), "getNombre", [], "method", false, false, false, 265), "html", null, true);
             echo "</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"";
-            // line 265
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminarProductosCesta", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 265), "getId", [], "method", false, false, false, 265)]), "html", null, true);
-            echo "\"><i class=\"mdi mdi-delete\"></i></a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"delete\" href=\"";
+            // line 269
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminarProductosCesta", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 269), "getId", [], "method", false, false, false, 269)]), "html", null, true);
+            echo "\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-delete\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>
-\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-quantity\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-quantity d-inline-flex\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"";
-            // line 276
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cambiarUnidades", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 276), "getId", [], "method", false, false, false, 276)]), "html", null, true);
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-quantity\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-quantity d-inline-flex\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"";
+            // line 284
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cambiarUnidades", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 284), "getId", [], "method", false, false, false, 284)]), "html", null, true);
             echo "\" method=\"post\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"";
-            // line 277
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produCesta"], "unidades", [], "any", false, false, false, 277), "html", null, true);
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"";
+            // line 285
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produCesta"], "unidades", [], "any", false, false, false, 285), "html", null, true);
             echo "\" size=\"3\" min=\"1\" max=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 277), "getUnidades", [], "method", false, false, false, 277), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 285), "getUnidades", [], "method", false, false, false, 285), "html", null, true);
             echo "\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"";
-            // line 278
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 278), "getCodigo", [], "method", false, false, false, 278), "html", null, true);
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"";
+            // line 286
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 286), "getCodigo", [], "method", false, false, false, 286), "html", null, true);
             echo "\"/>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
-\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-price\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"price\">";
-            // line 283
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 283), "getPvp", [], "method", false, false, false, 283), "html", null, true);
+\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-price\">
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"price\">";
+            // line 291
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produCesta"], "producto", [], "any", false, false, false, 291), "getPvp", [], "method", false, false, false, 291), "html", null, true);
             echo "€</p>
-\t\t\t\t\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t\t\t\t\t";
+\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produCesta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 287
-        echo "\t\t\t\t\t\t\t\t\t</tbody>
-\t\t\t\t\t\t\t\t</table>
-\t\t\t\t\t\t\t</div>
+        // line 295
+        echo "\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t</table>
+\t\t\t\t\t\t</div>
 
-\t\t\t\t\t\t\t<div class=\"checkout-footer\">
-\t\t\t\t\t\t\t\t<div class=\"checkout-sub-total d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t\t<p class=\"value\">Precio total:</p>
-\t\t\t\t\t\t\t\t\t<p class=\"price\">";
-        // line 294
-        echo twig_escape_filter($this->env, (isset($context["precioCesta"]) || array_key_exists("precioCesta", $context) ? $context["precioCesta"] : (function () { throw new RuntimeError('Variable "precioCesta" does not exist.', 294, $this->source); })()), "html", null, true);
+\t\t\t\t\t\t<div class=\"checkout-footer\">
+\t\t\t\t\t\t\t<div class=\"checkout-sub-total d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t<p class=\"value\">Precio total:</p>
+\t\t\t\t\t\t\t\t<p class=\"price\">";
+        // line 302
+        echo twig_escape_filter($this->env, (isset($context["precioCesta"]) || array_key_exists("precioCesta", $context) ? $context["precioCesta"] : (function () { throw new RuntimeError('Variable "precioCesta" does not exist.', 302, $this->source); })()), "html", null, true);
         echo "€</p>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"checkout-btn\">
-\t\t\t\t\t\t\t\t\t";
-        // line 298
-        echo "\t\t\t\t\t\t\t\t\t<a href=\"";
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div
+\t\t\t\t\t\t\t\tclass=\"checkout-btn\">
+\t\t\t\t\t\t\t\t";
+        // line 307
+        echo "\t\t\t\t\t\t\t\t<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("resumenCesta");
         echo "\" class=\"main-btn primary-btn\">Resumen</a>
-\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
-\t\t\t\t<!-- navbar cart Ends -->
 \t\t\t</div>
-\t\t</nav>
-\t</div>
-</div>
-<!-- main navbar Ends -->
-</div>
-<div class=\"overlay-7\">
-</div></header></div><!--====== Navbar Style 7 Part Ends ======-->
-<!--====== Header Style 1 Part Start ======--><section class=\"header-style-1\"><div class=\"header-big\"><div class=\"header-items-active\">
-<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-cartulina.jpg);\">
-\t<div class=\"header-item-content\">
-\t\t<h3 class=\"title\">Tenemos un amplio catálogo de cartulinas, para realizar cualquier manualidad.</h3>
-\t\t<a href=\"";
-        // line 317
+\t\t\t<!-- navbar cart Ends -->
+\t\t</div>
+\t</nav>
+</div></div><!-- main navbar Ends --></div><div class=\"overlay-7\"></div></header></div><!--====== Navbar Style 7 Part Ends ======--><!--====== Header Style 1 Part Start ======--><section class=\"header-style-1\"><div class=\"header-big\"><div class=\"header-items-active\"><div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-cartulina.jpg);\">
+<div class=\"header-item-content\">
+\t<h3 class=\"title\">Tenemos un amplio catálogo de cartulinas, para realizar cualquier manualidad.</h3>
+\t<a href=\"";
+        // line 319
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productos");
         echo "\" class=\"link\">Pulsa aquí para ver todas las opciones.</a>
-\t</div>
-</div>
-<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-gonzalo.jpg);\">
-\t<div class=\"header-item-content\">
-\t\t<h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
-\t\t<a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
-\t</div>
-</div>
-<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-puerta.jpg);\">
-\t<div class=\"header-item-content\">
-\t\t<h3 class=\"title\">Fachada de nuestra papeleria, situada en la plazoleta del juncal.</h3>
-\t\t<a href=\"";
-        // line 329
+</div></div><div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-gonzalo.jpg);\">
+<div class=\"header-item-content\">
+\t<h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
+\t<a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
+</div></div><div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-puerta.jpg);\">
+<div class=\"header-item-content\">
+\t<h3 class=\"title\">Fachada de nuestra papeleria, situada en la plazoleta del juncal.</h3>
+\t<a href=\"";
+        // line 327
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contacto");
         echo "\" class=\"link\">Página de contacto</a>
+</div></div></div></div></section><!--====== Header Style 1 Part Ends ======--><!--====== Content Card Style 4 Part Start ======--><section class=\"content-card-style-4 pt-70 pb-100 bg-light\"><div class=\"container\"><div class=\"row justify-content-center\"><div class=\"col-lg-4 col-md-7 col-sm-8\">
+<div class=\"single-content mt-15 text-center\">
+\t<div class=\"content-icon\">
+\t\t<i class=\"mdi mdi-truck-fast\"></i>
 \t</div>
-</div></div></div>
-</section>
-<!--====== Header Style 1 Part Ends ======-->
-<!--====== Content Card Style 4 Part Start ======--><section class=\"content-card-style-4 pt-70 pb-100\"><div class=\"container\"><div class=\"row justify-content-center\">
-<div class=\"col-lg-4 col-md-7 col-sm-8\">
-\t<div class=\"single-content mt-15 text-center\">
-\t\t<div class=\"content-icon\">
-\t\t\t<i class=\"mdi mdi-truck-fast\"></i>
-\t\t</div>
-\t\t<div class=\"content-content\">
-\t\t\t<h4 class=\"title\">
-\t\t\t\t<a href=\"javascript:void(0)\">Two-hour delivery</a>
-\t\t\t</h4>
-\t\t\t<p>Available in most metros on selected in-stock products</p>
-\t\t\t<a href=\"javascript:void(0)\" class=\"more\">learn more</a>
-\t\t</div>
+\t<div class=\"content-content\">
+\t\t<h4 class=\"title\">
+\t\t\t<a href=\"javascript:void(0)\">Entrega rápida</a>
+\t\t</h4>
+\t\t<p>Disponibles en la mayoría de áreas metropolitanas</p>
+\t\t<a href=\"";
+        // line 338
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productos");
+        echo "\" class=\"more\">Haga su pedido</a>
 \t</div>
-</div>
-<div class=\"col-lg-4 col-md-7 col-sm-8\">
-\t<div class=\"single-content mt-15 text-center\">
-\t\t<div class=\"content-icon\">
-\t\t\t<i class=\"mdi mdi-message-text\"></i>
-\t\t</div>
-\t\t<div class=\"content-content\">
-\t\t\t<h4 class=\"title\">
-\t\t\t\t<a href=\"javascript:void(0)\">Get help buying</a>
-\t\t\t</h4>
-\t\t\t<p>Have a question? Call a Specialist or chat online for help</p>
-\t\t\t<a href=\"contact-page.html\" class=\"more\">Contact us</a>
-\t\t</div>
+</div></div><div class=\"col-lg-4 col-md-7 col-sm-8\">
+<div class=\"single-content mt-15 text-center\">
+\t<div class=\"content-icon\">
+\t\t<i class=\"mdi mdi-message-text\"></i>
 \t</div>
-</div>
-<div class=\"col-lg-4 col-md-7 col-sm-8\">
-\t<div class=\"single-content mt-15 text-center\">
-\t\t<div class=\"content-icon\">
-\t\t\t<i class=\"mdi mdi-ticket-percent\"></i>
-\t\t</div>
-\t\t<div class=\"content-content\">
-\t\t\t<h4 class=\"title\">
-\t\t\t\t<a href=\"javascript:void(0)\">Find the card for you</a>
-\t\t\t</h4>
-\t\t\t<p>Get 3% Daily Cash with special financing offers from us</p>
-\t\t\t<a href=\"javascript:void(0)\" class=\"more\">learn more</a>
-\t\t</div>
+\t<div class=\"content-content\">
+\t\t<h4 class=\"title\">
+\t\t\t<a href=\"javascript:void(0)\">¿Necesita ayuda para comprar?</a>
+\t\t</h4>
+\t\t<p>Si tiene alguna pregunta, ¡llámenos!</p>
+\t\t<a href=\"";
+        // line 350
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contacto");
+        echo "\" class=\"more\">Contacto</a>
 \t</div>
-</div></div></div></section><!--====== Content Card Style 4 Part Ends ======--><!--====== Features Part Start ======--><section class=\"features-section pt-100 pb-50 gray-bg\"><div class=\"container\"><div class=\"row\">
-<div class=\"col-lg-12\">
-\t<div class=\"features-title text-center mb-50\">
-\t\t<h1 class=\"heading-1 font-weight-700\">Awesome Features</h1>
-\t</div>
-</div></div><div class=\"row\">
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-cog\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Bootstrap 5</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-code\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Clean Design</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-layers\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Included Business Pages</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-laptop-phone\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Fully Responsive</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-brush\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Completely Customizable</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-rocket\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Fast and Well-optimized</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div></div></div></section><!--====== Features Part Ends ======--><!--====== Footer Style 3 Part Start ======--><section class=\"footer-style-3 pt-100 pb-100\"><div class=\"container\"><div class=\"footer-top\">
-<div class=\"row justify-content-center\">
-\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
-\t\t<div class=\"footer-logo text-center\">
-\t\t\t<a href=\"";
-        // line 451
+</div></div></div></div></section><section class=\"footer-style-3 pt-100 pb-100\"><div class=\"container\"><div class=\"footer-top\"><div class=\"row justify-content-center\">
+<div class=\"col-lg-5 col-md-7 col-sm-10\">
+\t<div class=\"footer-logo text-center\">
+\t\t<a href=\"";
+        // line 355
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">
-\t\t\t\t<img src=\"";
-        // line 452
+\t\t\t<img src=\"";
+        // line 356
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagenes/logo-nombre.jpg"), "html", null, true);
         echo "\" alt=\"\">
+\t\t</a>
+\t</div>
+\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
+\t<ul class=\"footer-follow text-center\">
+\t\t<li>
+\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
+\t\t\t\t<i class=\"lni lni-facebook-filled\"></i>
 \t\t\t</a>
-\t\t</div>
-\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
-\t\t<ul class=\"footer-follow text-center\">
+\t\t</li>
+\t\t<li>
+\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
+\t\t\t\t<i class=\"lni lni-instagram-original\"></i>
+\t\t\t</a>
+\t\t</li>
+\t</ul>
+</div></div></div><div class=\"footer-widget-wrapper text-center pt-20\"><div class=\"row\">
+<div class=\"col-lg-6 col-md-6 col-sm-12\">
+\t<div class=\"footer-widget\">
+\t\t<h5 class=\"footer-title\">PRODUCTOS</h5>
+
+\t\t<ul class=\"footer-link\">
 \t\t\t<li>
-\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
-\t\t\t\t\t<i class=\"lni lni-facebook-filled\"></i>
-\t\t\t\t</a>
+\t\t\t\t<p>Impresión</p>
 \t\t\t</li>
 \t\t\t<li>
-\t\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
-\t\t\t\t\t<i class=\"lni lni-instagram-original\"></i>
-\t\t\t\t</a>
+\t\t\t\t<p>Libros</p>
+\t\t\t</li>
+\t\t\t<li>
+\t\t\t\t<p>Copistería</p>
 \t\t\t</li>
 \t\t</ul>
 \t</div>
-</div></div><div class=\"footer-widget-wrapper text-center pt-20\">
-<div class=\"row\">
-\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t<div class=\"footer-widget\">
-\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
+</div>
+<div class=\"col-lg-6 col-md-6 col-sm-12\">
+\t<div class=\"footer-widget\">
+\t\t<h5 class=\"footer-title\">ATENCIÓN AL CLIENTE</h5>
 
-\t\t\t<ul class=\"footer-link\">
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Quest</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Rift S</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Gear VR</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Oculus for Business</a>
-\t\t\t\t</li>
-\t\t\t</ul>
-\t\t</div>
+\t\t<ul class=\"footer-link\">
+\t\t\t<li>
+\t\t\t\t<p>Política de privacidad</p>
+\t\t\t</li>
+\t\t\t<li>
+\t\t\t\t<p>Aviso legal</p>
+\t\t\t</li>
+\t\t\t<li>
+\t\t\t\t<p>Condiciones de venta</p>
+\t\t\t</li>
+\t\t\t<li>
+\t\t\t\t<p>Política de Cookies</p>
+\t\t\t</li>
+\t\t</ul>
 \t</div>
-\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t<div class=\"footer-widget\">
-\t\t\t<h5 class=\"footer-title\">DEVELOPERS</h5>
-
-\t\t\t<ul class=\"footer-link\">
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Centre</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Docs</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Downloads</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Tools</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Blog</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Forums</a>
-\t\t\t\t</li>
-\t\t\t</ul>
-\t\t</div>
-\t</div>
-\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t<div class=\"footer-widget\">
-\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t<ul class=\"footer-link\">
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Blog</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Careers</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Brand Centre</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Connect</a>
-\t\t\t\t</li>
-\t\t\t</ul>
-\t\t</div>
-\t</div>
-\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t<div class=\"footer-widget\">
-\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t<ul class=\"footer-link\">
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">VR for Good</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Launch Pad</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Creators Lab</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Forums</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Support</a>
-\t\t\t\t</li>
-\t\t\t</ul>
-\t\t</div>
-\t</div>
-</div></div></div></section>
-
-
-";
+</div></div></div></div></section>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -844,7 +690,7 @@ class __TwigTemplate_25aea286beacef1099c18317ed2f8d7a extends Template
 
     }
 
-    // line 570
+    // line 409
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -854,55 +700,31 @@ class __TwigTemplate_25aea286beacef1099c18317ed2f8d7a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 571
-        echo "\t<script src=\"";
+        echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 572
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 573
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/jquery-3.5.1.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 574
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/modernizr-3.7.1.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 575
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/slick.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 576
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-vj-accordion-steps.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 577
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 578
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.form-validator.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 579
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.nice-select.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 580
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.formatter.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 581
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/count-up.min.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"";
-        // line 582
+        echo "\"></script><script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
-        echo "\"></script>
-";
+        echo "\"></script>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -923,7 +745,7 @@ class __TwigTemplate_25aea286beacef1099c18317ed2f8d7a extends Template
 
     public function getDebugInfo()
     {
-        return array (  903 => 582,  899 => 581,  895 => 580,  891 => 579,  887 => 578,  883 => 577,  879 => 576,  875 => 575,  871 => 574,  867 => 573,  863 => 572,  858 => 571,  848 => 570,  720 => 452,  716 => 451,  591 => 329,  576 => 317,  553 => 298,  547 => 294,  538 => 287,  528 => 283,  520 => 278,  514 => 277,  510 => 276,  496 => 265,  490 => 262,  483 => 257,  479 => 256,  463 => 243,  453 => 235,  446 => 231,  441 => 229,  435 => 225,  433 => 224,  428 => 222,  419 => 215,  411 => 212,  400 => 209,  397 => 208,  393 => 207,  387 => 204,  384 => 203,  380 => 202,  362 => 189,  345 => 174,  338 => 170,  335 => 169,  329 => 166,  324 => 164,  321 => 163,  319 => 162,  302 => 148,  266 => 115,  260 => 112,  251 => 105,  241 => 101,  233 => 96,  225 => 95,  221 => 94,  211 => 87,  205 => 84,  198 => 79,  194 => 78,  178 => 65,  163 => 55,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  694 => 409,  630 => 356,  626 => 355,  618 => 350,  603 => 338,  589 => 327,  578 => 319,  562 => 307,  555 => 302,  546 => 295,  536 => 291,  528 => 286,  522 => 285,  518 => 284,  500 => 269,  493 => 265,  486 => 260,  482 => 259,  466 => 246,  455 => 237,  447 => 232,  441 => 229,  435 => 225,  433 => 224,  428 => 222,  419 => 215,  411 => 212,  400 => 209,  397 => 208,  393 => 207,  387 => 204,  384 => 203,  380 => 202,  362 => 189,  345 => 174,  338 => 170,  335 => 169,  329 => 166,  324 => 164,  321 => 163,  319 => 162,  302 => 148,  266 => 115,  260 => 112,  251 => 105,  241 => 101,  233 => 96,  225 => 95,  221 => 94,  211 => 87,  205 => 84,  198 => 79,  194 => 78,  178 => 65,  163 => 55,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1014,7 +836,7 @@ class __TwigTemplate_25aea286beacef1099c18317ed2f8d7a extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"product-details-page.html\">{{ produCesta.producto.getNombre() }}</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}\"><i class=\"mdi mdi-delete\"></i></a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\"href=\"{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}\"><i class=\"mdi mdi-delete\"></i></a></li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -1158,14 +980,17 @@ class __TwigTemplate_25aea286beacef1099c18317ed2f8d7a extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('admin') }}\">Categorías y productos</a>
 \t\t\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"{{ path('adminPedidos') }}\">Pedidos</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('adminPedidos') }}\">Pedidos</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<!-- navbar menu Ends -->
-\t\t\t\t\t\t\t<div class=\"navbar-search-cart d-none d-lg-flex\">
+\t\t\t\t\t\t\t<div
+\t\t\t\t\t\t\t\tclass=\"navbar-search-cart d-none d-lg-flex\">
 \t\t\t\t\t\t\t\t<!-- navbar cart start -->
 \t\t\t\t\t\t\t\t<div class=\"navbar-cart\">
 \t\t\t\t\t\t\t\t\t<a class=\"icon-btn primary-icon-text icon-text-btn\" href=\"javascript:void(0)\">
@@ -1192,325 +1017,148 @@ class __TwigTemplate_25aea286beacef1099c18317ed2f8d7a extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"product-details-page.html\">{{ produCesta.producto.getNombre() }}</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a class=\"delete\" href=\"{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}\"><i class=\"mdi mdi-delete\"></i></a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"delete\" href=\"{{ path('eliminarProductosCesta', {'idProducto': produCesta.producto.getId()}) }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"mdi mdi-delete\"></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>
-\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-quantity\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-quantity d-inline-flex\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}\" method=\"post\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"{{ produCesta.unidades }}\" size=\"3\" min=\"1\" max=\"{{ produCesta.producto.getUnidades() }}\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"{{ produCesta.producto.getCodigo() }}\"/>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
-\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-price\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"price\">{{ produCesta.producto.getPvp() }}€</p>
-\t\t\t\t\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t\t\t\t\t{% endfor %}
-\t\t\t\t\t\t\t\t\t</tbody>
-\t\t\t\t\t\t\t\t</table>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-quantity\">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"product-quantity d-inline-flex\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<form id=\"form_seleccion\" action=\"{{ path('cambiarUnidades', {'idProducto': produCesta.producto.getId()}) }}\" method=\"post\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"unidades\" value=\"{{ produCesta.unidades }}\" size=\"3\" min=\"1\" max=\"{{ produCesta.producto.getUnidades() }}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type='hidden' name='codProduc' value=\"{{ produCesta.producto.getCodigo() }}\"/>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</form>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t\t<td class=\"checkout-price\">
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"price\">{{ produCesta.producto.getPvp() }}€</p>
+\t\t\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t\t\t</tbody>
+\t\t\t\t\t\t\t</table>
+\t\t\t\t\t\t</div>
 
-\t\t\t\t\t\t\t<div class=\"checkout-footer\">
-\t\t\t\t\t\t\t\t<div class=\"checkout-sub-total d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t\t<p class=\"value\">Precio total:</p>
-\t\t\t\t\t\t\t\t\t<p class=\"price\">{{ precioCesta }}€</p>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"checkout-btn\">
-\t\t\t\t\t\t\t\t\t{# <a href=\"{{ path('index') }}\" class=\"main-btn primary-btn-border\">Actualizar</a> #}
-\t\t\t\t\t\t\t\t\t<a href=\"{{ path('resumenCesta') }}\" class=\"main-btn primary-btn\">Resumen</a>
-\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"checkout-footer\">
+\t\t\t\t\t\t\t<div class=\"checkout-sub-total d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t<p class=\"value\">Precio total:</p>
+\t\t\t\t\t\t\t\t<p class=\"price\">{{ precioCesta }}€</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div
+\t\t\t\t\t\t\t\tclass=\"checkout-btn\">
+\t\t\t\t\t\t\t\t{# <a href=\"{{ path('index') }}\" class=\"main-btn primary-btn-border\">Actualizar</a> #}
+\t\t\t\t\t\t\t\t<a href=\"{{ path('resumenCesta') }}\" class=\"main-btn primary-btn\">Resumen</a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
-\t\t\t\t<!-- navbar cart Ends -->
 \t\t\t</div>
-\t\t</nav>
+\t\t\t<!-- navbar cart Ends -->
+\t\t</div>
+\t</nav>
+</div></div><!-- main navbar Ends --></div><div class=\"overlay-7\"></div></header></div><!--====== Navbar Style 7 Part Ends ======--><!--====== Header Style 1 Part Start ======--><section class=\"header-style-1\"><div class=\"header-big\"><div class=\"header-items-active\"><div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-cartulina.jpg);\">
+<div class=\"header-item-content\">
+\t<h3 class=\"title\">Tenemos un amplio catálogo de cartulinas, para realizar cualquier manualidad.</h3>
+\t<a href=\"{{path('productos')}}\" class=\"link\">Pulsa aquí para ver todas las opciones.</a>
+</div></div><div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-gonzalo.jpg);\">
+<div class=\"header-item-content\">
+\t<h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
+\t<a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
+</div></div><div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-puerta.jpg);\">
+<div class=\"header-item-content\">
+\t<h3 class=\"title\">Fachada de nuestra papeleria, situada en la plazoleta del juncal.</h3>
+\t<a href=\"{{ path('contacto') }}\" class=\"link\">Página de contacto</a>
+</div></div></div></div></section><!--====== Header Style 1 Part Ends ======--><!--====== Content Card Style 4 Part Start ======--><section class=\"content-card-style-4 pt-70 pb-100 bg-light\"><div class=\"container\"><div class=\"row justify-content-center\"><div class=\"col-lg-4 col-md-7 col-sm-8\">
+<div class=\"single-content mt-15 text-center\">
+\t<div class=\"content-icon\">
+\t\t<i class=\"mdi mdi-truck-fast\"></i>
 \t</div>
-</div>
-<!-- main navbar Ends -->
-</div>
-<div class=\"overlay-7\">
-</div></header></div><!--====== Navbar Style 7 Part Ends ======-->
-<!--====== Header Style 1 Part Start ======--><section class=\"header-style-1\"><div class=\"header-big\"><div class=\"header-items-active\">
-<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-cartulina.jpg);\">
-\t<div class=\"header-item-content\">
-\t\t<h3 class=\"title\">Tenemos un amplio catálogo de cartulinas, para realizar cualquier manualidad.</h3>
-\t\t<a href=\"{{path('productos')}}\" class=\"link\">Pulsa aquí para ver todas las opciones.</a>
+\t<div class=\"content-content\">
+\t\t<h4 class=\"title\">
+\t\t\t<a href=\"javascript:void(0)\">Entrega rápida</a>
+\t\t</h4>
+\t\t<p>Disponibles en la mayoría de áreas metropolitanas</p>
+\t\t<a href=\"{{ path('productos') }}\" class=\"more\">Haga su pedido</a>
 \t</div>
-</div>
-<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-gonzalo.jpg);\">
-\t<div class=\"header-item-content\">
-\t\t<h3 class=\"title\">Don’t say it with flowers: A NOMOS watch is a gift that lasts</h3>
-\t\t<a href=\"javascript:void(0)\" class=\"link\">Our Valentine's Day collection</a>
+</div></div><div class=\"col-lg-4 col-md-7 col-sm-8\">
+<div class=\"single-content mt-15 text-center\">
+\t<div class=\"content-icon\">
+\t\t<i class=\"mdi mdi-message-text\"></i>
 \t</div>
-</div>
-<div class=\"single-header-item bg_cover\" style=\"background-image: url(imagenes/fondo-puerta.jpg);\">
-\t<div class=\"header-item-content\">
-\t\t<h3 class=\"title\">Fachada de nuestra papeleria, situada en la plazoleta del juncal.</h3>
-\t\t<a href=\"{{ path('contacto') }}\" class=\"link\">Página de contacto</a>
+\t<div class=\"content-content\">
+\t\t<h4 class=\"title\">
+\t\t\t<a href=\"javascript:void(0)\">¿Necesita ayuda para comprar?</a>
+\t\t</h4>
+\t\t<p>Si tiene alguna pregunta, ¡llámenos!</p>
+\t\t<a href=\"{{ path('contacto') }}\" class=\"more\">Contacto</a>
 \t</div>
-</div></div></div>
-</section>
-<!--====== Header Style 1 Part Ends ======-->
-<!--====== Content Card Style 4 Part Start ======--><section class=\"content-card-style-4 pt-70 pb-100\"><div class=\"container\"><div class=\"row justify-content-center\">
-<div class=\"col-lg-4 col-md-7 col-sm-8\">
-\t<div class=\"single-content mt-15 text-center\">
-\t\t<div class=\"content-icon\">
-\t\t\t<i class=\"mdi mdi-truck-fast\"></i>
-\t\t</div>
-\t\t<div class=\"content-content\">
-\t\t\t<h4 class=\"title\">
-\t\t\t\t<a href=\"javascript:void(0)\">Two-hour delivery</a>
-\t\t\t</h4>
-\t\t\t<p>Available in most metros on selected in-stock products</p>
-\t\t\t<a href=\"javascript:void(0)\" class=\"more\">learn more</a>
-\t\t</div>
+</div></div></div></div></section><section class=\"footer-style-3 pt-100 pb-100\"><div class=\"container\"><div class=\"footer-top\"><div class=\"row justify-content-center\">
+<div class=\"col-lg-5 col-md-7 col-sm-10\">
+\t<div class=\"footer-logo text-center\">
+\t\t<a href=\"{{ path('index') }}\">
+\t\t\t<img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
+\t\t</a>
 \t</div>
-</div>
-<div class=\"col-lg-4 col-md-7 col-sm-8\">
-\t<div class=\"single-content mt-15 text-center\">
-\t\t<div class=\"content-icon\">
-\t\t\t<i class=\"mdi mdi-message-text\"></i>
-\t\t</div>
-\t\t<div class=\"content-content\">
-\t\t\t<h4 class=\"title\">
-\t\t\t\t<a href=\"javascript:void(0)\">Get help buying</a>
-\t\t\t</h4>
-\t\t\t<p>Have a question? Call a Specialist or chat online for help</p>
-\t\t\t<a href=\"contact-page.html\" class=\"more\">Contact us</a>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-7 col-sm-8\">
-\t<div class=\"single-content mt-15 text-center\">
-\t\t<div class=\"content-icon\">
-\t\t\t<i class=\"mdi mdi-ticket-percent\"></i>
-\t\t</div>
-\t\t<div class=\"content-content\">
-\t\t\t<h4 class=\"title\">
-\t\t\t\t<a href=\"javascript:void(0)\">Find the card for you</a>
-\t\t\t</h4>
-\t\t\t<p>Get 3% Daily Cash with special financing offers from us</p>
-\t\t\t<a href=\"javascript:void(0)\" class=\"more\">learn more</a>
-\t\t</div>
-\t</div>
-</div></div></div></section><!--====== Content Card Style 4 Part Ends ======--><!--====== Features Part Start ======--><section class=\"features-section pt-100 pb-50 gray-bg\"><div class=\"container\"><div class=\"row\">
-<div class=\"col-lg-12\">
-\t<div class=\"features-title text-center mb-50\">
-\t\t<h1 class=\"heading-1 font-weight-700\">Awesome Features</h1>
-\t</div>
-</div></div><div class=\"row\">
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-cog\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Bootstrap 5</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-code\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Clean Design</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-layers\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Included Business Pages</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-laptop-phone\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Fully Responsive</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-brush\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Completely Customizable</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div>
-<div class=\"col-lg-4 col-md-6\">
-\t<div class=\"single-feature-wrapper\">
-\t\t<div class=\"feature-icon\">
-\t\t\t<i class=\"lni lni-rocket\"></i>
-\t\t</div>
-\t\t<div class=\"feature-content\">
-\t\t\t<h5 class=\"heading-5 font-weight-500 mb-10\">Fast and Well-optimized</h5>
-\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quos iste veniam.</p>
-\t\t</div>
-\t</div>
-</div></div></div></section><!--====== Features Part Ends ======--><!--====== Footer Style 3 Part Start ======--><section class=\"footer-style-3 pt-100 pb-100\"><div class=\"container\"><div class=\"footer-top\">
-<div class=\"row justify-content-center\">
-\t<div class=\"col-lg-5 col-md-7 col-sm-10\">
-\t\t<div class=\"footer-logo text-center\">
-\t\t\t<a href=\"{{ path('index') }}\">
-\t\t\t\t<img src=\"{{ asset('imagenes/logo-nombre.jpg') }}\" alt=\"\">
+\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
+\t<ul class=\"footer-follow text-center\">
+\t\t<li>
+\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
+\t\t\t\t<i class=\"lni lni-facebook-filled\"></i>
 \t\t\t</a>
-\t\t</div>
-\t\t<h5 class=\"heading-5 text-center mt-30\">Síguenos</h5>
-\t\t<ul class=\"footer-follow text-center\">
+\t\t</li>
+\t\t<li>
+\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
+\t\t\t\t<i class=\"lni lni-instagram-original\"></i>
+\t\t\t</a>
+\t\t</li>
+\t</ul>
+</div></div></div><div class=\"footer-widget-wrapper text-center pt-20\"><div class=\"row\">
+<div class=\"col-lg-6 col-md-6 col-sm-12\">
+\t<div class=\"footer-widget\">
+\t\t<h5 class=\"footer-title\">PRODUCTOS</h5>
+
+\t\t<ul class=\"footer-link\">
 \t\t\t<li>
-\t\t\t\t<a href=\"https://www.facebook.com/impresionacopisteria/\">
-\t\t\t\t\t<i class=\"lni lni-facebook-filled\"></i>
-\t\t\t\t</a>
+\t\t\t\t<p>Impresión</p>
 \t\t\t</li>
 \t\t\t<li>
-\t\t\t\t<a href=\"https://www.instagram.com/impresionacopisteria/\">
-\t\t\t\t\t<i class=\"lni lni-instagram-original\"></i>
-\t\t\t\t</a>
+\t\t\t\t<p>Libros</p>
+\t\t\t</li>
+\t\t\t<li>
+\t\t\t\t<p>Copistería</p>
 \t\t\t</li>
 \t\t</ul>
 \t</div>
-</div></div><div class=\"footer-widget-wrapper text-center pt-20\">
-<div class=\"row\">
-\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t<div class=\"footer-widget\">
-\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
+</div>
+<div class=\"col-lg-6 col-md-6 col-sm-12\">
+\t<div class=\"footer-widget\">
+\t\t<h5 class=\"footer-title\">ATENCIÓN AL CLIENTE</h5>
 
-\t\t\t<ul class=\"footer-link\">
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Quest</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Rift S</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Gear VR</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Oculus for Business</a>
-\t\t\t\t</li>
-\t\t\t</ul>
-\t\t</div>
+\t\t<ul class=\"footer-link\">
+\t\t\t<li>
+\t\t\t\t<p>Política de privacidad</p>
+\t\t\t</li>
+\t\t\t<li>
+\t\t\t\t<p>Aviso legal</p>
+\t\t\t</li>
+\t\t\t<li>
+\t\t\t\t<p>Condiciones de venta</p>
+\t\t\t</li>
+\t\t\t<li>
+\t\t\t\t<p>Política de Cookies</p>
+\t\t\t</li>
+\t\t</ul>
 \t</div>
-\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t<div class=\"footer-widget\">
-\t\t\t<h5 class=\"footer-title\">DEVELOPERS</h5>
-
-\t\t\t<ul class=\"footer-link\">
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Centre</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Docs</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Downloads</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Tools</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Blog</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Forums</a>
-\t\t\t\t</li>
-\t\t\t</ul>
-\t\t</div>
-\t</div>
-\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t<div class=\"footer-widget\">
-\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t<ul class=\"footer-link\">
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Blog</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Careers</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Brand Centre</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Connect</a>
-\t\t\t\t</li>
-\t\t\t</ul>
-\t\t</div>
-\t</div>
-\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t<div class=\"footer-widget\">
-\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t<ul class=\"footer-link\">
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">VR for Good</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Launch Pad</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Creators Lab</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Forums</a>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"javascript:void(0)\">Support</a>
-\t\t\t\t</li>
-\t\t\t</ul>
-\t\t</div>
-\t</div>
-</div></div></div></section>
-
-
-{% endblock %}
-{% block javascripts %}
-\t<script src=\"{{ asset('js/popper.min.js') }}\"></script>
-\t<script src=\"{{ asset('js/bootstrap.min.js') }}\"></script>
-\t<script src=\"{{ asset('js/vendor/jquery-3.5.1.min.js') }}\"></script>
-\t<script src=\"{{ asset('js/vendor/modernizr-3.7.1.min.js') }}\"></script>
-\t<script src=\"{{ asset('js/slick.min.js') }}\"></script>
-\t<script src=\"{{ asset('js/jquery-vj-accordion-steps.js') }}\"></script>
-\t<script src=\"{{ asset('js/jquery-ui.min.js') }}\"></script>
-\t<script src=\"{{ asset('js/jquery.form-validator.min.js') }}\"></script>
-\t<script src=\"{{ asset('js/jquery.nice-select.min.js') }}\"></script>
-\t<script src=\"{{ asset('js/jquery.formatter.min.js') }}\"></script>
-\t<script src=\"{{ asset('js/count-up.min.js') }}\"></script>
-\t<script src=\"{{ asset('js/main.js') }}\"></script>
-{% endblock %}
+</div></div></div></div></section>{% endblock %}{% block javascripts %}<script src=\"{{ asset('js/popper.min.js') }}\"></script><script src=\"{{ asset('js/bootstrap.min.js') }}\"></script><script src=\"{{ asset('js/vendor/jquery-3.5.1.min.js') }}\"></script><script src=\"{{ asset('js/vendor/modernizr-3.7.1.min.js') }}\"></script><script src=\"{{ asset('js/slick.min.js') }}\"></script><script src=\"{{ asset('js/jquery-vj-accordion-steps.js') }}\"></script><script src=\"{{ asset('js/jquery-ui.min.js') }}\"></script><script src=\"{{ asset('js/jquery.form-validator.min.js') }}\"></script><script src=\"{{ asset('js/jquery.nice-select.min.js') }}\"></script><script src=\"{{ asset('js/jquery.formatter.min.js') }}\"></script><script src=\"{{ asset('js/count-up.min.js') }}\"></script><script src=\"{{ asset('js/main.js') }}\"></script>{% endblock %}
 ", "index.html.twig", "C:\\xampp\\htdocs\\tienda\\tiendaPapel\\templates\\index.html.twig");
     }
 }

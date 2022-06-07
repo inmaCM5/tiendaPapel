@@ -926,101 +926,43 @@ class __TwigTemplate_040f3ebb96796052782dfcdf6a156a48 extends Template
 
 \t\t\t<div class=\"footer-widget-wrapper text-center pt-20\">
 \t\t\t\t<div class=\"row\">
-\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
+\t\t\t\t\t<div class=\"col-lg-6 col-md-6 col-sm-12\">
+                        <div class=\"footer-widget\">
+                            <h5 class=\"footer-title\">PRODUCTOS</h5>
 
-\t\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Quest</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Rift S</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Gear VR</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Oculus for Business</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t\t<h5 class=\"footer-title\">DEVELOPERS</h5>
+                            <ul class=\"footer-link\">
+                                <li>
+                                    <p>Impresión</p>
+                                </li>
+                                <li>
+                                    <p>Libros</p>
+                                </li>
+                                <li>
+                                    <p>Copistería</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=\"col-lg-6 col-md-6 col-sm-12\">
+                        <div class=\"footer-widget\">
+                            <h5 class=\"footer-title\">ATENCIÓN AL CLIENTE</h5>
 
-\t\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Centre</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Docs</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Downloads</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Tools</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Blog</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Forums</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Blog</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Careers</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Brand Centre</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Connect</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">VR for Good</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Launch Pad</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Creators Lab</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Forums</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Support</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
+                            <ul class=\"footer-link\">
+                                <li>
+                                    <p>Política de privacidad</p>
+                                </li>
+                                <li>
+                                    <p>Aviso legal</p>
+                                </li>
+                                <li>
+                                    <p>Condiciones de venta</p>
+                                </li>
+                                <li>
+                                    <p>Política de Cookies</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
@@ -1034,7 +976,7 @@ class __TwigTemplate_040f3ebb96796052782dfcdf6a156a48 extends Template
 
     }
 
-    // line 633
+    // line 575
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1044,52 +986,52 @@ class __TwigTemplate_040f3ebb96796052782dfcdf6a156a48 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 634
+        // line 576
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 635
+        // line 577
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 636
+        // line 578
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/jquery-3.5.1.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 637
+        // line 579
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/modernizr-3.7.1.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 638
+        // line 580
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/slick.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 639
+        // line 581
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-vj-accordion-steps.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 640
+        // line 582
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 641
+        // line 583
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.form-validator.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 642
+        // line 584
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.nice-select.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 643
+        // line 585
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.formatter.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 644
+        // line 586
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/count-up.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 645
+        // line 587
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -1113,7 +1055,7 @@ class __TwigTemplate_040f3ebb96796052782dfcdf6a156a48 extends Template
 
     public function getDebugInfo()
     {
-        return array (  1093 => 645,  1089 => 644,  1085 => 643,  1081 => 642,  1077 => 641,  1073 => 640,  1069 => 639,  1065 => 638,  1061 => 637,  1057 => 636,  1053 => 635,  1048 => 634,  1038 => 633,  906 => 510,  902 => 509,  883 => 492,  870 => 486,  864 => 484,  860 => 482,  858 => 481,  853 => 479,  849 => 478,  842 => 476,  830 => 468,  821 => 461,  817 => 460,  811 => 456,  798 => 450,  792 => 448,  788 => 446,  786 => 445,  781 => 443,  777 => 442,  770 => 440,  759 => 432,  750 => 425,  746 => 424,  718 => 398,  711 => 396,  699 => 392,  691 => 390,  687 => 389,  679 => 384,  675 => 383,  670 => 381,  667 => 380,  663 => 379,  636 => 355,  612 => 333,  604 => 329,  598 => 325,  589 => 318,  579 => 314,  571 => 309,  565 => 308,  561 => 307,  551 => 300,  543 => 297,  536 => 292,  532 => 291,  526 => 287,  506 => 269,  504 => 268,  492 => 259,  488 => 258,  479 => 251,  472 => 247,  468 => 246,  463 => 243,  461 => 242,  456 => 240,  447 => 233,  439 => 230,  428 => 227,  425 => 226,  421 => 225,  415 => 222,  412 => 221,  408 => 220,  390 => 207,  373 => 192,  366 => 188,  363 => 187,  357 => 184,  352 => 182,  349 => 181,  347 => 180,  330 => 166,  299 => 137,  291 => 133,  285 => 129,  276 => 122,  266 => 118,  258 => 113,  252 => 112,  248 => 111,  238 => 104,  229 => 101,  222 => 95,  218 => 94,  212 => 90,  192 => 72,  190 => 71,  179 => 63,  175 => 62,  161 => 53,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  1035 => 587,  1031 => 586,  1027 => 585,  1023 => 584,  1019 => 583,  1015 => 582,  1011 => 581,  1007 => 580,  1003 => 579,  999 => 578,  995 => 577,  990 => 576,  980 => 575,  906 => 510,  902 => 509,  883 => 492,  870 => 486,  864 => 484,  860 => 482,  858 => 481,  853 => 479,  849 => 478,  842 => 476,  830 => 468,  821 => 461,  817 => 460,  811 => 456,  798 => 450,  792 => 448,  788 => 446,  786 => 445,  781 => 443,  777 => 442,  770 => 440,  759 => 432,  750 => 425,  746 => 424,  718 => 398,  711 => 396,  699 => 392,  691 => 390,  687 => 389,  679 => 384,  675 => 383,  670 => 381,  667 => 380,  663 => 379,  636 => 355,  612 => 333,  604 => 329,  598 => 325,  589 => 318,  579 => 314,  571 => 309,  565 => 308,  561 => 307,  551 => 300,  543 => 297,  536 => 292,  532 => 291,  526 => 287,  506 => 269,  504 => 268,  492 => 259,  488 => 258,  479 => 251,  472 => 247,  468 => 246,  463 => 243,  461 => 242,  456 => 240,  447 => 233,  439 => 230,  428 => 227,  425 => 226,  421 => 225,  415 => 222,  412 => 221,  408 => 220,  390 => 207,  373 => 192,  366 => 188,  363 => 187,  357 => 184,  352 => 182,  349 => 181,  347 => 180,  330 => 166,  299 => 137,  291 => 133,  285 => 129,  276 => 122,  266 => 118,  258 => 113,  252 => 112,  248 => 111,  238 => 104,  229 => 101,  222 => 95,  218 => 94,  212 => 90,  192 => 72,  190 => 71,  179 => 63,  175 => 62,  161 => 53,  121 => 15,  111 => 14,  99 => 11,  95 => 10,  91 => 9,  87 => 8,  83 => 7,  79 => 6,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1649,101 +1591,43 @@ class __TwigTemplate_040f3ebb96796052782dfcdf6a156a48 extends Template
 
 \t\t\t<div class=\"footer-widget-wrapper text-center pt-20\">
 \t\t\t\t<div class=\"row\">
-\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
+\t\t\t\t\t<div class=\"col-lg-6 col-md-6 col-sm-12\">
+                        <div class=\"footer-widget\">
+                            <h5 class=\"footer-title\">PRODUCTOS</h5>
 
-\t\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Quest</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Rift S</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Gear VR</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Apps and Games</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Oculus for Business</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t\t<h5 class=\"footer-title\">DEVELOPERS</h5>
+                            <ul class=\"footer-link\">
+                                <li>
+                                    <p>Impresión</p>
+                                </li>
+                                <li>
+                                    <p>Libros</p>
+                                </li>
+                                <li>
+                                    <p>Copistería</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=\"col-lg-6 col-md-6 col-sm-12\">
+                        <div class=\"footer-widget\">
+                            <h5 class=\"footer-title\">ATENCIÓN AL CLIENTE</h5>
 
-\t\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Centre</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Docs</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Downloads</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Tools</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Blog</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Developer Forums</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Blog</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Careers</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Brand Centre</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Connect</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-sm-6\">
-\t\t\t\t\t\t<div class=\"footer-widget\">
-\t\t\t\t\t\t\t<h5 class=\"footer-title\">PRODUCT</h5>
-
-\t\t\t\t\t\t\t<ul class=\"footer-link\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">VR for Good</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Launch Pad</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Creators Lab</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Forums</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\">Support</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
+                            <ul class=\"footer-link\">
+                                <li>
+                                    <p>Política de privacidad</p>
+                                </li>
+                                <li>
+                                    <p>Aviso legal</p>
+                                </li>
+                                <li>
+                                    <p>Condiciones de venta</p>
+                                </li>
+                                <li>
+                                    <p>Política de Cookies</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
