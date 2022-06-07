@@ -61,10 +61,10 @@ class ProductosCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         $categoriaRepository = $this->em->getRepository(Categoria::class);
-        $categoriasSecundarias = $categoriaRepository->findParentsNotNull();
+        //$categoriasSecundarias = $categoriaRepository->findParentsNotNull();
         
         yield IdField::new('id')->hideOnForm();
-        yield AssociationField::new('categoria')->onlyOnForms()->setFormTypeOptions(["choices" => $categoriasSecundarias])->setLabel('Categorías');
+        //yield AssociationField::new('categoria')->onlyOnForms()->setFormTypeOptions(["choices" => $categoriasSecundarias])->setLabel('Categorías');
         yield TextField::new('codigo');
         yield TextField::new('nombre');
         yield TextField::new('descripcion');
