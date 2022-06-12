@@ -69,7 +69,8 @@ class ProductosCrudController extends AbstractCrudController
         yield TextField::new('nombre');
         yield TextField::new('descripcion');
         yield NumberField::new('pvp');
-        yield Field::new('imageFile')->setFormType(VichImageType::class)->setLabel('Imagen');
+        yield Field::new('imageFile')->setFormType(VichImageType::class)->setLabel('Imagen')->onlyOnForms();
+        yield Field::new('foto')->hideOnForm()->setLabel('Imagen');
         yield NumberField::new('pp');
         yield IntegerField::new('unidades');
         yield TextField::new('proveedor');

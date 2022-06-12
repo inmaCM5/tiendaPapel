@@ -73,7 +73,7 @@ class __TwigTemplate_cb909d7d93f61e9a349a102b34397325 extends Template
         // line 24
         echo "\t\t";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 25
+        // line 26
         echo "\t</body>
 </html>";
         
@@ -185,6 +185,8 @@ class __TwigTemplate_cb909d7d93f61e9a349a102b34397325 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
+        // line 25
+        echo "\t\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -205,7 +207,7 @@ class __TwigTemplate_cb909d7d93f61e9a349a102b34397325 extends Template
 
     public function getDebugInfo()
     {
-        return array (  179 => 24,  161 => 22,  151 => 23,  149 => 22,  144 => 19,  141 => 18,  131 => 17,  118 => 13,  108 => 12,  88 => 6,  77 => 25,  74 => 24,  72 => 17,  68 => 15,  65 => 12,  61 => 10,  57 => 8,  55 => 6,  48 => 1,);
+        return array (  189 => 25,  179 => 24,  161 => 22,  151 => 23,  149 => 22,  144 => 19,  141 => 18,  131 => 17,  118 => 13,  108 => 12,  88 => 6,  77 => 26,  74 => 24,  72 => 17,  68 => 15,  65 => 12,  61 => 10,  57 => 8,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -233,7 +235,8 @@ class __TwigTemplate_cb909d7d93f61e9a349a102b34397325 extends Template
 \t\t\t</svg></span>
 \t\t{% block contenido %}{% endblock %}
 \t\t{% endblock %}
-\t\t{% block javascripts %}{% endblock %}
+\t\t{% block javascripts %}
+\t\t{% endblock %}
 \t</body>
 </html>", "base.html.twig", "C:\\xampp\\htdocs\\tienda\\tiendaPapel\\templates\\base.html.twig");
     }
