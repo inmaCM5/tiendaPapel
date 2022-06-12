@@ -1,3 +1,7 @@
 <?php //%5BC%5DApp%255CEntity%255CUsuarios%2524plainPassword
 
+<<<<<<< HEAD
 return [PHP_INT_MAX, 1655059344];
+=======
+return [PHP_INT_MAX, 1655052078];
+>>>>>>> 5f20a6994f46a2f8003b266fcce776d28f81e020
