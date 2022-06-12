@@ -49,6 +49,9 @@ class Usuarios implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'usuario', targetEntity: Pedido::class)]
     private $pedidos;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private $plainPassword;
+
     public function __construct()
     {
         $this->pedidos = new ArrayCollection();
@@ -225,6 +228,19 @@ class Usuarios implements UserInterface, PasswordAuthenticatedUserInterface
                 $pedido->setUsuario(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPlainPassword(): ?string
+    {
+        $this->plainPassword = $this->getPassword();
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword(string $plainPassword): self
+    {
+        $this->plainPassword = $plainPassword;
 
         return $this;
     }
